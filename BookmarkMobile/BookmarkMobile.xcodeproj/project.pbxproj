@@ -120,6 +120,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		69017B78203706340046B009 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8408E0292036D68F004ABC0A /* Assets.xcassets */,
+				8408E0262036D68F004ABC0A /* Main.storyboard */,
+				8408E02B2036D68F004ABC0A /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8408E0162036D68F004ABC0A = {
 			isa = PBXGroup;
 			children = (
@@ -150,10 +160,8 @@
 				8408E0522036EBC5004ABC0A /* Controllers */,
 				8408E0512036EBBE004ABC0A /* Views */,
 				8408E0502036EBAF004ABC0A /* Models */,
+				69017B78203706340046B009 /* Supporting Files */,
 				8408E0222036D68F004ABC0A /* AppDelegate.swift */,
-				8408E0262036D68F004ABC0A /* Main.storyboard */,
-				8408E0292036D68F004ABC0A /* Assets.xcassets */,
-				8408E02B2036D68F004ABC0A /* LaunchScreen.storyboard */,
 				8408E02E2036D68F004ABC0A /* Info.plist */,
 			);
 			path = BookmarkMobile;
