@@ -15,15 +15,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let dict = [String : AnyObject]()
-        BookmarkSessionManager.sharedInstance.requestPOSTURL("http://", params: dict as! [String : AnyObject], headers: nil, success: { (json) in
-            // success code
+        
+        Message.getMessages(success: { (json) in
             print(json)
-        }, failure: { (error) in
-            //error code
+        }) { (error) in
             print(error)
-        })
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

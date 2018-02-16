@@ -17,7 +17,7 @@
 		8408E0382036D68F004ABC0A /* BookmarkMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0372036D68F004ABC0A /* BookmarkMobileTests.swift */; };
 		8408E0432036D68F004ABC0A /* BookmarkMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0422036D68F004ABC0A /* BookmarkMobileUITests.swift */; };
 		8408E0542036EFFF004ABC0A /* Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8408E0532036EFFF004ABC0A /* Test.xib */; };
-		8408E0562036F01A004ABC0A /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0552036F01A004ABC0A /* Test.swift */; };
+		8408E0562036F01A004ABC0A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0552036F01A004ABC0A /* Message.swift */; };
 		8408E0592036F5A5004ABC0A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0582036F5A5004ABC0A /* Utilities.swift */; };
 		8408E05C2036FA36004ABC0A /* BookmarkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E05B2036FA36004ABC0A /* BookmarkSessionManager.swift */; };
 		CE69C9A073B8DEBC6D3FC864 /* Pods_BookmarkMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05105D23C47C7788D93BDAF2 /* Pods_BookmarkMobileUITests.framework */; };
@@ -61,7 +61,7 @@
 		8408E0422036D68F004ABC0A /* BookmarkMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkMobileUITests.swift; sourceTree = "<group>"; };
 		8408E0442036D68F004ABC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8408E0532036EFFF004ABC0A /* Test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Test.xib; sourceTree = "<group>"; };
-		8408E0552036F01A004ABC0A /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		8408E0552036F01A004ABC0A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8408E0582036F5A5004ABC0A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		8408E05B2036FA36004ABC0A /* BookmarkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkSessionManager.swift; sourceTree = "<group>"; };
 		AFE951CA1B8A879DDAAF64B0 /* Pods-BookmarkMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		8408E0502036EBAF004ABC0A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8408E0552036F01A004ABC0A /* Test.swift */,
+				8408E0552036F01A004ABC0A /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -521,7 +521,7 @@
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
 				8408E0592036F5A5004ABC0A /* Utilities.swift in Sources */,
-				8408E0562036F01A004ABC0A /* Test.swift in Sources */,
+				8408E0562036F01A004ABC0A /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
