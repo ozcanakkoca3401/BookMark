@@ -15,13 +15,15 @@ class BookmarkSessionManager: NSObject {
     
     static let sharedInstance = BookmarkSessionManager()
     
+    let baseURL = "http://dcomm.etiya.com/Dev-CommerceBackend/"
+    
     //TODO :-
     /* Handle Time out request alamofire */
     
     
     func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void)
     {
-        Alamofire.request(strURL).responseJSON { (responseObject) -> Void in
+        Alamofire.request(baseURL + strURL).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
@@ -38,7 +40,7 @@ class BookmarkSessionManager: NSObject {
     }
     
     func requestPOSTURL(_ strURL : String, params : [String : AnyObject]?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
-        Alamofire.request(strURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (responseObject) -> Void in
+        Alamofire.request(baseURL + strURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)

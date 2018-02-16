@@ -11,7 +11,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
