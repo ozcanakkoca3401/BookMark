@@ -1,12 +1,10 @@
 //
 //  AppDelegate.swift
-//  bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile
+//  BookmarkMobile
 //
-//  Created by Özcan AKKOCA on 16.02.2018.
-//  Copyright © 2018 Özcan AKKOCA. All rights reserved.
+//  Created by Alaattin Bedir on 16.02.2018.
+//  Copyright © 2018 Nookmark. All rights reserved.
 //
-
-// test
 
 import UIKit
 

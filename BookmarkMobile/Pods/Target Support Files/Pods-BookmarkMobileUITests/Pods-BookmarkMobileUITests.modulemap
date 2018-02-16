@@ -1,0 +1,6 @@
+framework module Pods_BookmarkMobileUITests {
+  umbrella header "Pods-BookmarkMobileUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

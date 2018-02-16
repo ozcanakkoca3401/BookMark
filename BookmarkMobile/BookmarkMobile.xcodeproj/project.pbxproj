@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27CD341983EAA5C14A1A20AB /* Pods_BookmarkMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */; };
+		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
+		8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0222036D68F004ABC0A /* AppDelegate.swift */; };
+		8408E0252036D68F004ABC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0242036D68F004ABC0A /* ViewController.swift */; };
+		8408E0282036D68F004ABC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8408E0262036D68F004ABC0A /* Main.storyboard */; };
+		8408E02A2036D68F004ABC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8408E0292036D68F004ABC0A /* Assets.xcassets */; };
+		8408E02D2036D68F004ABC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8408E02B2036D68F004ABC0A /* LaunchScreen.storyboard */; };
+		8408E0382036D68F004ABC0A /* BookmarkMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0372036D68F004ABC0A /* BookmarkMobileTests.swift */; };
+		8408E0432036D68F004ABC0A /* BookmarkMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0422036D68F004ABC0A /* BookmarkMobileUITests.swift */; };
+		CE69C9A073B8DEBC6D3FC864 /* Pods_BookmarkMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05105D23C47C7788D93BDAF2 /* Pods_BookmarkMobileUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8408E0342036D68F004ABC0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8408E0172036D68F004ABC0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8408E01E2036D68F004ABC0A;
+			remoteInfo = BookmarkMobile;
+		};
+		8408E03F2036D68F004ABC0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8408E0172036D68F004ABC0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8408E01E2036D68F004ABC0A;
+			remoteInfo = BookmarkMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04EAEC40EDE44A7D20DF142F /* Pods-BookmarkMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileTests/Pods-BookmarkMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		05105D23C47C7788D93BDAF2 /* Pods_BookmarkMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.release.xcconfig"; sourceTree = "<group>"; };
+		44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		8408E01F2036D68F004ABC0A /* BookmarkMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookmarkMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8408E0222036D68F004ABC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8408E0242036D68F004ABC0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8408E0272036D68F004ABC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8408E0292036D68F004ABC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8408E02C2036D68F004ABC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8408E02E2036D68F004ABC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8408E0332036D68F004ABC0A /* BookmarkMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookmarkMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8408E0372036D68F004ABC0A /* BookmarkMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkMobileTests.swift; sourceTree = "<group>"; };
+		8408E0392036D68F004ABC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8408E03E2036D68F004ABC0A /* BookmarkMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookmarkMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8408E0422036D68F004ABC0A /* BookmarkMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkMobileUITests.swift; sourceTree = "<group>"; };
+		8408E0442036D68F004ABC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE951CA1B8A879DDAAF64B0 /* Pods-BookmarkMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE513DAE58555C52CDA16578 /* Pods-BookmarkMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileTests/Pods-BookmarkMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8408E01C2036D68F004ABC0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27CD341983EAA5C14A1A20AB /* Pods_BookmarkMobile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8408E0302036D68F004ABC0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8408E03B2036D68F004ABC0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE69C9A073B8DEBC6D3FC864 /* Pods_BookmarkMobileUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		060C852977C01A48C6E0608C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */,
+				334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */,
+				04EAEC40EDE44A7D20DF142F /* Pods-BookmarkMobileTests.debug.xcconfig */,
+				DE513DAE58555C52CDA16578 /* Pods-BookmarkMobileTests.release.xcconfig */,
+				AFE951CA1B8A879DDAAF64B0 /* Pods-BookmarkMobileUITests.debug.xcconfig */,
+				44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5AC4212E732EA6459FD4B347 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */,
+				B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */,
+				05105D23C47C7788D93BDAF2 /* Pods_BookmarkMobileUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8408E0162036D68F004ABC0A = {
+			isa = PBXGroup;
+			children = (
+				8408E0212036D68F004ABC0A /* BookmarkMobile */,
+				8408E0362036D68F004ABC0A /* BookmarkMobileTests */,
+				8408E0412036D68F004ABC0A /* BookmarkMobileUITests */,
+				8408E0202036D68F004ABC0A /* Products */,
+				060C852977C01A48C6E0608C /* Pods */,
+				5AC4212E732EA6459FD4B347 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8408E0202036D68F004ABC0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8408E01F2036D68F004ABC0A /* BookmarkMobile.app */,
+				8408E0332036D68F004ABC0A /* BookmarkMobileTests.xctest */,
+				8408E03E2036D68F004ABC0A /* BookmarkMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8408E0212036D68F004ABC0A /* BookmarkMobile */ = {
+			isa = PBXGroup;
+			children = (
+				8408E0222036D68F004ABC0A /* AppDelegate.swift */,
+				8408E0242036D68F004ABC0A /* ViewController.swift */,
+				8408E0262036D68F004ABC0A /* Main.storyboard */,
+				8408E0292036D68F004ABC0A /* Assets.xcassets */,
+				8408E02B2036D68F004ABC0A /* LaunchScreen.storyboard */,
+				8408E02E2036D68F004ABC0A /* Info.plist */,
+			);
+			path = BookmarkMobile;
+			sourceTree = "<group>";
+		};
+		8408E0362036D68F004ABC0A /* BookmarkMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				8408E0372036D68F004ABC0A /* BookmarkMobileTests.swift */,
+				8408E0392036D68F004ABC0A /* Info.plist */,
+			);
+			path = BookmarkMobileTests;
+			sourceTree = "<group>";
+		};
+		8408E0412036D68F004ABC0A /* BookmarkMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8408E0422036D68F004ABC0A /* BookmarkMobileUITests.swift */,
+				8408E0442036D68F004ABC0A /* Info.plist */,
+			);
+			path = BookmarkMobileUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8408E01E2036D68F004ABC0A /* BookmarkMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8408E0472036D68F004ABC0A /* Build configuration list for PBXNativeTarget "BookmarkMobile" */;
+			buildPhases = (
+				73D6617139E6FE066338721D /* [CP] Check Pods Manifest.lock */,
+				8408E01B2036D68F004ABC0A /* Sources */,
+				8408E01C2036D68F004ABC0A /* Frameworks */,
+				8408E01D2036D68F004ABC0A /* Resources */,
+				9122F9E2C8A4B30E269A7E0F /* [CP] Embed Pods Frameworks */,
+				5E79B95D325854636B94C24D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BookmarkMobile;
+			productName = BookmarkMobile;
+			productReference = 8408E01F2036D68F004ABC0A /* BookmarkMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8408E0322036D68F004ABC0A /* BookmarkMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8408E04A2036D68F004ABC0A /* Build configuration list for PBXNativeTarget "BookmarkMobileTests" */;
+			buildPhases = (
+				D0D44F90384C2A4BD96CFAEA /* [CP] Check Pods Manifest.lock */,
+				8408E02F2036D68F004ABC0A /* Sources */,
+				8408E0302036D68F004ABC0A /* Frameworks */,
+				8408E0312036D68F004ABC0A /* Resources */,
+				CE86893352ED81A81B1351B3 /* [CP] Embed Pods Frameworks */,
+				2AF1A30EAAD0579284D4D785 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8408E0352036D68F004ABC0A /* PBXTargetDependency */,
+			);
+			name = BookmarkMobileTests;
+			productName = BookmarkMobileTests;
+			productReference = 8408E0332036D68F004ABC0A /* BookmarkMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8408E03D2036D68F004ABC0A /* BookmarkMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8408E04D2036D68F004ABC0A /* Build configuration list for PBXNativeTarget "BookmarkMobileUITests" */;
+			buildPhases = (
+				034C7C1D9E2B6F3F2709026F /* [CP] Check Pods Manifest.lock */,
+				8408E03A2036D68F004ABC0A /* Sources */,
+				8408E03B2036D68F004ABC0A /* Frameworks */,
+				8408E03C2036D68F004ABC0A /* Resources */,
+				399342908CC6891E6752FDC7 /* [CP] Embed Pods Frameworks */,
+				16EE5F630188B4C3227E6982 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8408E0402036D68F004ABC0A /* PBXTargetDependency */,
+			);
+			name = BookmarkMobileUITests;
+			productName = BookmarkMobileUITests;
+			productReference = 8408E03E2036D68F004ABC0A /* BookmarkMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8408E0172036D68F004ABC0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Nookmark;
+				TargetAttributes = {
+					8408E01E2036D68F004ABC0A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8408E0322036D68F004ABC0A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8408E01E2036D68F004ABC0A;
+					};
+					8408E03D2036D68F004ABC0A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8408E01E2036D68F004ABC0A;
+					};
+				};
+			};
+			buildConfigurationList = 8408E01A2036D68F004ABC0A /* Build configuration list for PBXProject "BookmarkMobile" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8408E0162036D68F004ABC0A;
+			productRefGroup = 8408E0202036D68F004ABC0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8408E01E2036D68F004ABC0A /* BookmarkMobile */,
+				8408E0322036D68F004ABC0A /* BookmarkMobileTests */,
+				8408E03D2036D68F004ABC0A /* BookmarkMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8408E01D2036D68F004ABC0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8408E02D2036D68F004ABC0A /* LaunchScreen.storyboard in Resources */,
+				8408E02A2036D68F004ABC0A /* Assets.xcassets in Resources */,
+				8408E0282036D68F004ABC0A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8408E0312036D68F004ABC0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8408E03C2036D68F004ABC0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		034C7C1D9E2B6F3F2709026F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookmarkMobileUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16EE5F630188B4C3227E6982 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AF1A30EAAD0579284D4D785 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmarkMobileTests/Pods-BookmarkMobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		399342908CC6891E6752FDC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E79B95D325854636B94C24D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73D6617139E6FE066338721D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookmarkMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9122F9E2C8A4B30E269A7E0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE86893352ED81A81B1351B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmarkMobileTests/Pods-BookmarkMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0D44F90384C2A4BD96CFAEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookmarkMobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8408E01B2036D68F004ABC0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
+				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8408E02F2036D68F004ABC0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8408E0382036D68F004ABC0A /* BookmarkMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8408E03A2036D68F004ABC0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8408E0432036D68F004ABC0A /* BookmarkMobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8408E0352036D68F004ABC0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8408E01E2036D68F004ABC0A /* BookmarkMobile */;
+			targetProxy = 8408E0342036D68F004ABC0A /* PBXContainerItemProxy */;
+		};
+		8408E0402036D68F004ABC0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8408E01E2036D68F004ABC0A /* BookmarkMobile */;
+			targetProxy = 8408E03F2036D68F004ABC0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8408E0262036D68F004ABC0A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8408E0272036D68F004ABC0A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8408E02B2036D68F004ABC0A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8408E02C2036D68F004ABC0A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8408E0452036D68F004ABC0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8408E0462036D68F004ABC0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8408E0482036D68F004ABC0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KHRD8446CX;
+				INFOPLIST_FILE = BookmarkMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8408E0492036D68F004ABC0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KHRD8446CX;
+				INFOPLIST_FILE = BookmarkMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8408E04B2036D68F004ABC0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04EAEC40EDE44A7D20DF142F /* Pods-BookmarkMobileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KHRD8446CX;
+				INFOPLIST_FILE = BookmarkMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookmarkMobile.app/BookmarkMobile";
+			};
+			name = Debug;
+		};
+		8408E04C2036D68F004ABC0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE513DAE58555C52CDA16578 /* Pods-BookmarkMobileTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KHRD8446CX;
+				INFOPLIST_FILE = BookmarkMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookmarkMobile.app/BookmarkMobile";
+			};
+			name = Release;
+		};
+		8408E04E2036D68F004ABC0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFE951CA1B8A879DDAAF64B0 /* Pods-BookmarkMobileUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KHRD8446CX;
+				INFOPLIST_FILE = BookmarkMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BookmarkMobile;
+			};
+			name = Debug;
+		};
+		8408E04F2036D68F004ABC0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KHRD8446CX;
+				INFOPLIST_FILE = BookmarkMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BookmarkMobile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8408E01A2036D68F004ABC0A /* Build configuration list for PBXProject "BookmarkMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8408E0452036D68F004ABC0A /* Debug */,
+				8408E0462036D68F004ABC0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8408E0472036D68F004ABC0A /* Build configuration list for PBXNativeTarget "BookmarkMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8408E0482036D68F004ABC0A /* Debug */,
+				8408E0492036D68F004ABC0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8408E04A2036D68F004ABC0A /* Build configuration list for PBXNativeTarget "BookmarkMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8408E04B2036D68F004ABC0A /* Debug */,
+				8408E04C2036D68F004ABC0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8408E04D2036D68F004ABC0A /* Build configuration list for PBXNativeTarget "BookmarkMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8408E04E2036D68F004ABC0A /* Debug */,
+				8408E04F2036D68F004ABC0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8408E0172036D68F004ABC0A /* Project object */;
+}
