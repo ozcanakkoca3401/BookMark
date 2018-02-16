@@ -1,0 +1,8 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+
+FOUNDATION_EXPORT double Pods_bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileVersionString[];
+
