@@ -9,6 +9,7 @@ target 'BookmarkMobile' do
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON'
   pod 'ObjectMapper', '~> 3.0.0'
+  pod 'SVProgressHUD'
   
   target 'BookmarkMobileTests' do
     inherit! :search_paths
