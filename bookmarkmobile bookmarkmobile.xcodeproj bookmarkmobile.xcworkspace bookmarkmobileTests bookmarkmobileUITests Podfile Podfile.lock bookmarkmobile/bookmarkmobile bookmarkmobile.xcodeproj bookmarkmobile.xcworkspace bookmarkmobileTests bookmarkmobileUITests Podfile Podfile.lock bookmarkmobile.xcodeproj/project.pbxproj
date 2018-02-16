@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		695BCE4C2036D31B00DCBB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695BCE4B2036D31B00DCBB1F /* AppDelegate.swift */; };
+		695BCE4E2036D31B00DCBB1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695BCE4D2036D31B00DCBB1F /* ViewController.swift */; };
+		695BCE512036D31B00DCBB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695BCE4F2036D31B00DCBB1F /* Main.storyboard */; };
+		695BCE532036D31B00DCBB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695BCE522036D31B00DCBB1F /* Assets.xcassets */; };
+		695BCE562036D31B00DCBB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695BCE542036D31B00DCBB1F /* LaunchScreen.storyboard */; };
+		695BCE612036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695BCE602036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileTests.swift */; };
+		695BCE6C2036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695BCE6B2036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		695BCE5D2036D31B00DCBB1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 695BCE402036D31B00DCBB1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 695BCE472036D31B00DCBB1F;
+			remoteInfo = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+		};
+		695BCE682036D31B00DCBB1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 695BCE402036D31B00DCBB1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 695BCE472036D31B00DCBB1F;
+			remoteInfo = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		695BCE482036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		695BCE4B2036D31B00DCBB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		695BCE4D2036D31B00DCBB1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		695BCE502036D31B00DCBB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		695BCE522036D31B00DCBB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		695BCE552036D31B00DCBB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		695BCE572036D31B00DCBB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		695BCE5C2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		695BCE602036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileTests.swift; sourceTree = "<group>"; };
+		695BCE622036D31B00DCBB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		695BCE672036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		695BCE6B2036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileUITests.swift; sourceTree = "<group>"; };
+		695BCE6D2036D31B00DCBB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		695BCE452036D31B00DCBB1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		695BCE592036D31B00DCBB1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		695BCE642036D31B00DCBB1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		695BCE3F2036D31B00DCBB1F = {
+			isa = PBXGroup;
+			children = (
+				695BCE4A2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile */,
+				695BCE5F2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests */,
+				695BCE6A2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests */,
+				695BCE492036D31B00DCBB1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		695BCE492036D31B00DCBB1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				695BCE482036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile.app */,
+				695BCE5C2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests.xctest */,
+				695BCE672036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		695BCE4A2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile */ = {
+			isa = PBXGroup;
+			children = (
+				695BCE4B2036D31B00DCBB1F /* AppDelegate.swift */,
+				695BCE4D2036D31B00DCBB1F /* ViewController.swift */,
+				695BCE4F2036D31B00DCBB1F /* Main.storyboard */,
+				695BCE522036D31B00DCBB1F /* Assets.xcassets */,
+				695BCE542036D31B00DCBB1F /* LaunchScreen.storyboard */,
+				695BCE572036D31B00DCBB1F /* Info.plist */,
+			);
+			path = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+			sourceTree = "<group>";
+		};
+		695BCE5F2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				695BCE602036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileTests.swift */,
+				695BCE622036D31B00DCBB1F /* Info.plist */,
+			);
+			path = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests";
+			sourceTree = "<group>";
+		};
+		695BCE6A2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				695BCE6B2036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileUITests.swift */,
+				695BCE6D2036D31B00DCBB1F /* Info.plist */,
+			);
+			path = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		695BCE472036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 695BCE702036D31B00DCBB1F /* Build configuration list for PBXNativeTarget "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile" */;
+			buildPhases = (
+				695BCE442036D31B00DCBB1F /* Sources */,
+				695BCE452036D31B00DCBB1F /* Frameworks */,
+				695BCE462036D31B00DCBB1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+			productName = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+			productReference = 695BCE482036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		695BCE5B2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 695BCE732036D31B00DCBB1F /* Build configuration list for PBXNativeTarget "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests" */;
+			buildPhases = (
+				695BCE582036D31B00DCBB1F /* Sources */,
+				695BCE592036D31B00DCBB1F /* Frameworks */,
+				695BCE5A2036D31B00DCBB1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				695BCE5E2036D31B00DCBB1F /* PBXTargetDependency */,
+			);
+			name = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests";
+			productName = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests";
+			productReference = 695BCE5C2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		695BCE662036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 695BCE762036D31B00DCBB1F /* Build configuration list for PBXNativeTarget "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests" */;
+			buildPhases = (
+				695BCE632036D31B00DCBB1F /* Sources */,
+				695BCE642036D31B00DCBB1F /* Frameworks */,
+				695BCE652036D31B00DCBB1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				695BCE692036D31B00DCBB1F /* PBXTargetDependency */,
+			);
+			name = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests";
+			productName = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests";
+			productReference = 695BCE672036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		695BCE402036D31B00DCBB1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Özcan AKKOCA";
+				TargetAttributes = {
+					695BCE472036D31B00DCBB1F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					695BCE5B2036D31B00DCBB1F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 695BCE472036D31B00DCBB1F;
+					};
+					695BCE662036D31B00DCBB1F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 695BCE472036D31B00DCBB1F;
+					};
+				};
+			};
+			buildConfigurationList = 695BCE432036D31B00DCBB1F /* Build configuration list for PBXProject "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 695BCE3F2036D31B00DCBB1F;
+			productRefGroup = 695BCE492036D31B00DCBB1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				695BCE472036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile */,
+				695BCE5B2036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests */,
+				695BCE662036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		695BCE462036D31B00DCBB1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				695BCE562036D31B00DCBB1F /* LaunchScreen.storyboard in Resources */,
+				695BCE532036D31B00DCBB1F /* Assets.xcassets in Resources */,
+				695BCE512036D31B00DCBB1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		695BCE5A2036D31B00DCBB1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		695BCE652036D31B00DCBB1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		695BCE442036D31B00DCBB1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				695BCE4E2036D31B00DCBB1F /* ViewController.swift in Sources */,
+				695BCE4C2036D31B00DCBB1F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		695BCE582036D31B00DCBB1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				695BCE612036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		695BCE632036D31B00DCBB1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				695BCE6C2036D31B00DCBB1F /* bookmarkmobile_bookmarkmobile_xcodeproj_bookmarkmobile_xcworkspace_bookmarkmobileTests_bookmarkmobileUITests_Podfile_Podfile_lock_bookmarkmobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		695BCE5E2036D31B00DCBB1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 695BCE472036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile */;
+			targetProxy = 695BCE5D2036D31B00DCBB1F /* PBXContainerItemProxy */;
+		};
+		695BCE692036D31B00DCBB1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 695BCE472036D31B00DCBB1F /* bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile */;
+			targetProxy = 695BCE682036D31B00DCBB1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		695BCE4F2036D31B00DCBB1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				695BCE502036D31B00DCBB1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		695BCE542036D31B00DCBB1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				695BCE552036D31B00DCBB1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		695BCE6E2036D31B00DCBB1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		695BCE6F2036D31B00DCBB1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		695BCE712036D31B00DCBB1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MHJ8EWL6NT;
+				INFOPLIST_FILE = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bookmark.bookmarkmobile-bookmarkmobile-xcodeproj-bookmarkmobile-xcworkspace-bookmarkmobileTests-bookmarkmobileUITests-Podfile-Podfile-lock-bookmarkmobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		695BCE722036D31B00DCBB1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MHJ8EWL6NT;
+				INFOPLIST_FILE = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bookmark.bookmarkmobile-bookmarkmobile-xcodeproj-bookmarkmobile-xcworkspace-bookmarkmobileTests-bookmarkmobileUITests-Podfile-Podfile-lock-bookmarkmobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		695BCE742036D31B00DCBB1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MHJ8EWL6NT;
+				INFOPLIST_FILE = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bookmark.bookmarkmobile-bookmarkmobile-xcodeproj-bookmarkmobile-xcworkspace-bookmarkmobileTests-bookmarkmobileUITests-Podfile-Podfile-lock-bookmarkmobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile.app/bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+			};
+			name = Debug;
+		};
+		695BCE752036D31B00DCBB1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MHJ8EWL6NT;
+				INFOPLIST_FILE = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bookmark.bookmarkmobile-bookmarkmobile-xcodeproj-bookmarkmobile-xcworkspace-bookmarkmobileTests-bookmarkmobileUITests-Podfile-Podfile-lock-bookmarkmobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile.app/bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+			};
+			name = Release;
+		};
+		695BCE772036D31B00DCBB1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MHJ8EWL6NT;
+				INFOPLIST_FILE = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bookmark.bookmarkmobile-bookmarkmobile-xcodeproj-bookmarkmobile-xcworkspace-bookmarkmobileTests-bookmarkmobileUITests-Podfile-Podfile-lock-bookmarkmobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+			};
+			name = Debug;
+		};
+		695BCE782036D31B00DCBB1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MHJ8EWL6NT;
+				INFOPLIST_FILE = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bookmark.bookmarkmobile-bookmarkmobile-xcodeproj-bookmarkmobile-xcworkspace-bookmarkmobileTests-bookmarkmobileUITests-Podfile-Podfile-lock-bookmarkmobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		695BCE432036D31B00DCBB1F /* Build configuration list for PBXProject "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				695BCE6E2036D31B00DCBB1F /* Debug */,
+				695BCE6F2036D31B00DCBB1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		695BCE702036D31B00DCBB1F /* Build configuration list for PBXNativeTarget "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				695BCE712036D31B00DCBB1F /* Debug */,
+				695BCE722036D31B00DCBB1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		695BCE732036D31B00DCBB1F /* Build configuration list for PBXNativeTarget "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				695BCE742036D31B00DCBB1F /* Debug */,
+				695BCE752036D31B00DCBB1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		695BCE762036D31B00DCBB1F /* Build configuration list for PBXNativeTarget "bookmarkmobile bookmarkmobile.xcodeproj bookmarkmobile.xcworkspace bookmarkmobileTests bookmarkmobileUITests Podfile Podfile.lock bookmarkmobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				695BCE772036D31B00DCBB1F /* Debug */,
+				695BCE782036D31B00DCBB1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 695BCE402036D31B00DCBB1F /* Project object */;
+}
