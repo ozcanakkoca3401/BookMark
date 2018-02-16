@@ -16,6 +16,14 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // internet kontrolü
+        
+        guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
+            print("internet yok")
+            
+            return
+        }
+        
         Message.getMessages(success: { (json) in
             print(json)
         }) { (error) in
