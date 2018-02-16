@@ -30,6 +30,14 @@ class ViewController: BaseViewController {
             print(error)
         }
         
+        let label  = UILabel(frame:CGRect(x:0, y:280, width:self.view.frame.width, height:20))
+        label.text = NSLocalizedString("Deneme", comment: "")
+        label.textAlignment = .center
+        
+        label.font = UIFont(name: "Avenir-Light", size: 15.0)
+        label.backgroundColor = .gray
+        self.view.addSubview(label)
+        
     }
 
     override func didReceiveMemoryWarning() {

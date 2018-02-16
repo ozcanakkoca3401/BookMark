@@ -18,7 +18,7 @@ public class Utilities {
         return Singleton.instance
     }
     
-    let manager = Utilities()
+//    let manager = Utilities()
     
     init() {
     }
