@@ -6,7 +6,10 @@ target 'BookmarkMobile' do
   use_frameworks!
 
   # Pods for BookmarkMobile
-
+  pod 'Alamofire', '~> 4.5'
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper', '~> 3.0.0'
+  
   target 'BookmarkMobileTests' do
     inherit! :search_paths
     # Pods for testing

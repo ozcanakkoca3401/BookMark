@@ -137,6 +137,9 @@
 		8408E0212036D68F004ABC0A /* BookmarkMobile */ = {
 			isa = PBXGroup;
 			children = (
+				8408E0522036EBC5004ABC0A /* Controllers */,
+				8408E0512036EBBE004ABC0A /* Views */,
+				8408E0502036EBAF004ABC0A /* Models */,
 				8408E0222036D68F004ABC0A /* AppDelegate.swift */,
 				8408E0242036D68F004ABC0A /* ViewController.swift */,
 				8408E0262036D68F004ABC0A /* Main.storyboard */,
@@ -163,6 +166,27 @@
 				8408E0442036D68F004ABC0A /* Info.plist */,
 			);
 			path = BookmarkMobileUITests;
+			sourceTree = "<group>";
+		};
+		8408E0502036EBAF004ABC0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8408E0512036EBBE004ABC0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8408E0522036EBC5004ABC0A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
