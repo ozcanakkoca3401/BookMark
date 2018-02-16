@@ -11,10 +11,17 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NetworkConnectivityChecking {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // internet kontrolü
+        guard isNetworkConnectivityAvailable() else {
+            print("internet yok")
+            
+            return
+        }
         
         Message.getMessages(success: { (json) in
             print(json)
