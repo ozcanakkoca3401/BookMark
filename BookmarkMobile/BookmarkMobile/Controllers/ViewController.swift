@@ -18,14 +18,14 @@ class ViewController: BaseViewController {
         
         // internet kontrolü
         
-        guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            print("internet yok")
-            
-            return
-        }
+//        guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
+//            print("internet yok")
+//
+//            return
+//        }
         
-        Message.getMessages(success: { (json) in
-            print(json)
+        Message.getMessages(success: { (messages) in
+            print(messages)
         }) { (error) in
             print(error)
         }

@@ -9,7 +9,7 @@
 import Foundation
 import SystemConfiguration
 
-public class Utilities {
+public final class Utilities {
     
     public class var sharedInstance: Utilities {
         struct Singleton {
@@ -18,9 +18,7 @@ public class Utilities {
         return Singleton.instance
     }
     
-    let manager = Utilities()
-    
-    init() {
+    private init() {
     }
     
     func isNetworkConnectivityAvailable() -> Bool {

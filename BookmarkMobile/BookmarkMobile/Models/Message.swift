@@ -43,18 +43,39 @@ extension Message {
     
     // Get messages from service
 
-    static func getMessages(success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void) -> Void {
-        let dict = [String : AnyObject]()
+    static func getMessages(success:@escaping (Array<Message>) -> Void, failure:@escaping (String) -> Void) -> Void{
         
-        BookmarkSessionManager.sharedInstance.requestPOSTURL("http://", params: dict as! [String : AnyObject], headers: nil, success: { (json) in
-            // success code
-            success(json)
-            print(json)
-        }, failure: { (error) in
-            //error code
-            failure(error)
-            print(error)
+        BookmarkSessionManager.sharedInstance.requestGETURL("jsonBlob/61d68d54-d93e-11e7-a24a-934385df7024", success: { (responseJSON) in
+            
+            // Convert to json
+            let json = JSON(responseJSON)
+            
+            // Get json array  from data
+            let array = json["data"].arrayObject
+            
+            // Map json array to Array<Message> object
+            guard let messages:[Message] = Mapper<Message>().mapArray(JSONObject: array) else {
+                failure("Error mapping response")
+                return
+            }
+            
+            // Send to array to calling controllers
+            success(messages)
+            
+        },failure: { (error) in
+            failure(error as! String)
         })
+        
+        
+//        BookmarkSessionManager.sharedInstance.requestPOSTURL("http://", params: dict as! [String : AnyObject], headers: nil, success: { (json) in
+//            // success code
+//            success(json)
+//            print(json)
+//        }, failure: { (error) in
+//            //error code
+//            failure(error)
+//            print(error)
+//        })
         
         
     }

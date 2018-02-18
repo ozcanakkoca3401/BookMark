@@ -14,21 +14,36 @@ import SwiftyJSON
 class BookmarkSessionManager: NSObject {
     
     static let sharedInstance = BookmarkSessionManager()
+    private var sessionManager: SessionManager
+    let baseURL = "https://jsonblob.com/api/"
+//    let baseURL = "http://dcomm.etiya.com/Dev-CommerceBackend/"
     
-    let baseURL = "http://dcomm.etiya.com/Dev-CommerceBackend/"
-    
-    //TODO :-
-    /* Handle Time out request alamofire */
-    
+    private override init() {
+        // Create custom manager
+        let configuration = URLSessionConfiguration.default
+        var headers = Alamofire.SessionManager.defaultHTTPHeaders
+        headers["Clien-Version"] = "1.0"
+        configuration.httpAdditionalHeaders = headers
+        let manager = Alamofire.SessionManager(
+            configuration: URLSessionConfiguration.default,
+            serverTrustPolicyManager: CustomServerTrustPoliceManager()
+        )
+        
+        self.sessionManager = manager
+    }
     
     func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void)
     {
-        Alamofire.request(baseURL + strURL).responseJSON { (responseObject) -> Void in
+        
+        guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
+            print("internet yok")
+            return
+        }
+
+        self.sessionManager.request(baseURL + strURL).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
-                //let title = resJson["title"].string
-                //print(title!)
                 success(resJson)
             }
             
@@ -40,7 +55,7 @@ class BookmarkSessionManager: NSObject {
     }
     
     func requestPOSTURL(_ strURL : String, params : [String : AnyObject]?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
-        Alamofire.request(baseURL + strURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (responseObject) -> Void in
+        self.sessionManager.request(baseURL + strURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
@@ -51,5 +66,14 @@ class BookmarkSessionManager: NSObject {
                 failure(error)
             }
         }
+    }
+}
+
+class CustomServerTrustPoliceManager : ServerTrustPolicyManager {
+    override func serverTrustPolicy(forHost host: String) -> ServerTrustPolicy? {
+        return .disableEvaluation
+    }
+    public init() {
+        super.init(policies: [:])
     }
 }
