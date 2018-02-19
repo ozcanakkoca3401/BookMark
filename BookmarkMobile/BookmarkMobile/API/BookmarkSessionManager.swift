@@ -55,6 +55,12 @@ class BookmarkSessionManager: NSObject {
     }
     
     func requestPOSTURL(_ strURL : String, params : [String : AnyObject]?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
+        
+        guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
+            print("internet yok")
+            return
+        }
+        
         self.sessionManager.request(baseURL + strURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
