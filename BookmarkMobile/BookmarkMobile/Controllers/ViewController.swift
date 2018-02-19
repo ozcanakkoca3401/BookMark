@@ -21,7 +21,9 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        memorizationView.frame = G
+        let button = RoundButton()
+//        button.bor
+//        memorizationView.frame = G
         view.addSubview(memorizationView)
         
         Message.getMessages(success: { (messages) in
