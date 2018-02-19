@@ -40,6 +40,9 @@ class ViewController: BaseViewController {
         label.backgroundColor = .gray
         self.view.addSubview(label)
         
+        let myView = RoundView(frame: CGRect(x: 20, y: 100, width: 300, height: 100))
+        myView.borderColor = UIColor.purple
+        self.view.addSubview(myView)
         
         
     }
