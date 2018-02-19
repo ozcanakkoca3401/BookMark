@@ -56,8 +56,8 @@ class MemorizationView: UIView {
         return imageView
     }()
     
-    var miniSoundButton: UIButton = {
-        let button = UIButton(type: .system)
+    var miniSoundButton: RoundButton = {
+        let button = RoundButton(type: .system)
         button.setTitle("Button", for: .normal)
         button.tintColor = .blue
         button.backgroundColor = .red
