@@ -13,8 +13,16 @@ import SwiftyJSON
 
 class ViewController: BaseViewController {
 
+    var memorizationView: MemorizationView = {
+        let view = MemorizationView()
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        memorizationView.frame = G
+        view.addSubview(memorizationView)
         
         Message.getMessages(success: { (messages) in
             print(messages)
@@ -29,6 +37,8 @@ class ViewController: BaseViewController {
         label.font = UIFont(name: "Avenir-Light", size: 15.0)
         label.backgroundColor = .gray
         self.view.addSubview(label)
+        
+        
         
     }
 

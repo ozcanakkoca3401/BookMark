@@ -13,6 +13,7 @@
 		4C7EECB4203722BC006C8805 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7EECB2203722BC006C8805 /* Localizable.strings */; };
 		69017B7C20370FC00046B009 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7B20370FC00046B009 /* StringExtension.swift */; };
 		69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */; };
+		69316E74203AC01B00AC2F10 /* MemorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69316E73203AC01B00AC2F10 /* MemorizationView.swift */; };
 		8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0222036D68F004ABC0A /* AppDelegate.swift */; };
 		8408E0252036D68F004ABC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0242036D68F004ABC0A /* ViewController.swift */; };
 		8408E0282036D68F004ABC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8408E0262036D68F004ABC0A /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		4C7EECB3203722BC006C8805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		69017B7B20370FC00046B009 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNetworkConnectivityAvailable.swift; sourceTree = "<group>"; };
+		69316E73203AC01B00AC2F10 /* MemorizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorizationView.swift; sourceTree = "<group>"; };
 		8408E01F2036D68F004ABC0A /* BookmarkMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookmarkMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8408E0222036D68F004ABC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8408E0242036D68F004ABC0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				8408E060203AC704004ABC0A /* Components */,
 				8408E05F203AC6F2004ABC0A /* Controls */,
 				8408E0532036EFFF004ABC0A /* Test.xib */,
+				69316E73203AC01B00AC2F10 /* MemorizationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
 				8408E0592036F5A5004ABC0A /* Utilities.swift in Sources */,
+				69316E74203AC01B00AC2F10 /* MemorizationView.swift in Sources */,
 				8408E0562036F01A004ABC0A /* Message.swift in Sources */,
 				8408E05E203710AE004ABC0A /* BaseViewController.swift in Sources */,
 			);
