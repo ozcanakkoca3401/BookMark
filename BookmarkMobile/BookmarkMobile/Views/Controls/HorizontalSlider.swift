@@ -19,8 +19,8 @@ import UIKit
         minimumValue = minValue
         maximumValue = maxValue
         value = initialvalue
-        self.setMinimumTrackImage(minTrackImage, for: .normal)
-        self.setMaximumTrackImage(maxTrackImage, for: .normal)
+//        self.setMinimumTrackImage(minTrackImage, for: .normal)
+//        self.setMaximumTrackImage(maxTrackImage, for: .normal)
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -57,15 +57,15 @@ import UIKit
         }
     }
     
-    @IBInspectable var minTrackImage: UIImage = UIImage(named: "")! {
-        didSet{
-            self.setMinimumTrackImage(minTrackImage, for: .normal)
-        }
-    }
-    
-    @IBInspectable var maxTrackImage: UIImage = UIImage(named: "")! {
-        didSet{
-            self.setMaximumTrackImage(maxTrackImage, for: .normal)
-        }
-    }
+//    @IBInspectable var minTrackImage: UIImage = UIImage(named: "")! {
+//        didSet{
+//            self.setMinimumTrackImage(minTrackImage, for: .normal)
+//        }
+//    }
+//
+//    @IBInspectable var maxTrackImage: UIImage = UIImage(named: "")! {
+//        didSet{
+//            self.setMaximumTrackImage(maxTrackImage, for: .normal)
+//        }
+//    }
 }
