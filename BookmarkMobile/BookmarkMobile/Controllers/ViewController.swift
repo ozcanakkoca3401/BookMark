@@ -26,6 +26,10 @@ class ViewController: BaseViewController {
 //        memorizationView.frame = G
         view.addSubview(memorizationView)
         
+        let slider = HorizontalSlider(frame: CGRect(x: 40, y: 40, width: 200, height: 20))
+        slider.maxTrackImage = UIImage(named: "")!
+        view.addSubview(slider)
+        
         Message.getMessages(success: { (messages) in
             print(messages)
         }) { (error) in
