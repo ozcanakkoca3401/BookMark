@@ -252,6 +252,9 @@
 		8408E0512036EBBE004ABC0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8408E061203AC70F004ABC0A /* Cells */,
+				8408E060203AC704004ABC0A /* Components */,
+				8408E05F203AC6F2004ABC0A /* Controls */,
 				8408E0532036EFFF004ABC0A /* Test.xib */,
 			);
 			path = Views;
@@ -280,6 +283,27 @@
 				8408E05B2036FA36004ABC0A /* BookmarkSessionManager.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		8408E05F203AC6F2004ABC0A /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		8408E060203AC704004ABC0A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8408E061203AC70F004ABC0A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
