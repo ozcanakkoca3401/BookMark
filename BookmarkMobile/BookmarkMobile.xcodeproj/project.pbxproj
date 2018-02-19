@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		27CD341983EAA5C14A1A20AB /* Pods_BookmarkMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */; };
 		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
-		4526FAC7203AF40600E16851 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526FAC6203AF40600E16851 /* RoundView.swift */; };
 		4C7EECB1203722AA006C8805 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7EECAF203722AA006C8805 /* Localizable.strings */; };
 		4C7EECB4203722BC006C8805 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7EECB2203722BC006C8805 /* Localizable.strings */; };
+		4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */; };
 		69017B7C20370FC00046B009 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7B20370FC00046B009 /* StringExtension.swift */; };
 		69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */; };
 		69316E74203AC01B00AC2F10 /* MemorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69316E73203AC01B00AC2F10 /* MemorizationView.swift */; };
@@ -54,12 +54,12 @@
 		295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.release.xcconfig"; sourceTree = "<group>"; };
 		44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4526FAC6203AF40600E16851 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4C7EECAB2037208D006C8805 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		4C7EECAC2037208D006C8805 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4C7EECB0203722AA006C8805 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = Localizable.strings; sourceTree = "<group>"; };
 		4C7EECB3203722BC006C8805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSlider.swift; sourceTree = "<group>"; };
 		69017B7B20370FC00046B009 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNetworkConnectivityAvailable.swift; sourceTree = "<group>"; };
 		69316E73203AC01B00AC2F10 /* MemorizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorizationView.swift; sourceTree = "<group>"; };
@@ -296,7 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				8408E064203AD05F004ABC0A /* RoundButton.swift */,
-				4526FAC6203AF40600E16851 /* RoundView.swift */,
+				4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -473,7 +473,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		16EE5F630188B4C3227E6982 /* [CP] Copy Pods Resources */ = {
@@ -551,7 +551,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9122F9E2C8A4B30E269A7E0F /* [CP] Embed Pods Frameworks */ = {
@@ -564,7 +564,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -572,7 +571,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,7 +608,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -620,8 +618,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */,
 				8408E05C2036FA36004ABC0A /* BookmarkSessionManager.swift in Sources */,
-				4526FAC7203AF40600E16851 /* RoundView.swift in Sources */,
 				69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */,
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
