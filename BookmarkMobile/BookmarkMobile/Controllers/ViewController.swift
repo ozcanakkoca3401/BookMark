@@ -43,9 +43,26 @@ class ViewController: BaseViewController {
         label.backgroundColor = .gray
         self.view.addSubview(label)
         
-        let myView = RoundView(frame: CGRect(x: 20, y: 100, width: 300, height: 100))
-        myView.borderColor = UIColor.purple
-        self.view.addSubview(myView)
+//        let myView = RoundView(frame: CGRect(x: 20, y: 100, width: 300, height: 100))
+//        myView.borderColor = UIColor.purple
+//        self.view.addSubview(myView)
+        
+        guard let image = UIImage(named: "EditIcon")?.withRenderingMode(.alwaysTemplate) else
+        {
+            return
+        }
+        
+        let alignedButton: UIButton = AlignedImageButton(frame: .zero, image: image)
+        
+        alignedButton.setTitle("Button From Code", for: .normal)
+        // Button is Custom by default so need to set its title color for normal/highlighted
+        alignedButton.setTitleColor(button.tintColor, for: .normal)
+        alignedButton.setTitleColor(button.tintColor.withAlphaComponent(0.3), for: .highlighted)
+        // Set font and background color the same as storyboard button
+        alignedButton.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
+        alignedButton.backgroundColor = UIColor.lightText
+        
+        self.view.addSubview(alignedButton)
         
         
     }
