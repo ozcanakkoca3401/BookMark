@@ -12,6 +12,14 @@ import UIKit
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func setup() {
         thumbTintColor = UIColor.clear
         isUserInteractionEnabled = false
         minimumTrackTintColor = minTintColor
@@ -19,12 +27,8 @@ import UIKit
         minimumValue = minValue
         maximumValue = maxValue
         value = initialvalue
-//        self.setMinimumTrackImage(minTrackImage, for: .normal)
-//        self.setMaximumTrackImage(maxTrackImage, for: .normal)
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        //        self.setMinimumTrackImage(minTrackImage, for: .normal)
+        //        self.setMaximumTrackImage(maxTrackImage, for: .normal)
     }
     
     @IBInspectable var minTintColor: UIColor = UIColor.darkGray {
