@@ -23,7 +23,7 @@ import UIKit
     func initialize(){
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
-        layer.cornerRadius = 3
+        layer.cornerRadius = cornerRadius
         clipsToBounds = true
         backgroundColor = bgColor
     }

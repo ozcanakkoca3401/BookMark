@@ -18,12 +18,12 @@ protocol TouchableProtocol {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initialize()
+        self.initialize()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initialize()
+        self.initialize()
     }
     
     func initialize(){
@@ -59,6 +59,5 @@ protocol TouchableProtocol {
     
     override public func layoutSubviews() { // refresh durumunda...
        super.layoutSubviews()
-   
     }
 }
