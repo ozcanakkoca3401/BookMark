@@ -18,19 +18,30 @@ protocol TouchableProtocol {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.cornerRadius = cornerRadius
-        layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.cgColor
-        clipsToBounds = true
-       
+        self.initialize()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-//        fatalError("init(coder:) has not been implemented")
+        self.initialize()
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.gray {
+    func initialize(){
+        layer.cornerRadius = cornerRadius
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
+        clipsToBounds = true
+        
+        self.isUserInteractionEnabled = true
+        let gesturedRecognizer = UITapGestureRecognizer(target: self, action: #selector(RoundView.touchAction))
+        self.addGestureRecognizer(gesturedRecognizer)
+    }
+    
+    @objc func touchAction() {
+        delegate?.didTrigger()
+    }
+    
+    @IBInspectable var borderColor: UIColor = Styling.colorForCode(.themeGray) {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
@@ -48,14 +59,13 @@ protocol TouchableProtocol {
         }
     }
     
+    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeClear) {
+        didSet {
+            backgroundColor = bgColor
+        }
+    }
     
     override public func layoutSubviews() { // refresh durumunda...
        super.layoutSubviews()
-   
     }
-    
-//    @IBInspectable var backgroundColor: UIColor = UIColor.clear {
-//
-//    }
-
 }

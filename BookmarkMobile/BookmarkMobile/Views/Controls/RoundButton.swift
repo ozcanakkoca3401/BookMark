@@ -12,21 +12,23 @@ import UIKit
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initialize()
+        self.initialize()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initialize()
+        self.initialize()
     }
     
     func initialize(){
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
+        layer.cornerRadius = cornerRadius
+        clipsToBounds = true
         backgroundColor = bgColor
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.white {
+    @IBInspectable var borderColor: UIColor = Styling.colorForCode(.themeClear) {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
@@ -38,16 +40,22 @@ import UIKit
         }
     }
     
-    @IBInspectable var bgColor: UIColor = UIColor.clear {
+    @IBInspectable var cornerRadius: CGFloat = 3 {
+        didSet {
+           layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeClear) {
         didSet {
             backgroundColor = bgColor
         }
     }
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        layer.cornerRadius = 0.02 * bounds.size.width
-        clipsToBounds = true
-    }
+//    override public func layoutSubviews() {
+//        super.layoutSubviews()
+//        layer.cornerRadius = 0.02 * bounds.size.width
+//        clipsToBounds = true
+//    }
     
 }

@@ -8,41 +8,56 @@
 
 import UIKit
 
-class StepperButton: RoundView {
+protocol StepperProtocol {
+    func minus()
+    func plus()
+}
 
-    private var button:RoundButton!
+class StepperButton: RoundView {
+    
+    var stepperDelegate: StepperProtocol?
+
+    private var button1:RoundButton!
+    private var button2:RoundButton!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initialize()
+        setupStepperButton()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initialize()
+        self.initialize()
+        setupStepperButton()
     }
     
-    func initialize(){
-        super.borderColor = .clear
-        super.borderWidth = 0
-        super.backgroundColor = UIColor.clear
-        button = RoundButton()
-        test()
+    override func initialize() {
+        button1 = RoundButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
+        button2 = RoundButton(frame: CGRect(x: 40, y: 0, width: 35, height: 35))
+        button1.bgColor = Styling.colorForCode(.themeBlue)
+        button2.bgColor = Styling.colorForCode(.themeBlue)
+        button1.addTarget(self, action: #selector(StepperButton.minusT), for: .touchUpInside)
+        button2.addTarget(self, action: #selector(StepperButton.plusT), for: .touchUpInside)
     }
-    
-    func test(){
-        
-        button.frame = CGRect(x: 100, y: 100, width: 50, height: 50)
-        self.addSubview(button)
-        
-    }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
+    func setupStepperButton(){
+        
+//        button1.setImage(UIImage(named:""), for: .normal)
+//        button2.setImage(UIImage(named:""), for: .normal)
+        
+        button1.setTitle("-", for: .normal)
+        button2.setTitle("+", for: .normal)
+        
+        self.addSubview(button1)
+        self.addSubview(button2)
+    }
+    
+    @objc func minusT(){
+        stepperDelegate?.minus()
+    }
+    
+    @objc func plusT(){
+        stepperDelegate?.plus()
+    }
+    
 }
