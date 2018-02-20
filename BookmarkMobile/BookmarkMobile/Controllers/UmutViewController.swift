@@ -21,7 +21,14 @@ class UmutViewController: UIViewController {
         view.addSubview(a)
         
         let b = EBLabel(frame: CGRect(x: 20, y: 20, width: 100, height: 40))
-        b.EBtitle = "sdfsdfsd"
+        b.EBtext = "sdfsdfsd"
+        self.view.addSubview(b)
+        
+        let touchableViewLabel2 = EBLabel(frame: CGRect(x: 70, y: 18, width: 200, height: 20))
+        touchableViewLabel2.EBtext = NSLocalizedString("Bilge", comment: "")
+        view.addSubview(touchableViewLabel2)
+//        touchableViewLabel2.EBfont = Styling.font(weight: .bold, size: 15)
+//        touchableViewLabel2.textColor = Styling.colorForCode(.themeGray)
     }
 
     override func didReceiveMemoryWarning() {

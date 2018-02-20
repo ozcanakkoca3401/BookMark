@@ -26,14 +26,26 @@ class EBLabel: UILabel {
     }
     
     func initialize(){
-        self.text = EBtitle
+        text = EBtext
+        textColor = EBcolor
+        font = EBfont
     }
     
-    @IBInspectable var EBtitle: String = "" {
+    @IBInspectable var EBtext: String = "" {
         didSet{
-            
-            self.text = EBtitle
+            text = EBtext
         }
     }
-
+    
+    @IBInspectable var EBcolor: UIColor = Styling.colorForCode(.themeBlue) {
+        didSet{
+            textColor = EBcolor
+        }
+    }
+    
+    @IBInspectable var EBfont: UIFont = Styling.font(weight: .bold, size: 15) {
+        didSet{
+            font = EBfont
+        }
+    }
 }
