@@ -49,6 +49,7 @@ class ViewController: BaseViewController {
         
         let myView = RoundView(frame: CGRect(x: 20, y: 100, width: 260, height: 60))
         myView.borderColor = UIColor.gray
+        myView.backgroundColor = Styling.colorForCode(.themeLight)
         let viewLabel = UILabel(frame: CGRect(x: 70, y: 18, width: 200, height: 20))
         viewLabel.text = "500 MB Shareable Data"
         viewLabel.font = Styling.font(weight: .bold, size: 15)
@@ -60,6 +61,8 @@ class ViewController: BaseViewController {
         myView.addSubview(viewLabel)
         myView.addSubview(priceLabel)
         let changeButton = RoundButton(frame: CGRect(x: 200, y: 0, width: 60, height: myView.bounds.height))
+        changeButton.setTitle("Change", for: .normal)
+        changeButton.titleLabel?.font = Styling.font(weight: .regular, size: 13)
         changeButton.backgroundColor = Styling.colorForCode(.themeBlue)
         changeButton.cornerRadius = 5
         changeButton.borderColor = Styling.colorForCode(.themeBlue)
