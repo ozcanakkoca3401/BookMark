@@ -55,6 +55,12 @@ class ViewController: BaseViewController {
         priceLabel.textColor = Styling.colorForCode(.themeBlue)
         myView.addSubview(viewLabel)
         myView.addSubview(priceLabel)
+        let changeButton = RoundButton(frame: CGRect(x: 200, y: 5, width: 60, height: myView.bounds.height))
+        changeButton.backgroundColor = Styling.colorForCode(.themeBlue)
+        myView.addSubview(changeButton)
+        
+        
+        
         self.view.addSubview(myView)
         
         guard let image = UIImage(named: "EditIcon")?.withRenderingMode(.alwaysTemplate) else
@@ -73,11 +79,7 @@ class ViewController: BaseViewController {
         alignedButton.backgroundColor = UIColor.lightText
         
         self.view.addSubview(alignedButton)
-        
-        let bilge = UILabel(frame: CGRect(x: 20, y: 400, width: 300, height: 50))
-        bilge.text = "BİLGE"
-        bilge.textColor = Styling.colorForCode(.themeBlue)
-        self.view.addSubview(bilge)
+   
     }
 
     override func didReceiveMemoryWarning() {
