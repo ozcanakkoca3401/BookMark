@@ -10,6 +10,22 @@ import UIKit
 
 @IBDesignable public class RoundButton: UIButton {
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        initialize()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+    
+    func initialize(){
+        layer.borderColor = borderColor.cgColor
+        layer.borderWidth = borderWidth
+        backgroundColor = bgColor
+    }
+    
     @IBInspectable var borderColor: UIColor = UIColor.white {
         didSet {
             layer.borderColor = borderColor.cgColor
@@ -19,6 +35,12 @@ import UIKit
     @IBInspectable var borderWidth: CGFloat = 2.0 {
         didSet {
             layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var bgColor: UIColor = UIColor.clear {
+        didSet {
+            backgroundColor = bgColor
         }
     }
     

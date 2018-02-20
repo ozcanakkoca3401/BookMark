@@ -18,6 +18,10 @@ protocol TouchableProtocol {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        layer.cornerRadius = cornerRadius
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
+        clipsToBounds = true
        
     }
     
@@ -32,7 +36,7 @@ protocol TouchableProtocol {
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0.5 {
+    @IBInspectable var borderWidth: CGFloat = 0.8 {
         didSet {
             layer.borderWidth = borderWidth
         }
@@ -45,12 +49,9 @@ protocol TouchableProtocol {
     }
     
     
-    override public func layoutSubviews() {
+    override public func layoutSubviews() { // refresh durumunda...
        super.layoutSubviews()
-       layer.cornerRadius = cornerRadius
-       layer.borderWidth = borderWidth
-       layer.borderColor = borderColor.cgColor
-       clipsToBounds = true
+   
     }
     
 //    @IBInspectable var backgroundColor: UIColor = UIColor.clear {
