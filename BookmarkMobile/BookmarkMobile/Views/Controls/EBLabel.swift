@@ -10,12 +10,30 @@ import UIKit
 
 class EBLabel: UILabel {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    public init() {
+        super.init(frame: .zero)
+        self.initialize()
     }
-    */
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.initialize()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.initialize()
+    }
+    
+    func initialize(){
+        self.text = EBtitle
+    }
+    
+    @IBInspectable var EBtitle: String = "" {
+        didSet{
+            
+            self.text = EBtitle
+        }
+    }
 
 }

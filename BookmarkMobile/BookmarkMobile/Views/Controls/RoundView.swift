@@ -16,6 +16,11 @@ protocol TouchableProtocol {
     
     var delegate: TouchableProtocol?
     
+    public init() {
+        super.init(frame: .zero)
+        self.initialize()
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()

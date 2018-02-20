@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let rootView: AlaattinViewController = AlaattinViewController()
-//        let rootView: UmutViewController = UmutViewController()
+//        let rootView: AlaattinViewController = AlaattinViewController()
+        let rootView: UmutViewController = UmutViewController()
 //        let rootView: BilgeViewController = BilgeViewController()
 //        let rootView: EnesViewController = EnesViewController()
         

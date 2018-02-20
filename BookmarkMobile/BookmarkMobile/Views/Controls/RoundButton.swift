@@ -10,6 +10,11 @@ import UIKit
 
 @IBDesignable public class RoundButton: UIButton {
     
+    public init() {
+        super.init(frame: .zero)
+        self.initialize()
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()

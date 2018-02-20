@@ -10,6 +10,10 @@ import UIKit
 
 class AlignedImageButton: RoundButton {
     
+    public override init() {
+        super.init(frame: .zero)
+    }
+    
     // Convenience initializer must delegate across not up
     // So we override init and call super.init to facilitate that
     override init(frame: CGRect) {

@@ -20,6 +20,11 @@ class StepperButton: RoundView {
     private var button1:RoundButton!
     private var button2:RoundButton!
     
+    public override init() {
+        super.init(frame: .zero)
+        self.initialize()
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupStepperButton()
