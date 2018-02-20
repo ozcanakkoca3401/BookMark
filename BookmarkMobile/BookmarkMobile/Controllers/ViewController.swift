@@ -66,6 +66,21 @@ class ViewController: BaseViewController {
         myView.addSubview(changeButton)
         self.view.addSubview(myView)
         
+        let touchableView = RoundView(frame: CGRect(x: 20, y: 200, width: 260, height: 60))
+        touchableView.borderColor = UIColor.gray
+        let touchableViewLabel = UILabel(frame: CGRect(x: 70, y: 18, width: 200, height: 20))
+        touchableViewLabel.text = "500 MB Shareable Data"
+        touchableViewLabel.font = Styling.font(weight: .bold, size: 15)
+        touchableViewLabel.textColor = Styling.colorForCode(.themeGray)
+        let touchableViewPriceLabel = UILabel(frame: CGRect(x: 45, y: 18, width: 30, height: 20))
+        touchableViewPriceLabel.text = "5"
+        touchableViewPriceLabel.font = Styling.font(weight: .regular, size: 25)
+        touchableViewPriceLabel.textColor = Styling.colorForCode(.themeBlue)
+        touchableView.delegate = self
+        touchableView.addSubview(touchableViewLabel)
+        touchableView.addSubview(touchableViewPriceLabel)
+        self.view.addSubview(touchableView)
+        
        
       
         guard let image = UIImage(named: "EditIcon")?.withRenderingMode(.alwaysTemplate) else
@@ -102,6 +117,13 @@ extension ViewController: StepperProtocol {
     
     func plus() {
         print("plus")
+    }
+    
+    
+}
+extension ViewController: TouchableProtocol {
+    func didTrigger() {
+        print("bilge")
     }
     
     
