@@ -34,6 +34,16 @@
 		8408E06C203C1033004ABC0A /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E06B203C1033004ABC0A /* RoundView.swift */; };
 		8408E06E203C12D6004ABC0A /* testComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E06D203C12D6004ABC0A /* testComponent.swift */; };
 		8408E070203C12EF004ABC0A /* testCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E06F203C12EF004ABC0A /* testCell.swift */; };
+		8408E075203C6480004ABC0A /* AlaattinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E073203C6480004ABC0A /* AlaattinViewController.swift */; };
+		8408E076203C6480004ABC0A /* AlaattinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8408E074203C6480004ABC0A /* AlaattinViewController.xib */; };
+		8408E079203C655C004ABC0A /* BilgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E077203C655C004ABC0A /* BilgeViewController.swift */; };
+		8408E07A203C655C004ABC0A /* BilgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8408E078203C655C004ABC0A /* BilgeViewController.xib */; };
+		8408E07D203C6573004ABC0A /* UmutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E07B203C6573004ABC0A /* UmutViewController.swift */; };
+		8408E07E203C6573004ABC0A /* UmutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8408E07C203C6573004ABC0A /* UmutViewController.xib */; };
+		8408E081203C6583004ABC0A /* OzcanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E07F203C6583004ABC0A /* OzcanViewController.swift */; };
+		8408E082203C6583004ABC0A /* OzcanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8408E080203C6583004ABC0A /* OzcanViewController.xib */; };
+		8408E085203C6594004ABC0A /* EnesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E083203C6594004ABC0A /* EnesViewController.swift */; };
+		8408E086203C6594004ABC0A /* EnesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8408E084203C6594004ABC0A /* EnesViewController.xib */; };
 		CE69C9A073B8DEBC6D3FC864 /* Pods_BookmarkMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05105D23C47C7788D93BDAF2 /* Pods_BookmarkMobileUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +104,16 @@
 		8408E06B203C1033004ABC0A /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		8408E06D203C12D6004ABC0A /* testComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testComponent.swift; sourceTree = "<group>"; };
 		8408E06F203C12EF004ABC0A /* testCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCell.swift; sourceTree = "<group>"; };
+		8408E073203C6480004ABC0A /* AlaattinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlaattinViewController.swift; sourceTree = "<group>"; };
+		8408E074203C6480004ABC0A /* AlaattinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlaattinViewController.xib; sourceTree = "<group>"; };
+		8408E077203C655C004ABC0A /* BilgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilgeViewController.swift; sourceTree = "<group>"; };
+		8408E078203C655C004ABC0A /* BilgeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BilgeViewController.xib; sourceTree = "<group>"; };
+		8408E07B203C6573004ABC0A /* UmutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmutViewController.swift; sourceTree = "<group>"; };
+		8408E07C203C6573004ABC0A /* UmutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UmutViewController.xib; sourceTree = "<group>"; };
+		8408E07F203C6583004ABC0A /* OzcanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzcanViewController.swift; sourceTree = "<group>"; };
+		8408E080203C6583004ABC0A /* OzcanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OzcanViewController.xib; sourceTree = "<group>"; };
+		8408E083203C6594004ABC0A /* EnesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnesViewController.swift; sourceTree = "<group>"; };
+		8408E084203C6594004ABC0A /* EnesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnesViewController.xib; sourceTree = "<group>"; };
 		AFE951CA1B8A879DDAAF64B0 /* Pods-BookmarkMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE513DAE58555C52CDA16578 /* Pods-BookmarkMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileTests/Pods-BookmarkMobileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +304,16 @@
 			children = (
 				8408E0242036D68F004ABC0A /* ViewController.swift */,
 				8408E05D203710AE004ABC0A /* BaseViewController.swift */,
+				8408E073203C6480004ABC0A /* AlaattinViewController.swift */,
+				8408E074203C6480004ABC0A /* AlaattinViewController.xib */,
+				8408E077203C655C004ABC0A /* BilgeViewController.swift */,
+				8408E078203C655C004ABC0A /* BilgeViewController.xib */,
+				8408E07B203C6573004ABC0A /* UmutViewController.swift */,
+				8408E07C203C6573004ABC0A /* UmutViewController.xib */,
+				8408E07F203C6583004ABC0A /* OzcanViewController.swift */,
+				8408E080203C6583004ABC0A /* OzcanViewController.xib */,
+				8408E083203C6594004ABC0A /* EnesViewController.swift */,
+				8408E084203C6594004ABC0A /* EnesViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -452,10 +482,15 @@
 			files = (
 				4C7EECB1203722AA006C8805 /* Localizable.strings in Resources */,
 				4C7EECB4203722BC006C8805 /* Localizable.strings in Resources */,
+				8408E07A203C655C004ABC0A /* BilgeViewController.xib in Resources */,
 				8408E02D2036D68F004ABC0A /* LaunchScreen.storyboard in Resources */,
+				8408E082203C6583004ABC0A /* OzcanViewController.xib in Resources */,
 				8408E0542036EFFF004ABC0A /* Test.xib in Resources */,
+				8408E076203C6480004ABC0A /* AlaattinViewController.xib in Resources */,
 				8408E02A2036D68F004ABC0A /* Assets.xcassets in Resources */,
 				8408E0282036D68F004ABC0A /* Main.storyboard in Resources */,
+				8408E086203C6594004ABC0A /* EnesViewController.xib in Resources */,
+				8408E07E203C6573004ABC0A /* UmutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,14 +676,19 @@
 				8408E06A203C1013004ABC0A /* Styling.swift in Sources */,
 				8408E05C2036FA36004ABC0A /* BookmarkSessionManager.swift in Sources */,
 				8408E06C203C1033004ABC0A /* RoundView.swift in Sources */,
+				8408E07D203C6573004ABC0A /* UmutViewController.swift in Sources */,
 				8408E06E203C12D6004ABC0A /* testComponent.swift in Sources */,
 				69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */,
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
+				8408E079203C655C004ABC0A /* BilgeViewController.swift in Sources */,
+				8408E075203C6480004ABC0A /* AlaattinViewController.swift in Sources */,
+				8408E085203C6594004ABC0A /* EnesViewController.swift in Sources */,
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
 				8408E070203C12EF004ABC0A /* testCell.swift in Sources */,
 				8408E067203BFA3E004ABC0A /* AlignedImageButton.swift in Sources */,
 				8408E0592036F5A5004ABC0A /* Utilities.swift in Sources */,
+				8408E081203C6583004ABC0A /* OzcanViewController.swift in Sources */,
 				8408E065203AD05F004ABC0A /* RoundButton.swift in Sources */,
 				69316E74203AC01B00AC2F10 /* MemorizationView.swift in Sources */,
 				8408E0562036F01A004ABC0A /* Message.swift in Sources */,
