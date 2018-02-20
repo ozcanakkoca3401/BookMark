@@ -28,7 +28,7 @@ import UIKit
         backgroundColor = bgColor
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.white {
+    @IBInspectable var borderColor: UIColor = UIColor.clear {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
@@ -37,6 +37,12 @@ import UIKit
     @IBInspectable var borderWidth: CGFloat = 2.0 {
         didSet {
             layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat = 3 {
+        didSet {
+           layer.cornerRadius = cornerRadius
         }
     }
     

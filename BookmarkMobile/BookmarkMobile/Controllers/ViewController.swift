@@ -58,12 +58,11 @@ class ViewController: BaseViewController {
         priceLabel.textColor = Styling.colorForCode(.themeBlue)
         myView.addSubview(viewLabel)
         myView.addSubview(priceLabel)
-        let changeButton = RoundButton(frame: CGRect(x: 200, y: 5, width: 60, height: myView.bounds.height))
+        let changeButton = RoundButton(frame: CGRect(x: 200, y: 0, width: 60, height: myView.bounds.height))
         changeButton.backgroundColor = Styling.colorForCode(.themeBlue)
+        changeButton.cornerRadius = 5
+        changeButton.borderColor = Styling.colorForCode(.themeBlue)
         myView.addSubview(changeButton)
-        
-        
-        
         self.view.addSubview(myView)
         
         guard let image = UIImage(named: "EditIcon")?.withRenderingMode(.alwaysTemplate) else
