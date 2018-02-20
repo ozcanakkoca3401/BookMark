@@ -28,7 +28,7 @@ import UIKit
         backgroundColor = bgColor
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.clear {
+    @IBInspectable var borderColor: UIColor = Styling.colorForCode(.themeClear) {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
