@@ -8,27 +8,30 @@
 
 import UIKit
 
+protocol StepperProtocol {
+    func minus()
+    func plus()
+}
+
 class StepperButton: RoundView {
+    
+    var stepperDelegate: StepperProtocol?
 
     private var button1:RoundButton!
     private var button2:RoundButton!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initialize()
         setupStepperButton()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initialize()
+        self.initialize()
         setupStepperButton()
     }
     
     override func initialize() {
-        super.initialize()
-        borderColor = UIColor.clear
-        borderWidth = 0
         button1 = RoundButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
         button2 = RoundButton(frame: CGRect(x: 40, y: 0, width: 35, height: 35))
         button1.bgColor = UIColor.init(red: 85/255, green: 173/255, blue: 236/255, alpha: 1)
@@ -37,6 +40,8 @@ class StepperButton: RoundView {
         button2.borderColor = UIColor.clear
         button1.borderWidth = 0
         button2.borderWidth = 0
+        button1.addTarget(self, action: #selector(StepperButton.minusT), for: .touchUpInside)
+        button2.addTarget(self, action: #selector(StepperButton.plusT), for: .touchUpInside)
     }
 
     func setupStepperButton(){
@@ -50,4 +55,13 @@ class StepperButton: RoundView {
         self.addSubview(button1)
         self.addSubview(button2)
     }
+    
+    @objc func minusT(){
+        stepperDelegate?.minus()
+    }
+    
+    @objc func plusT(){
+        stepperDelegate?.plus()
+    }
+    
 }

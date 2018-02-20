@@ -12,18 +12,18 @@ import UIKit
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initialize()
+        self.initialize()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initialize()
+        self.initialize()
     }
     
     func initialize(){
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
-        layer.cornerRadius = 3
+        layer.cornerRadius = cornerRadius
         clipsToBounds = true
         backgroundColor = bgColor
     }

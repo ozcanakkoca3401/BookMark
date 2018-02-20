@@ -12,14 +12,14 @@ import UIKit
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        self.initialize()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func setup() {
+    func initialize(){
         thumbTintColor = UIColor.clear
         isUserInteractionEnabled = false
         minimumTrackTintColor = minTintColor
