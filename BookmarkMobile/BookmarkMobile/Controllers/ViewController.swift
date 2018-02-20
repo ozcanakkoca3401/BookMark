@@ -29,6 +29,9 @@ class ViewController: BaseViewController {
         let slider = HorizontalSlider(frame: CGRect(x: 40, y: 40, width: 200, height: 20))
         view.addSubview(slider)
         
+        let a = StepperButton(frame: CGRect(x: 100, y: 400, width: 75, height: 35))
+        view.addSubview(a)
+        
         Message.getMessages(success: { (messages) in
             print(messages)
         }) { (error) in

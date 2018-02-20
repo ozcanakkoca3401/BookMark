@@ -32,6 +32,8 @@
 		8408E067203BFA3E004ABC0A /* AlignedImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E066203BFA3E004ABC0A /* AlignedImageButton.swift */; };
 		8408E06A203C1013004ABC0A /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E069203C1013004ABC0A /* Styling.swift */; };
 		8408E06C203C1033004ABC0A /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E06B203C1033004ABC0A /* RoundView.swift */; };
+		8408E06E203C12D6004ABC0A /* testComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E06D203C12D6004ABC0A /* testComponent.swift */; };
+		8408E070203C12EF004ABC0A /* testCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E06F203C12EF004ABC0A /* testCell.swift */; };
 		CE69C9A073B8DEBC6D3FC864 /* Pods_BookmarkMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05105D23C47C7788D93BDAF2 /* Pods_BookmarkMobileUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		8408E066203BFA3E004ABC0A /* AlignedImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedImageButton.swift; sourceTree = "<group>"; };
 		8408E069203C1013004ABC0A /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		8408E06B203C1033004ABC0A /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		8408E06D203C12D6004ABC0A /* testComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testComponent.swift; sourceTree = "<group>"; };
+		8408E06F203C12EF004ABC0A /* testCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCell.swift; sourceTree = "<group>"; };
 		AFE951CA1B8A879DDAAF64B0 /* Pods-BookmarkMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE513DAE58555C52CDA16578 /* Pods-BookmarkMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileTests/Pods-BookmarkMobileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 		8408E060203AC704004ABC0A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8408E06D203C12D6004ABC0A /* testComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 		8408E061203AC70F004ABC0A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8408E06F203C12EF004ABC0A /* testCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -635,10 +641,12 @@
 				8408E06A203C1013004ABC0A /* Styling.swift in Sources */,
 				8408E05C2036FA36004ABC0A /* BookmarkSessionManager.swift in Sources */,
 				8408E06C203C1033004ABC0A /* RoundView.swift in Sources */,
+				8408E06E203C12D6004ABC0A /* testComponent.swift in Sources */,
 				69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */,
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
+				8408E070203C12EF004ABC0A /* testCell.swift in Sources */,
 				8408E067203BFA3E004ABC0A /* AlignedImageButton.swift in Sources */,
 				8408E0592036F5A5004ABC0A /* Utilities.swift in Sources */,
 				8408E065203AD05F004ABC0A /* RoundButton.swift in Sources */,

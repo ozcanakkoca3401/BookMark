@@ -8,18 +8,46 @@
 
 import UIKit
 
-class StepperButton: UIView {
+class StepperButton: RoundView {
 
+    private var button1:RoundButton!
+    private var button2:RoundButton!
     
-    
-    
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        initialize()
+        setupStepperButton()
     }
-    */
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+        setupStepperButton()
+    }
+    
+    override func initialize() {
+        super.initialize()
+        borderColor = UIColor.clear
+        borderWidth = 0
+        button1 = RoundButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
+        button2 = RoundButton(frame: CGRect(x: 40, y: 0, width: 35, height: 35))
+        button1.bgColor = UIColor.init(red: 85/255, green: 173/255, blue: 236/255, alpha: 1)
+        button2.bgColor = UIColor.init(red: 85/255, green: 173/255, blue: 236/255, alpha: 1)
+        button1.borderColor = UIColor.clear
+        button2.borderColor = UIColor.clear
+        button1.borderWidth = 0
+        button2.borderWidth = 0
+    }
 
+    func setupStepperButton(){
+        
+//        button1.setImage(UIImage(named:""), for: .normal)
+//        button2.setImage(UIImage(named:""), for: .normal)
+        
+        button1.setTitle("-", for: .normal)
+        button2.setTitle("+", for: .normal)
+        
+        self.addSubview(button1)
+        self.addSubview(button2)
+    }
 }
