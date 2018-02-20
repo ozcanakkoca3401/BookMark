@@ -23,6 +23,8 @@ import UIKit
     func initialize(){
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
+        layer.cornerRadius = 3
+        clipsToBounds = true
         backgroundColor = bgColor
     }
     
@@ -44,10 +46,10 @@ import UIKit
         }
     }
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        layer.cornerRadius = 0.02 * bounds.size.width
-        clipsToBounds = true
-    }
+//    override public func layoutSubviews() {
+//        super.layoutSubviews()
+//        layer.cornerRadius = 0.02 * bounds.size.width
+//        clipsToBounds = true
+//    }
     
 }
