@@ -30,6 +30,8 @@
 		8408E05E203710AE004ABC0A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E05D203710AE004ABC0A /* BaseViewController.swift */; };
 		8408E065203AD05F004ABC0A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E064203AD05F004ABC0A /* RoundButton.swift */; };
 		8408E067203BFA3E004ABC0A /* AlignedImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E066203BFA3E004ABC0A /* AlignedImageButton.swift */; };
+		8408E06A203C1013004ABC0A /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E069203C1013004ABC0A /* Styling.swift */; };
+		8408E06C203C1033004ABC0A /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E06B203C1033004ABC0A /* RoundView.swift */; };
 		CE69C9A073B8DEBC6D3FC864 /* Pods_BookmarkMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05105D23C47C7788D93BDAF2 /* Pods_BookmarkMobileUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		8408E05D203710AE004ABC0A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8408E064203AD05F004ABC0A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		8408E066203BFA3E004ABC0A /* AlignedImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedImageButton.swift; sourceTree = "<group>"; };
+		8408E069203C1013004ABC0A /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
+		8408E06B203C1033004ABC0A /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		AFE951CA1B8A879DDAAF64B0 /* Pods-BookmarkMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE513DAE58555C52CDA16578 /* Pods-BookmarkMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileTests/Pods-BookmarkMobileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 		8408E0572036F537004ABC0A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8408E069203C1013004ABC0A /* Styling.swift */,
 				8408E0582036F5A5004ABC0A /* Utilities.swift */,
 			);
 			path = Helpers;
@@ -299,6 +304,7 @@
 		8408E05F203AC6F2004ABC0A /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				8408E06B203C1033004ABC0A /* RoundView.swift */,
 				8408E064203AD05F004ABC0A /* RoundButton.swift */,
 				4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */,
 				8408E066203BFA3E004ABC0A /* AlignedImageButton.swift */,
@@ -626,7 +632,9 @@
 			files = (
 				4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */,
 				4CBAD1FE203C0AEA00FC412B /* StepperButton.swift in Sources */,
+				8408E06A203C1013004ABC0A /* Styling.swift in Sources */,
 				8408E05C2036FA36004ABC0A /* BookmarkSessionManager.swift in Sources */,
+				8408E06C203C1033004ABC0A /* RoundView.swift in Sources */,
 				69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */,
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
@@ -823,12 +831,14 @@
 			baseConfigurationReference = 4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KHRD8446CX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BookmarkMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -839,12 +849,14 @@
 			baseConfigurationReference = 334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KHRD8446CX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BookmarkMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
