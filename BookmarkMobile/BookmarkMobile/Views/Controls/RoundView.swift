@@ -31,6 +31,14 @@ protocol TouchableProtocol {
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor
         clipsToBounds = true
+        
+        self.isUserInteractionEnabled = true
+        let gesturedRecognizer = UITapGestureRecognizer(target: self, action: #selector(RoundView.touchAction))
+        self.addGestureRecognizer(gesturedRecognizer)
+    }
+    
+    @objc func touchAction() {
+        delegate?.didTrigger()
     }
     
     @IBInspectable var borderColor: UIColor = UIColor.gray {
