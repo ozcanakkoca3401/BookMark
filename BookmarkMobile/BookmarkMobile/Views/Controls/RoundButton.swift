@@ -46,7 +46,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var bgColor: UIColor = UIColor.clear {
+    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeClear) {
         didSet {
             backgroundColor = bgColor
         }

@@ -20,7 +20,7 @@ import UIKit
     }
     
     func initialize(){
-        thumbTintColor = UIColor.clear
+        thumbTintColor = Styling.colorForCode(.themeClear)
         isUserInteractionEnabled = false
         minimumTrackTintColor = minTintColor
         maximumTrackTintColor = maxTintColor
@@ -31,13 +31,13 @@ import UIKit
         //        self.setMaximumTrackImage(maxTrackImage, for: .normal)
     }
     
-    @IBInspectable var minTintColor: UIColor = UIColor.darkGray {
+    @IBInspectable var minTintColor: UIColor = Styling.colorForCode(.themeGray) {
         didSet{
             minimumTrackTintColor = minTintColor
         }
     }
     
-    @IBInspectable var maxTintColor: UIColor = UIColor.lightGray {
+    @IBInspectable var maxTintColor: UIColor = Styling.colorForCode(.themeLight) {
         didSet{
             maximumTrackTintColor = maxTintColor
         }

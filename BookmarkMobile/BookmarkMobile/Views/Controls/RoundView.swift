@@ -41,7 +41,7 @@ protocol TouchableProtocol {
         delegate?.didTrigger()
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.gray {
+    @IBInspectable var borderColor: UIColor = Styling.colorForCode(.themeGray) {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
@@ -59,7 +59,7 @@ protocol TouchableProtocol {
         }
     }
     
-    @IBInspectable var bgColor: UIColor = UIColor.clear {
+    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeClear) {
         didSet {
             backgroundColor = bgColor
         }
