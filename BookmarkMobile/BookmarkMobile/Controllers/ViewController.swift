@@ -43,8 +43,18 @@ class ViewController: BaseViewController {
         label.backgroundColor = .gray
         self.view.addSubview(label)
         
-        let myView = RoundView(frame: CGRect(x: 20, y: 100, width: 300, height: 50))
+        let myView = RoundView(frame: CGRect(x: 20, y: 100, width: 260, height: 60))
         myView.borderColor = UIColor.gray
+        let viewLabel = UILabel(frame: CGRect(x: 70, y: 18, width: 200, height: 20))
+        viewLabel.text = "500 MB Shareable Data"
+        viewLabel.font = Styling.font(weight: .bold, size: 15)
+        viewLabel.textColor = Styling.colorForCode(.themeGray)
+        let priceLabel = UILabel(frame: CGRect(x: 45, y: 18, width: 30, height: 20))
+        priceLabel.text = "5"
+        priceLabel.font = Styling.font(weight: .regular, size: 25)
+        priceLabel.textColor = Styling.colorForCode(.themeBlue)
+        myView.addSubview(viewLabel)
+        myView.addSubview(priceLabel)
         self.view.addSubview(myView)
         
         guard let image = UIImage(named: "EditIcon")?.withRenderingMode(.alwaysTemplate) else
@@ -64,7 +74,10 @@ class ViewController: BaseViewController {
         
         self.view.addSubview(alignedButton)
         
-        
+        let bilge = UILabel(frame: CGRect(x: 20, y: 400, width: 300, height: 50))
+        bilge.text = "BİLGE"
+        bilge.textColor = Styling.colorForCode(.themeBlue)
+        self.view.addSubview(bilge)
     }
 
     override func didReceiveMemoryWarning() {
