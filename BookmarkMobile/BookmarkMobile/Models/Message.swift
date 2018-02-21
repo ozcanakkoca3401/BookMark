@@ -18,6 +18,10 @@ class Message: Mappable {
     var avatarUrl: String?
     var type:UInt8 = 0
     
+    init() {
+       
+    }
+    
     init(message: String, timestamp: Int32, nickname: String, avatarUrl: String, type:UInt8) {
         self.message = message
         self.timestamp = timestamp
