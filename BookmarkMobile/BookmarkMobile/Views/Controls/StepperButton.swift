@@ -13,12 +13,51 @@ protocol StepperProtocol {
     func plus()
 }
 
-class StepperButton: RoundView {
+@IBDesignable public class StepperButton: RoundView {
     
     var stepperDelegate: StepperProtocol?
-
-    private var button1:RoundButton!
-    private var button2:RoundButton!
+    
+    @IBInspectable var color: UIColor? {
+        didSet{
+            leftButton.backgroundColor = color
+            rightButton.backgroundColor = color
+        }
+    }
+    
+    @IBInspectable var buttonCornerRadius: CGFloat = 0 {
+        didSet {
+            leftButton.layer.cornerRadius = cornerRadius
+            rightButton.layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable var leftButtonTitle: String = "" {
+        didSet {
+            leftButton.title = leftButtonTitle
+        }
+    }
+    
+    @IBInspectable var rightButtonTitle: String = "" {
+        didSet {
+            rightButton.title = rightButtonTitle
+        }
+    }
+    
+    var leftButton: RoundButton = {
+        let button = RoundButton()
+        button.bgColor = Styling.colorForCode(.themeBlue)
+        button.title = "-"
+        button.addTarget(self, action: #selector(StepperButton.minusT), for: .touchUpInside)
+        return button
+    }()
+    
+    var rightButton: RoundButton = {
+        let button = RoundButton()
+        button.bgColor = Styling.colorForCode(.themeBlue)
+        button.title = "+"
+        button.addTarget(self, action: #selector(StepperButton.plusT), for: .touchUpInside)
+        return button
+    }()
     
     public override init() {
         super.init(frame: .zero)
@@ -27,6 +66,7 @@ class StepperButton: RoundView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        self.initialize()
         setupStepperButton()
     }
     
@@ -37,24 +77,22 @@ class StepperButton: RoundView {
     }
     
     override func initialize() {
-        button1 = RoundButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
-        button2 = RoundButton(frame: CGRect(x: 40, y: 0, width: 35, height: 35))
-        button1.bgColor = Styling.colorForCode(.themeBlue)
-        button2.bgColor = Styling.colorForCode(.themeBlue)
-        button1.addTarget(self, action: #selector(StepperButton.minusT), for: .touchUpInside)
-        button2.addTarget(self, action: #selector(StepperButton.plusT), for: .touchUpInside)
+        
     }
 
     func setupStepperButton(){
+        self.addSubview(leftButton)
+        self.addSubview(rightButton)
         
-//        button1.setImage(UIImage(named:""), for: .normal)
-//        button2.setImage(UIImage(named:""), for: .normal)
+        leftButton.snp.makeConstraints { (make) in
+            make.top.bottom.left.equalTo(self)
+            make.width.equalTo(self).dividedBy(2).offset(-2.5)
+        }
         
-        button1.setTitle("-", for: .normal)
-        button2.setTitle("+", for: .normal)
-        
-        self.addSubview(button1)
-        self.addSubview(button2)
+        rightButton.snp.makeConstraints { (make) in
+            make.top.bottom.right.equalTo(self)
+            make.width.equalTo(self).dividedBy(2).offset(-2.5)
+        }
     }
     
     @objc func minusT(){
@@ -64,5 +102,4 @@ class StepperButton: RoundView {
     @objc func plusT(){
         stepperDelegate?.plus()
     }
-    
 }
