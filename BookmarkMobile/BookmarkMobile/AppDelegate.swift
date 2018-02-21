@@ -8,22 +8,23 @@
 
 import UIKit
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var navigationViewController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let rootView: AlaattinViewController = AlaattinViewController()
+        navigationViewController = UINavigationController()
+        navigationViewController?.pushViewController(AlaattinViewController(), animated: true)
+
 //        let rootView: UmutViewController = UmutViewController()
-//          let rootView: BilgeViewController = BilgeViewController()
+//        let rootView: BilgeViewController = BilgeViewController()
 //        let rootView: EnesViewController = EnesViewController()
         
         if let window = self.window{
-            window.rootViewController = rootView
+            window.rootViewController = navigationViewController
         }
         
         return true

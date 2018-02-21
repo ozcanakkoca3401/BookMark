@@ -6,109 +6,90 @@
 //  Copyright © 2018 Nookmark. All rights reserved.
 //
 
-//import UIKit
-//
-//class AlaattinViewController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Do any additional setup after loading the view.
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//
-//
-//    /*
-//    // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//    }
-//    */
-//
-//}
-
 import UIKit
+import SnapKit
 
 class AlaattinViewController: UIViewController {
-    
-    var myView:UIView!
-    var myView2:UIView!
-    var myView3:UIView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(myFunc))
+        title = "Snapkit"
         
-        myView = UIView(frame: CGRect(x: 30, y: 30, width: 300, height: 100))
-        myView.isUserInteractionEnabled = true
-        myView.layer.borderColor = UIColor.darkGray.cgColor
-        myView.layer.borderWidth = 2
-        myView.layer.cornerRadius = 5
-        myView.clipsToBounds = true
-        myView.addGestureRecognizer(recognizer)
-        view.addSubview(myView)
+        view.backgroundColor = Styling.colorForCode(.themeBlue)
+        
+        let box = RoundView()
+        box.bgColor = Styling.colorForCode(.themeGray)
+        
+        let header = UIImageView()
+        header.image = UIImage(named:"fractal")
+        
+        let logo = UIImageView()
+        logo.image = UIImage(named: "CABJ")
+        logo.contentMode = .scaleAspectFit
+        
+        let headerButton = RoundButton()
+        headerButton.setTitle("Header", for: .normal)
+        headerButton.setTitleColor(Styling.colorForCode(.themeBlue), for: .normal)
+        headerButton.backgroundColor = Styling.colorForCode(.themeLight)
+        
+        let footerButton = AlignedImageButton()
+        footerButton.setTitle("Go To Tableview", for: .normal)
+        footerButton.setTitleColor(Styling.colorForCode(.themeBlue), for: .normal)
+        footerButton.setImage(UIImage(named:"EditIcon")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        footerButton.backgroundColor = Styling.colorForCode(.themeLight)
+        footerButton.addTarget(self, action: #selector(onButtonClick(button:)), for: .touchUpInside)
+        
+        view.addSubview(box)
+        view.addSubview(header)
+        view.addSubview(logo)
+        view.addSubview(headerButton)
+        view.addSubview(footerButton)
+        
+        box.snp.makeConstraints { (make) in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
+            make.right.equalTo(view).offset(-10)
+            make.bottom.equalTo(view).offset(-10)
+            make.left.equalTo(view).offset(10)
+        }
+        
+        header.snp.makeConstraints { (make) in
+            make.height.equalTo(box.snp.height).dividedBy(4)
+            make.top.equalTo(box.snp.top)
+            make.right.equalTo(box.snp.right)
+            make.left.equalTo(box.snp.left)
+        }
+        
+        logo.snp.makeConstraints { (make) in
+            make.height.equalTo(header.snp.height)
+            make.center.equalTo(header.snp.center)
+        }
+        
+        headerButton.snp.makeConstraints { (make) in
+            make.top.equalTo(header.snp.bottom)
+            make.height.equalTo(50)
+            make.left.equalTo(box.snp.left)
+            make.right.equalTo(box.snp.right)
+        }
+        
+        footerButton.snp.makeConstraints { (make) in
+            make.left.equalTo(box.snp.left)
+            make.right.equalTo(box.snp.right)
+            make.bottom.equalTo(box.snp.bottom)
+            make.height.equalTo(50)
+        }
         
         
-        myView2 = UIView(frame: CGRect(x: 0, y: 100, width: 300, height: 50))
-        myView2.backgroundColor = UIColor.darkGray
-        myView2.isHidden = true
-        myView.addSubview(myView2)
-        
-        myView3 = UIView(frame: CGRect(x: 0, y: 170, width: 300, height: 50))
-        myView3.backgroundColor = UIColor.darkGray
-        myView3.isHidden = true
-        myView.addSubview(myView3)
     }
     
-    @objc func myFunc(){
-        
-        if (self.myView.frame.size.height == 100) {
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                
-                self.myView.frame.size.height = 240
-                
-                UIView.transition(with: self.myView2, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                    self.myView2.isHidden = false
-                })
-                
-                UIView.transition(with: self.myView3, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                    self.myView3.isHidden = false
-                })
-                
-            }) { (finished) in
-                //Animation bittiğinde istenilen yazılacak
-            }
-        } else {
-            UIView.animate(withDuration: 0.3, animations: {
-                
-                self.myView.frame.size.height = 100
-                
-                UIView.transition(with: self.myView2, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                    self.myView2.isHidden = true
-                })
-                UIView.transition(with: self.myView3, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                    self.myView3.isHidden = true
-                })
-            }) { (finished) in
-                //Animation bittiğinde istenilen yazılacak
-                //                UIView.animate(withDuration: 1, animations: {
-                ////                    self.myView.transform = CGAffineTransform.identity
-                //                })
-            }
-        }
+    @objc func onButtonClick(button: UIButton) {
+        navigationController?.pushViewController(TableViewController(), animated: true)
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
 }
-
-
-
-
