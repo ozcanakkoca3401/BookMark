@@ -71,6 +71,7 @@ import SnapKit
     
     override func initialize() {
         
+        self.delegate = self
         super.initialize()
         self.addSubview(moneyImageView)
         self.addSubview(priceLabel)
@@ -101,6 +102,14 @@ import SnapKit
     override public func layoutSubviews() {
         super.layoutSubviews()
     }
+    
+}
+
+extension AddOnsButton: TouchableProtocol {
+    func didTrigger() {
+        print("heyoo")
+    }
+    
     
 }
 
