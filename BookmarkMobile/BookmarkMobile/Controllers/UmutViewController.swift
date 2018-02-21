@@ -20,6 +20,10 @@ class UmutViewController: UIViewController {
         a.stepperDelegate = self
         view.addSubview(a)
         
+        let r = RoundButton(frame: CGRect(x: 60, y: 60, width: 50, height: 50))
+        r.backgroundColor = UIColor.red
+        view.addSubview(r)
+        
         let b = EBLabel(frame: CGRect(x: 20, y: 20, width: 100, height: 40))
         b.EBtext = "sdfsdfsd"
         self.view.addSubview(b)

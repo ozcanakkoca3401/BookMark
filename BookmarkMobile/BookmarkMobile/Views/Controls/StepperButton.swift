@@ -13,14 +13,40 @@ protocol StepperProtocol {
     func plus()
 }
 
-class StepperButton: RoundView {
+@IBDesignable public class StepperButton: RoundView {
     
     var stepperDelegate: StepperProtocol?
+    
+    @IBInspectable var color: UIColor? {
+        didSet{
+            leftButton.backgroundColor = color
+            rightButton.backgroundColor = color
+        }
+    }
+    
+    @IBInspectable var buttonCornerRadius: CGFloat = 0 {
+        didSet {
+            leftButton.layer.cornerRadius = cornerRadius
+            rightButton.layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable var leftButtonTitle: String = "" {
+        didSet {
+            leftButton.title = leftButtonTitle
+        }
+    }
+    
+    @IBInspectable var rightButtonTitle: String = "" {
+        didSet {
+            rightButton.title = rightButtonTitle
+        }
+    }
     
     var leftButton: RoundButton = {
         let button = RoundButton()
         button.bgColor = Styling.colorForCode(.themeBlue)
-        button.setTitle("-", for: .normal)
+        button.title = "-"
         button.addTarget(self, action: #selector(StepperButton.minusT), for: .touchUpInside)
         return button
     }()
@@ -28,7 +54,7 @@ class StepperButton: RoundView {
     var rightButton: RoundButton = {
         let button = RoundButton()
         button.bgColor = Styling.colorForCode(.themeBlue)
-        button.setTitle("+", for: .normal)
+        button.title = "+"
         button.addTarget(self, action: #selector(StepperButton.plusT), for: .touchUpInside)
         return button
     }()

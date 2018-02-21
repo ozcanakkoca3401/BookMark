@@ -10,6 +10,48 @@ import UIKit
 
 @IBDesignable public class HorizontalSlider: UISlider {
 
+    @IBInspectable var minTintColor: UIColor = Styling.colorForCode(.themeGray) {
+        didSet{
+            minimumTrackTintColor = minTintColor
+        }
+    }
+    
+    @IBInspectable var maxTintColor: UIColor = Styling.colorForCode(.themeLight) {
+        didSet{
+            maximumTrackTintColor = maxTintColor
+        }
+    }
+    
+    @IBInspectable var minValue: Float = 0 {
+        didSet{
+            minimumValue = minValue
+        }
+    }
+    
+    @IBInspectable var maxValue: Float = 1 {
+        didSet{
+            maximumValue = maxValue
+        }
+    }
+    
+    @IBInspectable var initialvalue: Float = 0.5 {
+        didSet{
+            value = initialvalue
+        }
+    }
+    
+    //    @IBInspectable var minTrackImage: UIImage = UIImage(named: "")! {
+    //        didSet{
+    //            self.setMinimumTrackImage(minTrackImage, for: .normal)
+    //        }
+    //    }
+    //
+    //    @IBInspectable var maxTrackImage: UIImage = UIImage(named: "")! {
+    //        didSet{
+    //            self.setMaximumTrackImage(maxTrackImage, for: .normal)
+    //        }
+    //    }
+    
     public init() {
         super.init(frame: .zero)
         self.initialize()
@@ -35,46 +77,4 @@ import UIKit
         //        self.setMinimumTrackImage(minTrackImage, for: .normal)
         //        self.setMaximumTrackImage(maxTrackImage, for: .normal)
     }
-    
-    @IBInspectable var minTintColor: UIColor = Styling.colorForCode(.themeGray) {
-        didSet{
-            minimumTrackTintColor = minTintColor
-        }
-    }
-    
-    @IBInspectable var maxTintColor: UIColor = Styling.colorForCode(.themeLight) {
-        didSet{
-            maximumTrackTintColor = maxTintColor
-        }
-    }
-    
-    @IBInspectable var minValue: Float = 0 {
-        didSet{
-            minimumValue = minValue
-        }
-    }
-
-    @IBInspectable var maxValue: Float = 1 {
-        didSet{
-            maximumValue = maxValue
-        }
-    }
-    
-    @IBInspectable var initialvalue: Float = 0.5 {
-        didSet{
-            value = initialvalue
-        }
-    }
-    
-//    @IBInspectable var minTrackImage: UIImage = UIImage(named: "")! {
-//        didSet{
-//            self.setMinimumTrackImage(minTrackImage, for: .normal)
-//        }
-//    }
-//
-//    @IBInspectable var maxTrackImage: UIImage = UIImage(named: "")! {
-//        didSet{
-//            self.setMaximumTrackImage(maxTrackImage, for: .normal)
-//        }
-//    }
 }

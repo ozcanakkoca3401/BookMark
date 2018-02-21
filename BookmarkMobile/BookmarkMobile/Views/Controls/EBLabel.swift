@@ -9,6 +9,24 @@
 import UIKit
 
 class EBLabel: UILabel {
+    
+    @IBInspectable var EBtext: String = "" {
+        didSet{
+            text = EBtext
+        }
+    }
+    
+    @IBInspectable var EBcolor: UIColor = Styling.colorForCode(.themeBlue) {
+        didSet{
+            textColor = EBcolor
+        }
+    }
+    
+    @IBInspectable var EBfont: UIFont = Styling.font(weight: .bold, size: 15) {
+        didSet{
+            font = EBfont
+        }
+    }
 
     public init() {
         super.init(frame: .zero)
@@ -29,23 +47,5 @@ class EBLabel: UILabel {
         text = EBtext
         textColor = EBcolor
         font = EBfont
-    }
-    
-    @IBInspectable var EBtext: String = "" {
-        didSet{
-            text = EBtext
-        }
-    }
-    
-    @IBInspectable var EBcolor: UIColor = Styling.colorForCode(.themeBlue) {
-        didSet{
-            textColor = EBcolor
-        }
-    }
-    
-    @IBInspectable var EBfont: UIFont = Styling.font(weight: .bold, size: 15) {
-        didSet{
-            font = EBfont
-        }
     }
 }
