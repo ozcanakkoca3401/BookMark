@@ -10,7 +10,6 @@ import UIKit
 
 @IBDesignable public class EBView: UIView {
 
-    
     public init() {
         super.init(frame: .zero)
         self.initialize()
