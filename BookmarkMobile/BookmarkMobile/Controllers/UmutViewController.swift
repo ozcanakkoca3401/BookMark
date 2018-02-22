@@ -38,17 +38,17 @@ class UmutViewController: UIViewController {
         g.addSubview(slider)
         
         let ad3 = EBLabel(frame: CGRect(x: 10, y: 10, width: 150, height: 25))
-        ad3.EBtext = "Deneme"
+        ad3.EBtext = "Data"
         ad3.EBcolor = UIColor.blue
         g.addSubview(ad3)
         
         let ad = EBLabel(frame: CGRect(x: 10, y: 45, width: 150, height: 25))
-        ad.EBtext = "Deneme"
+        ad.EBtext = "0.45 GB"
         ad.EBcolor = UIColor.blue
         g.addSubview(ad)
         
         let ad2 = EBLabel(frame: CGRect(x: 150, y: 45, width: 150, height: 25))
-        ad2.EBtext = "Deneme"
+        ad2.EBtext = "11 GB"
         ad2.EBcolor = UIColor.blue
         g.addSubview(ad2)
         

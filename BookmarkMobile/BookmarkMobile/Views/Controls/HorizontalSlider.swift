@@ -64,6 +64,7 @@ import UIKit
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.initialize()
     }
     
     func initialize(){
