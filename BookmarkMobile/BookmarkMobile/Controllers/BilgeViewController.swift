@@ -9,9 +9,15 @@
 import UIKit
 
 class BilgeViewController: UIViewController {
+    
     var bilgeView: AddOnsButtonView = {
         let view = AddOnsButtonView()
         return view
+    }()
+    
+    var changeBview: ChangeButtonView = {
+        let cView = ChangeButtonView()
+        return cView
     }()
 
     override func viewDidLoad() {
@@ -24,6 +30,9 @@ class BilgeViewController: UIViewController {
         /* loadview or viewdidload */
         bilgeView.frame = CGRect(x: 50, y: 200, width: 250, height: 50)
         view.addSubview(bilgeView)
+        
+        changeBview.frame = CGRect(x: 50, y: 300, width: 250, height: 50)
+        view.addSubview(changeBview)
         
 
     }

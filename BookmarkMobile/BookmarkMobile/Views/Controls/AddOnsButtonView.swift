@@ -8,8 +8,8 @@
 
 /* sample usage */
 
-//var headerView: HeaderView = {
-//    let view = HeaderView()
+//var headerView: AddOnsButtonView = {
+//    let view = AddOnsButtonView()
 //    return view
 //}()
 
