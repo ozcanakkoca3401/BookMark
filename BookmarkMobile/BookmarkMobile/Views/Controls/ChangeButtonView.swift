@@ -32,16 +32,16 @@ import SnapKit
     
     var iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "phone")
+        imageView.image = UIImage(named: "visa")
        
         return imageView
     }()
 
     var informationLabel : EBLabel = {
         let label = EBLabel()
-        label.EBtext = "vsIDCBŞAWhbvcajANCJWQVL"
+        label.EBtext = "bilgeee"
         label.textAlignment = .center
-        label.EBfont = Styling.font(weight: .regular, size: 13)
+        label.EBfont = Styling.font(weight: .regular, size: 15)
         
         return label
     }()
@@ -50,6 +50,7 @@ import SnapKit
         let changeB = UIButton()
         changeB.setTitle("Change", for: .normal)
         changeB.titleLabel?.textColor = UIColor.white
+        changeB.titleLabel?.font = Styling.font(weight: .regular, size: 11)
         changeB.backgroundColor = Styling.colorForCode(.themeBlue)
         
         return changeB
@@ -91,15 +92,16 @@ import SnapKit
                 }
         
         informationLabel.snp.makeConstraints { (make) in
-            make.width.equalTo(30)
-            //make.height.equalTo(30)
-            make.left.equalTo(iconImageView).offset(15)
+            //make.width.equalTo(30)
+            make.height.equalTo(30)
+            make.left.equalTo(iconImageView).offset(35)
+            //make.right.equalTo(changeButton).offset(-25)
             make.centerY.equalTo(self)
         }
         
         changeButton.snp.makeConstraints { (make) in
-            make.width.equalTo(30)
-            make.height.equalTo(30)
+            make.width.equalTo(60)
+            make.height.equalTo(60)
             make.right.equalTo(self).offset(0)
             make.centerY.equalTo(self)
         }

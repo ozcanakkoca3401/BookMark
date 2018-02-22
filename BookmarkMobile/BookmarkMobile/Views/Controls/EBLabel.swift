@@ -16,7 +16,7 @@ class EBLabel: UILabel {
         }
     }
     
-    @IBInspectable var EBcolor: UIColor = Styling.colorForCode(.themeGray) {
+    @IBInspectable var EBcolor: UIColor = Styling.colorForCode(.themeDarkGray) {
         didSet{
             textColor = EBcolor
         }
