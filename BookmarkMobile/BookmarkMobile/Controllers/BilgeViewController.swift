@@ -9,10 +9,21 @@
 import UIKit
 
 class BilgeViewController: UIViewController {
-
+    var bilgeView: AddOnsButton = {
+        let view = AddOnsButton()
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //var headerView: HeaderView = {
+        //    let view = HeaderView()
+        //    return view
+        //}()
+        
+        /* loadview or viewdidload */
+        bilgeView.frame = CGRect(x: 150, y: 200, width: 150, height: 50)
+        view.addSubview(bilgeView)
         
 
     }
