@@ -11,6 +11,7 @@
 		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
 		4577DEB3203D85A70076A7D8 /* AddOnsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButton.swift */; };
 		4C3B0457203EB3B200A01E94 /* EBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0456203EB3B200A01E94 /* EBView.swift */; };
+		4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */; };
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
 		4C741555203C678F00A32734 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741554203C678F00A32734 /* ColorExtension.swift */; };
 		4C7EECB1203722AA006C8805 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7EECAF203722AA006C8805 /* Localizable.strings */; };
@@ -79,6 +80,7 @@
 		4577DEB2203D85A70076A7D8 /* AddOnsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsButton.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4C3B0456203EB3B200A01E94 /* EBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBView.swift; sourceTree = "<group>"; };
+		4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHorizontalSlider.swift; sourceTree = "<group>"; };
 		4C741552203C670600A32734 /* EBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLabel.swift; sourceTree = "<group>"; };
 		4C741554203C678F00A32734 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		4C7EECAB2037208D006C8805 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				4C741552203C670600A32734 /* EBLabel.swift */,
 				4577DEB2203D85A70076A7D8 /* AddOnsButton.swift */,
 				4C3B0456203EB3B200A01E94 /* EBView.swift */,
+				4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
 				69004CCB203D540700CC1215 /* HeaderView.swift in Sources */,
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
+				4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */,
 				8408E070203C12EF004ABC0A /* testCell.swift in Sources */,
 				8408E067203BFA3E004ABC0A /* AlignedImageButton.swift in Sources */,
 				8408E0592036F5A5004ABC0A /* Utilities.swift in Sources */,
