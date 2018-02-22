@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		27CD341983EAA5C14A1A20AB /* Pods_BookmarkMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */; };
 		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
-		4577DEB3203D85A70076A7D8 /* AddOnsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButton.swift */; };
+		4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */; };
+		45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */; };
 		4C3B0457203EB3B200A01E94 /* EBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0456203EB3B200A01E94 /* EBView.swift */; };
 		4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */; };
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
@@ -77,7 +78,8 @@
 		295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.release.xcconfig"; sourceTree = "<group>"; };
 		44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4577DEB2203D85A70076A7D8 /* AddOnsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsButton.swift; sourceTree = "<group>"; };
+		4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsButtonView.swift; sourceTree = "<group>"; };
+		45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonView.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4C3B0456203EB3B200A01E94 /* EBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBView.swift; sourceTree = "<group>"; };
 		4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHorizontalSlider.swift; sourceTree = "<group>"; };
@@ -360,9 +362,10 @@
 				8408E066203BFA3E004ABC0A /* AlignedImageButton.swift */,
 				4CBAD1FD203C0AEA00FC412B /* StepperButton.swift */,
 				4C741552203C670600A32734 /* EBLabel.swift */,
-				4577DEB2203D85A70076A7D8 /* AddOnsButton.swift */,
+				4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */,
 				4C3B0456203EB3B200A01E94 /* EBView.swift */,
 				4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */,
+				45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -704,7 +707,7 @@
 				4CBAD1FE203C0AEA00FC412B /* StepperButton.swift in Sources */,
 				8408E06A203C1013004ABC0A /* Styling.swift in Sources */,
 				4C741555203C678F00A32734 /* ColorExtension.swift in Sources */,
-				4577DEB3203D85A70076A7D8 /* AddOnsButton.swift in Sources */,
+				4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */,
 				8408E05C2036FA36004ABC0A /* BookmarkSessionManager.swift in Sources */,
 				8408E06C203C1033004ABC0A /* RoundView.swift in Sources */,
 				8408E07D203C6573004ABC0A /* UmutViewController.swift in Sources */,
@@ -720,6 +723,7 @@
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
 				4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */,
 				8408E070203C12EF004ABC0A /* testCell.swift in Sources */,
+				45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */,
 				8408E067203BFA3E004ABC0A /* AlignedImageButton.swift in Sources */,
 				8408E0592036F5A5004ABC0A /* Utilities.swift in Sources */,
 				8408E081203C6583004ABC0A /* OzcanViewController.swift in Sources */,

@@ -21,11 +21,11 @@ import UIKit
 import SnapKit
 
 
-@IBDesignable public class AddOnsButton: RoundView {
+@IBDesignable public class AddOnsButtonView: RoundView {
     
-    @IBInspectable var image: UIImage? {
+    @IBInspectable var icon: String = "" {
         didSet {
-            moneyImageView.image = image
+            iconLabel.text = icon
         }
     }
     
@@ -42,27 +42,38 @@ import SnapKit
     }
     
 
-    var moneyImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.backgroundColor = .blue
-        imageView.image = UIImage(named: "phone")
-        return imageView
-    }()
+//    var moneyImageView: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.backgroundColor = .blue
+//        imageView.image = UIImage(named: "dolar")
+//        return imageView
+//    }()
     
-    var priceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "5"
+    var iconLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "$"
+        label.EBcolor = Styling.colorForCode(.themeBlue)
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.EBfont = Styling.font(weight: .bold, size: 20)
         
         return label
     }()
     
-    var productDescriptionLabel: UILabel = {
-        let label = UILabel()
-        label.text = "500 MB Shareable Data"
+    var priceLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "5"
+        label.EBcolor = Styling.colorForCode(.themeBlue)
+        label.textAlignment = .center
+        label.EBfont = Styling.font(weight: .bold, size: 20)
+        
+        return label
+    }()
+    
+    var productDescriptionLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "500 MB Shareable Data"
         label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 8)
+        label.EBfont = UIFont.systemFont(ofSize: 15)
         
         return label
     }()
@@ -92,27 +103,34 @@ import SnapKit
         
         self.delegate = self
         super.initialize()
-        self.addSubview(moneyImageView)
+        self.addSubview(iconLabel)
         self.addSubview(priceLabel)
         self.addSubview(productDescriptionLabel)
         
-        moneyImageView.snp.makeConstraints { (make) in
+//        moneyImageView.snp.makeConstraints { (make) in
+//            make.width.equalTo(30)
+//            make.height.equalTo(30)
+//            make.left.equalTo(self).offset(10)
+//            make.centerY.equalTo(self)
+//        }
+       
+        iconLabel.snp.makeConstraints { (make) in
             make.width.equalTo(30)
-            make.height.equalTo(20)
-            make.left.equalTo(self).offset(10)
+            make.height.equalTo(30)
+            make.left.equalTo(self).offset(15)
             make.centerY.equalTo(self)
         }
 
         priceLabel.snp.makeConstraints { (make) in
             make.width.equalTo(30)
-            make.height.equalTo(20)
-            make.left.equalTo(moneyImageView).offset(25)
+            make.height.equalTo(30)
+            make.left.equalTo(iconLabel).offset(15)
             make.centerY.equalTo(self)
         }
 
         productDescriptionLabel.snp.makeConstraints { (make) in
             make.height.equalTo(20)
-            make.left.equalTo(priceLabel).offset(25)
+            make.left.equalTo(priceLabel).offset(30)
             make.right.equalTo(self).offset(-15)
             make.centerY.equalTo(self)
         }
@@ -124,7 +142,7 @@ import SnapKit
     
 }
 
-extension AddOnsButton: TouchableProtocol {
+extension AddOnsButtonView: TouchableProtocol {
     func didTrigger() {
         print("heyoo")
         layer.borderWidth = 1.4

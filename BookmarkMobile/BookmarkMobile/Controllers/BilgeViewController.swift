@@ -9,8 +9,8 @@
 import UIKit
 
 class BilgeViewController: UIViewController {
-    var bilgeView: AddOnsButton = {
-        let view = AddOnsButton()
+    var bilgeView: AddOnsButtonView = {
+        let view = AddOnsButtonView()
         return view
     }()
 
@@ -22,7 +22,7 @@ class BilgeViewController: UIViewController {
         //}()
         
         /* loadview or viewdidload */
-        bilgeView.frame = CGRect(x: 150, y: 200, width: 150, height: 50)
+        bilgeView.frame = CGRect(x: 50, y: 200, width: 250, height: 50)
         view.addSubview(bilgeView)
         
 
