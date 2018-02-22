@@ -11,6 +11,8 @@
 		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
 		4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */; };
 		45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */; };
+		4C007A86203F050400A39E8A /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C007A85203F050400A39E8A /* ExpandableHeaderView.swift */; };
+		4C007A88203F054D00A39E8A /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C007A87203F054D00A39E8A /* Section.swift */; };
 		4C3B0457203EB3B200A01E94 /* EBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0456203EB3B200A01E94 /* EBView.swift */; };
 		4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */; };
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
@@ -81,6 +83,8 @@
 		4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsButtonView.swift; sourceTree = "<group>"; };
 		45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonView.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		4C007A85203F050400A39E8A /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		4C007A87203F054D00A39E8A /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4C3B0456203EB3B200A01E94 /* EBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBView.swift; sourceTree = "<group>"; };
 		4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHorizontalSlider.swift; sourceTree = "<group>"; };
 		4C741552203C670600A32734 /* EBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLabel.swift; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 				4C3B0456203EB3B200A01E94 /* EBView.swift */,
 				4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */,
 				45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */,
+				4C007A85203F050400A39E8A /* ExpandableHeaderView.swift */,
+				4C007A87203F054D00A39E8A /* Section.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -710,7 +716,9 @@
 				4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */,
 				8408E05C2036FA36004ABC0A /* BookmarkSessionManager.swift in Sources */,
 				8408E06C203C1033004ABC0A /* RoundView.swift in Sources */,
+				4C007A86203F050400A39E8A /* ExpandableHeaderView.swift in Sources */,
 				8408E07D203C6573004ABC0A /* UmutViewController.swift in Sources */,
+				4C007A88203F054D00A39E8A /* Section.swift in Sources */,
 				8408E06E203C12D6004ABC0A /* testComponent.swift in Sources */,
 				69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */,
 				4C741553203C670600A32734 /* EBLabel.swift in Sources */,
