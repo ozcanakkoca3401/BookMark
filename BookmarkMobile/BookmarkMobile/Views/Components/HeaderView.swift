@@ -6,8 +6,6 @@
 //  Copyright © 2018 Nookmark. All rights reserved.
 //
 
-import Foundation
-
 /* sample usage */
 
 //var headerView: HeaderView = {
@@ -19,7 +17,7 @@ import Foundation
 //headerView.frame = CGRect(x: 150, y: 200, width: 150, height: 50)
 //view.addSubview(headerView)
 
-
+import Foundation
 import UIKit
 import SnapKit
 

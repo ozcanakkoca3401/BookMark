@@ -6,8 +6,20 @@
 //  Copyright © 2018 Nookmark. All rights reserved.
 //
 
+/* sample usage */
+
+//var headerView: HeaderView = {
+//    let view = HeaderView()
+//    return view
+//}()
+
+/* loadview or viewdidload */
+//headerView.frame = CGRect(x: 150, y: 200, width: 150, height: 50)
+//view.addSubview(headerView)
+
 import UIKit
 import SnapKit
+
 
 @IBDesignable public class AddOnsButton: RoundView {
     
@@ -108,6 +120,8 @@ import SnapKit
 extension AddOnsButton: TouchableProtocol {
     func didTrigger() {
         print("heyoo")
+        layer.borderWidth = 1.4
+        borderColor = Styling.colorForCode(.themeBlue)
     }
     
     

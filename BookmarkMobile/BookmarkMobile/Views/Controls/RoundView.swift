@@ -16,6 +16,30 @@ protocol TouchableProtocol {
     
     var delegate: TouchableProtocol?
     
+    @IBInspectable var borderColor: UIColor = Styling.colorForCode(.themeGray) {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 0.8 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat = 5 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeClear) {
+        didSet {
+            backgroundColor = bgColor
+        }
+    }
+    
     public init() {
         super.init(frame: .zero)
         self.initialize()
@@ -46,31 +70,7 @@ protocol TouchableProtocol {
         delegate?.didTrigger()
     }
     
-    @IBInspectable var borderColor: UIColor = Styling.colorForCode(.themeGray) {
-        didSet {
-            layer.borderColor = borderColor.cgColor
-        }
-    }
-    
-    @IBInspectable var borderWidth: CGFloat = 0.8 {
-        didSet {
-            layer.borderWidth = borderWidth
-        }
-    }
-   
-    @IBInspectable var cornerRadius: CGFloat = 5 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-        }
-    }
-    
-    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeClear) {
-        didSet {
-            backgroundColor = bgColor
-        }
-    }
-    
-    override public func layoutSubviews() { // refresh durumunda...
+   override public func layoutSubviews() { // refresh durumunda...
        super.layoutSubviews()
     }
 }
