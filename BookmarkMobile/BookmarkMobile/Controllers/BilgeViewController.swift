@@ -28,10 +28,11 @@ class BilgeViewController: UIViewController {
         //}()
         
         /* loadview or viewdidload */
-        bilgeView.frame = CGRect(x: 50, y: 200, width: 250, height: 50)
+        bilgeView.frame = CGRect(x: 50, y: 200, width: 250, height: 60)
         view.addSubview(bilgeView)
         
-        changeBview.frame = CGRect(x: 50, y: 300, width: 250, height: 50)
+        changeBview.frame = CGRect(x: 50, y: 300, width: 250, height: 60)
+        changeBview.backgroundColor = Styling.colorForCode(.themeLight)
         view.addSubview(changeBview)
         
 
