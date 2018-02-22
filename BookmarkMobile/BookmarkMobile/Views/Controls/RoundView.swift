@@ -12,7 +12,7 @@ protocol TouchableProtocol {
     func didTrigger()
 }
 
- @IBDesignable public class RoundView: UIView {
+ @IBDesignable public class RoundView: EBView {
     
     var delegate: TouchableProtocol?
     
@@ -40,7 +40,7 @@ protocol TouchableProtocol {
         }
     }
     
-    public init() {
+    public override init() {
         super.init(frame: .zero)
         self.initialize()
     }
@@ -55,7 +55,7 @@ protocol TouchableProtocol {
         self.initialize()
     }
     
-    func initialize(){
+    override func initialize(){
         layer.cornerRadius = cornerRadius
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor
