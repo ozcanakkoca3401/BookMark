@@ -1,9 +1,9 @@
 //
 //  ExpandableHeaderView.swift
-//  BookmarkMobile
+//  TableViewDropDown
 //
-//  Created by Umut on 22.02.2018.
-//  Copyright © 2018 Nookmark. All rights reserved.
+//  Created by BriefOS on 5/3/17.
+//  Copyright © 2017 BriefOS. All rights reserved.
 //
 
 import UIKit
@@ -25,21 +25,14 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
+    
     @objc func selectHeaderAction(gestureRecognizer: UITapGestureRecognizer) {
         let cell = gestureRecognizer.view as! ExpandableHeaderView
         delegate?.toggleSection(header: self, section: cell.section)
     }
     
-    func customInit(section: Int, delegate: ExpandableHeaderViewDelegate) {
-//        self.textLabel?.text = title
-        self.section = section
-        self.delegate = delegate
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-//        self.textLabel?.textColor = UIColor.white
-//        self.contentView.backgroundColor = UIColor.darkGray
-    }
 }
-
