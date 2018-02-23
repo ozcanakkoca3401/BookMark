@@ -13,7 +13,8 @@ class UmutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        let t = EBHeaderView(frame: CGRect(x: 10, y: 60, width: 350, height: 80))
+        view.addSubview(t)
     }
     
     override func didReceiveMemoryWarning() {

@@ -16,6 +16,7 @@
 		4C007A88203F054D00A39E8A /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C007A87203F054D00A39E8A /* Section.swift */; };
 		4C3B0457203EB3B200A01E94 /* EBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0456203EB3B200A01E94 /* EBView.swift */; };
 		4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */; };
+		4C451A1D2040170700FF9E3D /* EBHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C451A1C2040170700FF9E3D /* EBHeaderView.swift */; };
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
 		4C741555203C678F00A32734 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741554203C678F00A32734 /* ColorExtension.swift */; };
 		4C7EECB1203722AA006C8805 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7EECAF203722AA006C8805 /* Localizable.strings */; };
@@ -89,6 +90,7 @@
 		4C007A87203F054D00A39E8A /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4C3B0456203EB3B200A01E94 /* EBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBView.swift; sourceTree = "<group>"; };
 		4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHorizontalSlider.swift; sourceTree = "<group>"; };
+		4C451A1C2040170700FF9E3D /* EBHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBHeaderView.swift; sourceTree = "<group>"; };
 		4C741552203C670600A32734 /* EBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLabel.swift; sourceTree = "<group>"; };
 		4C741554203C678F00A32734 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		4C7EECAB2037208D006C8805 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		8408E05F203AC6F2004ABC0A /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				4C451A1C2040170700FF9E3D /* EBHeaderView.swift */,
 				8408E06B203C1033004ABC0A /* RoundView.swift */,
 				8408E064203AD05F004ABC0A /* RoundButton.swift */,
 				4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */,
@@ -723,6 +726,7 @@
 				8408E07D203C6573004ABC0A /* UmutViewController.swift in Sources */,
 				4C007A88203F054D00A39E8A /* Section.swift in Sources */,
 				8408E06E203C12D6004ABC0A /* testComponent.swift in Sources */,
+				4C451A1D2040170700FF9E3D /* EBHeaderView.swift in Sources */,
 				69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */,
 				4C741553203C670600A32734 /* EBLabel.swift in Sources */,
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
