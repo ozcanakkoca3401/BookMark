@@ -12,28 +12,11 @@ import SnapKit
 
 @IBDesignable public class ThreeButtonView: EBView {
 
-    @IBInspectable var addOn: RoundButton? {
-        didSet {
-            
-        }
-    }
-    
-    @IBInspectable var give: RoundButton? {
-        didSet {
-            
-        }
-    }
-    
-    @IBInspectable var usage: RoundButton? {
-        didSet {
-            
-        }
-    }
     var addOnButton: RoundButton = {
         let addOnB = RoundButton()
         addOnB.title = "ADD-ON"
         addOnB.titleLabel?.textColor = UIColor.white
-        addOnB.bgColor = Styling.colorForCode(.themeBlue)
+        addOnB.bgColor = Styling.colorForCode(.themeDarkBlue)
         addOnB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return addOnB
@@ -43,7 +26,7 @@ import SnapKit
         let giveB = RoundButton()
         giveB.title = "GIVE"
         giveB.titleLabel?.textColor = UIColor.white
-        giveB.bgColor = Styling.colorForCode(.themeBlue)
+        giveB.bgColor = Styling.colorForCode(.themeDarkBlue)
         giveB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return giveB
@@ -53,7 +36,7 @@ import SnapKit
         let usageB = RoundButton()
         usageB.title = "USAGE"
         usageB.titleLabel?.textColor = UIColor.white
-        usageB.bgColor = Styling.colorForCode(.themeBlue)
+        usageB.bgColor = Styling.colorForCode(.themeDarkBlue)
         usageB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return usageB

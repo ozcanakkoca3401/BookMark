@@ -57,6 +57,11 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        view.backgroundColor = Styling.colorForCode(.themeLight)
+        
+        let a = EBCellView(frame: CGRect(x: 20, y: 20, width: view.frame.width, height: 150))
+        a.backgroundColor = UIColor.white
+        view.addSubview(a)
         
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,8 +96,9 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()//tableView.dequeueReusableCell(withIdentifier: "labelCell")!
-        let cellD = ThreeButtonView(frame: CGRect(x: 0, y: 10, width: 380, height: 40))
+        let cellD = ThreeButtonView(frame: CGRect(x: 0, y: 10, width: 360, height: 40))
 //        cell.textLabel?.text = sections[indexPath.section].movies[indexPath.row]
+        cell.backgroundColor = Styling.colorForCode(.themeLight)
         cell.addSubview(cellD)
         return cell
     }
