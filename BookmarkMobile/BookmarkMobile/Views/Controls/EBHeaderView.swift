@@ -11,7 +11,7 @@ import SnapKit
 
 @IBDesignable public class EBHeaderView: EBView {
 
-    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeLight) {
+    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeUltraLightGray) {
         didSet {
             self.backgroundColor = bgColor
         }
@@ -105,7 +105,7 @@ import SnapKit
         }
         
         hSlider.snp.makeConstraints { (make) in
-            make.width.equalTo(150)
+            make.right.equalTo(self).offset(-65)
             make.left.equalTo(self).offset(15)
             make.bottom.equalTo(self).offset(5)
         }
