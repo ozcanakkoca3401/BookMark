@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 ////        let rootView: AlaattinViewController = AlaattinViewController()
  //       let rootView: OzcanViewController = OzcanViewController()
-//        let rootView: UmutViewController = UmutViewController()
-        let rootView: BilgeViewController = BilgeViewController()
+        let rootView: UmutViewController = UmutViewController()
+//        let rootView: BilgeViewController = BilgeViewController()
 ////        let rootView: EnesViewController = EnesViewController()
 
 
