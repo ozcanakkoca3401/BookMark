@@ -41,7 +41,6 @@ import SnapKit
         }
     }
     
-
 //    var moneyImageView: UIImageView = {
 //        let imageView = UIImageView()
 //        imageView.backgroundColor = .blue
