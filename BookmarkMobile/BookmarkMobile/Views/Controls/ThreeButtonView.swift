@@ -31,9 +31,9 @@ import SnapKit
     }
     var addOnButton: RoundButton = {
         let addOnB = RoundButton()
-        addOnB.setTitle("ADD-ON", for: .normal)
+        addOnB.title = "ADD-ON"
         addOnB.titleLabel?.textColor = UIColor.white
-        addOnB.backgroundColor = Styling.colorForCode(.themeBlue)
+        addOnB.bgColor = Styling.colorForCode(.themeBlue)
         addOnB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return addOnB
@@ -41,9 +41,9 @@ import SnapKit
     
     var giveButton: RoundButton = {
         let giveB = RoundButton()
-        giveB.setTitle("GIVE", for: .normal)
+        giveB.title = "GIVE"
         giveB.titleLabel?.textColor = UIColor.white
-        giveB.backgroundColor = Styling.colorForCode(.themeBlue)
+        giveB.bgColor = Styling.colorForCode(.themeBlue)
         giveB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return giveB
@@ -51,9 +51,9 @@ import SnapKit
     
     var usageButton: RoundButton = {
         let usageB = RoundButton()
-        usageB.setTitle("USAGE", for: .normal)
+        usageB.title = "USAGE"
         usageB.titleLabel?.textColor = UIColor.white
-        usageB.backgroundColor = Styling.colorForCode(.themeBlue)
+        usageB.bgColor = Styling.colorForCode(.themeBlue)
         usageB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return usageB
@@ -86,34 +86,27 @@ import SnapKit
         self.addSubview(giveButton)
         self.addSubview(usageButton)
 
-
-
         addOnButton.snp.makeConstraints { (make) in
-            make.width.equalTo(70)
-            make.height.equalTo(45)
-            make.left.equalTo(self).offset(10)
-            make.centerY.equalTo(self)
+            make.top.bottom.equalTo(self)
+            make.left.equalTo(15)
+            make.width.equalTo(self).dividedBy(3).offset(-15)
         }
 
         giveButton.snp.makeConstraints { (make) in
-            make.width.equalTo(70)
-            make.height.equalTo(45)
-            make.left.equalTo(self).offset(90)
-            make.centerY.equalTo(self)
+            make.top.bottom.equalTo(self)
+            make.centerX.equalTo(self)
+            make.width.equalTo(self).dividedBy(3).offset(-15)
         }
 
         usageButton.snp.makeConstraints { (make) in
-            make.width.equalTo(70)
-            make.height.equalTo(45)
-           // make.left.equalTo(priceLabel).offset(30)
-            make.right.equalTo(self).offset(-10)
-            make.centerY.equalTo(self)
+            make.top.bottom.equalTo(self)
+            make.right.equalTo(-15)
+            make.width.equalTo(self).dividedBy(3).offset(-15)
         }
     }
 
     override public func layoutSubviews() {
         super.layoutSubviews()
     }
-
 }
 
