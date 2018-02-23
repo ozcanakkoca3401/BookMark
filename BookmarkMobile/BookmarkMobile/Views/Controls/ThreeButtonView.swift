@@ -33,7 +33,7 @@ import SnapKit
         let addOnB = RoundButton()
         addOnB.setTitle("ADD-ON", for: .normal)
         addOnB.titleLabel?.textColor = UIColor.white
-        addOnB.backgroundColor = Styling.colorForCode(.themeBlue)
+        addOnB.backgroundColor = Styling.colorForCode(.themeDarkBlue)
         addOnB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return addOnB
@@ -43,7 +43,7 @@ import SnapKit
         let giveB = RoundButton()
         giveB.setTitle("GIVE", for: .normal)
         giveB.titleLabel?.textColor = UIColor.white
-        giveB.backgroundColor = Styling.colorForCode(.themeBlue)
+        giveB.backgroundColor = Styling.colorForCode(.themeDarkBlue)
         giveB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return giveB
@@ -53,7 +53,7 @@ import SnapKit
         let usageB = RoundButton()
         usageB.setTitle("USAGE", for: .normal)
         usageB.titleLabel?.textColor = UIColor.white
-        usageB.backgroundColor = Styling.colorForCode(.themeBlue)
+        usageB.backgroundColor = Styling.colorForCode(.themeDarkBlue)
         usageB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return usageB

@@ -16,6 +16,7 @@ enum ColorCode {
     case themeClear
     case themeLight
     case themeDarkGray
+    case themeDarkBlue
    
 }
 
@@ -39,6 +40,8 @@ class Styling {
             return UIColor.init(red: 227.0 / 255.0, green: 228.0 / 255.0, blue: 229.0 / 255.0, alpha: 1.0)
         case .themeDarkGray:
             return UIColor.init(red: 143.0 / 255.0, green: 136.0 / 255.0, blue: 135.0 / 255.0, alpha: 1.0)
+        case .themeDarkBlue:
+            return UIColor.init(red: 58.0 / 255.0, green: 155.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
         }
     }
     
