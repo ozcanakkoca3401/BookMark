@@ -82,21 +82,21 @@ import SnapKit
     public override init() {
         super.init()
         
-        initialize()
+        self.initialize()
     }
     
     // code initialize
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        initialize()
+        self.initialize()
     }
     
     // storyboard initialize
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        initialize()
+        self.initialize()
     }
     
     override func initialize() {
