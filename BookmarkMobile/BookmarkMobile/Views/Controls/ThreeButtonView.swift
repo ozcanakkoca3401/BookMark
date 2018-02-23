@@ -29,32 +29,32 @@ import SnapKit
             
         }
     }
-    var addOnButton: UIButton = {
-        let addOnB = UIButton()
+    var addOnButton: RoundButton = {
+        let addOnB = RoundButton()
         addOnB.setTitle("ADD-ON", for: .normal)
         addOnB.titleLabel?.textColor = UIColor.white
-        addOnB.titleLabel?.font = Styling.font(weight: .regular, size: 15)
         addOnB.backgroundColor = Styling.colorForCode(.themeBlue)
+        addOnB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return addOnB
     }()
     
-    var giveButton: UIButton = {
-        let giveB = UIButton()
+    var giveButton: RoundButton = {
+        let giveB = RoundButton()
         giveB.setTitle("GIVE", for: .normal)
         giveB.titleLabel?.textColor = UIColor.white
-        giveB.titleLabel?.font = Styling.font(weight: .regular, size: 15)
         giveB.backgroundColor = Styling.colorForCode(.themeBlue)
+        giveB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return giveB
     }()
     
-    var usageButton: UIButton = {
-        let usageB = UIButton()
+    var usageButton: RoundButton = {
+        let usageB = RoundButton()
         usageB.setTitle("USAGE", for: .normal)
         usageB.titleLabel?.textColor = UIColor.white
-        usageB.titleLabel?.font = Styling.font(weight: .regular, size: 15)
         usageB.backgroundColor = Styling.colorForCode(.themeBlue)
+        usageB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         
         return usageB
     }()
@@ -88,31 +88,32 @@ import SnapKit
 
 
 
-//        iconLabel.snp.makeConstraints { (make) in
-//            make.width.equalTo(30)
-//            make.height.equalTo(30)
-//            make.left.equalTo(self).offset(15)
-//            make.centerY.equalTo(self)
-//        }
-//
-//        priceLabel.snp.makeConstraints { (make) in
-//            make.width.equalTo(30)
-//            make.height.equalTo(30)
-//            make.left.equalTo(iconLabel).offset(15)
-//            make.centerY.equalTo(self)
-//        }
-//
-//        productDescriptionLabel.snp.makeConstraints { (make) in
-//            make.height.equalTo(20)
-//            make.left.equalTo(priceLabel).offset(30)
-//            make.right.equalTo(self).offset(-15)
-//            make.centerY.equalTo(self)
-//        }
-//    }
-//
-//    override public func layoutSubviews() {
-//        super.layoutSubviews()
-//    }
+        addOnButton.snp.makeConstraints { (make) in
+            make.width.equalTo(70)
+            make.height.equalTo(45)
+            make.left.equalTo(self).offset(10)
+            make.centerY.equalTo(self)
+        }
+
+        giveButton.snp.makeConstraints { (make) in
+            make.width.equalTo(70)
+            make.height.equalTo(45)
+            make.left.equalTo(self).offset(90)
+            make.centerY.equalTo(self)
+        }
+
+        usageButton.snp.makeConstraints { (make) in
+            make.width.equalTo(70)
+            make.height.equalTo(45)
+           // make.left.equalTo(priceLabel).offset(30)
+            make.right.equalTo(self).offset(-10)
+            make.centerY.equalTo(self)
+        }
+    }
+
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+    }
 
 }
-}
+

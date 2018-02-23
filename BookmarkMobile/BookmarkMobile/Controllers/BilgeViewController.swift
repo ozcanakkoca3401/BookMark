@@ -19,6 +19,11 @@ class BilgeViewController: UIViewController {
         let cView = ChangeButtonView()
         return cView
     }()
+    
+    var threeButtonView: ThreeButtonView = {
+        let tbView = ThreeButtonView()
+        return tbView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +40,9 @@ class BilgeViewController: UIViewController {
         changeBview.backgroundColor = Styling.colorForCode(.themeLight)
         view.addSubview(changeBview)
         
+        threeButtonView.frame = CGRect(x:50, y: 400, width: 250, height: 60)
+        threeButtonView.backgroundColor = Styling.colorForCode(.themeLight)
+        view.addSubview(threeButtonView)
 
     }
 
