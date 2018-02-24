@@ -37,7 +37,19 @@
 
 import UIKit
 
-class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
+class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate, ThreeButtonProtocol {
+    func addOnButton() {
+        print("addOnButton")
+    }
+    
+    func giveButton() {
+        print("giveButton")
+    }
+    
+    func usageButton() {
+        print("usageButton")
+    }
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -61,6 +73,7 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         view.backgroundColor = Styling.colorForCode(.themeLight)
+        
         
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,6 +111,8 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         let cellD = ThreeButtonView(frame: CGRect(x: 0, y: 10, width: 360, height: 40))
 //        cell.textLabel?.text = sections[indexPath.section].movies[indexPath.row]
         cell.backgroundColor = Styling.colorForCode(.themeLight)
+        cell.selectionStyle = .none
+        cellD.threeButtonDelegate = self
         cell.addSubview(cellD)
         return cell
     }
@@ -114,6 +129,7 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
 }
 
 extension ExpandableHeaderView {
+    
     func customInit(title: SectionData, section: Int, delegate: ExpandableHeaderViewDelegate) {
         
         let t = EBHeaderView(frame: CGRect(x: 0, y: 0, width: 380, height: 80))

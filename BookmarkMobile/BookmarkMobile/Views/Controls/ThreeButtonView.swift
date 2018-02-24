@@ -9,15 +9,23 @@
 import Foundation
 import SnapKit
 
+protocol ThreeButtonProtocol {
+    func addOnButton()
+    func giveButton()
+    func usageButton()
+}
 
 @IBDesignable public class ThreeButtonView: EBView {
 
+    var threeButtonDelegate: ThreeButtonProtocol?
+    
     var addOnButton: RoundButton = {
         let addOnB = RoundButton()
         addOnB.title = "ADD-ON"
         addOnB.titleLabel?.textColor = UIColor.white
         addOnB.bgColor = Styling.colorForCode(.themeDarkBlue)
         addOnB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
+        addOnB.addTarget(self, action: #selector(ThreeButtonView.addOnButtonF), for: .touchUpInside)
         
         return addOnB
     }()
@@ -28,6 +36,7 @@ import SnapKit
         giveB.titleLabel?.textColor = UIColor.white
         giveB.bgColor = Styling.colorForCode(.themeDarkBlue)
         giveB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
+        giveB.addTarget(self, action: #selector(ThreeButtonView.giveButtonF), for: .touchUpInside)
         
         return giveB
     }()
@@ -38,6 +47,7 @@ import SnapKit
         usageB.titleLabel?.textColor = UIColor.white
         usageB.bgColor = Styling.colorForCode(.themeDarkBlue)
         usageB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
+        usageB.addTarget(self, action: #selector(ThreeButtonView.usageButtonF), for: .touchUpInside)
         
         return usageB
     }()
@@ -90,6 +100,18 @@ import SnapKit
 
     override public func layoutSubviews() {
         super.layoutSubviews()
+    }
+    
+    @objc func addOnButtonF() {
+        threeButtonDelegate?.addOnButton()
+    }
+    
+    @objc func giveButtonF() {
+        threeButtonDelegate?.giveButton()
+    }
+    
+    @objc func usageButtonF() {
+        threeButtonDelegate?.usageButton()
     }
 }
 

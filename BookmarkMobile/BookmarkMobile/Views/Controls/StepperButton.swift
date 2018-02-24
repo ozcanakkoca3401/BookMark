@@ -95,11 +95,11 @@ protocol StepperProtocol {
         }
     }
     
-    @objc func minusT(){
+    @objc func minusT() {
         stepperDelegate?.minus()
     }
     
-    @objc func plusT(){
+    @objc func plusT() {
         stepperDelegate?.plus()
     }
 }
