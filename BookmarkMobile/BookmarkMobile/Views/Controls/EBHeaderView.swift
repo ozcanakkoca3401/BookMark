@@ -110,7 +110,7 @@ import SnapKit
         
         gbLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(self)
-            make.right.equalTo(usageLabel).offset(25)
+            make.left.equalTo(usageLabel.snp.right).offset(5)
         }
         
         usableLabel.snp.makeConstraints { (make) in

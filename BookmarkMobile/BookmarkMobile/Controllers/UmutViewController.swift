@@ -42,15 +42,18 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var sections = [
-        Section(genre: "🦁 Animation",
-                movies: ["The Lion King"],
+        SectionData(dataType: "DATA",
+                    usedData: "0.45",
+                    usableData: "11 GB",
                 expanded: false),
-        Section(genre: "💥 Superhero",
-                movies: ["Guardians of the Galaxy"],
-                expanded: false),
-        Section(genre: "👻 Horror",
-                movies: ["The Walking Dead"],
-                expanded: false)
+        SectionData(dataType: "SMS",
+                    usedData: "120",
+                    usableData: "500 SMS",
+                    expanded: false),
+        SectionData(dataType: "VOICE",
+                    usedData: "50",
+                    usableData: "1000 VOICE",
+                    expanded: false)
     ]
     
     override func viewDidLoad() {
@@ -59,17 +62,13 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         view.backgroundColor = Styling.colorForCode(.themeLight)
         
-        let a = EBCellView(frame: CGRect(x: 20, y: 20, width: view.frame.width, height: 150))
-        a.backgroundColor = UIColor.white
-        view.addSubview(a)
-        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].movies.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -90,7 +89,7 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ExpandableHeaderView()
-        header.customInit1(title: sections[section].genre, section: section, delegate: self)
+        header.customInit(title: sections[section], section: section, delegate: self)
         return header
     }
     
@@ -107,30 +106,23 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         sections[section].expanded = !sections[section].expanded
         
         tableView.beginUpdates()
-        for i in 0 ..< sections[section].movies.count {
-            tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
-        }
+//        for i in 0 ..< sections[section].movies.count {
+//            tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
+//        }
         tableView.endUpdates()
     }
-    
 }
 
-
 extension ExpandableHeaderView {
-    func customInit1(title: String, section: Int, delegate: ExpandableHeaderViewDelegate) {
-        
-        self.textLabel?.textColor = UIColor.white
-//        self.contentView.backgroundColor = UIColor.purple
-        
-        self.textLabel?.text = title + "ozn"
+    func customInit(title: SectionData, section: Int, delegate: ExpandableHeaderViewDelegate) {
         
         let t = EBHeaderView(frame: CGRect(x: 0, y: 0, width: 380, height: 80))
-        self.addSubview(t)
-
-//        let view  = UIView(frame:CGRect(x:0, y:0, width:40, height:30))
-//        view.backgroundColor = .blue
-//        self.addSubview(view)
+        t.dataLabel.EBtext = title.dataType
+        t.usableLabel.EBtext = title.usableData
+        t.usageLabel.EBtext = title.usedData
+        t.gbLabel.text = title.dataType
         
+        self.addSubview(t)
         self.section = section
         self.delegate = delegate
     }
