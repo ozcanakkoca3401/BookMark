@@ -106,7 +106,6 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     func toggleSection(header: ExpandableHeaderView, section: Int) {
         sections[section].expanded = !sections[section].expanded
         
-        
         tableView.beginUpdates()
         for i in 0 ..< sections[section].movies.count {
             tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
@@ -127,7 +126,7 @@ extension ExpandableHeaderView {
         
         let t = EBHeaderView(frame: CGRect(x: 0, y: 0, width: 380, height: 80))
         self.addSubview(t)
-        
+
 //        let view  = UIView(frame:CGRect(x:0, y:0, width:40, height:30))
 //        view.backgroundColor = .blue
 //        self.addSubview(view)

@@ -17,6 +17,12 @@ import SnapKit
         }
     }
     
+    @IBInspectable var rightImage: UIImage? {
+        didSet {
+            rightImageView.image = rightImage
+        }
+    }
+    
     var dataLabel: EBLabel = {
         let label = EBLabel()
         label.EBtext = "DATA"
@@ -53,6 +59,13 @@ import SnapKit
         return label
     }()
     
+    var rightImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "openIcon")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     var hSlider: HorizontalSlider = {
         let slider = HorizontalSlider()
         return slider
@@ -81,6 +94,7 @@ import SnapKit
         self.addSubview(usageLabel)
         self.addSubview(gbLabel)
         self.addSubview(usableLabel)
+        self.addSubview(rightImageView)
         self.addSubview(hSlider)
         
         dataLabel.snp.makeConstraints { (make) in
@@ -101,6 +115,13 @@ import SnapKit
         
         usableLabel.snp.makeConstraints { (make) in
             make.right.equalTo(self).offset(-65)
+            make.centerY.equalTo(self)
+        }
+        
+        rightImageView.snp.makeConstraints { (make) in
+            make.width.equalTo(20)
+            make.height.equalTo(20)
+            make.right.equalTo(self).offset(-40)
             make.centerY.equalTo(self)
         }
         
