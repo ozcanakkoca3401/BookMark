@@ -16,9 +16,9 @@ class UmutViewController: UITableViewController {
         super.viewDidLoad()
         
         // Auto resizing the height of the cell
-        tableView.estimatedRowHeight = 44.0
+        tableView.estimatedRowHeight = 70.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+        tableView.separatorStyle = .none
         self.title = "Apple Products"
     }
     
@@ -41,8 +41,8 @@ extension UmutViewController {
         
         let item: Item = sections[indexPath.section].items[indexPath.row]
         
-        cell.nameLabel.text = item.name
-        cell.detailLabel.text = item.detail
+//        cell.nameLabel.text = item.name
+//        cell.detailLabel.text = item.detail
         
         return cell
     }
@@ -55,8 +55,8 @@ extension UmutViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? CollapsibleTableViewHeader ?? CollapsibleTableViewHeader(reuseIdentifier: "header")
         
-        header.titleLabel.text = sections[section].name
-        header.arrowLabel.text = ">"
+//        header.titleLabel.text = sections[section].name
+//        header.arrowLabel.text = ">"
         header.setCollapsed(sections[section].collapsed)
         
         header.section = section
@@ -66,7 +66,7 @@ extension UmutViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44.0
+        return 80.0
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

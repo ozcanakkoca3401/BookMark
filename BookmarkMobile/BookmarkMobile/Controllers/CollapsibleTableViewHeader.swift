@@ -17,8 +17,10 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     weak var delegate: CollapsibleTableViewHeaderDelegate?
     var section: Int = 0
     
-    let titleLabel = UILabel()
-    let arrowLabel = UILabel()
+//    let titleLabel = UILabel()
+//    let arrowLabel = UILabel()
+    
+    let headerView = EBHeaderView(frame: CGRect(x: 0, y: 0, width: 380, height: 80))
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -26,25 +28,26 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         // Content View
         contentView.backgroundColor = UIColor(hex: 0x2E3944)
         
-        let marginGuide = contentView.layoutMarginsGuide
+        contentView.addSubview(headerView)
+//        let marginGuide = contentView.layoutMarginsGuide
         
         // Arrow label
-        contentView.addSubview(arrowLabel)
-        arrowLabel.textColor = UIColor.white
-        arrowLabel.translatesAutoresizingMaskIntoConstraints = false
-        arrowLabel.widthAnchor.constraint(equalToConstant: 12).isActive = true
-        arrowLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
-        arrowLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
-        arrowLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
-        
-        // Title label
-        contentView.addSubview(titleLabel)
-        titleLabel.textColor = UIColor.white
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
+//        contentView.addSubview(arrowLabel)
+//        arrowLabel.textColor = UIColor.white
+//        arrowLabel.translatesAutoresizingMaskIntoConstraints = false
+//        arrowLabel.widthAnchor.constraint(equalToConstant: 12).isActive = true
+//        arrowLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
+//        arrowLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
+//        arrowLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
+//
+//        // Title label
+//        contentView.addSubview(titleLabel)
+//        titleLabel.textColor = UIColor.white
+//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+//        titleLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
+//        titleLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
+//        titleLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
+//        titleLabel.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
         
         //
         // Call tapHeader when tapping on this header
@@ -71,7 +74,7 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         //
         // Animate the arrow rotation (see Extensions.swf)
         //
-        arrowLabel.rotate(collapsed ? 0.0 : .pi / 2)
+//        arrowLabel.rotate(collapsed ? 0.0 : .pi / 2)
     }
     
 }
