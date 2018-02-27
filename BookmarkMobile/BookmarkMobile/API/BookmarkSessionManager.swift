@@ -32,9 +32,7 @@ class BookmarkSessionManager: NSObject {
         self.sessionManager = manager
     }
     
-    func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void)
-    {
-        
+    func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void) {
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
             print("internet yok")
             return
@@ -48,13 +46,13 @@ class BookmarkSessionManager: NSObject {
             }
             
             if responseObject.result.isFailure {
-                let error : Error = responseObject.result.error!
+                let error: Error = responseObject.result.error!
                 failure(error)
             }
         }
     }
     
-    func requestPOSTURL(_ strURL : String, params : [String : AnyObject]?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
+    func requestPOSTURL(_ strURL: String, params: [String: AnyObject]?, headers: [String: String]?, success:@escaping (JSON) -> Void, failure: @escaping (Error) -> Void) {
         
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
             print("internet yok")
@@ -68,14 +66,14 @@ class BookmarkSessionManager: NSObject {
                 success(resJson)
             }
             if responseObject.result.isFailure {
-                let error : Error = responseObject.result.error!
+                let error: Error = responseObject.result.error!
                 failure(error)
             }
         }
     }
 }
 
-class CustomServerTrustPoliceManager : ServerTrustPolicyManager {
+class CustomServerTrustPoliceManager: ServerTrustPolicyManager {
     override func serverTrustPolicy(forHost host: String) -> ServerTrustPolicy? {
         return .disableEvaluation
     }

@@ -55,7 +55,7 @@ import UIKit
         self.initialize()
     }
     
-    func initialize(){
+    func initialize() {
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
         layer.cornerRadius = cornerRadius

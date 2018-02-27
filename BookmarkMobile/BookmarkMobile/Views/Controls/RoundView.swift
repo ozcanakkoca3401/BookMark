@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol TouchableProtocol {
+protocol TouchableProtocol: class {
     func didTrigger()
 }
 
  @IBDesignable public class RoundView: EBView {
     
-    var delegate: TouchableProtocol?
+    weak var delegate: TouchableProtocol?
     
     @IBInspectable var borderColor: UIColor = Styling.colorForCode(.themeGray) {
         didSet {
@@ -55,7 +55,7 @@ protocol TouchableProtocol {
         self.initialize()
     }
     
-    override func initialize(){
+    override func initialize() {
         layer.cornerRadius = cornerRadius
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor

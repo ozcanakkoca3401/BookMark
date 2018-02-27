@@ -51,11 +51,8 @@ class Styling {
     static func font(weight: FontWeight, size: Float) -> UIFont {
         if let font = UIFont.init(name: "Helvetica-\(weight.rawValue.capitalized)", size: CGFloat(size)) {
             return font
-        }
-        else {
+        } else {
             return UIFont.systemFont(ofSize: CGFloat(size))
         }
     }
 }
-
-

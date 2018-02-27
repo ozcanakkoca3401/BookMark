@@ -86,7 +86,7 @@ import SnapKit
         self.initialize()
     }
     
-    override func initialize(){
+    override func initialize() {
         
         self.backgroundColor = bgColor
     

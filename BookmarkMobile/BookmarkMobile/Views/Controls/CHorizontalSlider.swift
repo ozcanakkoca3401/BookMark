@@ -11,13 +11,13 @@ import UIKit
 class CHorizontalSlider: HorizontalSlider {
 
     @IBInspectable var isThumbInteractionEnabled: Bool = true {
-        didSet{
+        didSet {
             isUserInteractionEnabled = isThumbInteractionEnabled
         }
     }
 
     @IBInspectable var thumbColor: UIColor = Styling.colorForCode(.themeGray) {
-        didSet{
+        didSet {
             thumbTintColor = thumbColor
         }
     }

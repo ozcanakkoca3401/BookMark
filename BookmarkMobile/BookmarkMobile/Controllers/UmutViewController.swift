@@ -37,7 +37,7 @@
 
 import UIKit
 
-class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate, ThreeButtonProtocol {
+class UmutViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate, ThreeButtonProtocol {
     func addOnButton() {
         print("addOnButton")
     }
@@ -49,7 +49,6 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     func usageButton() {
         print("usageButton")
     }
-    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -74,7 +73,6 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         view.backgroundColor = Styling.colorForCode(.themeLight)
         
-        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -89,7 +87,7 @@ class UmutViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (sections[indexPath.section].expanded) {
+        if sections[indexPath.section].expanded {
             return 60
         } else {
             return 0
@@ -143,6 +141,3 @@ extension ExpandableHeaderView {
         self.delegate = delegate
     }
 }
-
-
-

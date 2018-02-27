@@ -25,7 +25,7 @@ import UIKit
         self.initialize()
     }
     
-    func initialize(){
+    func initialize() {
         
     }
 }

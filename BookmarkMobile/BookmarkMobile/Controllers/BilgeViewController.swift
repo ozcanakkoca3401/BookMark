@@ -40,7 +40,7 @@ class BilgeViewController: UIViewController {
         changeBview.backgroundColor = Styling.colorForCode(.themeLight)
         view.addSubview(changeBview)
         
-        threeButtonView.frame = CGRect(x:50, y: 400, width: 250, height: 60)
+        threeButtonView.frame = CGRect(x: 50, y: 400, width: 250, height: 60)
         threeButtonView.backgroundColor = Styling.colorForCode(.themeLight)
         view.addSubview(threeButtonView)
 
@@ -51,12 +51,10 @@ class BilgeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
 extension BilgeViewController: TouchableProtocol {
     func didTrigger() {
         print("bilge")
     }
-    
     
 }

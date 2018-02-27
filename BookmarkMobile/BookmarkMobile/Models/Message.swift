@@ -6,7 +6,6 @@
 //  Copyright © 2018 Nookmark. All rights reserved.
 //
 
-
 import ObjectMapper
 import SwiftyJSON
 
@@ -16,13 +15,13 @@ class Message: Mappable {
     var timestamp: Int32?
     var nickname: String?
     var avatarUrl: String?
-    var type:UInt8 = 0
+    var type: UInt8 = 0
     
     init() {
        
     }
     
-    init(message: String, timestamp: Int32, nickname: String, avatarUrl: String, type:UInt8) {
+    init(message: String, timestamp: Int32, nickname: String, avatarUrl: String, type: UInt8) {
         self.message = message
         self.timestamp = timestamp
         self.nickname = nickname
@@ -30,7 +29,7 @@ class Message: Mappable {
         self.type = type
     }
     
-    required init?(map: Map){
+    required init?(map: Map) {
         
     }
     
@@ -46,7 +45,7 @@ class Message: Mappable {
 extension Message {
     
     // Get messages from service
-    static func getMessages(success:@escaping (Array<Message>) -> Void, failure:@escaping (String) -> Void) -> Void{
+    static func getMessages(success:@escaping ([Message]) -> Void, failure:@escaping (String) -> Void) {
         
         BookmarkSessionManager.sharedInstance.requestGETURL("jsonBlob/61d68d54-d93e-11e7-a24a-934385df7024", success: { (responseJSON) in
             
@@ -65,10 +64,9 @@ extension Message {
             // Send to array to calling controllers
             success(messages)
             
-        },failure: { (error) in
-           // failure(error)
+        }, failure: { (error) in
+            print(error)
         })
         
     }
 }
-

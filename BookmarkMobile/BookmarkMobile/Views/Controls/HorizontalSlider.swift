@@ -11,31 +11,31 @@ import UIKit
 @IBDesignable public class HorizontalSlider: UISlider {
 
     @IBInspectable var minTintColor: UIColor = Styling.colorForCode(.themeGray) {
-        didSet{
+        didSet {
             minimumTrackTintColor = minTintColor
         }
     }
     
     @IBInspectable var maxTintColor: UIColor = Styling.colorForCode(.themeLight) {
-        didSet{
+        didSet {
             maximumTrackTintColor = maxTintColor
         }
     }
     
     @IBInspectable var minValue: Float = 0 {
-        didSet{
+        didSet {
             minimumValue = minValue
         }
     }
     
     @IBInspectable var maxValue: Float = 1 {
-        didSet{
+        didSet {
             maximumValue = maxValue
         }
     }
     
     @IBInspectable var initialvalue: Float = 0.5 {
-        didSet{
+        didSet {
             value = initialvalue
         }
     }
@@ -67,7 +67,7 @@ import UIKit
         self.initialize()
     }
     
-    func initialize(){
+    func initialize() {
         thumbTintColor = Styling.colorForCode(.themeClear)
         isUserInteractionEnabled = false
         minimumTrackTintColor = minTintColor

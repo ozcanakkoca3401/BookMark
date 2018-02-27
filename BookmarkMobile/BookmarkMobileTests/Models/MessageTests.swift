@@ -29,9 +29,9 @@ class MessageTests: XCTestCase {
         Message.getMessages(success: { (messages) in
             messagesList = messages
             messageExpectation.fulfill()
-        }) { (error) in
-            
-        }
+        }, failure: { (error) in
+            print(error)
+        })
         
         waitForExpectations(timeout: 2) { _ in
             XCTAssertNotNil(messagesList)

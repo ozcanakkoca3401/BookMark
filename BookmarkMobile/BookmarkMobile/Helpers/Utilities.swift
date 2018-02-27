@@ -13,7 +13,7 @@ public final class Utilities {
     
     public class var sharedInstance: Utilities {
         struct Singleton {
-            static let instance : Utilities = Utilities()
+            static let instance: Utilities = Utilities()
         }
         return Singleton.instance
     }

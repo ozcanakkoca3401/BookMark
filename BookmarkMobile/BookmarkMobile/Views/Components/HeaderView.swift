@@ -21,7 +21,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-
 @IBDesignable public class HeaderView: UIView {
     
     @IBInspectable var leftImage: UIImage? {

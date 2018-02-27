@@ -20,14 +20,13 @@ struct Section {
     }
 }
 
-
 struct SectionData {
     var dataType: String!
-    var usedData:String!
-    var usableData:String!
+    var usedData: String!
+    var usableData: String!
     var expanded: Bool!
     
-    init(dataType: String,usedData: String, usableData: String, expanded: Bool) {
+    init(dataType: String, usedData: String, usableData: String, expanded: Bool) {
         self.dataType = dataType
         self.usedData = usedData
         self.usableData = usableData

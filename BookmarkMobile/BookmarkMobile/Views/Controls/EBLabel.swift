@@ -11,19 +11,19 @@ import UIKit
 class EBLabel: UILabel {
     
     @IBInspectable var EBtext: String = "" {
-        didSet{
+        didSet {
             text = EBtext
         }
     }
     
     @IBInspectable var EBcolor: UIColor = Styling.colorForCode(.themeDarkGray) {
-        didSet{
+        didSet {
             textColor = EBcolor
         }
     }
     
     @IBInspectable var EBfont: UIFont = Styling.font(weight: .bold, size: 15) {
-        didSet{
+        didSet {
             font = EBfont
         }
     }
@@ -43,7 +43,7 @@ class EBLabel: UILabel {
         self.initialize()
     }
     
-    func initialize(){
+    func initialize() {
         text = EBtext
         textColor = EBcolor
         font = EBfont

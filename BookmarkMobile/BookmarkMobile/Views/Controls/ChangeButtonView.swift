@@ -9,7 +9,6 @@
 import Foundation
 import SnapKit
 
-
 @IBDesignable public class ChangeButtonView: RoundView {
     
     @IBInspectable var image: UIImage? {
@@ -24,11 +23,11 @@ import SnapKit
         }
     }
     
-    @IBInspectable var change: UIButton? {
-        didSet {
-            
-        }
-}
+//    @IBInspectable var change: UIButton? {
+//        didSet {
+//
+//        }
+//    }
     
     var iconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -37,7 +36,7 @@ import SnapKit
         return imageView
     }()
 
-    var informationLabel : EBLabel = {
+    var informationLabel: EBLabel = {
         let label = EBLabel()
         label.EBtext = "bilgeee"
         label.textAlignment = .center
@@ -113,6 +112,3 @@ import SnapKit
     }
     
 }
-
-
-    

@@ -14,5 +14,3 @@ extension String {
         print("Hello world")
     }
 }
-
-

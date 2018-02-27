@@ -35,11 +35,11 @@ class ViewController: BaseViewController {
         
         Message.getMessages(success: { (messages) in
             print(messages)
-        }) { (error) in
+        }, failure: { (error) in
             print(error)
-        }
+        })
         
-        let label  = UILabel(frame:CGRect(x:0, y:280, width:self.view.frame.width, height:20))
+        let label  = UILabel(frame: CGRect(x: 0, y: 280, width: self.view.frame.width, height: 20))
         label.text = NSLocalizedString("Deneme", comment: "")
         label.textAlignment = .center
         
@@ -47,8 +47,7 @@ class ViewController: BaseViewController {
         label.backgroundColor = .gray
         self.view.addSubview(label)
         
-       guard let image = UIImage(named: "EditIcon")?.withRenderingMode(.alwaysTemplate) else
-        {
+       guard let image = UIImage(named: "EditIcon")?.withRenderingMode(.alwaysTemplate) else {
             return
         }
         
@@ -71,7 +70,6 @@ class ViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
 
 extension ViewController: StepperProtocol {
@@ -83,6 +81,4 @@ extension ViewController: StepperProtocol {
         print("plus")
     }
     
-    
 }
-

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OzcanViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
+class OzcanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -43,7 +43,7 @@ class OzcanViewController:  UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (sections[indexPath.section].expanded) {
+        if sections[indexPath.section].expanded {
             return 44
         } else {
             return 0
@@ -69,7 +69,6 @@ class OzcanViewController:  UIViewController, UITableViewDelegate, UITableViewDa
     func toggleSection(header: ExpandableHeaderView, section: Int) {
         sections[section].expanded = !sections[section].expanded
         
-        
         tableView.beginUpdates()
         for i in 0 ..< sections[section].movies.count {
             tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
@@ -79,7 +78,6 @@ class OzcanViewController:  UIViewController, UITableViewDelegate, UITableViewDa
     
 }
 
-
 extension ExpandableHeaderView {
     func customInit(title: String, section: Int, delegate: ExpandableHeaderViewDelegate) {
         
@@ -88,7 +86,7 @@ extension ExpandableHeaderView {
         
         self.textLabel?.text = title + "ozn"
         
-        let view  = UIView(frame:CGRect(x:0, y:0, width:40, height:30))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
         view.backgroundColor = .blue
         self.addSubview(view)
         
@@ -96,6 +94,3 @@ extension ExpandableHeaderView {
         self.delegate = delegate
     }
 }
-
-
-

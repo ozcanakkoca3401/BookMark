@@ -9,7 +9,7 @@
 import Foundation
 import SnapKit
 
-protocol ThreeButtonProtocol {
+protocol ThreeButtonProtocol: class {
     func addOnButton()
     func giveButton()
     func usageButton()
@@ -17,7 +17,7 @@ protocol ThreeButtonProtocol {
 
 @IBDesignable public class ThreeButtonView: EBView {
 
-    var threeButtonDelegate: ThreeButtonProtocol?
+    weak var threeButtonDelegate: ThreeButtonProtocol?
     
     var addOnButton: RoundButton = {
         let addOnB = RoundButton()
@@ -114,4 +114,3 @@ protocol ThreeButtonProtocol {
         threeButtonDelegate?.usageButton()
     }
 }
-

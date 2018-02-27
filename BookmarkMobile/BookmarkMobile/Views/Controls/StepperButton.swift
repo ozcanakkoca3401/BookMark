@@ -8,17 +8,17 @@
 
 import UIKit
 
-protocol StepperProtocol {
+protocol StepperProtocol: class {
     func minus()
     func plus()
 }
 
 @IBDesignable public class StepperButton: RoundView {
     
-    var stepperDelegate: StepperProtocol?
+    weak var stepperDelegate: StepperProtocol?
     
     @IBInspectable var color: UIColor? {
-        didSet{
+        didSet {
             leftButton.backgroundColor = color
             rightButton.backgroundColor = color
         }
@@ -80,7 +80,8 @@ protocol StepperProtocol {
         
     }
 
-    func setupStepperButton(){
+    func setupStepperButton() {
+        
         self.addSubview(leftButton)
         self.addSubview(rightButton)
         

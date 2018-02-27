@@ -6,7 +6,6 @@
 //  Copyright © 2018 Henry Mason. All rights reserved.
 //
 
-
 //let memorizationView = MemorizationView()
 //memorizationView.frame = view.frame
 //view.addSubview(memorizationView)
@@ -16,7 +15,6 @@ import SnapKit
 
 class MemorizationView: UIView {
 
-    
     var keyLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
@@ -77,7 +75,6 @@ class MemorizationView: UIView {
         return button
     }()
     
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         addBehavior()
@@ -158,11 +155,7 @@ class MemorizationView: UIView {
         }
     
     }
-    
 
-
-
-    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

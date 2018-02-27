@@ -20,7 +20,6 @@
 import UIKit
 import SnapKit
 
-
 @IBDesignable public class AddOnsButtonView: RoundView {
     
     @IBInspectable var icon: String = "" {
@@ -147,6 +146,5 @@ extension AddOnsButtonView: TouchableProtocol {
         layer.borderWidth = 1.4
         borderColor = Styling.colorForCode(.themeBlue)
     }
-    
     
 }
