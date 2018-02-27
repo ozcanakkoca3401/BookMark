@@ -27,7 +27,7 @@ import SnapKit
         let label = EBLabel()
         label.EBtext = "DATA"
         label.textAlignment = .left
-        label.EBfont = Styling.font(weight: .regular, size: 12)
+        label.font = Styling.font(weight: .regular, size: 12)
         
         return label
     }()
@@ -36,7 +36,7 @@ import SnapKit
         let label = EBLabel()
         label.EBtext = "0.45"
         label.textAlignment = .left
-        label.EBfont = Styling.font(weight: .bold, size: 20)
+        label.font = Styling.font(weight: .bold, size: 20)
         
         return label
     }()
@@ -45,7 +45,7 @@ import SnapKit
         let label = EBLabel()
         label.EBtext = "GB"
         label.textAlignment = .left
-        label.EBfont = Styling.font(weight: .regular, size: 15)
+        label.font = Styling.font(weight: .regular, size: 15)
         
         return label
     }()
@@ -54,7 +54,7 @@ import SnapKit
         let label = EBLabel()
         label.EBtext = "11 GB"
         label.textAlignment = .left
-        label.EBfont = Styling.font(weight: .regular, size: 15)
+        label.font = Styling.font(weight: .regular, size: 15)
         
         return label
     }()

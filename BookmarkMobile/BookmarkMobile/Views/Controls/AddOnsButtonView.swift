@@ -52,7 +52,7 @@ import SnapKit
         label.EBtext = "$"
         label.EBcolor = Styling.colorForCode(.themeBlue)
         label.textAlignment = .center
-        label.EBfont = Styling.font(weight: .bold, size: 20)
+        label.font = Styling.font(weight: .bold, size: 20)
         
         return label
     }()
@@ -62,7 +62,7 @@ import SnapKit
         label.EBtext = "5"
         label.EBcolor = Styling.colorForCode(.themeBlue)
         label.textAlignment = .center
-        label.EBfont = Styling.font(weight: .bold, size: 20)
+        label.font = Styling.font(weight: .bold, size: 20)
         
         return label
     }()
@@ -71,7 +71,7 @@ import SnapKit
         let label = EBLabel()
         label.EBtext = "500 MB Shareable Data"
         label.textAlignment = .left
-        label.EBfont = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 15)
         
         return label
     }()

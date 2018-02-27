@@ -15,7 +15,7 @@ import SnapKit
         let label = EBLabel()
         label.EBtext = "11 DAYS LEFT"
         label.EBcolor = Styling.colorForCode(.themeDarkBlue)
-        label.EBfont = Styling.font(weight: .regular, size: 15)
+        label.font = Styling.font(weight: .regular, size: 15)
         return label
     }()
     
@@ -23,7 +23,7 @@ import SnapKit
         let label = EBLabel()
         label.EBtext = "$65.00"
         label.textAlignment = .right
-        label.EBfont = Styling.font(weight: .bold, size: 20)
+        label.font = Styling.font(weight: .bold, size: 20)
         return label
     }()
     

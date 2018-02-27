@@ -22,12 +22,18 @@ class EBLabel: UILabel {
         }
     }
     
-    @IBInspectable var EBfont: UIFont = Styling.font(weight: .bold, size: 15) {
+    @IBInspectable public var EBfontSize: CGFloat = UIFont.labelFontSize {
         didSet {
-            font = EBfont
+            font = Styling.font(weight: .bold, size: Float(EBfontSize))
         }
     }
-
+    
+    @IBInspectable var leftImage: UIImage? {
+        didSet {
+            //leftImageView.image = leftImage
+        }
+    }
+    
     public init() {
         super.init(frame: .zero)
         self.initialize()
@@ -46,6 +52,6 @@ class EBLabel: UILabel {
     func initialize() {
         text = EBtext
         textColor = EBcolor
-        font = EBfont
+        font = Styling.font(weight: .bold, size: Float(EBfontSize))
     }
 }

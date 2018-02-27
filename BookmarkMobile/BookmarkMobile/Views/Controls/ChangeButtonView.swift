@@ -40,7 +40,7 @@ import SnapKit
         let label = EBLabel()
         label.EBtext = "bilgeee"
         label.textAlignment = .center
-        label.EBfont = Styling.font(weight: .regular, size: 15)
+        label.font = Styling.font(weight: .regular, size: 15)
         
         return label
     }()
