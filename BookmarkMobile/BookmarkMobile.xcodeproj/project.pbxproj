@@ -28,6 +28,7 @@
 		69017B7C20370FC00046B009 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7B20370FC00046B009 /* StringExtension.swift */; };
 		69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */; };
 		69316E74203AC01B00AC2F10 /* MemorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69316E73203AC01B00AC2F10 /* MemorizationView.swift */; };
+		6989CEDB204537CF00157BDB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6989CEDA204537CF00157BDB /* .swiftlint.yml */; };
 		8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0222036D68F004ABC0A /* AppDelegate.swift */; };
 		8408E0252036D68F004ABC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408E0242036D68F004ABC0A /* ViewController.swift */; };
 		8408E0282036D68F004ABC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8408E0262036D68F004ABC0A /* Main.storyboard */; };
@@ -105,6 +106,7 @@
 		69017B7B20370FC00046B009 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNetworkConnectivityAvailable.swift; sourceTree = "<group>"; };
 		69316E73203AC01B00AC2F10 /* MemorizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorizationView.swift; sourceTree = "<group>"; };
+		6989CEDA204537CF00157BDB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		8408E01F2036D68F004ABC0A /* BookmarkMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookmarkMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8408E0222036D68F004ABC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8408E0242036D68F004ABC0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		8408E0162036D68F004ABC0A = {
 			isa = PBXGroup;
 			children = (
+				6989CEDA204537CF00157BDB /* .swiftlint.yml */,
 				8408E0212036D68F004ABC0A /* BookmarkMobile */,
 				8408E0362036D68F004ABC0A /* BookmarkMobileTests */,
 				8408E0412036D68F004ABC0A /* BookmarkMobileUITests */,
@@ -423,6 +426,8 @@
 				8408E01D2036D68F004ABC0A /* Resources */,
 				9122F9E2C8A4B30E269A7E0F /* [CP] Embed Pods Frameworks */,
 				5E79B95D325854636B94C24D /* [CP] Copy Pods Resources */,
+				6989CED72045377700157BDB /* ShellScript */,
+				6989CEDC204538BB00157BDB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -527,6 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6989CEDB204537CF00157BDB /* .swiftlint.yml in Resources */,
 				4C7EECB1203722AA006C8805 /* Localizable.strings in Resources */,
 				4C7EECB4203722BC006C8805 /* Localizable.strings in Resources */,
 				8408E07A203C655C004ABC0A /* BilgeViewController.xib in Resources */,
@@ -635,6 +641,32 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6989CED72045377700157BDB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		6989CEDC204538BB00157BDB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" -type f\\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
 		};
 		73D6617139E6FE066338721D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

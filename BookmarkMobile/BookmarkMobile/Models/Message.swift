@@ -66,11 +66,9 @@ extension Message {
             success(messages)
             
         },failure: { (error) in
-            failure(error as! String)
+           // failure(error)
         })
         
     }
 }
-
-
 

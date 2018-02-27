@@ -17,7 +17,7 @@ class ViewController: BaseViewController {
         let view = MemorizationView()
         return view
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

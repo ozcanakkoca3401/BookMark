@@ -3,6 +3,7 @@ PODS:
   - ObjectMapper (3.0.0)
   - SnapKit (4.0.0)
   - SVProgressHUD (2.2.2)
+  - SwiftLint (0.25.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.0.0)
   - SnapKit (~> 4.0)
   - SVProgressHUD
+  - SwiftLint
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -17,8 +19,9 @@ SPEC CHECKSUMS:
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 5db4d029f3d3851992fe60944733d2f375b70d35
+PODFILE CHECKSUM: 68f8aa4d282cb0fadcb7c476c65bcaa7bdd8ce0a
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.1.1
