@@ -6,138 +6,88 @@
 //  Copyright © 2018 Nookmark. All rights reserved.
 //
 
-//import UIKit
-//
-//class UmutViewController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        let t = EBHeaderView(frame: CGRect(x: 10, y: 60, width: 350, height: 80))
-//        view.addSubview(t)
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//
-//
-//    /*
-//     // MARK: - Navigation
-//
-//     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//     // Get the new view controller using segue.destinationViewController.
-//     // Pass the selected object to the new view controller.
-//     }
-//     */
-//
-//}
-
 import UIKit
 
-class UmutViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate, ThreeButtonProtocol {
-    func addOnButton() {
-        print("addOnButton")
-    }
+class UmutViewController: UITableViewController {
     
-    func giveButton() {
-        print("giveButton")
-    }
-    
-    func usageButton() {
-        print("usageButton")
-    }
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    var sections = [
-        SectionData(dataType: "DATA",
-                    usedData: "0.45",
-                    usableData: "11 GB",
-                expanded: false),
-        SectionData(dataType: "SMS",
-                    usedData: "120",
-                    usableData: "500 SMS",
-                    expanded: false),
-        SectionData(dataType: "VOICE",
-                    usedData: "50",
-                    usableData: "1000 VOICE",
-                    expanded: false)
-    ]
+    var sections = sectionsData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        view.backgroundColor = Styling.colorForCode(.themeLight)
         
+        // Auto resizing the height of the cell
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.title = "Apple Products"
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
+    
+}
+
+extension UmutViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sections[section].collapsed ? 0 : sections[section].items.count
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 80
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if sections[indexPath.section].expanded {
-            return 60
-        } else {
-            return 0
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = ExpandableHeaderView()
-        header.customInit(title: sections[section], section: section, delegate: self)
-        return header
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()//tableView.dequeueReusableCell(withIdentifier: "labelCell")!
-        let cellD = ThreeButtonView(frame: CGRect(x: 0, y: 10, width: 360, height: 40))
-//        cell.textLabel?.text = sections[indexPath.section].movies[indexPath.row]
-        cell.backgroundColor = Styling.colorForCode(.themeLight)
-        cell.selectionStyle = .none
-        cellD.threeButtonDelegate = self
-        cell.addSubview(cellD)
+    // Cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: CollapsibleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CollapsibleTableViewCell ??
+            CollapsibleTableViewCell(style: .default, reuseIdentifier: "cell")
+        
+        let item: Item = sections[indexPath.section].items[indexPath.row]
+        
+        cell.nameLabel.text = item.name
+        cell.detailLabel.text = item.detail
+        
         return cell
     }
     
-    func toggleSection(header: ExpandableHeaderView, section: Int) {
-        sections[section].expanded = !sections[section].expanded
-        
-        tableView.beginUpdates()
-//        for i in 0 ..< sections[section].movies.count {
-//            tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
-//        }
-        tableView.endUpdates()
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
+    
+    // Header
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? CollapsibleTableViewHeader ?? CollapsibleTableViewHeader(reuseIdentifier: "header")
+        
+        header.titleLabel.text = sections[section].name
+        header.arrowLabel.text = ">"
+        header.setCollapsed(sections[section].collapsed)
+        
+        header.section = section
+        header.delegate = self
+        
+        return header
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44.0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1.0
+    }
+    
 }
 
-extension ExpandableHeaderView {
+//
+// MARK: - Section Header Delegate
+//
+extension UmutViewController: CollapsibleTableViewHeaderDelegate {
     
-    func customInit(title: SectionData, section: Int, delegate: ExpandableHeaderViewDelegate) {
+    func toggleSection(_ header: CollapsibleTableViewHeader, section: Int) {
+        let collapsed = !sections[section].collapsed
         
-        let t = EBHeaderView(frame: CGRect(x: 0, y: 0, width: 380, height: 80))
-        t.dataLabel.EBtext = title.dataType
-        t.usableLabel.EBtext = title.usableData
-        t.usageLabel.EBtext = title.usedData
-        t.gbLabel.text = title.dataType
+        // Toggle collapse
+        sections[section].collapsed = collapsed
+        header.setCollapsed(collapsed)
         
-        self.addSubview(t)
-        self.section = section
-        self.delegate = delegate
+        tableView.reloadSections(NSIndexSet(index: section) as IndexSet, with: .automatic)
     }
+    
 }

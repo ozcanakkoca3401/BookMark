@@ -14,17 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//
+//////        let rootView: AlaattinViewController = AlaattinViewController()
+// //       let rootView: OzcanViewController = OzcanViewController()
+//        let rootView: UmutViewController = UmutViewController()
+////        let rootView: BilgeViewController = BilgeViewController()
+//////        let rootView: EnesViewController = EnesViewController()
+//
+//        if let window = self.window {
+//            window.rootViewController = rootView
+//        }
+//
+//        return true
         
-////        let rootView: AlaattinViewController = AlaattinViewController()
- //       let rootView: OzcanViewController = OzcanViewController()
-        let rootView: UmutViewController = UmutViewController()
-//        let rootView: BilgeViewController = BilgeViewController()
-////        let rootView: EnesViewController = EnesViewController()
-
-        if let window = self.window {
-            window.rootViewController = rootView
-        }
-        
+        self.window = UIWindow(frame:UIScreen.main.bounds)
+        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = UINavigationController(rootViewController: UmutViewController())
         return true
     }
 
