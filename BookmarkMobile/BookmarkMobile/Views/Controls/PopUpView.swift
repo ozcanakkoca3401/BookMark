@@ -39,7 +39,7 @@ import SnapKit
     var cardLabel: EBLabel = {
         let label = EBLabel()
         label.EBtext = "Visa finishing with 003"
-        label.EBcolor = Styling.colorForCode(.themeGray)
+        label.EBcolor = Styling.colorForCode(.black)
         label.textAlignment = .center
         label.font = Styling.font(weight: .regular, size: 15)
         
@@ -49,7 +49,7 @@ import SnapKit
     var expLabel: EBLabel = {
         let label = EBLabel()
         label.EBtext = "06 2020"
-        label.EBcolor = Styling.colorForCode(.themeGray)
+        label.EBcolor = Styling.colorForCode(.black)
         label.textAlignment = .center
         label.font = Styling.font(weight: .regular, size: 15)
         
