@@ -33,6 +33,7 @@ protocol CustomPopupProtocol: class {
     var headerLabel: EBLabel = {
         let label = EBLabel()
         label.EBtext = "Delete payment method ?"
+        label.font = Styling.font(weight: .bold, size: 22)
         label.textAlignment = .center
         return label
     }()
@@ -93,8 +94,6 @@ protocol CustomPopupProtocol: class {
         })
         
         self.addSubview(subView)
-//        headerLabel.backgroundColor = UIColor.brown
-//        subLabel.backgroundColor = UIColor.brown
         self.subView.addSubview(headerLabel)
         self.subView.addSubview(subLabel)
         self.subView.addSubview(popUpView)
@@ -102,22 +101,15 @@ protocol CustomPopupProtocol: class {
         self.subView.addSubview(rightButton)
         
         subView.snp.makeConstraints { (make) in
-//            make.left.right.equalTo(self).offset(20)
-//            make.top.bottom.equalTo(self).offset(50)
-//            make.top.bottom.equalTo(self).dividedBy(2)
-//            make.height.equalTo(100)
-//            make.width.equalTo(100)
             make.height.equalTo(300)
-            make.left.equalTo(self).offset(60)
-            make.right.equalTo(self).offset(-60)
-//            make.left.right.equalTo(10)
+            make.left.equalTo(self).offset(30)
+            make.right.equalTo(self).offset(-30)
             make.centerX.equalTo(self)
             make.centerY.equalTo(self)
         }
         
         headerLabel.snp.makeConstraints { (make) in
             make.top.equalTo(30)
-//            make.height.equalTo(40)
             make.left.equalTo(subView).offset(5)
             make.right.equalTo(subView).offset(-5)
         }

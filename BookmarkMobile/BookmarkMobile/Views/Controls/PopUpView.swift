@@ -48,7 +48,7 @@ import SnapKit
     
     var expLabel: EBLabel = {
         let label = EBLabel()
-        label.EBtext = "06 2020"
+        label.EBtext = "06/2020"
         label.EBcolor = Styling.colorForCode(.black)
         label.textAlignment = .center
         label.font = Styling.font(weight: .regular, size: 15)
@@ -92,14 +92,14 @@ import SnapKit
         }
         
         cardLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(cardImageView.snp.right).offset(10)
+            make.left.equalTo(cardImageView.snp.right).offset(15)
             make.bottom.equalTo(self).dividedBy(2).offset(5)
             make.height.equalTo(30)
         }
 
         expLabel.snp.makeConstraints { (make) in
             make.top.equalTo(cardLabel.snp.bottom).offset(-10)
-            make.left.equalTo(cardImageView.snp.right).offset(10)
+            make.left.equalTo(cardImageView.snp.right).offset(15)
             make.height.equalTo(30)
         }
 
