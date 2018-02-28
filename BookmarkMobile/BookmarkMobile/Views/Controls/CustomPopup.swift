@@ -34,6 +34,7 @@ protocol CustomPopupProtocol: class {
         let label = EBLabel()
         label.EBtext = "Delete payment method ?"
         label.font = Styling.font(weight: .bold, size: 22)
+        label.EBcolor = Styling.colorForCode(.themeMediumGray)
         label.textAlignment = .center
         return label
     }()
