@@ -32,7 +32,8 @@ import SnapKit
     var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "visa")
-       
+        imageView.contentMode = .scaleAspectFit
+        
         return imageView
     }()
 
@@ -58,22 +59,19 @@ import SnapKit
     // code initialize
     public override init() {
         super.init()
-        
-        initialize()
+        self.initialize()
     }
     
     // code initialize
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        initialize()
+        self.initialize()
     }
     
     // storyboard initialize
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        initialize()
+        self.initialize()
     }
     
     override func initialize() {
@@ -88,7 +86,7 @@ import SnapKit
             make.height.equalTo(30)
             make.left.equalTo(self).offset(10)
             make.centerY.equalTo(self)
-                }
+        }
         
         informationLabel.snp.makeConstraints { (make) in
             //make.width.equalTo(30)

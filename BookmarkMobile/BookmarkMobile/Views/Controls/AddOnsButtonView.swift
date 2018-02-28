@@ -40,13 +40,6 @@ import SnapKit
         }
     }
     
-//    var moneyImageView: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.backgroundColor = .blue
-//        imageView.image = UIImage(named: "dolar")
-//        return imageView
-//    }()
-    
     var iconLabel: EBLabel = {
         let label = EBLabel()
         label.EBtext = "$"
@@ -99,18 +92,10 @@ import SnapKit
     
     override func initialize() {
         
-        self.delegate = self
         super.initialize()
         self.addSubview(iconLabel)
         self.addSubview(priceLabel)
         self.addSubview(productDescriptionLabel)
-        
-//        moneyImageView.snp.makeConstraints { (make) in
-//            make.width.equalTo(30)
-//            make.height.equalTo(30)
-//            make.left.equalTo(self).offset(10)
-//            make.centerY.equalTo(self)
-//        }
        
         iconLabel.snp.makeConstraints { (make) in
             make.width.equalTo(30)
@@ -136,15 +121,6 @@ import SnapKit
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-    }
-    
-}
-
-extension AddOnsButtonView: TouchableProtocol {
-    func didTrigger() {
-        print("heyoo")
-        layer.borderWidth = 1.4
-        borderColor = Styling.colorForCode(.themeBlue)
     }
     
 }

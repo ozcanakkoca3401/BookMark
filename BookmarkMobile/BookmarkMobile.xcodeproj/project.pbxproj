@@ -10,6 +10,7 @@
 		27CD341983EAA5C14A1A20AB /* Pods_BookmarkMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */; };
 		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
 		4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */; };
+		45C35D132046CBDB00B21B52 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D122046CBDB00B21B52 /* PopUpView.swift */; };
 		45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */; };
 		45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D322040053300A564CF /* ThreeButtonView.swift */; };
 		4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */; };
@@ -86,6 +87,7 @@
 		334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.release.xcconfig"; sourceTree = "<group>"; };
 		44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsButtonView.swift; sourceTree = "<group>"; };
+		45C35D122046CBDB00B21B52 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonView.swift; sourceTree = "<group>"; };
 		45CF9D322040053300A564CF /* ThreeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeButtonView.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				45CF9D322040053300A564CF /* ThreeButtonView.swift */,
 				4C451A1E20405E3700FF9E3D /* EBCellView.swift */,
 				4C7EBCB92046989200D762EE /* CustomPopup.swift */,
+				45C35D122046CBDB00B21B52 /* PopUpView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 				4C451A1D2040170700FF9E3D /* EBHeaderView.swift in Sources */,
 				69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */,
 				4C741553203C670600A32734 /* EBLabel.swift in Sources */,
+				45C35D132046CBDB00B21B52 /* PopUpView.swift in Sources */,
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
 				8408E079203C655C004ABC0A /* BilgeViewController.swift in Sources */,
 				8408E075203C6480004ABC0A /* AlaattinViewController.swift in Sources */,

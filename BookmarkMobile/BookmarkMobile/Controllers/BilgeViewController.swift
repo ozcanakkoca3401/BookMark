@@ -24,9 +24,17 @@ class BilgeViewController: UIViewController {
         let tbView = ThreeButtonView()
         return tbView
     }()
+    
+    var popUpView : PopUpView = {
+       let popView = PopUpView()
+        return popView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bilgeView.delegate = self
+        
         //var headerView: HeaderView = {
         //    let view = HeaderView()
         //    return view
@@ -43,6 +51,9 @@ class BilgeViewController: UIViewController {
         threeButtonView.frame = CGRect(x: 50, y: 400, width: 250, height: 60)
         threeButtonView.backgroundColor = Styling.colorForCode(.themeLight)
         view.addSubview(threeButtonView)
+        
+        popUpView.frame = CGRect(x: 50, y: 500, width: 250, height: 60)
+        view.addSubview(popUpView)
 
     }
 
@@ -54,7 +65,10 @@ class BilgeViewController: UIViewController {
 }
 extension BilgeViewController: TouchableProtocol {
     func didTrigger() {
-        print("bilge")
+        print("heyoo")
+        bilgeView.layer.borderWidth = 1.4
+        bilgeView.borderColor = Styling.colorForCode(.themeBlue)
     }
-    
+
 }
+
