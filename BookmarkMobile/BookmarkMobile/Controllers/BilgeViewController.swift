@@ -29,6 +29,11 @@ class BilgeViewController: UIViewController {
        let popView = PopUpView()
         return popView
     }()
+    
+    var expendHeaderView: ExpendHeaderView = {
+       let headerView = ExpendHeaderView()
+        return headerView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +59,9 @@ class BilgeViewController: UIViewController {
         
         popUpView.frame = CGRect(x: 50, y: 500, width: 250, height: 60)
         view.addSubview(popUpView)
+        
+        expendHeaderView.frame = CGRect(x: 50, y: 600, width: 250, height: 60)
+        view.addSubview(expendHeaderView)
 
     }
 
