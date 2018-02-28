@@ -25,7 +25,7 @@ class BilgeViewController: UIViewController {
         return tbView
     }()
     
-    var popUpView : PopUpView = {
+    var popUpView: PopUpView = {
        let popView = PopUpView()
         return popView
     }()
@@ -71,4 +71,3 @@ extension BilgeViewController: TouchableProtocol {
     }
 
 }
-

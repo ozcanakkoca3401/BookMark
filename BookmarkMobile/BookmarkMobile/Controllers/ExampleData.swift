@@ -35,13 +35,13 @@ public struct Section {
 
 public var sectionsData: [Section] = [
     Section(name: "Mac", items: [
-        Item(name: "ThreeButtonView", detail: "ThreeButtonView"),
+        Item(name: "ThreeButtonView", detail: "ThreeButtonView")
     ]),
     Section(name: "iPad", items: [
-       Item(name: "ThreeButtonView", detail: "ThreeButtonView"),
+       Item(name: "ThreeButtonView", detail: "ThreeButtonView")
     ]),
     Section(name: "iPhone", items: [
-        Item(name: "ThreeButtonView", detail: "ThreeButtonView"),
+        Item(name: "ThreeButtonView", detail: "ThreeButtonView")
     ])
     
 ]

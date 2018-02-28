@@ -39,7 +39,7 @@ extension UmutViewController {
         let cell: CollapsibleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CollapsibleTableViewCell ??
             CollapsibleTableViewCell(style: .default, reuseIdentifier: "cell")
         
-        let item: Item = sections[indexPath.section].items[indexPath.row]
+//        let item: Item = sections[indexPath.section].items[indexPath.row]
         
 //        cell.nameLabel.text = item.name
 //        cell.detailLabel.text = item.detail

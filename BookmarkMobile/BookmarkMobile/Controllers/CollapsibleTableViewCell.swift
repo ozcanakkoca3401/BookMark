@@ -20,7 +20,7 @@ class CollapsibleTableViewCell: UITableViewCell {
         let cellView = ThreeButtonView()
         
         cellView.frame = self.frame
-        print("Frame" , self.frame)
+        print("Frame", self.frame)
         contentView.addSubview(cellView)
         
 //        let marginGuide = contentView.layoutMarginsGuide
