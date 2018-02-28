@@ -45,6 +45,12 @@ protocol CustomPopupProtocol: class {
         return label
     }()
     
+    var popUpView: PopUpView = {
+       let view = PopUpView()
+        
+        return view
+    }()
+    
     var leftButton: RoundButton = {
        let button = RoundButton()
         button.bgColor = Styling.colorForCode(.themeLight)
@@ -91,6 +97,7 @@ protocol CustomPopupProtocol: class {
 //        subLabel.backgroundColor = UIColor.brown
         self.subView.addSubview(headerLabel)
         self.subView.addSubview(subLabel)
+        self.subView.addSubview(popUpView)
         self.subView.addSubview(leftButton)
         self.subView.addSubview(rightButton)
         
@@ -101,28 +108,34 @@ protocol CustomPopupProtocol: class {
 //            make.height.equalTo(100)
 //            make.width.equalTo(100)
             make.height.equalTo(300)
-            make.width.equalTo(350)
+            make.left.equalTo(self).offset(60)
+            make.right.equalTo(self).offset(-60)
 //            make.left.right.equalTo(10)
             make.centerX.equalTo(self)
             make.centerY.equalTo(self)
         }
         
         headerLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(20)
+            make.top.equalTo(30)
 //            make.height.equalTo(40)
             make.left.equalTo(subView).offset(5)
             make.right.equalTo(subView).offset(-5)
         }
         
         subLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(60)
-//            make.height.equalTo(40)
+            make.top.equalTo(headerLabel.snp.bottom).offset(20)
             make.left.equalTo(subView).offset(5)
             make.right.equalTo(subView).offset(-5)
         }
         
+        popUpView.snp.makeConstraints { (make) in
+            make.top.equalTo(subLabel.snp.bottom).offset(30)
+            make.height.equalTo(60)
+            make.left.equalTo(subView).offset(15)
+            make.right.equalTo(subView).offset(-15)
+        }
+        
         leftButton.snp.makeConstraints { (make) in
-//            make.top.equalTo(250)
             make.bottom.equalTo(-15)
             make.left.equalTo(15)
             make.height.equalTo(40)
@@ -130,7 +143,6 @@ protocol CustomPopupProtocol: class {
         }
         
         rightButton.snp.makeConstraints { (make) in
-//            make.top.equalTo(250)
             make.bottom.equalTo(-15)
             make.right.equalTo(-15)
             make.height.equalTo(40)
