@@ -21,7 +21,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-@IBDesignable public class HeaderView: UIView {
+@IBDesignable public class HeaderView: EBView {
     
     @IBInspectable var leftImage: UIImage? {
         didSet {
@@ -48,9 +48,9 @@ import SnapKit
         return imageView
     }()
     
-    var label: UILabel = {
-        let label = UILabel()
-        label.text = "514-428-0578"
+    var label: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "514-428-0578"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 8)
         
@@ -64,21 +64,27 @@ import SnapKit
         return imageView
     }()
     
+    public override init() {
+        super.init()
+        
+        self.initialize()
+    }
+    
     // code initialize
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        initialize()
+        self.initialize()
     }
     
     // storyboard initialize
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        initialize()
+         self.initialize()
     }
     
-    func initialize() {
+    override func initialize() {
         
         self.addSubview(leftImageView)
         self.addSubview(label)

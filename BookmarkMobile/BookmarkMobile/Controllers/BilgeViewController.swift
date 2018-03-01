@@ -12,27 +12,44 @@ class BilgeViewController: UIViewController {
     
     var bilgeView: AddOnsButtonView = {
         let view = AddOnsButtonView()
+      
         return view
     }()
     
     var changeBview: ChangeButtonView = {
         let cView = ChangeButtonView()
+        
         return cView
     }()
     
     var threeButtonView: ThreeButtonView = {
         let tbView = ThreeButtonView()
+       
         return tbView
     }()
     
     var popUpView: PopUpView = {
        let popView = PopUpView()
+       
         return popView
     }()
     
     var expendHeaderView: ExpendHeaderView = {
        let headerView = ExpendHeaderView()
+        
         return headerView
+    }()
+    
+    var headerView: HeaderView = {
+        let headerView = HeaderView()
+       
+        return headerView
+    }()
+    
+    var closeButton : CloseButton = {
+       let closeButton = CloseButton()
+        
+        return closeButton
     }()
 
     override func viewDidLoad() {
@@ -62,6 +79,13 @@ class BilgeViewController: UIViewController {
         
         expendHeaderView.frame = CGRect(x: 50, y: 600, width: 250, height: 60)
         view.addSubview(expendHeaderView)
+        
+        headerView.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
+        //view.addSubview(headerView)
+        
+        closeButton.frame = CGRect(x: 50, y: 100, width: 150, height: 50)
+        view.addSubview(closeButton)
+        
 
     }
 
