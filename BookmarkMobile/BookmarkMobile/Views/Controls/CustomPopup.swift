@@ -103,8 +103,8 @@ protocol CustomPopupProtocol: class {
         
         subView.snp.makeConstraints { (make) in
             make.height.equalTo(300)
-            make.left.equalTo(self).offset(30)
-            make.right.equalTo(self).offset(-30)
+            make.left.equalTo(self).offset(10)
+            make.right.equalTo(self).offset(-10)
             make.centerX.equalTo(self)
             make.centerY.equalTo(self)
         }
