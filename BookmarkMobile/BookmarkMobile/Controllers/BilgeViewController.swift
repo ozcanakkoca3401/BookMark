@@ -46,13 +46,13 @@ class BilgeViewController: UIViewController {
         return headerView
     }()
     
-    var closeButton : AlignedImageButton = {
-       let closeButton = AlignedImageButton(frame: CGRect(x: 50, y: 100, width: 250, height: 50) ,image:UIImage(named:"close")!)
+    var closeButton: CloseButton = {
+        let closeButton = CloseButton(frame: CGRect(x: 50, y: 100, width: 250, height: 50), image: UIImage(named: "close")!)
         
         return closeButton
+        
     }()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,10 +84,8 @@ class BilgeViewController: UIViewController {
         headerView.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
         //view.addSubview(headerView)
         
-    
         view.addSubview(closeButton)
         
-
     }
 
     override func didReceiveMemoryWarning() {

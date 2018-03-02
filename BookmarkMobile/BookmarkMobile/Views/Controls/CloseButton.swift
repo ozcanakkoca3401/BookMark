@@ -11,25 +11,10 @@ import SnapKit
 
 @IBDesignable public class CloseButton: AlignedImageButton {
   
-
-        var closeButton: AlignedImageButton = {
-        let closeB = AlignedImageButton()
-        closeB.setTitle("CLOSE", for: .normal)
-        closeB.titleLabel?.textColor = Styling.colorForCode(.black)
-        closeB.titleLabel?.font = Styling.font(weight: .regular, size: 20)
-        closeB.borderColor = Styling.colorForCode(.themeMediumGray)
-        closeB.cornerRadius = 25
-        closeB.setImage(UIImage(named: "close"), for: .normal)
-        
-        closeB.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
-        closeB.contentEdgeInsets = UIEdgeInsets(top: 10, left: closeB.bounds.size.width/2 - (closeB.titleLabel?.bounds.size.width)!/2, bottom: 10, right: 0)
-        
-        return closeB
-    }()
-//
     // code initialize
     public override init() {
         super.init()
+        
         self.initialize()
     }
     
@@ -47,13 +32,17 @@ import SnapKit
   
     override func initialize() {
         
-        self.contentHorizontalAlignment = .left
-        self.imageView?.contentMode = .scaleAspectFit
+        super.initialize()
+        self.setupButton()
         
-        guard let image = self.image(for: UIControlState.normal) else {
-            return
-            
-        }
+        
+//        self.contentHorizontalAlignment = .left
+//        self.imageView?.contentMode = .scaleAspectFit
+        
+//        guard let image = self.image(for: UIControlState.normal) else {
+//            return
+//
+//        }
 //        self.title = "CLOSE"
 //        self.titleLabel?.font = Styling.font(weight: .bold, size: 18)
 //        self.setTitleColor(Styling.colorForCode(.themeMediumGray), for: .normal)
@@ -64,7 +53,7 @@ import SnapKit
         //self.imageEdgeInsets = UIEdgeInsets(top: 0, left: self.bounds.size.width - image.size.width * 1.2, bottom: 0, right: 0)
         //self.contentEdgeInsets = UIEdgeInsets(top: 10, left: self.bounds.size.width/2 - (titleLabel?.bounds.size.width)!/2, bottom: 10, right: 0)
         
-        super.initialize()
+        
 
 //
 //        closeButton.snp.makeConstraints { (make) in
@@ -74,6 +63,17 @@ import SnapKit
 //            make.centerY.equalTo(self)
 //        }
         
+    }
+    
+    func setupButton() {
+        self.cornerRadius = 25
+        self.title = "CLOSE"
+        self.bgColor = Styling.colorForCode(.themeGray)
+        self.titleLabel?.textColor = Styling.colorForCode(.black)
+        self.titleLabel?.font = Styling.font(weight: .regular, size: 20)
+        
+        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: self.bounds.size.width/2 - (self.titleLabel?.bounds.size.width)!/2, bottom: 10, right: 0)
     }
     
     override public func layoutSubviews() {
