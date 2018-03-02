@@ -9,17 +9,23 @@
 import Foundation
 import SnapKit
 
-@IBDesignable public class CloseButton: RoundButton {
+@IBDesignable public class CloseButton: AlignedImageButton {
   
 
-//    var closeButton: UIButton = {
-//        let closeB = UIButton()
-//        closeB.setTitle("CLOSE", for: .normal)
-//        closeB.titleLabel?.textColor = Styling.colorForCode(.black)
-//        closeB.titleLabel?.font = Styling.font(weight: .regular, size: 20)
-//
-//        return closeB
-//    }()
+        var closeButton: AlignedImageButton = {
+        let closeB = AlignedImageButton()
+        closeB.setTitle("CLOSE", for: .normal)
+        closeB.titleLabel?.textColor = Styling.colorForCode(.black)
+        closeB.titleLabel?.font = Styling.font(weight: .regular, size: 20)
+        closeB.borderColor = Styling.colorForCode(.themeMediumGray)
+        closeB.cornerRadius = 25
+        closeB.setImage(UIImage(named: "blackPhone"), for: .normal)
+        
+        closeB.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        closeB.contentEdgeInsets = UIEdgeInsets(top: 10, left: closeB.bounds.size.width/2 - (closeB.titleLabel?.bounds.size.width)!/2, bottom: 10, right: 0)
+        
+        return closeB
+    }()
 //
     // code initialize
     public override init() {
@@ -38,15 +44,25 @@ import SnapKit
         super.init(coder: aDecoder)
         self.initialize()
     }
-    
+  
     override func initialize() {
         
-        self.title = "CLOSE"
-        self.setTitleColor(Styling.colorForCode(.black), for: .normal)
-        self.borderColor = Styling.colorForCode(.black)
-        self.cornerRadius = 25
-
+        self.contentHorizontalAlignment = .left
+        self.imageView?.contentMode = .scaleAspectFit
         
+        guard let image = self.image(for: UIControlState.normal) else {
+            return
+            
+        }
+//        self.title = "CLOSE"
+//        self.titleLabel?.font = Styling.font(weight: .bold, size: 18)
+//        self.setTitleColor(Styling.colorForCode(.themeMediumGray), for: .normal)
+       // self.borderColor = Styling.colorForCode(.black)
+       // self.cornerRadius = 25
+       // self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        //self.setImage(UIImage(named: "blackPhone"), for: .normal)
+        //self.imageEdgeInsets = UIEdgeInsets(top: 0, left: self.bounds.size.width - image.size.width * 1.2, bottom: 0, right: 0)
+        //self.contentEdgeInsets = UIEdgeInsets(top: 10, left: self.bounds.size.width/2 - (titleLabel?.bounds.size.width)!/2, bottom: 10, right: 0)
         
         super.initialize()
 
