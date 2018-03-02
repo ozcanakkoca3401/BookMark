@@ -48,10 +48,14 @@ public class AlignedImageButton: RoundButton {
         // Just in case they aren't set in a Storyboard
         self.contentHorizontalAlignment = .left
         self.imageView?.contentMode = .scaleAspectFit
-        
-        guard let image = self.image(for: UIControlState.normal) else {
-            return
+
+        guard self.image(for: UIControlState.normal) != nil else {
+                return
         }
+        
+//        guard let image = self.image(for: UIControlState.normal) else {
+//            return
+//        }
         
         // Inset the image based on left edge
        // self.imageEdgeInsets = UIEdgeInsets(top: 0, left: self.bounds.size.width - image.size.width * 1.7, bottom: 0, right: 0)

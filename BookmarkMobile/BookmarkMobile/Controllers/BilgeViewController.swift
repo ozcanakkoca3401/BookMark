@@ -47,7 +47,7 @@ class BilgeViewController: UIViewController {
     }()
     
     var closeButton: CloseButton = {
-        let closeButton = CloseButton(frame: CGRect(x: 50, y: 100, width: 250, height: 50), image: UIImage(named: "close")!)
+        let closeButton = CloseButton(frame: CGRect(x: 50, y: 100, width: 150, height: 50), image: UIImage(named: "close")!)
         
         return closeButton
         
