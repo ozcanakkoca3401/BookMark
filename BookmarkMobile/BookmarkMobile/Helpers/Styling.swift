@@ -20,6 +20,9 @@ enum ColorCode {
     case themeUltraLightGray
     case black
     case themeMediumGray
+    case white
+    case stepperGray
+    case capacityGray
    
 }
 
@@ -51,6 +54,12 @@ class Styling {
             return UIColor.init(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
         case .themeMediumGray:
             return UIColor.init(red: 96.0 / 255.0, green: 97.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0)
+        case .white:
+            return UIColor.init(red: 255.0 / 255.0, green: 255.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+        case .stepperGray:
+            return UIColor.init(red: 186.0 / 255.0, green: 187.0 / 255.0, blue: 188.0 / 255.0, alpha: 1.0)
+        case .capacityGray:
+            return UIColor.init(red: 101.0 / 255.0, green: 102.0 / 255.0, blue: 103.0 / 255.0, alpha: 1.0)
         }
     }
     

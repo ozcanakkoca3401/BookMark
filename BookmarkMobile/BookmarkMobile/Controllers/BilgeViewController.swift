@@ -53,6 +53,12 @@ class BilgeViewController: UIViewController {
         
     }()
     
+    var stepperView: StepperView = {
+        let stepperView = StepperView()
+        
+        return stepperView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,7 +90,10 @@ class BilgeViewController: UIViewController {
         headerView.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
         //view.addSubview(headerView)
         
-        view.addSubview(closeButton)
+       // view.addSubview(closeButton)
+        
+        stepperView.frame = CGRect(x: 50, y: 100, width: 250, height: 80)
+        view.addSubview(stepperView)
         
     }
 

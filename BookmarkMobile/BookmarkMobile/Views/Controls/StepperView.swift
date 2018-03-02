@@ -11,106 +11,118 @@ import SnapKit
 
 @IBDesignable public class StepperView: RoundView {
     
-//    @IBInspectable var icon: String = "" {
-//        didSet {
-//            iconLabel.text = icon
-//        }
-//    }
-//    
-//    @IBInspectable var price: String = "" {
-//        didSet {
-//            priceLabel.text = price
-//        }
-//    }
-//    
-//    @IBInspectable var product: String = "" {
-//        didSet {
-//            productDescriptionLabel.text = product
-//        }
-//    }
-//    
-//    var iconLabel: EBLabel = {
-//        let label = EBLabel()
-//        label.EBtext = "$"
-//        label.EBcolor = Styling.colorForCode(.themeBlue)
-//        label.textAlignment = .center
-//        label.font = Styling.font(weight: .bold, size: 20)
-//        
-//        return label
-//    }()
-//    
-//    var priceLabel: EBLabel = {
-//        let label = EBLabel()
-//        label.EBtext = "5"
-//        label.EBcolor = Styling.colorForCode(.themeBlue)
-//        label.textAlignment = .center
-//        label.font = Styling.font(weight: .bold, size: 20)
-//        
-//        return label
-//    }()
-//    
-//    var productDescriptionLabel: EBLabel = {
-//        let label = EBLabel()
-//        label.EBtext = "500 MB Shareable Data"
-//        label.textAlignment = .left
-//        label.font = UIFont.systemFont(ofSize: 15)
-//        
-//        return label
-//    }()
-//    
-//    // code initialize
-//    public override init() {
-//        super.init()
-//        
-//        self.initialize()
-//    }
-//    
-//    // code initialize
-//    public override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        
-//        self.initialize()
-//    }
-//    
-//    // storyboard initialize
-//    required public init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        
-//        self.initialize()
-//    }
-//    
-//    override func initialize() {
-//        
-//        super.initialize()
-//        self.addSubview(iconLabel)
-//        self.addSubview(priceLabel)
-//        self.addSubview(productDescriptionLabel)
-//        
-//        iconLabel.snp.makeConstraints { (make) in
-//            make.width.equalTo(30)
-//            make.height.equalTo(30)
-//            make.left.equalTo(self).offset(15)
-//            make.centerY.equalTo(self)
-//        }
-//        
-//        priceLabel.snp.makeConstraints { (make) in
-//            make.width.equalTo(30)
-//            make.height.equalTo(30)
-//            make.left.equalTo(iconLabel).offset(15)
-//            make.centerY.equalTo(self)
-//        }
-//        
-//        productDescriptionLabel.snp.makeConstraints { (make) in
-//            make.height.equalTo(20)
-//            make.left.equalTo(priceLabel).offset(30)
-//            make.right.equalTo(self).offset(-15)
-//            make.centerY.equalTo(self)
-//        }
-//    }
-//    
-//    override public func layoutSubviews() {
-//        super.layoutSubviews()
-//    }
+    @IBInspectable var data: String = "" {
+        didSet {
+            dataLabel.text = data
+        }
+    }
+
+    @IBInspectable var gb: String = "" {
+        didSet {
+            gbLabel.text = gb
+        }
+    }
+    
+    @IBInspectable var gbChange: String = "" {
+        didSet {
+            gbChangeLabel.text = gbChange
+        }
+    }
+
+    var dataLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "Data"
+        label.EBcolor = Styling.colorForCode(.white)
+        label.textAlignment = .center
+        label.font = Styling.font(weight: .bold, size: 13)
+
+        return label
+    }()
+
+    var gbLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "GB"
+        label.EBcolor = Styling.colorForCode(.white)
+        label.textAlignment = .center
+        label.font = Styling.font(weight: .bold, size: 16)
+
+        return label
+    }()
+    
+    var gbChangeLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = ""
+        label.EBcolor = Styling.colorForCode(.white)
+        label.textAlignment = .center
+        label.font = Styling.font(weight: .bold, size: 20)
+        
+        return label
+    }()
+
+    var capacityView: RoundView = {
+        let view = RoundView()
+
+        return view
+    }()
+    
+    var stepperButton: StepperButton = {
+        let button = StepperButton()
+
+        return button
+    }()
+    
+     // code initialize
+    public override init() {
+        super.init(frame: .zero)
+        
+        self.initialize()
+    }
+
+   // code initialize
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        self.initialize()
+    }
+
+    // storyboard initialize
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        self.initialize()
+    }
+
+    override func initialize() {
+
+        super.initialize()
+        
+        self.bgColor = Styling.colorForCode(.stepperGray)
+
+//        addSubview(dataLabel)
+//        addSubview(gbChangeLabel)
+//        addSubview(gbLabel)
+          addSubview(capacityView)
+          addSubview(stepperButton)
+
+        
+        stepperButton.snp.makeConstraints { (make) in
+            
+            make.right.equalTo(self).offset(-15)
+            make.centerY.equalTo(self)
+            
+        }
+        
+        capacityView.snp.makeConstraints { (make) in
+            
+            make.left.equalTo(self).offset(0)
+            make.top.equalTo(self).offset(0)
+            make.bottom.equalTo(self).offset(0)
+        }
+     }
+
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+    }
     
 }
 
