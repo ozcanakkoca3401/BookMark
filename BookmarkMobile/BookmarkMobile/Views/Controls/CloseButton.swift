@@ -19,7 +19,7 @@ import SnapKit
         closeB.titleLabel?.font = Styling.font(weight: .regular, size: 20)
         closeB.borderColor = Styling.colorForCode(.themeMediumGray)
         closeB.cornerRadius = 25
-        closeB.setImage(UIImage(named: "blackPhone"), for: .normal)
+        closeB.setImage(UIImage(named: "close"), for: .normal)
         
         closeB.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         closeB.contentEdgeInsets = UIEdgeInsets(top: 10, left: closeB.bounds.size.width/2 - (closeB.titleLabel?.bounds.size.width)!/2, bottom: 10, right: 0)
