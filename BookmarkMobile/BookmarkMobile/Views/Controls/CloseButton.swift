@@ -69,11 +69,12 @@ import SnapKit
         self.cornerRadius = 25
         self.title = "CLOSE"
         self.bgColor = Styling.colorForCode(.themeGray)
-        self.titleLabel?.textColor = Styling.colorForCode(.black)
+        self.setTitleColor(Styling.colorForCode(.black), for: .normal)
         self.titleLabel?.font = Styling.font(weight: .regular, size: 20)
         
-        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
-        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: self.bounds.size.width/2 - (self.titleLabel?.bounds.size.width)!/2, bottom: 10, right: 0)
+        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 200, bottom: 0, right: 0)
+      // self.contentEdgeInsets = UIEdgeInsets(top: 10, left: self.bounds.size.width/2 , bottom: 10, right: 0)
+        self.titleEdgeInsets = UIEdgeInsets(top: 10, left: 40 , bottom: 10, right: 0)
     }
     
     override public func layoutSubviews() {
