@@ -71,7 +71,7 @@ protocol CustomPopupProtocol: class {
     
     var closeButton: CloseButton = {
         let button = CloseButton(frame: .zero, image: UIImage(named: "close")!)
-        
+        button.addTarget(self, action: #selector(CustomPopup.cancelButtonF), for: .touchUpInside)
         return button
     }()
     
