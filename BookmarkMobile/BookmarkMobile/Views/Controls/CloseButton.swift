@@ -35,9 +35,9 @@ import SnapKit
     }
     
     func setupButton() {
-        self.cornerRadius = 25
+        self.cornerRadius = 20
         self.title = "CLOSE"
-        self.bgColor = Styling.colorForCode(.themeGray)
+        self.bgColor = Styling.colorForCode(.white)
         self.setTitleColor(Styling.colorForCode(.black), for: .normal)
         self.titleLabel?.font = Styling.font(weight: .regular, size: 20)
         self.semanticContentAttribute = .forceRightToLeft
