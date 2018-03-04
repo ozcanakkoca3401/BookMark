@@ -53,16 +53,22 @@ class BilgeViewController: UIViewController {
         
     }()
     
-    var stepperView: StepperView = {
-        let stepperView = StepperView()
-        
-        return stepperView
-    }()
+//    var stepperView: StepperView = {
+//        let stepperView = StepperView()
+//
+//        return stepperView
+//    }()
+//
+//    var switchStepperView: SwitchStepperView = {
+//        let switchStepperView = SwitchStepperView()
+//
+//        return switchStepperView
+//    }()
     
-    var switchStepperView: SwitchStepperView = {
-        let switchStepperView = SwitchStepperView()
+    var stepperComponentview: StepperComponentView = {
+       let stepperComponentView = StepperComponentView()
         
-        return switchStepperView
+        return stepperComponentView
     }()
     
     override func viewDidLoad() {
@@ -81,28 +87,31 @@ class BilgeViewController: UIViewController {
         
         changeBview.frame = CGRect(x: 50, y: 300, width: 250, height: 60)
         changeBview.backgroundColor = Styling.colorForCode(.themeLight)
-        view.addSubview(changeBview)
+       // view.addSubview(changeBview)
         
         threeButtonView.frame = CGRect(x: 50, y: 400, width: 250, height: 60)
         threeButtonView.backgroundColor = Styling.colorForCode(.themeLight)
-        view.addSubview(threeButtonView)
+       // view.addSubview(threeButtonView)
         
         popUpView.frame = CGRect(x: 50, y: 500, width: 250, height: 60)
-        view.addSubview(popUpView)
+        //view.addSubview(popUpView)
         
         expendHeaderView.frame = CGRect(x: 50, y: 600, width: 250, height: 60)
-        view.addSubview(expendHeaderView)
+        //view.addSubview(expendHeaderView)
         
         headerView.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
         //view.addSubview(headerView)
         
        // view.addSubview(closeButton)
         
-        stepperView.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
-        view.addSubview(stepperView)
+       // stepperView.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
+       // view.addSubview(stepperView)
         
-        switchStepperView.frame = CGRect(x: 50, y: 200, width: 250, height: 60)
-        view.addSubview(switchStepperView)
+        //switchStepperView.frame = CGRect(x: 50, y: 200, width: 250, height: 60)
+       // view.addSubview(switchStepperView)
+        
+        stepperComponentview.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
+        view.addSubview(stepperComponentview)
         
     }
 

@@ -21,6 +21,7 @@
 		45C35D192047E15E00B21B52 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D182047E15E00B21B52 /* CloseButton.swift */; };
 		45C35D1B204964FC00B21B52 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D1A204964FC00B21B52 /* StepperView.swift */; };
 		45C35D1D204C4A6800B21B52 /* SwitchStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D1C204C4A6800B21B52 /* SwitchStepperView.swift */; };
+		45C35D1F204C67AF00B21B52 /* StepperComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D1E204C67AF00B21B52 /* StepperComponentView.swift */; };
 		45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */; };
 		45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D322040053300A564CF /* ThreeButtonView.swift */; };
 		4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */; };
@@ -109,6 +110,7 @@
 		45C35D182047E15E00B21B52 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		45C35D1A204964FC00B21B52 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		45C35D1C204C4A6800B21B52 /* SwitchStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchStepperView.swift; sourceTree = "<group>"; };
+		45C35D1E204C67AF00B21B52 /* StepperComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperComponentView.swift; sourceTree = "<group>"; };
 		45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonView.swift; sourceTree = "<group>"; };
 		45CF9D322040053300A564CF /* ThreeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeButtonView.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 			children = (
 				8408E06D203C12D6004ABC0A /* testComponent.swift */,
 				69004CCA203D540700CC1215 /* HeaderView.swift */,
+				45C35D1E204C67AF00B21B52 /* StepperComponentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 			files = (
 				4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */,
 				4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */,
+				45C35D1F204C67AF00B21B52 /* StepperComponentView.swift in Sources */,
 				4CBAD1FE203C0AEA00FC412B /* StepperButton.swift in Sources */,
 				8408E06A203C1013004ABC0A /* Styling.swift in Sources */,
 				4C7EBCBA2046989200D762EE /* CustomPopup.swift in Sources */,
