@@ -23,7 +23,7 @@ enum ColorCode {
     case white
     case stepperGray
     case capacityGray
-   
+    case blurGray
 }
 
 enum FontWeight: String {
@@ -60,6 +60,8 @@ class Styling {
             return UIColor.init(red: 186.0 / 255.0, green: 187.0 / 255.0, blue: 188.0 / 255.0, alpha: 1.0)
         case .capacityGray:
             return UIColor.init(red: 101.0 / 255.0, green: 102.0 / 255.0, blue: 103.0 / 255.0, alpha: 1.0)
+        case .blurGray:
+            return UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.4)
         }
     }
     

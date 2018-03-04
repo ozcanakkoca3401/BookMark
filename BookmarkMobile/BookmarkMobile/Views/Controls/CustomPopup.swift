@@ -69,6 +69,12 @@ protocol CustomPopupProtocol: class {
         return button
     }()
     
+    var closeButton: CloseButton = {
+        let button = CloseButton(frame: .zero, image: UIImage(named: "close")!)
+        button.addTarget(self, action: #selector(CustomPopup.cancelButtonF), for: .touchUpInside)
+        return button
+    }()
+    
     public override init() {
         super.init()
         self.initialize()
@@ -95,6 +101,7 @@ protocol CustomPopupProtocol: class {
         })
         
         self.addSubview(subView)
+        self.addSubview(closeButton)
         self.subView.addSubview(headerLabel)
         self.subView.addSubview(subLabel)
         self.subView.addSubview(popUpView)
@@ -140,6 +147,13 @@ protocol CustomPopupProtocol: class {
             make.right.equalTo(-15)
             make.height.equalTo(40)
             make.width.equalTo(subView).dividedBy(2).offset(10)
+        }
+        
+        closeButton.snp.makeConstraints { (make) in
+            make.top.equalTo(subView.snp.bottom).offset(30)
+            make.width.equalTo(130)
+            make.height.equalTo(40)
+            make.centerX.equalTo(self)
         }
     }
     

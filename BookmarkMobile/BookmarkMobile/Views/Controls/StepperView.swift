@@ -116,7 +116,6 @@ import SnapKit
           addSubview(capacityView)
           addSubview(stepperButton)
 
-        
         stepperButton.snp.makeConstraints { (make) in
             //make.top.equalTo(self).offset(10)
             make.height.equalTo(35)
@@ -182,4 +181,3 @@ import SnapKit
     }
     
 }
-
