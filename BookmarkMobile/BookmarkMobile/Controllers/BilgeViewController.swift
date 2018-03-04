@@ -59,6 +59,16 @@ class BilgeViewController: UIViewController {
         return stepperView
     }()
     
+    var switchStepperView: SwitchStepperView = {
+        let switchStepperView = SwitchStepperView()
+        
+        
+        return switchStepperView
+    }()
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,7 +81,7 @@ class BilgeViewController: UIViewController {
         
         /* loadview or viewdidload */
         bilgeView.frame = CGRect(x: 50, y: 200, width: 250, height: 60)
-        view.addSubview(bilgeView)
+        //view.addSubview(bilgeView)
         
         changeBview.frame = CGRect(x: 50, y: 300, width: 250, height: 60)
         changeBview.backgroundColor = Styling.colorForCode(.themeLight)
@@ -94,6 +104,9 @@ class BilgeViewController: UIViewController {
         
         stepperView.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
         view.addSubview(stepperView)
+        
+        switchStepperView.frame = CGRect(x: 50, y: 200, width: 250, height: 60)
+        view.addSubview(switchStepperView)
         
     }
 

@@ -32,7 +32,7 @@ import SnapKit
     var capacityWith: CGFloat = 0
     var minusButtonisEnable = false
     var plusButtonisEnable = false
-//    var changeLabelValue: Int? = 0
+   // var changeLabelValue: Int? = 0
 
     var dataLabel: EBLabel = {
         let label = EBLabel()
@@ -105,10 +105,10 @@ import SnapKit
         
         self.bgColor = Styling.colorForCode(.stepperGray)
         
+        addSubview(capacityView)
         addSubview(dataLabel)
         addSubview(gbChangeLabel)
         addSubview(gbLabel)
-        addSubview(capacityView)
         addSubview(stepperButton)
 
         stepperButton.snp.makeConstraints { (make) in
@@ -148,7 +148,7 @@ import SnapKit
         
         capacityWith -= 50
         capacityView.frame.size.width = CGFloat(capacityWith)
-//        gbChangeLabel.text = String(changeLabelValue! - 1)
+       // gbChangeLabel.text = String(changeLabelValue! - 1)
         
         if plusButtonisEnable {
             stepperButton.rightButton.bgColor = Styling.colorForCode(.themeBlue)
@@ -166,7 +166,7 @@ import SnapKit
         
         capacityWith += 50
         capacityView.frame.size.width = CGFloat(capacityWith)
-//        gbChangeLabel.text  = String(changeLabelValue! + 1)
+      //  gbChangeLabel.text  = String(changeLabelValue! + 1)
         
         if minusButtonisEnable {
             stepperButton.leftButton.bgColor = Styling.colorForCode(.themeBlue)
