@@ -70,30 +70,25 @@ import SnapKit
     // code initialize
     public override init() {
         super.init(frame: .zero)
-        
         self.initialize()
     }
     
     // code initialize
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.initialize()
     }
     
     // storyboard initialize
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         self.initialize()
     }
     
     override func initialize() {
         
         super.initialize()
-        
         stepperSwitch.addTarget(self, action: #selector(stateChanged), for: UIControlEvents.valueChanged)
-        
         self.bgColor = Styling.colorForCode(.stepperGray)
         
         addSubview(smsLabel)
@@ -106,7 +101,6 @@ import SnapKit
             make.centerY.equalTo(self)
 
         }
-        
         
         smsLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(5)
@@ -126,12 +120,13 @@ import SnapKit
     }
     
     @objc func stateChanged(switchState: UISwitch) {
+        
         if switchState.isOn {
-           self.bgColor = Styling.colorForCode(.themeMediumGray)
-           limitLabel.EBtext = "OO"
-           secondSmsLabel.EBtext = "Unlimited"
+            self.bgColor = Styling.colorForCode(.themeMediumGray)
+            limitLabel.EBtext = "OO"
+            secondSmsLabel.EBtext = "Unlimited"
         } else {
-           self.bgColor = Styling.colorForCode(.stepperGray)
+            self.bgColor = Styling.colorForCode(.stepperGray)
             limitLabel.EBtext = "0"
             secondSmsLabel.EBtext = "sms"
         }
