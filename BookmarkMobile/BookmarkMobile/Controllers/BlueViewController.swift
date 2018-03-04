@@ -13,7 +13,7 @@ class BlueViewController: BaseViewController2 {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = UIButton(frame: CGRect(x: 20, y: 20, width: 100, height: 60))
+        let button = UIButton(frame: CGRect(x: 40, y: 150, width: 100, height: 60))
         button.backgroundColor = UIColor.blue
         super.view.addSubview(button)
         

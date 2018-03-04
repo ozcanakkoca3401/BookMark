@@ -41,7 +41,7 @@ import SnapKit
         self.setTitleColor(Styling.colorForCode(.black), for: .normal)
         self.titleLabel?.font = Styling.font(weight: .regular, size: 20)
         self.semanticContentAttribute = .forceRightToLeft
-        self.titleEdgeInsets = UIEdgeInsets(top: 10, left: self.bounds.width/2 - 50, bottom: 10, right: 0)
+        self.titleEdgeInsets = UIEdgeInsets(top: 10, left: self.bounds.width/2, bottom: 10, right: 0)
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: self.titleEdgeInsets.left + 10, bottom: 0, right: 0)
     }
     

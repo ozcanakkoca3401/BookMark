@@ -1,20 +1,14 @@
 //
-//  RoundButton.swift
+//  EBScrollView.swift
 //  BookmarkMobile
 //
-//  Created by Alaattin Bedir on 19.02.2018.
+//  Created by umut karagoz on 4.03.2018.
 //  Copyright © 2018 Nookmark. All rights reserved.
 //
 
 import UIKit
 
-protocol RoundButtonProtocol: class {
-    func buttonClicked()
-}
-
-@IBDesignable public class RoundButton: UIButton {
-    
-    weak var roundButtonDelegate: RoundButtonProtocol?
+@IBDesignable public class EBScrollView: UIScrollView {
     
     @IBInspectable var borderColor: UIColor = Styling.colorForCode(.themeClear) {
         didSet {
@@ -34,15 +28,9 @@ protocol RoundButtonProtocol: class {
         }
     }
     
-    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeClear) {
+    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.white) {
         didSet {
             backgroundColor = bgColor
-        }
-    }
-    
-    @IBInspectable var title: String = "" {
-        didSet {
-            self.setTitle(title, for: .normal)
         }
     }
     
@@ -62,23 +50,17 @@ protocol RoundButtonProtocol: class {
     }
     
     func initialize() {
-        self.addTarget(self, action: #selector(RoundButton.buttonClicked), for: .touchUpInside)
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
         layer.cornerRadius = cornerRadius
         clipsToBounds = true
         backgroundColor = bgColor
-        setTitle(title, for: .normal)
     }
     
-    @objc func buttonClicked() {
-        roundButtonDelegate?.buttonClicked()
-    }
-    
-//    override public func layoutSubviews() {
-//        super.layoutSubviews()
-//        layer.cornerRadius = 0.02 * bounds.size.width
-//        clipsToBounds = true
-//    }
+    //    override public func layoutSubviews() {
+    //        super.layoutSubviews()
+    //        layer.cornerRadius = 0.02 * bounds.size.width
+    //        clipsToBounds = true
+    //    }
     
 }
