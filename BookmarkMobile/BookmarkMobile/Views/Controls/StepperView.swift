@@ -104,7 +104,6 @@ import SnapKit
           addSubview(capacityView)
           addSubview(stepperButton)
 
-        
         stepperButton.snp.makeConstraints { (make) in
             
             make.right.equalTo(self).offset(-15)
@@ -125,4 +124,3 @@ import SnapKit
     }
     
 }
-

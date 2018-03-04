@@ -32,6 +32,14 @@ class EnesViewController: UIViewController, CustomPopupProtocol {
         
     }
     
+    @IBAction func PageViewButton(_ sender: Any) {
+        
+        let modalVC = PageVC()
+        //        modalVC.view.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        modalVC.modalPresentationStyle = .overCurrentContext
+        present(modalVC, animated: true, completion: nil)
+    }
+    
     func cancelButton() {
          a.removeFromSuperview()
     }

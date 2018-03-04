@@ -2,7 +2,8 @@
 line_length:
 - 700 # warning
 - 800 # error
-
+cyclomatic_complexity:
+- 20
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Carthage
