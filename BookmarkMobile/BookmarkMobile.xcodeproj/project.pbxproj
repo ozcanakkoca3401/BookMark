@@ -23,6 +23,7 @@
 		45C35D1D204C4A6800B21B52 /* SwitchStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D1C204C4A6800B21B52 /* SwitchStepperView.swift */; };
 		45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */; };
 		45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D322040053300A564CF /* ThreeButtonView.swift */; };
+		4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */; };
 		4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */; };
 		4C36B1C4204568870055DB00 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C0204568870055DB00 /* Extensions.swift */; };
 		4C36B1C5204568870055DB00 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C1204568870055DB00 /* ExampleData.swift */; };
@@ -111,6 +112,7 @@
 		45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonView.swift; sourceTree = "<group>"; };
 		45CF9D322040053300A564CF /* ThreeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeButtonView.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScrollView.swift; sourceTree = "<group>"; };
 		4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		4C36B1C0204568870055DB00 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4C36B1C1204568870055DB00 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				45C35D1A204964FC00B21B52 /* StepperView.swift */,
 				0BB7FA82204C08090076BF66 /* EBScrollView.swift */,
 				45C35D1C204C4A6800B21B52 /* SwitchStepperView.swift */,
+				4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -829,6 +832,7 @@
 				8408E0562036F01A004ABC0A /* Message.swift in Sources */,
 				0BB7FA83204C08090076BF66 /* EBScrollView.swift in Sources */,
 				8408E05E203710AE004ABC0A /* BaseViewController.swift in Sources */,
+				4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */,
 				45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */,
 				0BB7FA7E204BF4C00076BF66 /* BlueViewController.swift in Sources */,
 			);

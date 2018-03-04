@@ -51,6 +51,10 @@ class EnesViewController: UIViewController, CustomPopupProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var a = MainScrollView(frame: CGRect(x: 10, y: 80, width: 290, height: 130))
+        a.backgroundColor = UIColor.red
+        view.addSubview(a)
+        
 //        view.backgroundColor = UIColor.red
         
     }
