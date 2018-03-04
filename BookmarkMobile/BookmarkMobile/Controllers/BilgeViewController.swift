@@ -92,7 +92,7 @@ class BilgeViewController: UIViewController {
         
        // view.addSubview(closeButton)
         
-        stepperView.frame = CGRect(x: 50, y: 100, width: 250, height: 80)
+        stepperView.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
         view.addSubview(stepperView)
         
     }

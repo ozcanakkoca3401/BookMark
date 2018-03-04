@@ -47,6 +47,7 @@ protocol StepperProtocol: class {
         let button = RoundButton()
         button.bgColor = Styling.colorForCode(.themeBlue)
         button.title = "-"
+        button.titleLabel?.font = Styling.font(weight: .bold, size: 25)
         button.addTarget(self, action: #selector(StepperButton.minusT), for: .touchUpInside)
         return button
     }()
@@ -55,6 +56,7 @@ protocol StepperProtocol: class {
         let button = RoundButton()
         button.bgColor = Styling.colorForCode(.themeBlue)
         button.title = "+"
+        button.titleLabel?.font = Styling.font(weight: .bold, size: 25)
         button.addTarget(self, action: #selector(StepperButton.plusT), for: .touchUpInside)
         return button
     }()
@@ -62,6 +64,7 @@ protocol StepperProtocol: class {
     public override init() {
         super.init(frame: .zero)
         self.initialize()
+        setupStepperButton()
     }
     
     public override init(frame: CGRect) {
