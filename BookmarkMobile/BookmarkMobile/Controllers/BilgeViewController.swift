@@ -62,12 +62,8 @@ class BilgeViewController: UIViewController {
     var switchStepperView: SwitchStepperView = {
         let switchStepperView = SwitchStepperView()
         
-        
         return switchStepperView
     }()
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
