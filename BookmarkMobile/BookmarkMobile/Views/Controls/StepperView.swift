@@ -11,7 +11,6 @@ import SnapKit
 
 @IBDesignable public class StepperView: RoundView, StepperProtocol {
     
-    
     @IBInspectable var data: String = "" {
         didSet {
             dataLabel.text = data
@@ -30,7 +29,9 @@ import SnapKit
         }
     }
     
-    var capacityWith:CGFloat = 0
+    var capacityWith: CGFloat = 0
+    var minusButtonisEnable = false
+    var plusButtonisEnable = false
 
     var dataLabel: EBLabel = {
         let label = EBLabel()
@@ -74,13 +75,6 @@ import SnapKit
 
         return button
     }()
-
-    var i: Int = {
-       
-        let i = 0
-        
-        return i
-    }()
     
      // code initialize
     public override init() {
@@ -117,17 +111,14 @@ import SnapKit
           addSubview(stepperButton)
 
         stepperButton.snp.makeConstraints { (make) in
-            //make.top.equalTo(self).offset(10)
             make.height.equalTo(35)
             make.width.equalTo(70)
-            //make.left.equalTo(self).offset(20)
             make.right.equalTo(self).offset(-15)
             make.centerY.equalTo(self)
 
         }
         
         capacityView.snp.makeConstraints { (make) in
-            
             make.width.equalTo(self.capacityWith)
             make.height.equalTo(60)
             make.left.equalTo(self).offset(0)
@@ -138,43 +129,37 @@ import SnapKit
     
     func minus() {
         
-        if self.capacityWith == 0 {
-            stepperButton.leftButton.bgColor = UIColor.red
-            stepperButton.leftButton.isEnabled = false
-            return
-        }
-        
-        
         capacityWith -= 50
         capacityView.frame.size.width = CGFloat(capacityWith)
         
-        print(capacityWith)
+        if plusButtonisEnable {
+            stepperButton.rightButton.bgColor = Styling.colorForCode(.themeBlue)
+            stepperButton.rightButton.isEnabled = true
+        }
         
+        if self.capacityWith == 0 {
+            stepperButton.leftButton.bgColor = UIColor.red
+            minusButtonisEnable  = true
+            stepperButton.leftButton.isEnabled = false
+        }
     }
     
     func plus() {
         
+        capacityWith += 50
+        capacityView.frame.size.width = CGFloat(capacityWith)
+        
+        if minusButtonisEnable {
+            stepperButton.leftButton.bgColor = Styling.colorForCode(.themeBlue)
+            stepperButton.leftButton.isEnabled = true
+        }
         
         if self.capacityWith >= self.frame.size.width {
             stepperButton.rightButton.bgColor = UIColor.red
+            plusButtonisEnable  = true
             stepperButton.rightButton.isEnabled = false
-            return
         }
-
-        capacityWith += 50
-        capacityView.frame.size.width = CGFloat(capacityWith)
-        print(capacityWith)
     }
-    
-//    func calculateCapacity() -> Int {
-//
-//
-////        var a = calculateCapacity()
-////        a = a + 10
-//        capacityWith += 30
-//        return capacityWith
-//
-//    }
 
     override public func layoutSubviews() {
         super.layoutSubviews()
