@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable public class HorizontalSlider: UISlider {
 
-    @IBInspectable var minTintColor: UIColor = Styling.colorForCode(.themeGray) {
+    @IBInspectable var minTintColor: UIColor = Styling.colorForCode(.themeMediumGray) {
         didSet {
             minimumTrackTintColor = minTintColor
         }
@@ -34,7 +34,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var initialvalue: Float = 0.5 {
+    @IBInspectable var initialvalue: Float = 0.3 {
         didSet {
             value = initialvalue
         }
