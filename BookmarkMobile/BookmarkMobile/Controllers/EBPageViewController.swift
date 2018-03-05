@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageVC: UIPageViewController {
+class EBPageViewController: UIPageViewController {
 
 //    private lazy var orderedViewControllers: [UIViewController] = {
 //        return [self.newColoredViewController(color: "Green"),
@@ -16,8 +16,8 @@ class PageVC: UIPageViewController {
 //                self.newColoredViewController(color: "Blue")]
 //    }()
     
-    private lazy var orderedViewControllers: [UIViewController] = {
-        return [GreenViewController(), BlueViewController(), RedViewController()]
+    public lazy var orderedViewControllers: [UIViewController] = {
+        return []
         }()
     
     override func viewDidLoad() {
@@ -43,7 +43,7 @@ class PageVC: UIPageViewController {
 //    }
 }
 
-extension PageVC: UIPageViewControllerDataSource {
+extension EBPageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         

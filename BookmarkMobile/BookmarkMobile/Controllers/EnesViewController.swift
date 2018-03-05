@@ -20,7 +20,8 @@ class EnesViewController: UIViewController, CustomPopupProtocol {
     
     @IBAction func PageViewButton(_ sender: Any) {
         
-        let modalVC = PageVC()
+        let modalVC = EBPageViewController()
+        modalVC.orderedViewControllers = [GreenViewController(), BlueViewController()]
         modalVC.modalPresentationStyle = .overCurrentContext
         present(modalVC, animated: true, completion: nil)
     }

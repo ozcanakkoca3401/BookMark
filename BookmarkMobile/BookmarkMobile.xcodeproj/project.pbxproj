@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0BB7FA7D204BF4C00076BF66 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */; };
 		0BB7FA7E204BF4C00076BF66 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA79204BF4BF0076BF66 /* BlueViewController.swift */; };
-		0BB7FA7F204BF4C00076BF66 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA7A204BF4BF0076BF66 /* PageVC.swift */; };
+		0BB7FA7F204BF4C00076BF66 /* EBPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA7A204BF4BF0076BF66 /* EBPageViewController.swift */; };
 		0BB7FA81204BF4C00076BF66 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */; };
 		0BB7FA83204C08090076BF66 /* EBScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA82204C08090076BF66 /* EBScrollView.swift */; };
 		0BB7FA85204C16A20076BF66 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */; };
@@ -97,7 +97,7 @@
 		05105D23C47C7788D93BDAF2 /* Pods_BookmarkMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		0BB7FA79204BF4BF0076BF66 /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
-		0BB7FA7A204BF4BF0076BF66 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		0BB7FA7A204BF4BF0076BF66 /* EBPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBPageViewController.swift; sourceTree = "<group>"; };
 		0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		0BB7FA82204C08090076BF66 /* EBScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBScrollView.swift; sourceTree = "<group>"; };
 		0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
@@ -376,7 +376,7 @@
 				8408E084203C6594004ABC0A /* EnesViewController.xib */,
 				0BB7FA79204BF4BF0076BF66 /* BlueViewController.swift */,
 				0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */,
-				0BB7FA7A204BF4BF0076BF66 /* PageVC.swift */,
+				0BB7FA7A204BF4BF0076BF66 /* EBPageViewController.swift */,
 				0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */,
 				0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */,
 			);
@@ -808,7 +808,7 @@
 				4C741553203C670600A32734 /* EBLabel.swift in Sources */,
 				45C35D132046CBDB00B21B52 /* PopUpView.swift in Sources */,
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
-				0BB7FA7F204BF4C00076BF66 /* PageVC.swift in Sources */,
+				0BB7FA7F204BF4C00076BF66 /* EBPageViewController.swift in Sources */,
 				8408E079203C655C004ABC0A /* BilgeViewController.swift in Sources */,
 				8408E075203C6480004ABC0A /* AlaattinViewController.swift in Sources */,
 				4C36B1C4204568870055DB00 /* Extensions.swift in Sources */,
