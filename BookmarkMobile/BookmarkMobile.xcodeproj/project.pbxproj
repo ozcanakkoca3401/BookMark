@@ -240,6 +240,26 @@
 			path = tr.lproj;
 			sourceTree = "<group>";
 		};
+		4C92B4D9204D2F5D00347293 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */,
+				8408E05D203710AE004ABC0A /* BaseViewController.swift */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		4C92B4DA204D2FB900347293 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				0BB7FA7A204BF4BF0076BF66 /* EBPageViewController.swift */,
+				0BB7FA79204BF4BF0076BF66 /* BlueViewController.swift */,
+				0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */,
+				0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
 		5AC4212E732EA6459FD4B347 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,12 +379,12 @@
 		8408E0522036EBC5004ABC0A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4C92B4D9204D2F5D00347293 /* BaseControllers */,
 				4C36B1C2204568870055DB00 /* CollapsibleTableViewCell.swift */,
 				4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */,
 				4C36B1C1204568870055DB00 /* ExampleData.swift */,
 				4C36B1C0204568870055DB00 /* Extensions.swift */,
 				8408E0242036D68F004ABC0A /* ViewController.swift */,
-				8408E05D203710AE004ABC0A /* BaseViewController.swift */,
 				8408E073203C6480004ABC0A /* AlaattinViewController.swift */,
 				8408E074203C6480004ABC0A /* AlaattinViewController.xib */,
 				8408E077203C655C004ABC0A /* BilgeViewController.swift */,
@@ -374,11 +394,6 @@
 				8408E080203C6583004ABC0A /* OzcanViewController.xib */,
 				8408E083203C6594004ABC0A /* EnesViewController.swift */,
 				8408E084203C6594004ABC0A /* EnesViewController.xib */,
-				0BB7FA79204BF4BF0076BF66 /* BlueViewController.swift */,
-				0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */,
-				0BB7FA7A204BF4BF0076BF66 /* EBPageViewController.swift */,
-				0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */,
-				0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -430,6 +445,7 @@
 		8408E060203AC704004ABC0A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4C92B4DA204D2FB900347293 /* PageView */,
 				8408E06D203C12D6004ABC0A /* testComponent.swift */,
 				69004CCA203D540700CC1215 /* HeaderView.swift */,
 				45C35D1E204C67AF00B21B52 /* StepperComponentView.swift */,
