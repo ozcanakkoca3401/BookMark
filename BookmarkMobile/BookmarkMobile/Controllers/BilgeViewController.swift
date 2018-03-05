@@ -71,6 +71,12 @@ class BilgeViewController: UIViewController {
         return stepperComponentView
     }()
     
+    var usageInformationView: UsageInformationView = {
+        let usageInformationView = UsageInformationView()
+        
+        return usageInformationView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -111,7 +117,10 @@ class BilgeViewController: UIViewController {
        // view.addSubview(switchStepperView)
         
         stepperComponentview.frame = CGRect(x: 50, y: 100, width: 250, height: 180)
-        view.addSubview(stepperComponentview)
+        //view.addSubview(stepperComponentview)
+        
+        usageInformationView.frame = CGRect(x: 50, y: 100, width: 250, height: 300)
+        view.addSubview(usageInformationView)
         
     }
 
