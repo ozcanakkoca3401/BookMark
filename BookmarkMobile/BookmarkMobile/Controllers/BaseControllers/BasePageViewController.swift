@@ -11,7 +11,9 @@ import SnapKit
 
 class BasePageViewController: UIViewController, RoundButtonProtocol {
     
-    var subView: EBScrollView = {
+    
+    // ScrollView da yapılacak custom değişiklikler burada yapılabilir
+    var mainScrollView: EBScrollView = {
         
         let view = EBScrollView()
         
@@ -30,7 +32,7 @@ class BasePageViewController: UIViewController, RoundButtonProtocol {
         
         closeButton.roundButtonDelegate = self
         view.backgroundColor = Styling.colorForCode(.blurGray)
-        view.addSubview(subView)
+        view.addSubview(mainScrollView)
         view.addSubview(closeButton)
         setupView()
         
@@ -38,7 +40,7 @@ class BasePageViewController: UIViewController, RoundButtonProtocol {
     
     func setupView() {
         
-        subView.snp.makeConstraints { (make) in
+        mainScrollView.snp.makeConstraints { (make) in
             make.top.equalTo(self.view).offset(100)
             make.bottom.equalTo(self.view).offset(-100)
             make.left.equalTo(self.view).offset(20)
@@ -48,7 +50,7 @@ class BasePageViewController: UIViewController, RoundButtonProtocol {
         }
         
         closeButton.snp.makeConstraints { (make) in
-            make.top.equalTo(subView.snp.bottom).offset(30)
+            make.top.equalTo(mainScrollView.snp.bottom).offset(30)
             make.width.equalTo(130)
             make.height.equalTo(40)
             make.centerX.equalTo(self.view)
