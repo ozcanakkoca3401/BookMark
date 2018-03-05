@@ -13,29 +13,14 @@ class EnesViewController: UIViewController, CustomPopupProtocol {
     let a = CustomPopup()
     
     @IBAction func buttona(_ sender: Any) {
-        
         a.frame = view.frame
         a.twoButtonDelegate = self
-//        a.transform = CGAffineTransform(scaleX: 0, y: 0)
         view.addSubview(a)
-//        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseIn, animations: {
-//            a.transform = CGAffineTransform.identity
-//        })
-        
-//        var animationView: UIView = UIView(frame: CGRect(x:50,y: 90,width: 100,height: 50))
-//        animationView.backgroundColor = UIColor.black
-//        animationView.transform = CGAffineTransform(scaleX: 0, y: 0)
-//        view.addSubview(animationView)
-//        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseIn, animations: {
-//            animationView.transform = CGAffineTransform.identity
-//        })
-        
     }
     
     @IBAction func PageViewButton(_ sender: Any) {
         
         let modalVC = PageVC()
-        //        modalVC.view.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         modalVC.modalPresentationStyle = .overCurrentContext
         present(modalVC, animated: true, completion: nil)
     }
