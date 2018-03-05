@@ -11,7 +11,6 @@ import SnapKit
 
 class BasePageViewController: UIViewController, RoundButtonProtocol {
     
-    
     // ScrollView da yapılacak custom değişiklikler burada yapılabilir
     var mainScrollView: EBScrollView = {
         

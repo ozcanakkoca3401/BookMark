@@ -38,6 +38,7 @@
 		4C7EBCBA2046989200D762EE /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EBCB92046989200D762EE /* CustomPopup.swift */; };
 		4C7EECB1203722AA006C8805 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7EECAF203722AA006C8805 /* Localizable.strings */; };
 		4C7EECB4203722BC006C8805 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7EECB2203722BC006C8805 /* Localizable.strings */; };
+		4C8B90ED204D97E3001C730C /* EBLevelKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */; };
 		4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */; };
 		4CBAD1FE203C0AEA00FC412B /* StepperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAD1FD203C0AEA00FC412B /* StepperButton.swift */; };
 		69004CCB203D540700CC1215 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69004CCA203D540700CC1215 /* HeaderView.swift */; };
@@ -129,6 +130,7 @@
 		4C7EECAC2037208D006C8805 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4C7EECB0203722AA006C8805 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = Localizable.strings; sourceTree = "<group>"; };
 		4C7EECB3203722BC006C8805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLevelKnowledge.swift; sourceTree = "<group>"; };
 		4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSlider.swift; sourceTree = "<group>"; };
 		4CBAD1FD203C0AEA00FC412B /* StepperButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperButton.swift; sourceTree = "<group>"; };
 		69004CCA203D540700CC1215 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 				69004CCA203D540700CC1215 /* HeaderView.swift */,
 				45C35D1E204C67AF00B21B52 /* StepperComponentView.swift */,
 				4C7EBCB92046989200D762EE /* CustomPopup.swift */,
+				4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -832,6 +835,7 @@
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
 				69004CCB203D540700CC1215 /* HeaderView.swift in Sources */,
 				4C36B1C5204568870055DB00 /* ExampleData.swift in Sources */,
+				4C8B90ED204D97E3001C730C /* EBLevelKnowledge.swift in Sources */,
 				4C36B1C6204568870055DB00 /* CollapsibleTableViewCell.swift in Sources */,
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
 				4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */,
