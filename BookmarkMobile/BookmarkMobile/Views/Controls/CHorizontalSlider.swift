@@ -16,7 +16,7 @@ class CHorizontalSlider: HorizontalSlider {
         }
     }
 
-    @IBInspectable var thumbColor: UIColor = Styling.colorForCode(.themeGray) {
+    @IBInspectable var thumbColor: UIColor = Styling.colorForCode(.themeMediumGray) {
         didSet {
             thumbTintColor = thumbColor
         }
