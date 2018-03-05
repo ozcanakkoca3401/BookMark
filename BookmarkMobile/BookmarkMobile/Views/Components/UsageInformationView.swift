@@ -22,7 +22,7 @@ import SnapKit
     
     var middleView: EBView = {
         let middleView = EBView()
-        middleView.backgroundColor = Styling.colorForCode(.usageGreen)
+        middleView.backgroundColor = Styling.colorForCode(.themeBlue)
         
         return middleView
         
@@ -52,7 +52,7 @@ import SnapKit
         avgLabel.EBcolor = Styling.colorForCode(.usageGreen)
         avgLabel.font = Styling.font(weight: .bold, size: 12)
         avgLabel.textAlignment = .right
-        avgLabel.backgroundColor = Styling.colorForCode(.white)
+        avgLabel.backgroundColor = Styling.colorForCode(.themeGray)
         
         return avgLabel
     }()
@@ -63,9 +63,40 @@ import SnapKit
         mbLabel.EBcolor = Styling.colorForCode(.usageGreen)
         mbLabel.font = Styling.font(weight: .bold, size: 22)
         mbLabel.textAlignment = .center
-        mbLabel.backgroundColor = Styling.colorForCode(.white)
+        mbLabel.backgroundColor = Styling.colorForCode(.themeGray)
         
         return mbLabel
+    }()
+    
+    var dayLabel: EBLabel = {
+        let dayLabel = EBLabel()
+        dayLabel.EBtext = "/ DAY"
+        dayLabel.EBcolor = Styling.colorForCode(.usageGreen)
+        dayLabel.font = Styling.font(weight: .bold, size: 12)
+        dayLabel.textAlignment = .left
+        dayLabel.backgroundColor = Styling.colorForCode(.themeGray)
+        
+        return dayLabel
+    }()
+    
+    var dataLabel: EBLabel = {
+        let dataLabel = EBLabel()
+        dataLabel.EBtext = "DATA"
+        dataLabel.EBcolor = Styling.colorForCode(.white)
+        dataLabel.font = Styling.font(weight: .bold, size: 12)
+        dataLabel.textAlignment = .center
+        
+        return dataLabel
+    }()
+    
+    var daysLabel: EBLabel = {
+        let daysLabel = EBLabel()
+        daysLabel.EBtext = "22 days left"
+        daysLabel.EBcolor = Styling.colorForCode(.white)
+        daysLabel.font = Styling.font(weight: .bold, size: 12)
+        daysLabel.textAlignment = .center
+        
+        return daysLabel
     }()
 
     public override init() {
@@ -98,10 +129,13 @@ import SnapKit
         headerView.addSubview(headerLabel)
         middleView.addSubview(avgLabel)
         middleView.addSubview(mbLabel)
+        middleView.addSubview(dayLabel)
+        middleView.addSubview(dataLabel)
+        middleView.addSubview(daysLabel)
 
         headerView.snp.makeConstraints { (make) in
             //  make.width.equalTo(250)
-            make.height.equalTo(100)
+            make.height.equalTo(140)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
             make.top.equalTo(self).offset(0)
@@ -109,18 +143,18 @@ import SnapKit
 
         middleView.snp.makeConstraints { (make) in
             //            make.width.equalTo(250)
-            make.height.equalTo(100)
+            make.height.equalTo(140)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
-            make.top.equalTo(self).offset(99)
+            make.top.equalTo(self).offset(139)
         }
 
         footerView.snp.makeConstraints { (make) in
             //  make.width.equalTo(250)
-            make.height.equalTo(100)
+            make.height.equalTo(150)
             make.left.equalTo(self).offset(20)
             make.right.equalTo(self).offset(-20)
-            make.top.equalTo(self).offset(199)
+            make.top.equalTo(self).offset(280)
         }
         
         headerLabel.snp.makeConstraints { (make) in
@@ -128,25 +162,52 @@ import SnapKit
             make.height.equalTo(60)
             make.left.equalTo(headerView).offset(0)
             make.right.equalTo(headerView).offset(0)
-            make.top.equalTo(headerView).offset(50)
+            make.top.equalTo(headerView).offset(30)
             
         }
         
         avgLabel.snp.makeConstraints { (make) in
             make.width.equalTo(middleView).dividedBy(3)
-            make.height.equalTo(50)
+            make.height.equalTo(middleView).dividedBy(2)
             make.left.equalTo(middleView).offset(0)
             //make.right.equalTo(headerView).offset(0)
-            make.top.equalTo(middleView).offset(50)
+            make.top.equalTo(middleView).offset(75)
             
         }
         
         mbLabel.snp.makeConstraints { (make) in
             make.width.equalTo(middleView).dividedBy(3)
-            make.height.equalTo(50)
+            make.height.equalTo(75)
             make.left.equalTo(avgLabel.snp.right).offset(0)
             //make.right.equalTo(headerView).offset(0)
-            make.top.equalTo(middleView).offset(50)
+            make.top.equalTo(middleView).offset(75)
+            
+        }
+        
+        dayLabel.snp.makeConstraints { (make) in
+            make.width.equalTo(middleView).dividedBy(3)
+            make.height.equalTo(75)
+            make.left.equalTo(mbLabel.snp.right).offset(0)
+            //make.right.equalTo(headerView).offset(0)
+            make.top.equalTo(middleView).offset(75)
+            
+        }
+        
+        dataLabel.snp.makeConstraints { (make) in
+            make.width.equalTo(middleView).dividedBy(3)
+            make.height.equalTo(50)
+            make.left.equalTo(middleView).offset(0)
+            //make.right.equalTo(headerView).offset(0)
+            make.top.equalTo(middleView).offset(0)
+            
+        }
+        
+        daysLabel.snp.makeConstraints { (make) in
+            make.width.equalTo(middleView).dividedBy(3)
+            make.height.equalTo(50)
+            make.right.equalTo(middleView).offset(0)
+            //make.right.equalTo(headerView).offset(0)
+            make.top.equalTo(middleView).offset(0)
             
         }
     }
