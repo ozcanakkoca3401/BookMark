@@ -22,6 +22,7 @@
 		45C35D1B204964FC00B21B52 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D1A204964FC00B21B52 /* StepperView.swift */; };
 		45C35D1D204C4A6800B21B52 /* SwitchStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D1C204C4A6800B21B52 /* SwitchStepperView.swift */; };
 		45C35D1F204C67AF00B21B52 /* StepperComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D1E204C67AF00B21B52 /* StepperComponentView.swift */; };
+		45CCA134204D990500C56D66 /* UsageInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCA133204D990500C56D66 /* UsageInformationView.swift */; };
 		45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */; };
 		45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D322040053300A564CF /* ThreeButtonView.swift */; };
 		4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */; };
@@ -112,6 +113,7 @@
 		45C35D1A204964FC00B21B52 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		45C35D1C204C4A6800B21B52 /* SwitchStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchStepperView.swift; sourceTree = "<group>"; };
 		45C35D1E204C67AF00B21B52 /* StepperComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperComponentView.swift; sourceTree = "<group>"; };
+		45CCA133204D990500C56D66 /* UsageInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageInformationView.swift; sourceTree = "<group>"; };
 		45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonView.swift; sourceTree = "<group>"; };
 		45CF9D322040053300A564CF /* ThreeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeButtonView.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				45C35D1E204C67AF00B21B52 /* StepperComponentView.swift */,
 				4C7EBCB92046989200D762EE /* CustomPopup.swift */,
 				4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */,
+				45CCA133204D990500C56D66 /* UsageInformationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -859,6 +862,7 @@
 				4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */,
 				45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */,
 				0BB7FA7E204BF4C00076BF66 /* BlueViewController.swift in Sources */,
+				45CCA134204D990500C56D66 /* UsageInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
