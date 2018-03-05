@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlueViewController: BaseViewController2 {
+class BlueViewController: BasePageViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,7 +12,7 @@
 		0BB7FA7F204BF4C00076BF66 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA7A204BF4BF0076BF66 /* PageVC.swift */; };
 		0BB7FA81204BF4C00076BF66 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */; };
 		0BB7FA83204C08090076BF66 /* EBScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA82204C08090076BF66 /* EBScrollView.swift */; };
-		0BB7FA85204C16A20076BF66 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA84204C16A20076BF66 /* BaseViewController2.swift */; };
+		0BB7FA85204C16A20076BF66 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */; };
 		27CD341983EAA5C14A1A20AB /* Pods_BookmarkMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */; };
 		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
 		4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */; };
@@ -100,7 +100,7 @@
 		0BB7FA7A204BF4BF0076BF66 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		0BB7FA82204C08090076BF66 /* EBScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBScrollView.swift; sourceTree = "<group>"; };
-		0BB7FA84204C16A20076BF66 /* BaseViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController2.swift; sourceTree = "<group>"; };
+		0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.release.xcconfig"; sourceTree = "<group>"; };
 		44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -378,7 +378,7 @@
 				0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */,
 				0BB7FA7A204BF4BF0076BF66 /* PageVC.swift */,
 				0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */,
-				0BB7FA84204C16A20076BF66 /* BaseViewController2.swift */,
+				0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -803,7 +803,7 @@
 				8408E07D203C6573004ABC0A /* UmutViewController.swift in Sources */,
 				8408E06E203C12D6004ABC0A /* testComponent.swift in Sources */,
 				4C451A1D2040170700FF9E3D /* EBHeaderView.swift in Sources */,
-				0BB7FA85204C16A20076BF66 /* BaseViewController2.swift in Sources */,
+				0BB7FA85204C16A20076BF66 /* BasePageViewController.swift in Sources */,
 				69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */,
 				4C741553203C670600A32734 /* EBLabel.swift in Sources */,
 				45C35D132046CBDB00B21B52 /* PopUpView.swift in Sources */,

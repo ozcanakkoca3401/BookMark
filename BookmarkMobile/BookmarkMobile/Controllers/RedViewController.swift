@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RedViewController: BaseViewController2 {
+class RedViewController: BasePageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

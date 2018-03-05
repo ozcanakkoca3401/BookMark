@@ -18,7 +18,7 @@ class PageVC: UIPageViewController {
     
     private lazy var orderedViewControllers: [UIViewController] = {
         return [GreenViewController(), BlueViewController(), RedViewController()]
-    }()
+        }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

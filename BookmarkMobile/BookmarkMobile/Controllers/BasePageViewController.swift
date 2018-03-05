@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class BaseViewController2: UIViewController, RoundButtonProtocol {
+class BasePageViewController: UIViewController, RoundButtonProtocol {
     
     var subView: EBScrollView = {
         

@@ -110,7 +110,7 @@ class BilgeViewController: UIViewController {
         //switchStepperView.frame = CGRect(x: 50, y: 200, width: 250, height: 60)
        // view.addSubview(switchStepperView)
         
-        stepperComponentview.frame = CGRect(x: 50, y: 100, width: 250, height: 60)
+        stepperComponentview.frame = CGRect(x: 50, y: 100, width: 250, height: 180)
         view.addSubview(stepperComponentview)
         
     }
