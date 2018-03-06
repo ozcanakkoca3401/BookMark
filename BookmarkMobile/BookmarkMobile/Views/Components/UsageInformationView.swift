@@ -38,13 +38,14 @@ import SnapKit
 
     }()
 
-//    var footerView: EBView = {
-//        let footerView = EBView()
-//        footerView.backgroundColor = UIColor.blue
-//
-//        return footerView
-//
-//    }()
+    var footerView: FooterView = {
+        let footerView = FooterView()
+        footerView.topLabel.EBtext = "You have so much data for this period that you could help those in need!"
+        footerView.topLabel.EBcolor = Styling.colorForCode(.usageGreen)
+        
+        return footerView
+
+    }()
 
     var headerLabel: EBLabel = {
        let headerLabel = EBLabel()
@@ -68,7 +69,7 @@ import SnapKit
         //avgLabel.EBcolor = Styling.colorForCode(.usageGreen)
         avgLabel.font = Styling.font(weight: .bold, size: 12)
         avgLabel.textAlignment = .right
-        avgLabel.backgroundColor = Styling.colorForCode(.white)
+        avgLabel.labelBackgroundColor = Styling.colorForCode(.white)
 
         return avgLabel
     }()
@@ -79,7 +80,7 @@ import SnapKit
         //mbLabel.EBcolor = Styling.colorForCode(.usageGreen)
         mbLabel.font = Styling.font(weight: .bold, size: 22)
         mbLabel.textAlignment = .center
-        mbLabel.backgroundColor = Styling.colorForCode(.white)
+        mbLabel.labelBackgroundColor = Styling.colorForCode(.white)
 
         return mbLabel
     }()
@@ -90,7 +91,7 @@ import SnapKit
         //dayLabel.EBcolor = Styling.colorForCode(.usageGreen)
         dayLabel.font = Styling.font(weight: .bold, size: 12)
         dayLabel.textAlignment = .left
-        dayLabel.backgroundColor = Styling.colorForCode(.white)
+        dayLabel.labelBackgroundColor = Styling.colorForCode(.white)
 
         return dayLabel
     }()
@@ -154,7 +155,7 @@ import SnapKit
 
           self.addSubview(headerView)
           self.addSubview(middleView)
-//        self.addSubview(footerView)
+          self.addSubview(footerView)
           headerView.addSubview(headerButton)
           headerView.addSubview(headerLabel)
           middleView.addSubview(avgLabel)
@@ -177,16 +178,16 @@ import SnapKit
             make.height.equalTo(120)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
-            make.top.equalTo(self).offset(120)
+            make.top.equalTo(headerView.snp.bottom).offset(0)
         }
-//
-//        footerView.snp.makeConstraints { (make) in
-//            //  make.width.equalTo(250)
-//            make.height.equalTo(150)
-//            make.left.equalTo(self).offset(20)
-//            make.right.equalTo(self).offset(-20)
-//            make.top.equalTo(self).offset(280)
-//        }
+
+        footerView.snp.makeConstraints { (make) in
+            //  make.width.equalTo(250)
+            make.height.equalTo(155)
+            make.left.equalTo(self).offset(20)
+            make.right.equalTo(self).offset(-20)
+            make.top.equalTo(middleView.snp.bottom).offset(0)
+        }
         
         headerButton.snp.makeConstraints { (make) in
             make.height.equalTo(60)
