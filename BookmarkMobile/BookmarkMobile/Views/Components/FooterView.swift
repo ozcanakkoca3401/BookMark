@@ -28,9 +28,9 @@ import UIKit
     
     var bottomButton: AlignedImageButton = {
         var button = AlignedImageButton(frame: .zero, image: UIImage(named: "right-arrow")!)
-        button.backgroundColor = Styling.colorForCode(.themeDarkGray)
-        button.setTitle("GIVE TO A FRIEND", for: .normal)
-        button.setTitleColor(Styling.colorForCode(.white), for: .normal)
+        button.bgColor = Styling.colorForCode(.themeDarkGray)
+        button.title = "GIVE TO A FRIEND"
+        button.titleColor = Styling.colorForCode(.white)
         button.titleLabel?.font = Styling.font(weight: .bold, size: 16)
         button.borderColor = Styling.colorForCode(.themeClear)
         button.borderWidth = 0.0

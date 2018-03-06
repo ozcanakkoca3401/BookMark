@@ -46,6 +46,12 @@ protocol RoundButtonProtocol: class {
         }
     }
     
+    @IBInspectable var titleColor: UIColor = Styling.colorForCode(.themeClear) {
+        didSet {
+            self.setTitleColor(titleColor, for: .normal)
+        }
+    }
+    
     public init() {
         super.init(frame: .zero)
         self.initialize()
@@ -69,6 +75,7 @@ protocol RoundButtonProtocol: class {
         clipsToBounds = true
         backgroundColor = bgColor
         setTitle(title, for: .normal)
+        self.setTitleColor(titleColor, for: .normal)
     }
     
     @objc func buttonClicked() {
