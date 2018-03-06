@@ -50,7 +50,7 @@ class BasePageViewController: UIViewController, RoundButtonProtocol {
         
         closeButton.snp.makeConstraints { (make) in
             make.top.equalTo(mainScrollView.snp.bottom).offset(30)
-            make.width.equalTo(130)
+            make.width.equalTo(120)
             make.height.equalTo(40)
             make.centerX.equalTo(self.view)
         }
