@@ -15,6 +15,7 @@
 		0BB7FA85204C16A20076BF66 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FA84204C16A20076BF66 /* BasePageViewController.swift */; };
 		27CD341983EAA5C14A1A20AB /* Pods_BookmarkMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */; };
 		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
+		453A5557204ECCA200E19887 /* InformationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A5556204ECCA200E19887 /* InformationCellView.swift */; };
 		4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */; };
 		45C35D132046CBDB00B21B52 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D122046CBDB00B21B52 /* PopUpView.swift */; };
 		45C35D172046F8C600B21B52 /* ExpendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D162046F8C600B21B52 /* ExpendHeaderView.swift */; };
@@ -109,6 +110,7 @@
 		295C79D6AD45E67A49FD49A5 /* Pods_BookmarkMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmarkMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		334DDC35F148B7AFC7B97028 /* Pods-BookmarkMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.release.xcconfig"; sourceTree = "<group>"; };
 		44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		453A5556204ECCA200E19887 /* InformationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCellView.swift; sourceTree = "<group>"; };
 		4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsButtonView.swift; sourceTree = "<group>"; };
 		45C35D122046CBDB00B21B52 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		45C35D162046F8C600B21B52 /* ExpendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpendHeaderView.swift; sourceTree = "<group>"; };
@@ -399,7 +401,6 @@
 			isa = PBXGroup;
 			children = (
 				4C92B4D9204D2F5D00347293 /* BaseControllers */,
-				4C36B1C2204568870055DB00 /* CollapsibleTableViewCell.swift */,
 				4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */,
 				4C36B1C1204568870055DB00 /* ExampleData.swift */,
 				4C36B1C0204568870055DB00 /* Extensions.swift */,
@@ -473,6 +474,7 @@
 				4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */,
 				45CCA133204D990500C56D66 /* UsageInformationView.swift */,
 				4C5AFF78204E793D00572447 /* FooterView.swift */,
+				453A5556204ECCA200E19887 /* InformationCellView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -480,6 +482,7 @@
 		8408E061203AC70F004ABC0A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4C36B1C2204568870055DB00 /* CollapsibleTableViewCell.swift */,
 				8408E06F203C12EF004ABC0A /* testCell.swift */,
 			);
 			path = Cells;
@@ -857,6 +860,7 @@
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
 				69004CCB203D540700CC1215 /* HeaderView.swift in Sources */,
 				4C36B1C5204568870055DB00 /* ExampleData.swift in Sources */,
+				453A5557204ECCA200E19887 /* InformationCellView.swift in Sources */,
 				4C8B90ED204D97E3001C730C /* EBLevelKnowledge.swift in Sources */,
 				4C36B1C6204568870055DB00 /* CollapsibleTableViewCell.swift in Sources */,
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
