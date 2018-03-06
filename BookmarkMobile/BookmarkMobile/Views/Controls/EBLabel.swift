@@ -28,6 +28,8 @@ class EBLabel: UILabel {
         }
     }
     
+    // #TODO: FontSize dışarıdan çağırmalarda sıkıntılı düzeltilecek
+    
     @IBInspectable public var EBfontSize: CGFloat = UIFont.labelFontSize {
         didSet {
             font = Styling.font(weight: .bold, size: Float(EBfontSize))
