@@ -17,6 +17,7 @@
 		413BAAA76A56B5FF843454B3 /* Pods_BookmarkMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73C2EBAE507203E13A876B4 /* Pods_BookmarkMobileTests.framework */; };
 		453A5557204ECCA200E19887 /* InformationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A5556204ECCA200E19887 /* InformationCellView.swift */; };
 		453A5559204ED5F000E19887 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A5558204ED5F000E19887 /* InformationTableViewCell.swift */; };
+		453A555B204EE19A00E19887 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A555A204EE19A00E19887 /* InformationTableViewController.swift */; };
 		4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */; };
 		45C35D132046CBDB00B21B52 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D122046CBDB00B21B52 /* PopUpView.swift */; };
 		45C35D172046F8C600B21B52 /* ExpendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D162046F8C600B21B52 /* ExpendHeaderView.swift */; };
@@ -113,6 +114,7 @@
 		44A3CB195EA69579FD23CDC9 /* Pods-BookmarkMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobileUITests/Pods-BookmarkMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
 		453A5556204ECCA200E19887 /* InformationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCellView.swift; sourceTree = "<group>"; };
 		453A5558204ED5F000E19887 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		453A555A204EE19A00E19887 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
 		4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsButtonView.swift; sourceTree = "<group>"; };
 		45C35D122046CBDB00B21B52 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		45C35D162046F8C600B21B52 /* ExpendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpendHeaderView.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 				8408E080203C6583004ABC0A /* OzcanViewController.xib */,
 				8408E083203C6594004ABC0A /* EnesViewController.swift */,
 				8408E084203C6594004ABC0A /* EnesViewController.xib */,
+				453A555A204EE19A00E19887 /* InformationTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				4C3B0457203EB3B200A01E94 /* EBView.swift in Sources */,
 				8408E0562036F01A004ABC0A /* Message.swift in Sources */,
 				0BB7FA83204C08090076BF66 /* EBScrollView.swift in Sources */,
+				453A555B204EE19A00E19887 /* InformationTableViewController.swift in Sources */,
 				8408E05E203710AE004ABC0A /* BaseViewController.swift in Sources */,
 				4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */,
 				45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */,
