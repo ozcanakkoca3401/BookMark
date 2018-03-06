@@ -58,7 +58,7 @@ import SnapKit
         avgLabel.EBcolor = Styling.colorForCode(.usageGreen)
         avgLabel.font = Styling.font(weight: .bold, size: 12)
         avgLabel.textAlignment = .right
-        avgLabel.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
+        avgLabel.backgroundColor = Styling.colorForCode(.white)
 
         return avgLabel
     }()
@@ -69,7 +69,7 @@ import SnapKit
         mbLabel.EBcolor = Styling.colorForCode(.usageGreen)
         mbLabel.font = Styling.font(weight: .bold, size: 22)
         mbLabel.textAlignment = .center
-        mbLabel.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
+        mbLabel.backgroundColor = Styling.colorForCode(.white)
 
         return mbLabel
     }()
@@ -80,7 +80,7 @@ import SnapKit
         dayLabel.EBcolor = Styling.colorForCode(.usageGreen)
         dayLabel.font = Styling.font(weight: .bold, size: 12)
         dayLabel.textAlignment = .left
-        dayLabel.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
+        dayLabel.backgroundColor = Styling.colorForCode(.white)
 
         return dayLabel
     }()
@@ -103,6 +103,14 @@ import SnapKit
         daysLabel.textAlignment = .center
 
         return daysLabel
+    }()
+    
+    var usageImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        //imageView.backgroundColor = .blue
+        imageView.image = UIImage(named: "usagee")
+        return imageView
     }()
 
     public override init() {
@@ -139,6 +147,7 @@ import SnapKit
           middleView.addSubview(dayLabel)
           middleView.addSubview(dataLabel)
           middleView.addSubview(daysLabel)
+          middleView.addSubview(usageImageView)
 
         headerView.snp.makeConstraints { (make) in
             //  make.width.equalTo(250)
@@ -223,6 +232,15 @@ import SnapKit
             make.right.equalTo(middleView).offset(0)
             //make.right.equalTo(headerView).offset(0)
             make.top.equalTo(middleView).offset(30)
+            
+        }
+        
+        usageImageView.snp.makeConstraints { (make) in
+            make.width.equalTo(middleView).dividedBy(3)
+            make.height.equalTo(middleView).dividedBy(2).offset(27)
+            make.left.equalTo(dataLabel.snp.right).offset(0)
+            //make.right.equalTo(headerView).offset(0)
+            make.top.equalTo(middleView).offset(0)
             
         }
     }
