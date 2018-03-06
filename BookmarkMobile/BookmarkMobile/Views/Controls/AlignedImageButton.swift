@@ -8,6 +8,8 @@
 
 import UIKit
 
+// #TODO: AlignedImageButton biraz daha görsellik iyileştirecelecek. Özellikle font sizeda sıkıntı var
+
 @IBDesignable public class AlignedImageButton: RoundButton {
     
     public override init() {

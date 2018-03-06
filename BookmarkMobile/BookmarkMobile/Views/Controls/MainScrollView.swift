@@ -51,24 +51,24 @@ import UIKit
     
     override func initialize() {
         
-        for var i in 0..<4 {print("deede")}
-        
-        for var i in 0..<4 {
-            //            let view = UIView(frame: CGRect(x: 10 + sumWidth, y: 10, width: 60, height: 60))
-            //            view.backgroundColor = UIColor.gray
-            //            landSpaceContentView.addSubview(view)
-            //
-            //            sumWidth = 10 + sumWidth + 60
-            scrollButton.frame = CGRect(x: 10 + sumWidth, y: 10, width: 60, height: 60)
-            self.addSubview(scrollButton)
-//            let button = UIButton(frame: CGRect(x: 10 + sumWidth, y: 10, width: 60, height: 60))
-//            button.backgroundColor = UIColor.white
-//            landSpaceContentView.addSubview(button)
-//            button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-            
-            sumWidth = 10 + sumWidth + 60
-            
-        }
+//        for var i in 0..<4 {print("deede")}
+//        
+//        for var i in 0..<4 {
+//            //            let view = UIView(frame: CGRect(x: 10 + sumWidth, y: 10, width: 60, height: 60))
+//            //            view.backgroundColor = UIColor.gray
+//            //            landSpaceContentView.addSubview(view)
+//            //
+//            //            sumWidth = 10 + sumWidth + 60
+//            scrollButton.frame = CGRect(x: 10 + sumWidth, y: 10, width: 60, height: 60)
+//            self.addSubview(scrollButton)
+////            let button = UIButton(frame: CGRect(x: 10 + sumWidth, y: 10, width: 60, height: 60))
+////            button.backgroundColor = UIColor.white
+////            landSpaceContentView.addSubview(button)
+////            button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+//            
+//            sumWidth = 10 + sumWidth + 60
+//            
+//        }
       
     }
 }
