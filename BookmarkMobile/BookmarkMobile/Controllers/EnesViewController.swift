@@ -20,10 +20,16 @@ class EnesViewController: UIViewController { //CustomPopupProtocol
 //
 //    @IBAction func PageViewButton(_ sender: Any) {
 //
-//        let modalVC = EBPageViewController()
-//        modalVC.orderedViewControllers = [GreenViewController(), BlueViewController()]
+////        let modalVC = EBPageViewController()
+////        modalVC.orderedViewControllers = [GreenViewController(), BlueViewController()]
+////        modalVC.modalPresentationStyle = .overCurrentContext
+////        present(modalVC, animated: true, completion: nil)
+//
+//        let modalVC = EBUsageInfoPageView()
+//        modalVC.orderedViewControllers = [UsageInfoViewController()]
 //        modalVC.modalPresentationStyle = .overCurrentContext
 //        present(modalVC, animated: true, completion: nil)
+//
 //    }
 //
 //    func cancelButton() {
@@ -37,8 +43,13 @@ class EnesViewController: UIViewController { //CustomPopupProtocol
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let view1 = UIView(frame: CGRect(x: 0, y: 220, width: self.view.frame.size.width, height: self.view.frame.size.height - 120))
+        self.view.addSubview(view1)
+        
         let modalVC = EBUsageInfoPageView()
-        modalVC.orderedViewControllers = [UsageInfoViewController()]
+        modalVC.orderedViewControllers = [UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController()]
+        self.addChildViewController(modalVC)
+        view1.addSubview(modalVC.view)
         
         //        modalVC.orderedViewControllers = [GreenViewController(), BlueViewController()]
         //        modalVC.modalPresentationStyle = .overCurrentContext

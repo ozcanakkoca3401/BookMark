@@ -14,9 +14,15 @@ class UsageInfoViewController: BaseViewController {
         super.viewDidLoad()
 
         let a = UsageInformationView()
-        a.frame = CGRect(x: 50, y: 100, width: 280, height: 300)
         view.addSubview(a)
+        
+        a.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self.view).offset(0)
+            make.left.equalTo(self.view).offset(20)
+            make.right.equalTo(self.view).offset(-20)
+            make.top.equalTo(self.view).offset(0)
+        }
      
     }
-
+    
 }
