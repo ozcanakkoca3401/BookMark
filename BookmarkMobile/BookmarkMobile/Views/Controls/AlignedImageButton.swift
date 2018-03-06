@@ -48,22 +48,18 @@ public class AlignedImageButton: RoundButton {
         // Just in case they aren't set in a Storyboard
         self.contentHorizontalAlignment = .left
         self.imageView?.contentMode = .scaleAspectFit
-
-        guard self.image(for: UIControlState.normal) != nil else {
-                return
+        
+        guard let image = self.image(for: UIControlState.normal) else
+        {
+            return
         }
         
-//        guard let image = self.image(for: UIControlState.normal) else {
-//            return
-//        }
-        
         // Inset the image based on left edge
-       // self.imageEdgeInsets = UIEdgeInsets(top: 0, left: self.bounds.size.width - image.size.width * 1.7, bottom: 0, right: 0)
-//        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: self.bounds.size.width - image.size.width * 1.2, bottom: 0, right: 0)
-//        self.layer.borderWidth = 0.5
-//        self.layer.borderColor = UIColor.darkGray.cgColor
-        //self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        //self.contentEdgeInsets = UIEdgeInsets(top: 10, left: self.bounds.size.width/2 + (titleLabel?.bounds.size.width)!/2, bottom: 10, right: 0)
+        self.imageEdgeInsets = UIEdgeInsetsMake(0, self.bounds.size.width-image.size.width*1.7, 0, 0);
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = UIColor.darkGray.cgColor
+        // Inset top and bottom by 10
+        self.contentEdgeInsets = UIEdgeInsetsMake(10,0,10,0)
     }
     
     // Configure button when bounds change since image inset has dependency on bounds
