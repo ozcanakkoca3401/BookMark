@@ -43,6 +43,8 @@
 		4C8B90ED204D97E3001C730C /* EBLevelKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */; };
 		4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */; };
 		4CBAD1FE203C0AEA00FC412B /* StepperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAD1FD203C0AEA00FC412B /* StepperButton.swift */; };
+		4CC89614204EC90400A2A87A /* EBUsageInfoPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC89613204EC90400A2A87A /* EBUsageInfoPageView.swift */; };
+		4CC89616204EC97800A2A87A /* UsageInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC89615204EC97800A2A87A /* UsageInfoViewController.swift */; };
 		69004CCB203D540700CC1215 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69004CCA203D540700CC1215 /* HeaderView.swift */; };
 		69017B7C20370FC00046B009 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7B20370FC00046B009 /* StringExtension.swift */; };
 		69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */; };
@@ -137,6 +139,8 @@
 		4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLevelKnowledge.swift; sourceTree = "<group>"; };
 		4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSlider.swift; sourceTree = "<group>"; };
 		4CBAD1FD203C0AEA00FC412B /* StepperButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperButton.swift; sourceTree = "<group>"; };
+		4CC89613204EC90400A2A87A /* EBUsageInfoPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBUsageInfoPageView.swift; sourceTree = "<group>"; };
+		4CC89615204EC97800A2A87A /* UsageInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageInfoViewController.swift; sourceTree = "<group>"; };
 		69004CCA203D540700CC1215 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		69017B7B20370FC00046B009 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNetworkConnectivityAvailable.swift; sourceTree = "<group>"; };
@@ -264,6 +268,15 @@
 				0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */,
 			);
 			path = PageView;
+			sourceTree = "<group>";
+		};
+		4CC89612204EC8B500A2A87A /* UsageInfoPageView */ = {
+			isa = PBXGroup;
+			children = (
+				4CC89613204EC90400A2A87A /* EBUsageInfoPageView.swift */,
+				4CC89615204EC97800A2A87A /* UsageInfoViewController.swift */,
+			);
+			path = UsageInfoPageView;
 			sourceTree = "<group>";
 		};
 		5AC4212E732EA6459FD4B347 /* Frameworks */ = {
@@ -451,6 +464,7 @@
 		8408E060203AC704004ABC0A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4CC89612204EC8B500A2A87A /* UsageInfoPageView */,
 				4C92B4DA204D2FB900347293 /* PageView */,
 				8408E06D203C12D6004ABC0A /* testComponent.swift */,
 				69004CCA203D540700CC1215 /* HeaderView.swift */,
@@ -820,6 +834,7 @@
 				4CBAD1FE203C0AEA00FC412B /* StepperButton.swift in Sources */,
 				8408E06A203C1013004ABC0A /* Styling.swift in Sources */,
 				4C7EBCBA2046989200D762EE /* CustomPopup.swift in Sources */,
+				4CC89614204EC90400A2A87A /* EBUsageInfoPageView.swift in Sources */,
 				4C741555203C678F00A32734 /* ColorExtension.swift in Sources */,
 				4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */,
 				8408E05C2036FA36004ABC0A /* BookmarkSessionManager.swift in Sources */,
@@ -848,6 +863,7 @@
 				4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */,
 				45C35D172046F8C600B21B52 /* ExpendHeaderView.swift in Sources */,
 				0BB7FA7D204BF4C00076BF66 /* RedViewController.swift in Sources */,
+				4CC89616204EC97800A2A87A /* UsageInfoViewController.swift in Sources */,
 				8408E070203C12EF004ABC0A /* testCell.swift in Sources */,
 				0BB7FA81204BF4C00076BF66 /* GreenViewController.swift in Sources */,
 				45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */,
