@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AlignedImageButton: RoundButton {
+@IBDesignable public class AlignedImageButton: RoundButton {
     
     public override init() {
         super.init(frame: .zero)
@@ -45,6 +45,7 @@ public class AlignedImageButton: RoundButton {
     }
     
     func configure() {
+        
         // Just in case they aren't set in a Storyboard
         self.contentHorizontalAlignment = .left
         self.imageView?.contentMode = .scaleAspectFit
@@ -58,6 +59,7 @@ public class AlignedImageButton: RoundButton {
 //        self.layer.borderWidth = 1.5
 //        self.layer.borderColor = UIColor.red.cgColor
         self.contentHorizontalAlignment = .center
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
         self.titleEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: image.size.width)
         // Inset top and bottom by 10
         self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 5)
