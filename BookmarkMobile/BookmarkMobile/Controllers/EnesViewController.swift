@@ -50,6 +50,7 @@ class EnesViewController: UIViewController { //CustomPopupProtocol
         modalVC.orderedViewControllers = [UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController()]
         self.addChildViewController(modalVC)
         view1.addSubview(modalVC.view)
+        modalVC.didMove(toParentViewController: self)
         
         //        modalVC.orderedViewControllers = [GreenViewController(), BlueViewController()]
         //        modalVC.modalPresentationStyle = .overCurrentContext
