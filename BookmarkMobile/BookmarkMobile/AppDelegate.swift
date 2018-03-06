@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let rootView: UmutViewController = UmutViewController()
 //       let rootView: BilgeViewController = BilgeViewController()
 //          let rootView: EnesViewController = EnesViewController()
+ //       let rootView: InformationTableViewController = InformationTableViewController()
 //
 //        if let window = self.window {
 //            window.rootViewController = rootView
@@ -29,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = UINavigationController(rootViewController: BilgeViewController())
+        self.window?.rootViewController = UINavigationController(rootViewController: InformationTableViewController())
         return true
     }
 

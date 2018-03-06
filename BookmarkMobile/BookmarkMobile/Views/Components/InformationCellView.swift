@@ -51,10 +51,7 @@ import SnapKit
     }
     
     override func initialize() {
-     
-        self.borderColor = Styling.colorForCode(.themeGray)
-        self.borderWidth = 2
-        
+
         self.addSubview(nameLabel)
         self.addSubview(secondNameLabel)
         self.addSubview(editButton)
@@ -62,14 +59,14 @@ import SnapKit
         
         nameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(0)
-            make.left.equalTo(self).offset(10)
+            make.left.equalTo(self).offset(20)
             make.height.equalTo(self).dividedBy(2)
             make.width.equalTo(50)
         }
         
         secondNameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(nameLabel.snp.bottom).offset(0)
-            make.left.equalTo(self).offset(10)
+            make.left.equalTo(self).offset(20)
             make.height.equalTo(self).dividedBy(2)
             make.width.equalTo(130)
         }
@@ -78,7 +75,7 @@ import SnapKit
             make.height.equalTo(40)
             make.width.equalTo(40)
             make.top.equalTo(10)
-            make.right.equalTo(-10)
+            make.right.equalTo(self).offset(10)
         }
   
     }
