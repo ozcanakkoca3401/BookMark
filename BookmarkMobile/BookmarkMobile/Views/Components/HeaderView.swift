@@ -43,7 +43,7 @@ import SnapKit
     
     var leftImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
+        //imageView.backgroundColor = .blue
         imageView.image = UIImage(named: "phone")
         return imageView
     }()
@@ -51,15 +51,16 @@ import SnapKit
     var label: EBLabel = {
         let label = EBLabel()
         label.EBtext = "514-428-0578"
+        label.EBcolor = Styling.colorForCode(.white)
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 8)
+        label.font = Styling.font(weight: .bold, size: 10)
         
         return label
     }()
     
     var rightImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
+        //imageView.backgroundColor = .blue
         imageView.image = UIImage(named: "arrow")
         return imageView
     }()

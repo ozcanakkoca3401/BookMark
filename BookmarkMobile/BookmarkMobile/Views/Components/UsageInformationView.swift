@@ -12,8 +12,8 @@ import SnapKit
 
 @IBDesignable public class UsageInformationView: RoundView {
     
-    var headerView: RoundView = {
-        let headerView = RoundView()
+    var headerView: EBView = {
+        let headerView = EBView()
         headerView.backgroundColor = Styling.colorForCode(.usageGreen)
     
         return headerView
@@ -22,7 +22,7 @@ import SnapKit
     
     var middleView: EBView = {
         let middleView = EBView()
-        middleView.backgroundColor = Styling.colorForCode(.themeBlue)
+        middleView.backgroundColor = Styling.colorForCode(.usageGreen)
 
         return middleView
 
@@ -45,14 +45,20 @@ import SnapKit
 
         return headerLabel
     }()
-//
+    
+    var headerButton: HeaderView = {
+        let button = HeaderView()
+        
+        return button
+    }()
+
     var avgLabel: EBLabel = {
         let avgLabel = EBLabel()
         avgLabel.EBtext = "Avg."
         avgLabel.EBcolor = Styling.colorForCode(.usageGreen)
         avgLabel.font = Styling.font(weight: .bold, size: 12)
         avgLabel.textAlignment = .right
-        avgLabel.backgroundColor = Styling.colorForCode(.themeGray)
+        avgLabel.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
 
         return avgLabel
     }()
@@ -63,7 +69,7 @@ import SnapKit
         mbLabel.EBcolor = Styling.colorForCode(.usageGreen)
         mbLabel.font = Styling.font(weight: .bold, size: 22)
         mbLabel.textAlignment = .center
-        mbLabel.backgroundColor = Styling.colorForCode(.themeGray)
+        mbLabel.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
 
         return mbLabel
     }()
@@ -74,30 +80,30 @@ import SnapKit
         dayLabel.EBcolor = Styling.colorForCode(.usageGreen)
         dayLabel.font = Styling.font(weight: .bold, size: 12)
         dayLabel.textAlignment = .left
-        dayLabel.backgroundColor = Styling.colorForCode(.themeGray)
+        dayLabel.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
 
         return dayLabel
     }()
-//
-//    var dataLabel: EBLabel = {
-//        let dataLabel = EBLabel()
-//        dataLabel.EBtext = "DATA"
-//        dataLabel.EBcolor = Styling.colorForCode(.white)
-//        dataLabel.font = Styling.font(weight: .bold, size: 12)
-//        dataLabel.textAlignment = .center
-//
-//        return dataLabel
-//    }()
-//
-//    var daysLabel: EBLabel = {
-//        let daysLabel = EBLabel()
-//        daysLabel.EBtext = "22 days left"
-//        daysLabel.EBcolor = Styling.colorForCode(.white)
-//        daysLabel.font = Styling.font(weight: .bold, size: 12)
-//        daysLabel.textAlignment = .center
-//
-//        return daysLabel
-//    }()
+
+    var dataLabel: EBLabel = {
+        let dataLabel = EBLabel()
+        dataLabel.EBtext = "DATA"
+        dataLabel.EBcolor = Styling.colorForCode(.white)
+        dataLabel.font = Styling.font(weight: .bold, size: 12)
+        dataLabel.textAlignment = .center
+
+        return dataLabel
+    }()
+
+    var daysLabel: EBLabel = {
+        let daysLabel = EBLabel()
+        daysLabel.EBtext = "22 days left"
+        daysLabel.EBcolor = Styling.colorForCode(.white)
+        daysLabel.font = Styling.font(weight: .bold, size: 12)
+        daysLabel.textAlignment = .center
+
+        return daysLabel
+    }()
 
     public override init() {
         super.init()
@@ -126,12 +132,13 @@ import SnapKit
           self.addSubview(headerView)
           self.addSubview(middleView)
 //        self.addSubview(footerView)
+          headerView.addSubview(headerButton)
           headerView.addSubview(headerLabel)
           middleView.addSubview(avgLabel)
           middleView.addSubview(mbLabel)
           middleView.addSubview(dayLabel)
-//        middleView.addSubview(dataLabel)
-//        middleView.addSubview(daysLabel)
+          middleView.addSubview(dataLabel)
+          middleView.addSubview(daysLabel)
 
         headerView.snp.makeConstraints { (make) in
             //  make.width.equalTo(250)
@@ -146,7 +153,7 @@ import SnapKit
             make.height.equalTo(120)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
-            make.top.equalTo(self).offset(119)
+            make.top.equalTo(self).offset(120)
         }
 //
 //        footerView.snp.makeConstraints { (make) in
@@ -156,7 +163,15 @@ import SnapKit
 //            make.right.equalTo(self).offset(-20)
 //            make.top.equalTo(self).offset(280)
 //        }
-//        
+        
+        headerButton.snp.makeConstraints { (make) in
+            make.height.equalTo(60)
+            make.left.equalTo(headerView).offset(60)
+            make.right.equalTo(headerView).offset(-60)
+            make.top.equalTo(headerView).offset(8)
+            
+        }
+     
           headerLabel.snp.makeConstraints { (make) in
 //            make.width.equalTo(100)
             make.height.equalTo(60)
@@ -192,24 +207,24 @@ import SnapKit
             make.top.equalTo(middleView).offset(60)
             
         }
-//
-//        dataLabel.snp.makeConstraints { (make) in
-//            make.width.equalTo(middleView).dividedBy(3)
-//            make.height.equalTo(50)
-//            make.left.equalTo(middleView).offset(0)
-//            //make.right.equalTo(headerView).offset(0)
-//            make.top.equalTo(middleView).offset(0)
-//            
-//        }
-//        
-//        daysLabel.snp.makeConstraints { (make) in
-//            make.width.equalTo(middleView).dividedBy(3)
-//            make.height.equalTo(50)
-//            make.right.equalTo(middleView).offset(0)
-//            //make.right.equalTo(headerView).offset(0)
-//            make.top.equalTo(middleView).offset(0)
-//            
-//        }
+
+        dataLabel.snp.makeConstraints { (make) in
+            make.width.equalTo(middleView).dividedBy(3)
+            make.height.equalTo(middleView).dividedBy(4)
+            make.left.equalTo(middleView).offset(0)
+            //make.right.equalTo(headerView).offset(0)
+            make.top.equalTo(middleView).offset(30)
+            
+        }
+
+        daysLabel.snp.makeConstraints { (make) in
+            make.width.equalTo(middleView).dividedBy(3)
+            make.height.equalTo(middleView).dividedBy(4)
+            make.right.equalTo(middleView).offset(0)
+            //make.right.equalTo(headerView).offset(0)
+            make.top.equalTo(middleView).offset(30)
+            
+        }
     }
 
     override public func layoutSubviews() {
