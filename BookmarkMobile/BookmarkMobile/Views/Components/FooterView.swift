@@ -71,7 +71,7 @@ import UIKit
         
         bottomButton.snp.makeConstraints { (make) in
             make.top.equalTo(topLabel.snp.bottom).offset(20)
-            make.height.equalTo(60)
+            make.height.equalTo(40)
             make.centerX.equalTo(self)
             make.width.greaterThanOrEqualTo(120)
         }

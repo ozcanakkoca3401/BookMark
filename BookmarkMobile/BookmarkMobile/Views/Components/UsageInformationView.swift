@@ -42,6 +42,11 @@ import SnapKit
         let footerView = FooterView()
         footerView.topLabel.EBtext = "You have so much data for this period that you could help those in need!"
         footerView.topLabel.EBcolor = Styling.colorForCode(.usageGreen)
+        footerView.topLabel.font = Styling.font(weight: .regular, size: 12)
+        footerView.topLabel.EBNumberOfLine = 3
+        footerView.bottomButton.title = "GIVE TO A FRIEND"
+        footerView.bottomButton.titleLabel?.font = Styling.font(weight: .bold, size: 18)
+        footerView.bottomButton.bgColor = Styling.colorForCode(.usageGreen)
         
         return footerView
 
@@ -78,7 +83,7 @@ import SnapKit
         let mbLabel = EBLabel()
         mbLabel.EBtext = "120 MB"
         //mbLabel.EBcolor = Styling.colorForCode(.usageGreen)
-        mbLabel.font = Styling.font(weight: .bold, size: 22)
+        mbLabel.font = Styling.font(weight: .bold, size: 24)
         mbLabel.textAlignment = .center
         mbLabel.labelBackgroundColor = Styling.colorForCode(.white)
 
@@ -151,11 +156,20 @@ import SnapKit
         avgLabel.EBcolor = color
         mbLabel.EBcolor = color
         dayLabel.EBcolor = color
+        
+        headerView.layer.shadowColor = Styling.colorForCode(.themeDarkGray).cgColor
+        headerView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        headerView.layer.shadowOpacity = 0.0
+        
+        middleView.layer.shadowColor = Styling.colorForCode(.themeDarkGray).cgColor
+        middleView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        middleView.layer.shadowOpacity = 0.5
         //self.backgroundColor = UIColor.black
 
-          self.addSubview(headerView)
-          self.addSubview(middleView)
           self.addSubview(footerView)
+          self.addSubview(middleView)
+          self.addSubview(headerView)
+        
           headerView.addSubview(headerButton)
           headerView.addSubview(headerLabel)
           middleView.addSubview(avgLabel)
@@ -183,10 +197,10 @@ import SnapKit
 
         footerView.snp.makeConstraints { (make) in
             //  make.width.equalTo(250)
-            make.height.equalTo(155)
+            make.height.equalTo(135)
             make.left.equalTo(self).offset(20)
             make.right.equalTo(self).offset(-20)
-            make.top.equalTo(middleView.snp.bottom).offset(0)
+            make.top.equalTo(middleView.snp.bottom).offset(1)
         }
         
         headerButton.snp.makeConstraints { (make) in
