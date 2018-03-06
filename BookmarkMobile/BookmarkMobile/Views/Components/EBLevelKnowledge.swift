@@ -88,6 +88,18 @@ import UIKit
         return slider
     }()
     
+    var lkButton: AlignedImageButton = {
+        var button = AlignedImageButton(frame: .zero, image: UIImage(named: "right-arrow")!)
+        button.bgColor = Styling.colorForCode(.themeDarkGray)
+        button.title = "SEE MORE"
+        button.titleColor = Styling.colorForCode(.white)
+        button.titleLabel?.font = Styling.font(weight: .bold, size: 16)
+        button.borderColor = Styling.colorForCode(.themeClear)
+        button.borderWidth = 0.0
+        
+        return button
+    }()
+    
     public override init() {
         super.init(frame: .zero)
         self.initialize()
@@ -112,6 +124,7 @@ import UIKit
         self.addSubview(topRightView)
         self.addSubview(topLeftView)
         self.addSubview(horizontalSlider)
+        self.addSubview(lkButton)
         topRightView.addSubview(xpLabel)
         topRightView.addSubview(horizontalView)
         topRightView.addSubview(badgesLabel)
@@ -180,6 +193,14 @@ import UIKit
             make.top.equalTo(levelLabel.snp.bottom)
             make.left.equalTo(topLeftView)
             make.right.equalTo(topLeftView)
+        }
+        
+        lkButton.snp.makeConstraints { (make) in
+            make.top.equalTo(horizontalSlider.snp.bottom).offset(25)
+            make.height.equalTo(40)
+            make.centerX.equalTo(self)
+            make.left.equalTo(self).offset(30)
+            make.right.equalTo(self).offset(-30)
         }
     }
 

@@ -40,8 +40,6 @@ import SnapKit
         self.bgColor = Styling.colorForCode(.white)
         self.setTitleColor(Styling.colorForCode(.black), for: .normal)
         self.titleLabel?.font = Styling.font(weight: .regular, size: 20)
-        self.semanticContentAttribute = .forceRightToLeft
-        self.titleEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 0)
     }
     
     override public func layoutSubviews() {

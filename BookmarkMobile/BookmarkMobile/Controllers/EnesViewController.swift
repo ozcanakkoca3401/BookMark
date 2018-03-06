@@ -41,10 +41,10 @@ class EnesViewController: UIViewController, CustomPopupProtocol {
 //        a.backgroundColor = UIColor.red
 //        view.addSubview(a)
         
-//        let a = EBLevelKnowledge(frame: CGRect(x: 20, y: 250, width: 320, height: 300))
-//        view.addSubview(a)
-//        view.backgroundColor = Styling.colorForCode(.themeGray)
-//        view.backgroundColor = UIColor.red
+        let a = EBLevelKnowledge(frame: CGRect(x: 20, y: 250, width: 320, height: 300))
+        view.addSubview(a)
+        view.backgroundColor = Styling.colorForCode(.themeGray)
+        view.backgroundColor = UIColor.red
         
 //        let a = AlignedImageButton(frame: CGRect.init(x: 40, y: 260, width: 220, height: 60), image: UIImage(named: "right-arrow")!)
 //        a.backgroundColor = UIColor.red
@@ -52,8 +52,8 @@ class EnesViewController: UIViewController, CustomPopupProtocol {
 //        a.setTitleColor(UIColor.brown, for: .normal)
 //        view.addSubview(a)
         
-        let c = FooterView(frame: CGRect(x: 40, y: 260, width: 300, height: 155))
-        view.addSubview(c)
+//        let c = FooterView(frame: CGRect(x: 40, y: 260, width: 300, height: 155))
+//        view.addSubview(c)
         
     }
 

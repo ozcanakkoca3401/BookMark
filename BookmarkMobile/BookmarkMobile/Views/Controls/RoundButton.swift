@@ -46,7 +46,7 @@ protocol RoundButtonProtocol: class {
         }
     }
     
-    @IBInspectable var titleColor: UIColor = Styling.colorForCode(.themeClear) {
+    @IBInspectable var titleColor: UIColor = Styling.colorForCode(.white) {
         didSet {
             self.setTitleColor(titleColor, for: .normal)
         }
