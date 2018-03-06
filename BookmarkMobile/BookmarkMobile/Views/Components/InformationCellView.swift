@@ -56,7 +56,6 @@ import SnapKit
         self.addSubview(secondNameLabel)
         self.addSubview(editButton)
         
-        
         nameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(0)
             make.left.equalTo(self).offset(20)

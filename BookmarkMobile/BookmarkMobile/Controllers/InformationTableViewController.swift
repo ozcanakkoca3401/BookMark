@@ -10,9 +10,9 @@ import UIKit
 
 class InformationTableViewController: UITableViewController {
 
-    var titleArray: [String] = ["name","birth date","email address","password","security question","billing address","shipping address","payment informations"]
+    var titleArray: [String] = ["name", "birth date", "email address", "password", "security question", "billing address", "shipping address", "payment informations"]
     
-    var dataArray: [String] = ["John Doe","13 NOV 1974","devprodvl@gmail.com","*******","","Etiya","Etiya","..."]
+    var dataArray: [String] = ["John Doe", "13 NOV 1974", "devprodvl@gmail.com", "*******", " ", "Etiya", "Etiya", "..."]
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +96,3 @@ extension InformationTableViewController {
 //
 //        tableView.reloadSections(NSIndexSet(index: section) as IndexSet, with: .automatic)
 //    }
-
-
-
