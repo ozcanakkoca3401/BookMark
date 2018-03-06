@@ -8,7 +8,7 @@
 
 import UIKit
 
-//TODO: AlignedImageButton biraz daha görsellik iyileştirecelecek. Özellikle font sizeda sıkıntı var
+// #TODO: AlignedImageButton biraz daha görsellik iyileştirecelecek. Özellikle font sizeda sıkıntı var
 
 @IBDesignable public class AlignedImageButton: RoundButton {
     

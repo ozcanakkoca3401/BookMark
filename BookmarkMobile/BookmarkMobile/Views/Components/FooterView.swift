@@ -25,6 +25,7 @@ import UIKit
         
        return label
     }()
+    // #TODO: İmage beyaz olarak güncellenecek
     
     var bottomButton: AlignedImageButton = {
         var button = AlignedImageButton(frame: .zero, image: UIImage(named: "right-arrow")!)
