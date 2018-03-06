@@ -40,6 +40,12 @@ class EBLabel: UILabel {
         }
     }
     
+    @IBInspectable var EBNumberOfLine: Int = 2 {
+        didSet {
+            numberOfLines = EBNumberOfLine
+        }
+    }
+    
     public init() {
         super.init(frame: .zero)
         self.initialize()

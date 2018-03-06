@@ -19,7 +19,7 @@ import UIKit
     var topLabel: EBLabel = {
         var label = EBLabel()
         label.EBtext = "You just level up ! It's time to manage your privileges"
-        label.numberOfLines = 2
+        label.EBNumberOfLine = 2
         label.textAlignment = .center
         label.font = Styling.font(weight: .regular, size: 16)
         
