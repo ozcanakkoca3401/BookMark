@@ -73,7 +73,7 @@ class BilgeViewController: UIViewController {
     
     var usageInformationView: UsageInformationView = {
         let usageInformationView = UsageInformationView()
-        
+
         return usageInformationView
     }()
     
@@ -119,7 +119,7 @@ class BilgeViewController: UIViewController {
         stepperComponentview.frame = CGRect(x: 50, y: 100, width: 250, height: 180)
         //view.addSubview(stepperComponentview)
         
-        usageInformationView.frame = CGRect(x: 50, y: 100, width: 250, height: 300)
+        usageInformationView.frame = CGRect(x: 50, y: 100, width: 280, height: 300)
         view.addSubview(usageInformationView)
         
     }
