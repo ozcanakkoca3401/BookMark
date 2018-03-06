@@ -10,7 +10,17 @@ import Foundation
 import UIKit
 import SnapKit
 
-@IBDesignable public class UsageInformationView: RoundView {
+ @IBDesignable public class UsageInformationView: RoundView {
+
+    @IBInspectable var color: UIColor = Styling.colorForCode(.usageGreen) {
+        didSet {
+            headerView.backgroundColor = color
+            middleView.backgroundColor = color
+            avgLabel.EBcolor = color
+            mbLabel.EBcolor = color
+            dayLabel.EBcolor = color
+         }
+    }
     
     var headerView: EBView = {
         let headerView = EBView()
@@ -27,7 +37,7 @@ import SnapKit
         return middleView
 
     }()
-//
+
 //    var footerView: EBView = {
 //        let footerView = EBView()
 //        footerView.backgroundColor = UIColor.blue
@@ -35,7 +45,7 @@ import SnapKit
 //        return footerView
 //
 //    }()
-//
+
     var headerLabel: EBLabel = {
        let headerLabel = EBLabel()
         headerLabel.EBtext = "So far, so good!"
@@ -55,7 +65,7 @@ import SnapKit
     var avgLabel: EBLabel = {
         let avgLabel = EBLabel()
         avgLabel.EBtext = "Avg."
-        avgLabel.EBcolor = Styling.colorForCode(.usageGreen)
+        //avgLabel.EBcolor = Styling.colorForCode(.usageGreen)
         avgLabel.font = Styling.font(weight: .bold, size: 12)
         avgLabel.textAlignment = .right
         avgLabel.backgroundColor = Styling.colorForCode(.white)
@@ -66,7 +76,7 @@ import SnapKit
     var mbLabel: EBLabel = {
         let mbLabel = EBLabel()
         mbLabel.EBtext = "120 MB"
-        mbLabel.EBcolor = Styling.colorForCode(.usageGreen)
+        //mbLabel.EBcolor = Styling.colorForCode(.usageGreen)
         mbLabel.font = Styling.font(weight: .bold, size: 22)
         mbLabel.textAlignment = .center
         mbLabel.backgroundColor = Styling.colorForCode(.white)
@@ -77,7 +87,7 @@ import SnapKit
     var dayLabel: EBLabel = {
         let dayLabel = EBLabel()
         dayLabel.EBtext = "/ DAY"
-        dayLabel.EBcolor = Styling.colorForCode(.usageGreen)
+        //dayLabel.EBcolor = Styling.colorForCode(.usageGreen)
         dayLabel.font = Styling.font(weight: .bold, size: 12)
         dayLabel.textAlignment = .left
         dayLabel.backgroundColor = Styling.colorForCode(.white)
@@ -135,6 +145,11 @@ import SnapKit
 
     override func initialize() {
         
+        headerView.backgroundColor = color
+        middleView.backgroundColor = color
+        avgLabel.EBcolor = color
+        mbLabel.EBcolor = color
+        dayLabel.EBcolor = color
         //self.backgroundColor = UIColor.black
 
           self.addSubview(headerView)
