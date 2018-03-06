@@ -10,11 +10,33 @@ import UIKit
 
 @IBDesignable public class FooterView: EBView {
 
-    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeClear) {
+    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.white) {
         didSet {
             backgroundColor = bgColor
         }
     }
+    
+    var topLabel: EBLabel = {
+        var label = EBLabel()
+        label.EBtext = "You just level up ! It's time to manage your privileges"
+        label.numberOfLines = 2
+        label.textAlignment = .center
+        label.font = Styling.font(weight: .regular, size: 16)
+        
+       return label
+    }()
+    
+    var bottomButton: AlignedImageButton = {
+        var button = AlignedImageButton(frame: .zero, image: UIImage(named: "right-arrow")!)
+        button.backgroundColor = Styling.colorForCode(.themeDarkGray)
+        button.setTitle("MANAGE", for: .normal)
+        button.setTitleColor(Styling.colorForCode(.white), for: .normal)
+        button.titleLabel?.font = Styling.font(weight: .bold, size: 20)
+        button.borderColor = Styling.colorForCode(.themeClear)
+        button.borderWidth = 0.0
+        
+        return button
+    }()
     
     public override init() {
         super.init(frame: .zero)
@@ -34,7 +56,26 @@ import UIKit
     override func initialize() {
 
         backgroundColor = bgColor
+        layer.shadowColor = Styling.colorForCode(.themeDarkGray).cgColor
+        layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        layer.shadowOpacity = 0.5
         
+        self.addSubview(topLabel)
+        self.addSubview(bottomButton)
+        
+        topLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self).offset(20)
+            make.left.equalTo(self).offset(20)
+            make.right.equalTo(self).offset(-20)
+        }
+        
+        bottomButton.snp.makeConstraints { (make) in
+            make.top.equalTo(topLabel.snp.bottom).offset(20)
+            make.height.equalTo(60)
+            make.left.equalTo(60)
+            make.right.equalTo(-60)
+            make.width.greaterThanOrEqualTo(120)
+        }
     }
     
     override public func layoutSubviews() { // refresh durumunda...
