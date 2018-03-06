@@ -77,6 +77,12 @@ class BilgeViewController: UIViewController {
         return usageInformationView
     }()
     
+    var cell: InformationCellView = {
+       let cell = InformationCellView()
+        
+        return cell
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -120,7 +126,10 @@ class BilgeViewController: UIViewController {
         //view.addSubview(stepperComponentview)
         
         usageInformationView.frame = CGRect(x: 50, y: 100, width: 280, height: 300)
-        view.addSubview(usageInformationView)
+       // view.addSubview(usageInformationView)
+        
+        cell.frame = CGRect(x: 50, y: 100, width: 300, height: 60)
+        view.addSubview(cell)
         
     }
 
