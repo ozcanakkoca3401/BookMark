@@ -22,6 +22,12 @@ class EBLabel: UILabel {
         }
     }
     
+    @IBInspectable var labelBackgroundColor: UIColor = Styling.colorForCode(.themeClear) {
+        didSet {
+            backgroundColor = labelBackgroundColor
+        }
+    }
+    
     @IBInspectable public var EBfontSize: CGFloat = UIFont.labelFontSize {
         didSet {
             font = Styling.font(weight: .bold, size: Float(EBfontSize))
@@ -53,5 +59,6 @@ class EBLabel: UILabel {
         text = EBtext
         textColor = EBcolor
         font = Styling.font(weight: .bold, size: Float(EBfontSize))
+        backgroundColor = labelBackgroundColor
     }
 }
