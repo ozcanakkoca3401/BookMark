@@ -46,11 +46,14 @@ class EnesViewController: UIViewController, CustomPopupProtocol {
 //        view.backgroundColor = Styling.colorForCode(.themeGray)
 //        view.backgroundColor = UIColor.red
         
-        let a = AlignedImageButton(frame: CGRect.init(x: 40, y: 260, width: 220, height: 60), image: UIImage(named: "right-arrow")!)
-        a.backgroundColor = UIColor.red
-        a.setTitle("SEE USAGE", for: .normal)
-        a.setTitleColor(UIColor.brown, for: .normal)
-        view.addSubview(a)
+//        let a = AlignedImageButton(frame: CGRect.init(x: 40, y: 260, width: 220, height: 60), image: UIImage(named: "right-arrow")!)
+//        a.backgroundColor = UIColor.red
+//        a.setTitle("SEE USAGE", for: .normal)
+//        a.setTitleColor(UIColor.brown, for: .normal)
+//        view.addSubview(a)
+        
+        let c = FooterView(frame: CGRect(x: 40, y: 260, width: 300, height: 155))
+        view.addSubview(c)
         
     }
 
