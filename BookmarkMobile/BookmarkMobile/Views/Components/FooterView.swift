@@ -29,9 +29,9 @@ import UIKit
     var bottomButton: AlignedImageButton = {
         var button = AlignedImageButton(frame: .zero, image: UIImage(named: "right-arrow")!)
         button.backgroundColor = Styling.colorForCode(.themeDarkGray)
-        button.setTitle("MANAGE", for: .normal)
+        button.setTitle("GIVE TO A FRIEND", for: .normal)
         button.setTitleColor(Styling.colorForCode(.white), for: .normal)
-        button.titleLabel?.font = Styling.font(weight: .bold, size: 20)
+        button.titleLabel?.font = Styling.font(weight: .bold, size: 16)
         button.borderColor = Styling.colorForCode(.themeClear)
         button.borderWidth = 0.0
         
@@ -72,8 +72,7 @@ import UIKit
         bottomButton.snp.makeConstraints { (make) in
             make.top.equalTo(topLabel.snp.bottom).offset(20)
             make.height.equalTo(60)
-            make.left.equalTo(60)
-            make.right.equalTo(-60)
+            make.centerX.equalTo(self)
             make.width.greaterThanOrEqualTo(120)
         }
     }

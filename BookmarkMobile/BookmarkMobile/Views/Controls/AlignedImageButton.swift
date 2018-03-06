@@ -57,6 +57,8 @@ public class AlignedImageButton: RoundButton {
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: self.bounds.size.width-image.size.width * 1.2, bottom: 0, right: 0)
 //        self.layer.borderWidth = 1.5
 //        self.layer.borderColor = UIColor.red.cgColor
+        self.contentHorizontalAlignment = .center
+        self.titleEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: image.size.width)
         // Inset top and bottom by 10
         self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 5)
     }
