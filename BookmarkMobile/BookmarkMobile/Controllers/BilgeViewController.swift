@@ -53,6 +53,13 @@ class BilgeViewController: UIViewController {
         
     }()
     
+    var topMenuButton: TopMenuButtonView = {
+        let topMenuButton = TopMenuButtonView()
+        
+        return topMenuButton
+        
+    }()
+    
 //    var stepperView: StepperView = {
 //        let stepperView = StepperView()
 //
@@ -126,10 +133,13 @@ class BilgeViewController: UIViewController {
         //view.addSubview(stepperComponentview)
         
         usageInformationView.frame = CGRect(x: 50, y: 100, width: 280, height: 300)
-        view.addSubview(usageInformationView)
+       // view.addSubview(usageInformationView)
         
 //        cell.frame = CGRect(x: 50, y: 100, width: 300, height: 60)
 //        view.addSubview(cell)
+        
+        topMenuButton.frame = CGRect(x: 50, y: 150, width: 70, height: 60)
+        view.addSubview(topMenuButton)
         
     }
 
