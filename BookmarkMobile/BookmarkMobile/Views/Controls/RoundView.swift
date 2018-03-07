@@ -55,11 +55,12 @@ protocol TouchableProtocol: class {
         self.initialize()
     }
     
+    // #TODO: ClipsToBounds kodu kapatıldı. Bundan türeyen bir view a gölge vermeye çalışıldığında engelliyor. Nedenine bakılacak ve bundan türeyen viewlerde bozulma var mı kontrol edilecek.
     override func initialize() {
         layer.cornerRadius = cornerRadius
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor
-        clipsToBounds = true
+//        clipsToBounds = true
         
         self.isUserInteractionEnabled = true
         let gesturedRecognizer = UITapGestureRecognizer(target: self, action: #selector(RoundView.touchAction))
