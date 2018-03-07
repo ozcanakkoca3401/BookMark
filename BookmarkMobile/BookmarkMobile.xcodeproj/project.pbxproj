@@ -20,6 +20,7 @@
 		453A555B204EE19A00E19887 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A555A204EE19A00E19887 /* InformationTableViewController.swift */; };
 		453F8E882050115A00EDA6D2 /* TopMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F8E872050115A00EDA6D2 /* TopMenuButtonView.swift */; };
 		4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */; };
+		45B481E6205040C00094F6D2 /* LoyaltyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B481E5205040C00094F6D2 /* LoyaltyButtonView.swift */; };
 		45C35D132046CBDB00B21B52 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D122046CBDB00B21B52 /* PopUpView.swift */; };
 		45C35D172046F8C600B21B52 /* ExpendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D162046F8C600B21B52 /* ExpendHeaderView.swift */; };
 		45C35D192047E15E00B21B52 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C35D182047E15E00B21B52 /* CloseButton.swift */; };
@@ -120,6 +121,7 @@
 		453A555A204EE19A00E19887 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
 		453F8E872050115A00EDA6D2 /* TopMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuButtonView.swift; sourceTree = "<group>"; };
 		4577DEB2203D85A70076A7D8 /* AddOnsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsButtonView.swift; sourceTree = "<group>"; };
+		45B481E5205040C00094F6D2 /* LoyaltyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyButtonView.swift; sourceTree = "<group>"; };
 		45C35D122046CBDB00B21B52 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		45C35D162046F8C600B21B52 /* ExpendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpendHeaderView.swift; sourceTree = "<group>"; };
 		45C35D182047E15E00B21B52 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				0BB7FA79204BF4BF0076BF66 /* BlueViewController.swift */,
 				0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */,
 				0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */,
+				45B481E5205040C00094F6D2 /* LoyaltyButtonView.swift */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				8408E067203BFA3E004ABC0A /* AlignedImageButton.swift in Sources */,
 				8408E0592036F5A5004ABC0A /* Utilities.swift in Sources */,
 				8408E081203C6583004ABC0A /* OzcanViewController.swift in Sources */,
+				45B481E6205040C00094F6D2 /* LoyaltyButtonView.swift in Sources */,
 				8408E065203AD05F004ABC0A /* RoundButton.swift in Sources */,
 				45C35D1B204964FC00B21B52 /* StepperView.swift in Sources */,
 				69316E74203AC01B00AC2F10 /* MemorizationView.swift in Sources */,
