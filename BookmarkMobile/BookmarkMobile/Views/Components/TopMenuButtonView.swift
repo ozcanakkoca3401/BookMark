@@ -27,7 +27,7 @@ import SnapKit
         let imageView = UIImageView()
         imageView.image = UIImage(named: "topMenu1")
         imageView.contentMode = .scaleAspectFit
-    
+
          return imageView
     }()
   
@@ -71,10 +71,11 @@ import SnapKit
         self.addSubview(titleLabel)
         self.addSubview(menuImageView)
 
-            menuImageView.snp.makeConstraints { (make) in
+        menuImageView.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(10)
+            make.width.equalTo(50)
+            make.height.equalTo(30)
             make.centerX.equalTo(self)
-           
         }
 
         titleLabel.snp.makeConstraints { (make) in
@@ -82,7 +83,6 @@ import SnapKit
            make.right.equalTo(self).offset(0)
            make.left.equalTo(self).offset(0)
         }
-
     }
 
     override public func layoutSubviews() {
