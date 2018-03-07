@@ -42,15 +42,18 @@ class EnesViewController: UIViewController { //CustomPopupProtocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let a = EBTopLoyaltyView(frame: CGRect(x: 30, y: 300, width: 300, height: 200))
+        view.addSubview(a)
         
-        let view1 = UIView(frame: CGRect(x: 0, y: 220, width: self.view.frame.size.width, height: self.view.frame.size.height - 120))
-        self.view.addSubview(view1)
-        
-        let modalVC = EBUsageInfoPageView()
-        modalVC.orderedViewControllers = [UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController()]
-        self.addChildViewController(modalVC)
-        view1.addSubview(modalVC.view)
-        modalVC.didMove(toParentViewController: self)
+//        let view1 = UIView(frame: CGRect(x: 0, y: 220, width: self.view.frame.size.width, height: self.view.frame.size.height - 120))
+//        self.view.addSubview(view1)
+//
+//        let modalVC = EBUsageInfoPageView()
+//        modalVC.orderedViewControllers = [UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController()]
+//        self.addChildViewController(modalVC)
+//        view1.addSubview(modalVC.view)
+//        modalVC.didMove(toParentViewController: self)
         
         //        modalVC.orderedViewControllers = [GreenViewController(), BlueViewController()]
         //        modalVC.modalPresentationStyle = .overCurrentContext
