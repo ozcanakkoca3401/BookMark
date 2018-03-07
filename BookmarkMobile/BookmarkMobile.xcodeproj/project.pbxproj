@@ -38,6 +38,7 @@
 		4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */; };
 		4C451A1D2040170700FF9E3D /* EBHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C451A1C2040170700FF9E3D /* EBHeaderView.swift */; };
 		4C451A1F20405E3700FF9E3D /* EBCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C451A1E20405E3700FF9E3D /* EBCellView.swift */; };
+		4C4C4F6020501220003DC903 /* LoyaltyScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C4F5F20501220003DC903 /* LoyaltyScrollView.swift */; };
 		4C5AFF79204E793D00572447 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AFF78204E793D00572447 /* FooterView.swift */; };
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
 		4C741555203C678F00A32734 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741554203C678F00A32734 /* ColorExtension.swift */; };
@@ -138,6 +139,7 @@
 		4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHorizontalSlider.swift; sourceTree = "<group>"; };
 		4C451A1C2040170700FF9E3D /* EBHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBHeaderView.swift; sourceTree = "<group>"; };
 		4C451A1E20405E3700FF9E3D /* EBCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBCellView.swift; sourceTree = "<group>"; };
+		4C4C4F5F20501220003DC903 /* LoyaltyScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyScrollView.swift; sourceTree = "<group>"; };
 		4C5AFF78204E793D00572447 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		4C741552203C670600A32734 /* EBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLabel.swift; sourceTree = "<group>"; };
 		4C741554203C678F00A32734 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -467,6 +469,7 @@
 				0BB7FA82204C08090076BF66 /* EBScrollView.swift */,
 				45C35D1C204C4A6800B21B52 /* SwitchStepperView.swift */,
 				4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */,
+				4C4C4F5F20501220003DC903 /* LoyaltyScrollView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				4C8B90ED204D97E3001C730C /* EBLevelKnowledge.swift in Sources */,
 				4C36B1C6204568870055DB00 /* CollapsibleTableViewCell.swift in Sources */,
 				8408E0232036D68F004ABC0A /* AppDelegate.swift in Sources */,
+				4C4C4F6020501220003DC903 /* LoyaltyScrollView.swift in Sources */,
 				4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */,
 				45C35D172046F8C600B21B52 /* ExpendHeaderView.swift in Sources */,
 				0BB7FA7D204BF4C00076BF66 /* RedViewController.swift in Sources */,
