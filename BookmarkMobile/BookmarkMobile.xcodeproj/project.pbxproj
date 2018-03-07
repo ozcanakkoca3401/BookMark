@@ -280,7 +280,6 @@
 				0BB7FA79204BF4BF0076BF66 /* BlueViewController.swift */,
 				0BB7FA7C204BF4C00076BF66 /* GreenViewController.swift */,
 				0BB7FA78204BF4BF0076BF66 /* RedViewController.swift */,
-				45B481E5205040C00094F6D2 /* LoyaltyButtonView.swift */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -492,6 +491,7 @@
 				453A5556204ECCA200E19887 /* InformationCellView.swift */,
 				4CC89617204EF04800A2A87A /* EBTopLoyaltyView.swift */,
 				453F8E872050115A00EDA6D2 /* TopMenuButtonView.swift */,
+				45B481E5205040C00094F6D2 /* LoyaltyButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
