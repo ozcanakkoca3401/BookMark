@@ -77,11 +77,11 @@ class BilgeViewController: UIViewController {
         return usageInformationView
     }()
     
-    var cell: InformationCellView = {
-       let cell = InformationCellView()
-        
-        return cell
-    }()
+//    var cell: InformationCellView = {
+//       let cell = InformationCellView()
+//        
+//        return cell
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

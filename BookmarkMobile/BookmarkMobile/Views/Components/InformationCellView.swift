@@ -9,7 +9,7 @@
 import Foundation
 import SnapKit
 
-@IBDesignable public class InformationCellView: RoundView {
+@IBDesignable public class InformationCellView: EBView {
     
     var nameLabel: EBLabel = {
         let label = EBLabel()
@@ -51,6 +51,8 @@ import SnapKit
     }
     
     override func initialize() {
+        
+        super.initialize()
 
         self.addSubview(nameLabel)
         self.addSubview(secondNameLabel)

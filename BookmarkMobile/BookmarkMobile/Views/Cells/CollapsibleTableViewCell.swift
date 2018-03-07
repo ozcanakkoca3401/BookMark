@@ -23,9 +23,9 @@ class CollapsibleTableViewCell: UITableViewCell {
         print("Frame", self.frame)
         contentView.addSubview(cellView)
         
-//        let marginGuide = contentView.layoutMarginsGuide
-//
-//        // configure nameLabel
+        _ = contentView.layoutMarginsGuide
+
+        // configure nameLabel
 //        contentView.addSubview(nameLabel)
 //        nameLabel.translatesAutoresizingMaskIntoConstraints = false
 //        nameLabel.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
@@ -33,7 +33,7 @@ class CollapsibleTableViewCell: UITableViewCell {
 //        nameLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
 //        nameLabel.numberOfLines = 0
 //        nameLabel.font = UIFont.systemFont(ofSize: 16)
-//        
+//
 //        // configure detailLabel
 //        contentView.addSubview(detailLabel)
 //        detailLabel.lineBreakMode = .byWordWrapping
