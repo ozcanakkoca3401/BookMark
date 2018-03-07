@@ -11,87 +11,81 @@ import SnapKit
 
 @IBDesignable public class TopMenuButtonView: RoundView {
     
+    @IBInspectable var image: UIImage? {
+        didSet {
+            menuImageView.image = image
+        }
+    }
     
-//    var addOnButton: RoundButton = {
-//        let addOnB = RoundButton()
-//        addOnB.title = "ADD-ON"
-//        addOnB.titleLabel?.textColor = UIColor.white
-//        addOnB.bgColor = Styling.colorForCode(.themeDarkBlue)
-//        addOnB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
-//        addOnB.addTarget(self, action: #selector(ThreeButtonView.addOnButtonF), for: .touchUpInside)
-//
-//        return addOnB
-//    }()
-//
-//    var giveButton: RoundButton = {
-//        let giveB = RoundButton()
-//        giveB.title = "GIVE"
-//        giveB.titleLabel?.textColor = UIColor.white
-//        giveB.bgColor = Styling.colorForCode(.themeDarkBlue)
-//        giveB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
-//        giveB.addTarget(self, action: #selector(ThreeButtonView.giveButtonF), for: .touchUpInside)
-//
-//        return giveB
-//    }()
-//
-//    var usageButton: RoundButton = {
-//        let usageB = RoundButton()
-//        usageB.title = "USAGE"
-//        usageB.titleLabel?.textColor = UIColor.white
-//        usageB.bgColor = Styling.colorForCode(.themeDarkBlue)
-//        usageB.titleLabel?.font = Styling.font(weight: .bold, size: 14)
-//        usageB.addTarget(self, action: #selector(ThreeButtonView.usageButtonF), for: .touchUpInside)
-//
-//        return usageB
-//    }()
-//    // code initialize
-//    public override init() {
-//        super.init()
-//
-//        self.initialize()
-//    }
-//
-//    // code initialize
-//    public override init(frame: CGRect) {
-//        super.init(frame: frame)
-//
-//        self.initialize()
-//    }
-//
-//    // storyboard initialize
-//    required public init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//
-//        self.initialize()
-//    }
-//
-//    override func initialize() {
-//
-//        super.initialize()
-//        self.addSubview(addOnButton)
-//        self.addSubview(giveButton)
-//        self.addSubview(usageButton)
-//
-//        addOnButton.snp.makeConstraints { (make) in
-//            make.top.bottom.equalTo(self)
-//            make.left.equalTo(15)
-//            make.width.equalTo(self).dividedBy(3).offset(-15)
-//        }
-//
-//        giveButton.snp.makeConstraints { (make) in
-//            make.top.bottom.equalTo(self)
-//            make.centerX.equalTo(self)
-//            make.width.equalTo(self).dividedBy(3).offset(-15)
-//        }
-//
-//        usageButton.snp.makeConstraints { (make) in
-//            make.top.bottom.equalTo(self)
-//            make.right.equalTo(-15)
-//            make.width.equalTo(self).dividedBy(3).offset(-15)
-//        }
-//    }
-//    
-//    override public func layoutSubviews() {
-//        super.layoutSubviews()
-//    }
+    @IBInspectable var title: String = "" {
+        didSet {
+           titleLabel.text = title
+        }
+    }
+    
+   var menuImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "topMenu1")
+        imageView.contentMode = .scaleAspectFit
+    
+         return imageView
+    }()
+  
+    var titleLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "Overview"
+        label.EBcolor = Styling.colorForCode(.themeDarkGray)
+        label.textAlignment = .center
+        label.font = Styling.font(weight: .regular, size: 12)
+        
+        return label
+    }()
+
+    // code initialize
+    public override init() {
+        super.init()
+
+        self.initialize()
+    }
+
+    // code initialize
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        self.initialize()
+    }
+
+    // storyboard initialize
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        self.initialize()
+    }
+
+    override func initialize() {
+        super.initialize()
+        
+        self.borderWidth = 0
+        self.borderColor = Styling.colorForCode(.themeClear)
+        
+        self.addSubview(titleLabel)
+        self.addSubview(menuImageView)
+
+            menuImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(self).offset(10)
+            make.centerX.equalTo(self)
+           
+        }
+
+        titleLabel.snp.makeConstraints { (make) in
+           make.top.equalTo(menuImageView.snp.bottom).offset(5)
+           make.right.equalTo(self).offset(0)
+           make.left.equalTo(self).offset(0)
+        }
+
+    }
+
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+    }
 }
