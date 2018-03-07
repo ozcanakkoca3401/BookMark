@@ -23,15 +23,24 @@ import UIKit
     //    }
     
     // #TODO: array içeriğini gönderme ve count unu dışarıdan gönderilebilir olarak düzenlenecek
-    var sumWidth: CGFloat = 40
-    var parametricCount: Int = 4
-    var nameArray: [String] = ["Overview", "Notifications", "My Profile", "Plans & Billing"]
+    var sumWidth: CGFloat = 15
+    var parametricCount: Int = 8
+    var nameArray: [String] = ["Overview", "Notifications", "My Profile", "Plans & Billing", "", "", "", ""]
     
     var sc: EBScrollView = {
         let scroll = EBScrollView()
-        scroll.bgColor = Styling.colorForCode(.themeGray)
+        scroll.bgColor = Styling.colorForCode(.themeUltraLightGray)
         
         return scroll
+    }()
+    
+    var loyaltyLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "Current privileges that you're using"
+        label.font = Styling.font(weight: .regular, size: 12)
+        label.EBcolor = Styling.colorForCode(.themeGray)
+        
+        return label
     }()
     
     public override init() {
@@ -67,10 +76,16 @@ import UIKit
         }
         
         sc.contentSize = CGSize(width: sumWidth + 20, height: sc.frame.size.height)
+        self.addSubview(loyaltyLabel)
         self.addSubview(sc)
         
+        loyaltyLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self).offset(15)
+            make.left.equalTo(15)
+        }
+        
         sc.snp.makeConstraints { (make) in
-            make.top.equalTo(self)
+            make.top.equalTo(loyaltyLabel.snp.bottom).offset(0)
             make.width.equalTo(self)
             make.bottom.equalTo(self)
             make.centerX.equalTo(self)
@@ -78,4 +93,3 @@ import UIKit
     }
     
 }
-

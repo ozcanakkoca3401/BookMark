@@ -42,10 +42,14 @@ class EnesViewController: UIViewController { //CustomPopupProtocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let f = MainScrollView(frame: CGRect(x: 0, y: 300, width: self.view.frame.size.width, height: 80))
-        f.backgroundColor = Styling.colorForCode(.themeDarkGray)
+
+        let f = LoyaltyScrollView(frame: CGRect(x: 0, y: 300, width: self.view.frame.size.width, height: 110))
+        f.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
         view.addSubview(f)
+        
+//        let f = MainScrollView(frame: CGRect(x: 0, y: 300, width: self.view.frame.size.width, height: 80))
+//        f.backgroundColor = Styling.colorForCode(.themeDarkGray)
+//        view.addSubview(f)
 
 //        let a = EBTopLoyaltyView(frame: CGRect(x: 30, y: 300, width: 320, height: 140))
 //        view.addSubview(a)
