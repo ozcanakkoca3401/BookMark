@@ -26,6 +26,7 @@ import UIKit
     var sumWidth: CGFloat = 40
     var parametricCount: Int = 4
     var nameArray: [String] = ["Overview", "Notifications", "My Profile", "Plans & Billing"]
+    var imageArray: [String] = ["topMenu1", "topMenu2", "topMenu3", "topMenu4"]
     
     var sc: EBScrollView = {
         let scroll = EBScrollView()
@@ -53,12 +54,12 @@ import UIKit
         
         for i in 0..<parametricCount {
             
-            let button = RoundButton(frame: CGRect(x: sumWidth, y: 10, width: 70, height: 60))
-            button.title = nameArray[i]
-            button.titleLabel?.textColor = UIColor.white
-            button.titleColor = Styling.colorForCode(.themeMediumGray)
+            let button = TopMenuButtonView(frame: CGRect(x: sumWidth, y: 10, width: 70, height: 60))
+            button.titleLabel.EBtext = nameArray[i]
+            button.menuImageView.image = UIImage(named: imageArray[i])
+            button.titleLabel.EBcolor = Styling.colorForCode(.themeMediumGray)
             button.bgColor = Styling.colorForCode(.white)
-            button.titleLabel?.font = Styling.font(weight: .bold, size: 9)
+            button.titleLabel.font = Styling.font(weight: .bold, size: 9)
 //            button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
             
             sc.addSubview(button)

@@ -60,6 +60,10 @@ import UIKit
     
     override func initialize() {
         
+        layer.shadowColor = Styling.colorForCode(.themeDarkGray).cgColor
+        layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        layer.shadowOpacity = 0.5
+        
         for i in 0..<parametricCount {
             
             let button = RoundButton(frame: CGRect(x: sumWidth, y: 10, width: 70, height: 60))
