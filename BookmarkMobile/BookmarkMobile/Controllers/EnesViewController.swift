@@ -43,7 +43,7 @@ class EnesViewController: UIViewController { //CustomPopupProtocol
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let a = EBTopLoyaltyView(frame: CGRect(x: 30, y: 300, width: 300, height: 200))
+        let a = EBTopLoyaltyView(frame: CGRect(x: 30, y: 300, width: 320, height: 140))
         view.addSubview(a)
         
 //        let view1 = UIView(frame: CGRect(x: 0, y: 220, width: self.view.frame.size.width, height: self.view.frame.size.height - 120))

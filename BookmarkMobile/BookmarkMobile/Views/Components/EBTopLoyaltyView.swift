@@ -45,6 +45,30 @@ import UIKit
         return label
     }()
     
+    var bottomRightLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "8"
+        label.font = Styling.font(weight: .bold, size: 20)
+        label.EBcolor = Styling.colorForCode(.themeMediumGray)
+        
+        return label
+    }()
+    
+    var tlSlider: HorizontalSlider = {
+        let slider = HorizontalSlider()
+        
+        return slider
+    }()
+    
+    var bottomCenterLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "View details and history"
+        label.font = Styling.font(weight: .regular, size: 14)
+        label.EBcolor = Styling.colorForCode(.themeGray)
+        
+        return label
+    }()
+    
     // code initialize
     public override init() {
         super.init(frame: .zero)
@@ -77,6 +101,9 @@ import UIKit
         self.addSubview(topLeftLabel)
         self.addSubview(bottomLeftLabel)
         self.addSubview(topRightLabel)
+        self.addSubview(bottomRightLabel)
+        self.addSubview(tlSlider)
+        self.addSubview(bottomCenterLabel)
         
         topLeftLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(10)
@@ -92,6 +119,22 @@ import UIKit
             make.top.equalTo(self).offset(10)
             make.right.equalTo(self).offset(-20)
             make.width.equalTo(140)
+        }
+        
+        bottomRightLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(topRightLabel.snp.bottom).offset(10)
+            make.right.equalTo(self).offset(-20)
+        }
+        
+        tlSlider.snp.makeConstraints { (make) in
+            make.top.equalTo(bottomLeftLabel.snp.bottom).offset(5)
+            make.left.equalTo(self).offset(20)
+            make.right.equalTo(bottomRightLabel.snp.left).offset(-15)
+        }
+        
+        bottomCenterLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(tlSlider.snp.bottom).offset(5)
+            make.right.equalTo(self).offset(-20)
         }
     }
     
