@@ -101,6 +101,7 @@ class BilgeViewController: UIViewController {
         super.viewDidLoad()
         
         bilgeView.delegate = self
+        topMenuButton.delegate = self
         
         //var headerView: HeaderView = {
         //    let view = HeaderView()
@@ -137,7 +138,7 @@ class BilgeViewController: UIViewController {
        // view.addSubview(switchStepperView)
         
         stepperComponentview.frame = CGRect(x: 50, y: 100, width: 250, height: 180)
-        view.addSubview(stepperComponentview)
+        //view.addSubview(stepperComponentview)
         
         usageInformationView.frame = CGRect(x: 50, y: 100, width: 280, height: 300)
        // view.addSubview(usageInformationView)
@@ -146,10 +147,10 @@ class BilgeViewController: UIViewController {
 //        view.addSubview(cell)
         
         topMenuButton.frame = CGRect(x: 50, y: 150, width: 70, height: 60)
-        //view.addSubview(topMenuButton)
+        view.addSubview(topMenuButton)
         
         loyaltyButton.frame = CGRect(x: 50, y: 150, width: 60, height: 80)
-//        view.addSubview(loyaltyButton)
+       // view.addSubview(loyaltyButton)
         
     }
 
@@ -160,6 +161,11 @@ class BilgeViewController: UIViewController {
 
 }
 extension BilgeViewController: TouchableProtocol {
+  
+    func changeBackground() {
+       topMenuButton.bgColor = Styling.colorForCode(.themeUltraLightGray)
+    }
+    
     func didTrigger() {
         print("heyoo")
         bilgeView.layer.borderWidth = 1.4

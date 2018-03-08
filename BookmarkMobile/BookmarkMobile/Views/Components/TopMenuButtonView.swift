@@ -64,7 +64,7 @@ import SnapKit
 
     override func initialize() {
         super.initialize()
-        
+   
         self.borderWidth = 0
         self.borderColor = Styling.colorForCode(.themeClear)
         
