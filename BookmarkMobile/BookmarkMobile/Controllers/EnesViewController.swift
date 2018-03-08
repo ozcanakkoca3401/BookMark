@@ -9,9 +9,11 @@
 import UIKit
 
 class EnesViewController: UIViewController, MainScrollViewProtocol {
-    func buttonClicked(_ sender: AnyObject) {
+    func buttonClicked(_ sender: UITapGestureRecognizer) {
         
-        if sender.view.tag == 0 {
+        sender.view?.backgroundColor = Styling.colorForCode(.themeDarkGray)
+        
+        if sender.view?.tag == 0 {
             
             let view1 = UIView(frame: CGRect(x: 0, y: 240, width: self.view.frame.size.width, height: self.view.frame.size.height - 120))
             view1.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
@@ -25,7 +27,7 @@ class EnesViewController: UIViewController, MainScrollViewProtocol {
 
         }
         
-        print("Sender: ", sender.view.tag)
+        print("Sender: ", sender.view?.tag)
     }
     
     //CustomPopupProtocol

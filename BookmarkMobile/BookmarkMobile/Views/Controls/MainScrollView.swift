@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainScrollViewProtocol: class {
-    func buttonClicked(_ sender: AnyObject)
+    func buttonClicked(_ sender: UITapGestureRecognizer)
 }
 
 @IBDesignable public class MainScrollView: EBView {
@@ -88,7 +88,7 @@ protocol MainScrollViewProtocol: class {
         }
     }
     
-    @objc func eachButtonClicked(_ sender: AnyObject) {
+    @objc func eachButtonClicked(_ sender: UITapGestureRecognizer) {
         mainScrollViewDelegate?.buttonClicked(sender)
     }
     
