@@ -26,8 +26,6 @@ class EnesViewController: UIViewController, MainScrollViewProtocol {
             modalVC.didMove(toParentViewController: self)
 
         }
-        
-        print("Sender: ", sender.view?.tag)
     }
     
     //CustomPopupProtocol
