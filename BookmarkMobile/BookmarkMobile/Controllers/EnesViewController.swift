@@ -8,7 +8,27 @@
 
 import UIKit
 
-class EnesViewController: UIViewController { //CustomPopupProtocol
+class EnesViewController: UIViewController, MainScrollViewProtocol {
+    func buttonClicked(_ sender: AnyObject) {
+        
+        if sender.view.tag == 0 {
+            
+            let view1 = UIView(frame: CGRect(x: 0, y: 240, width: self.view.frame.size.width, height: self.view.frame.size.height - 120))
+            view1.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
+            self.view.addSubview(view1)
+            
+            let modalVC = EBUsageInfoPageView()
+            modalVC.orderedViewControllers = [UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController()]
+            self.addChildViewController(modalVC)
+            view1.addSubview(modalVC.view)
+            modalVC.didMove(toParentViewController: self)
+
+        }
+        
+        print("Sender: ", sender.view.tag)
+    }
+    
+    //CustomPopupProtocol
 
 //    let a = CustomPopup()
 //
@@ -47,13 +67,14 @@ class EnesViewController: UIViewController { //CustomPopupProtocol
 //        f.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
 //        view.addSubview(f)
         
-        let g = EBMainLoyaltyView(frame: CGRect(x: 20, y: 250, width: 330, height: 390))
-//        g.backgroundColor = Styling.colorForCode(.themeBlue)
-        view.addSubview(g)
+//        let g = EBMainLoyaltyView(frame: CGRect(x: 20, y: 250, width: 330, height: 390))
+////        g.backgroundColor = Styling.colorForCode(.themeBlue)
+//        view.addSubview(g)
         
-//        let f = MainScrollView(frame: CGRect(x: 0, y: 300, width: self.view.frame.size.width, height: 80))
-//        f.backgroundColor = Styling.colorForCode(.themeDarkGray)
-//        view.addSubview(f)
+        let f = MainScrollView(frame: CGRect(x: 0, y: 70, width: self.view.frame.size.width, height: 80))
+        f.backgroundColor = Styling.colorForCode(.themeDarkGray)
+        f.mainScrollViewDelegate = self
+        view.addSubview(f)
 
 //        let a = EBTopLoyaltyView(frame: CGRect(x: 30, y: 300, width: 320, height: 140))
 //        view.addSubview(a)

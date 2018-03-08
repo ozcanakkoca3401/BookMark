@@ -20,20 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj5-Eu-unE">
-                    <rect key="frame" x="53" y="86" width="283" height="30"/>
-                    <color key="backgroundColor" red="0.24039266269964077" green="0.90383058636912672" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="buttona:" destination="-1" eventType="touchUpInside" id="8N5-Q1-8Wc"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q74-jb-6Yc">
-                    <rect key="frame" x="53" y="159" width="283" height="30"/>
+                    <rect key="frame" x="53" y="594" width="283" height="30"/>
                     <color key="backgroundColor" red="0.24039266270000001" green="0.90383058640000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button2"/>
                     <connections>
                         <action selector="PageViewButton:" destination="-1" eventType="touchUpInside" id="O2O-Zt-ORF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj5-Eu-unE">
+                    <rect key="frame" x="53" y="521" width="283" height="30"/>
+                    <color key="backgroundColor" red="0.24039266269964077" green="0.90383058636912672" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttona:" destination="-1" eventType="touchUpInside" id="8N5-Q1-8Wc"/>
                     </connections>
                 </button>
             </subviews>
@@ -42,7 +42,7 @@
                 <constraint firstItem="Nj5-Eu-unE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="53" id="LrW-dO-VEZ"/>
                 <constraint firstItem="Q74-jb-6Yc" firstAttribute="top" secondItem="Nj5-Eu-unE" secondAttribute="bottom" constant="43" id="ali-Kr-s41"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nj5-Eu-unE" secondAttribute="trailing" constant="39" id="c0h-OB-3LJ"/>
-                <constraint firstItem="Nj5-Eu-unE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="66" id="m7y-qb-Ld2"/>
+                <constraint firstItem="Nj5-Eu-unE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="501" id="m7y-qb-Ld2"/>
                 <constraint firstItem="Q74-jb-6Yc" firstAttribute="top" secondItem="Nj5-Eu-unE" secondAttribute="bottom" constant="43" id="wXp-2V-yxU"/>
                 <constraint firstItem="Q74-jb-6Yc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="53" id="x06-Ad-wgf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q74-jb-6Yc" secondAttribute="trailing" constant="39" id="yvb-c2-I0X"/>

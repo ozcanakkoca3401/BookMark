@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol MainScrollViewProtocol: class {
+    func buttonClicked(_ sender: AnyObject)
+}
+
 @IBDesignable public class MainScrollView: EBView {
+    
+     weak var mainScrollViewDelegate: MainScrollViewProtocol?
     
 //    @IBInspectable var bgColor: UIColor = Styling.colorForCode(.themeUltraLightGray) {
 //        didSet {
@@ -60,7 +66,11 @@ import UIKit
             button.titleLabel.EBcolor = Styling.colorForCode(.themeMediumGray)
             button.bgColor = Styling.colorForCode(.white)
             button.titleLabel.font = Styling.font(weight: .bold, size: 9)
-//            button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+            button.isUserInteractionEnabled = true
+            button.tag = i
+            
+            let gesturedRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainScrollView.eachButtonClicked(_ :)))
+            button.addGestureRecognizer(gesturedRecognizer)
             
             sc.addSubview(button)
             sumWidth = 15 + sumWidth + 60
@@ -76,6 +86,10 @@ import UIKit
             make.bottom.equalTo(self)
             make.centerX.equalTo(self)
         }
+    }
+    
+    @objc func eachButtonClicked(_ sender: AnyObject) {
+        mainScrollViewDelegate?.buttonClicked(sender)
     }
     
 }
