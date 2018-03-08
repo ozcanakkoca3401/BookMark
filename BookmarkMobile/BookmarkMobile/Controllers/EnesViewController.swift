@@ -70,7 +70,8 @@ class EnesViewController: UIViewController, MainScrollViewProtocol, CustomPopupP
         }()
         
         stepperComponentview.frame = CGRect(x: 50, y: 250, width: 250, height: 180)
-//        stepperComponentview.stepperView.increaseAmount = 200
+        stepperComponentview.stepperView.increaseAmount = 2
+        stepperComponentview.secondStepperView.increaseAmount = 200
         view.addSubview(stepperComponentview)
 
 //        let f = LoyaltyScrollView(frame: CGRect(x: 0, y: 300, width: self.view.frame.size.width, height: 130))

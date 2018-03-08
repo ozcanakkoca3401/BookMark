@@ -32,6 +32,7 @@ import SnapKit
     var capacityWith: CGFloat = 0
     var plusButtonisEnable = false
     var changeLabelValue: Int = 0
+    var increaseAmount: Int = 0
 
     var dataLabel: EBLabel = {
         let label = EBLabel()
@@ -76,6 +77,12 @@ import SnapKit
         return button
     }()
     
+    var subView: EBView = {
+        let view = EBView()
+
+        return view
+    }()
+    
      // code initialize
     public override init() {
         super.init(frame: .zero)
@@ -107,11 +114,12 @@ import SnapKit
         
         self.bgColor = Styling.colorForCode(.stepperGray)
         
-        addSubview(capacityView)
-        addSubview(dataLabel)
-        addSubview(gbChangeLabel)
-        addSubview(gbLabel)
-        addSubview(stepperButton)
+        self.addSubview(capacityView)
+        self.addSubview(subView)
+        subView.addSubview(dataLabel)
+        subView.addSubview(gbChangeLabel)
+        subView.addSubview(gbLabel)
+        self.addSubview(stepperButton)
 
         stepperButton.snp.makeConstraints { (make) in
             make.height.equalTo(35)
@@ -130,19 +138,26 @@ import SnapKit
         }
         
         dataLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self).offset(5)
-            make.left.equalTo(self).offset(10)
-            make.right.equalTo(self).offset(-15)
+            make.top.equalTo(subView).offset(5)
+            make.left.equalTo(subView).offset(10)
+            make.right.equalTo(subView).offset(-15)
         }
         
         gbChangeLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(self).offset(10)
-            make.centerY.equalTo(self)
+            make.left.equalTo(subView).offset(10)
+            make.centerY.equalTo(subView)
         }
         
         gbLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(self)
+            make.centerY.equalTo(subView)
             make.left.equalTo(gbChangeLabel.snp.right).offset(5)
+        }
+        
+        subView.snp.makeConstraints { (make) in
+            make.top.equalTo(self)
+            make.bottom.equalTo(self)
+            make.left.equalTo(self)
+            make.right.equalTo(stepperButton.snp.left).offset(5)
         }
      }
     
@@ -150,7 +165,7 @@ import SnapKit
         
         capacityWith -= 50
         capacityView.frame.size.width = CGFloat(capacityWith)
-        changeLabelValue -= 1
+        changeLabelValue -= increaseAmount
         gbChangeLabel.text  = String(changeLabelValue)
         
         if plusButtonisEnable {
@@ -170,7 +185,7 @@ import SnapKit
         capacityView.frame.size.width = CGFloat(capacityWith)
         stepperButton.leftButton.isEnabled = true
         stepperButton.leftButton.bgColor = Styling.colorForCode(.themeBlue)
-        changeLabelValue += 1
+        changeLabelValue += increaseAmount
         gbChangeLabel.text  = String(changeLabelValue)
         
         if self.capacityWith >= self.frame.size.width {
