@@ -67,6 +67,12 @@ class BilgeViewController: UIViewController {
         
     }()
     
+    var addAddOnsHeader: AddAddOnsHeaderView = {
+       let header = AddAddOnsHeaderView()
+        
+        return header
+    }()
+    
 //    var stepperView: StepperView = {
 //        let stepperView = StepperView()
 //
@@ -147,10 +153,13 @@ class BilgeViewController: UIViewController {
 //        view.addSubview(cell)
         
         topMenuButton.frame = CGRect(x: 50, y: 150, width: 70, height: 60)
-        view.addSubview(topMenuButton)
+       // view.addSubview(topMenuButton)
         
         loyaltyButton.frame = CGRect(x: 50, y: 150, width: 60, height: 80)
        // view.addSubview(loyaltyButton)
+        
+        addAddOnsHeader.frame = CGRect(x: 50, y: 150, width: 250, height: 80)
+        view.addSubview(addAddOnsHeader)
         
     }
 
