@@ -8,35 +8,35 @@
 
 import UIKit
 
-class EnesViewController: UIViewController, MainScrollViewProtocol {
+class EnesViewController: UIViewController, MainScrollViewProtocol, CustomPopupProtocol {
     func buttonClicked(_ sender: UITapGestureRecognizer) {
         
         sender.view?.backgroundColor = Styling.colorForCode(.themeDarkGray)
         
-        if sender.view?.tag == 0 {
-            
-            let view1 = UIView(frame: CGRect(x: 0, y: 240, width: self.view.frame.size.width, height: self.view.frame.size.height - 120))
-            view1.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
-            self.view.addSubview(view1)
-            
-            let modalVC = EBUsageInfoPageView()
-            modalVC.orderedViewControllers = [UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController()]
-            self.addChildViewController(modalVC)
-            view1.addSubview(modalVC.view)
-            modalVC.didMove(toParentViewController: self)
-
-        }
+//        if sender.view?.tag == 0 {
+//
+//            let view1 = UIView(frame: CGRect(x: 0, y: 240, width: self.view.frame.size.width, height: self.view.frame.size.height - 120))
+//            view1.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
+//            self.view.addSubview(view1)
+//
+//            let modalVC = EBUsageInfoPageView()
+//            modalVC.orderedViewControllers = [UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController(), UsageInfoViewController()]
+//            self.addChildViewController(modalVC)
+//            view1.addSubview(modalVC.view)
+//            modalVC.didMove(toParentViewController: self)
+//
+//        }
     }
     
     //CustomPopupProtocol
 
-//    let a = CustomPopup()
-//
-//    @IBAction func buttona(_ sender: Any) {
-//        a.frame = view.frame
-//        a.twoButtonDelegate = self
-//        view.addSubview(a)
-//    }
+    let a = CustomPopup()
+
+    @IBAction func buttona(_ sender: Any) {
+        a.frame = view.frame
+        a.twoButtonDelegate = self
+        view.addSubview(a)
+    }
 //
 //    @IBAction func PageViewButton(_ sender: Any) {
 //
@@ -52,16 +52,26 @@ class EnesViewController: UIViewController, MainScrollViewProtocol {
 //
 //    }
 //
-//    func cancelButton() {
-//         a.removeFromSuperview()
-//    }
-//
-//    func confirmButton() {
-//        print("confirm")
-//    }
+    func cancelButton() {
+         a.removeFromSuperview()
+    }
+
+    func confirmButton() {
+        print("confirm")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var stepperComponentview: StepperComponentView = {
+            let stepperComponentView = StepperComponentView()
+            
+            return stepperComponentView
+        }()
+        
+        stepperComponentview.frame = CGRect(x: 50, y: 250, width: 250, height: 180)
+//        stepperComponentview.stepperView.increaseAmount = 200
+        view.addSubview(stepperComponentview)
 
 //        let f = LoyaltyScrollView(frame: CGRect(x: 0, y: 300, width: self.view.frame.size.width, height: 130))
 //        f.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
