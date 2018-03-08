@@ -11,11 +11,11 @@ import SnapKit
 
 @IBDesignable public class LoyaltyButtonView: RoundView {
     
-//    @IBInspectable var image: UIImage? {
-//        didSet {
-//            menuImageView.image = image
-//        }
-//    }
+    @IBInspectable var image: UIImage? {
+        didSet {
+            loyaltyButton.setImage(UIImage(named: "topMenu1"), for: .normal)
+        }
+    }
     
     @IBInspectable var title: String = "" {
         didSet {
@@ -25,20 +25,11 @@ import SnapKit
     
     var loyaltyButton: RoundButton = {
         let button = RoundButton()
-        button.setImage(UIImage(named: "topMenu1"), for: .normal)
         button.bgColor = Styling.colorForCode(.white)
         button.cornerRadius = 5
         
         return button
     }()
-    
-//    var menuImageView: UIImageView = {
-//        let imageView = UIImageView()
-//       // imageView.image = UIImage(named: "topMenu1")
-//        imageView.contentMode = .scaleAspectFit
-//
-//        return imageView
-//    }()
     
     var titleLabel: EBLabel = {
         let label = EBLabel()
@@ -80,23 +71,13 @@ import SnapKit
         
         self.addSubview(titleLabel)
         self.addSubview(loyaltyButton)
-       // loyaltyButton.addSubview(menuImageView)
         
         loyaltyButton.snp.makeConstraints { (make) in
             make.height.equalTo(50)
             make.top.equalTo(self).offset(5)
             make.right.equalTo(self).offset(-5)
             make.left.equalTo(self).offset(5)
-           // make.bottom.equalTo(self).offset(-20)
-            
         }
-        
-//        menuImageView.snp.makeConstraints { (make) in
-//            make.top.equalTo(loyaltyButton).offset(10)
-//            make.width.equalTo(50)
-//            make.height.equalTo(30)
-//            make.centerX.equalTo(self)
-//        }
         
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(loyaltyButton.snp.bottom).offset(5)
