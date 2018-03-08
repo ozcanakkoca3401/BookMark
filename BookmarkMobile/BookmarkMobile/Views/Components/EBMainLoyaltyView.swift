@@ -24,6 +24,12 @@ import UIKit
     
     var scrolView: LoyaltyScrollView = {
         let view = LoyaltyScrollView()
+        view.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
+        return view
+    }()
+    
+    var footerView: FooterView = {
+       let view = FooterView()
         
         return view
     }()
@@ -46,6 +52,7 @@ import UIKit
     override func initialize() {
         super.initialize()
         
+        self.addSubview(footerView)
         self.addSubview(topView)
         self.addSubview(scrolView)
         
@@ -57,10 +64,17 @@ import UIKit
         }
         
         scrolView.snp.makeConstraints { (make) in
-            make.top.equalTo(topView.snp.bottom).offset(20)
+            make.top.equalTo(topView.snp.bottom).offset(0)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
             make.height.equalTo(110)
+        }
+        
+        footerView.snp.makeConstraints { (make) in
+            make.top.equalTo(scrolView.snp.bottom).offset(0)
+            make.left.equalTo(self).offset(30)
+            make.right.equalTo(self).offset(-30)
+            make.height.equalTo(130)
         }
     }
     

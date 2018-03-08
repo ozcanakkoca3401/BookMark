@@ -47,7 +47,7 @@ class EnesViewController: UIViewController { //CustomPopupProtocol
 //        f.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
 //        view.addSubview(f)
         
-        let g = EBMainLoyaltyView(frame: CGRect(x: 20, y: 300, width: 330, height: 350))
+        let g = EBMainLoyaltyView(frame: CGRect(x: 20, y: 250, width: 330, height: 350))
 //        g.backgroundColor = Styling.colorForCode(.themeUltraLightGray)
         view.addSubview(g)
         
