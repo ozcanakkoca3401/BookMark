@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = UINavigationController(rootViewController: BilgeViewController())
+        self.window?.rootViewController = UINavigationController(rootViewController: EnesViewController())
         return true
     }
 

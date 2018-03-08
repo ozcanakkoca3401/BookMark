@@ -10,7 +10,6 @@ import UIKit
 
 protocol TouchableProtocol: class {
     func didTrigger()
-    func changeBackground()
 }
 
  @IBDesignable public class RoundView: EBView {
@@ -67,16 +66,10 @@ protocol TouchableProtocol: class {
         let gesturedRecognizer = UITapGestureRecognizer(target: self, action: #selector(RoundView.touchAction))
         self.addGestureRecognizer(gesturedRecognizer)
         
-        let topGesturedRecognizer = UITapGestureRecognizer(target: self, action: #selector(RoundView.touchEnabled))
-        self.addGestureRecognizer(topGesturedRecognizer)
     }
     
     @objc func touchAction() {
         delegate?.didTrigger()
-    }
-   
-    @objc func touchEnabled() {
-        delegate?.changeBackground()
     }
     
    override public func layoutSubviews() { // refresh durumunda...

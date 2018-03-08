@@ -30,7 +30,6 @@ import SnapKit
     }
     
     var capacityWith: CGFloat = 0
-    var minusButtonisEnable = false
     var plusButtonisEnable = false
     var changeLabelValue: Int = 0
 
@@ -161,7 +160,6 @@ import SnapKit
         
         if self.capacityWith == 0 {
             stepperButton.leftButton.bgColor = Styling.colorForCode(.themeLight)
-            minusButtonisEnable  = true
             stepperButton.leftButton.isEnabled = false
         }
     }
@@ -174,11 +172,6 @@ import SnapKit
         stepperButton.leftButton.bgColor = Styling.colorForCode(.themeBlue)
         changeLabelValue += 1
         gbChangeLabel.text  = String(changeLabelValue)
-        
-        if minusButtonisEnable {
-            stepperButton.leftButton.bgColor = Styling.colorForCode(.themeBlue)
-            stepperButton.leftButton.isEnabled = true
-        }
         
         if self.capacityWith >= self.frame.size.width {
             stepperButton.rightButton.bgColor = Styling.colorForCode(.themeLight)
