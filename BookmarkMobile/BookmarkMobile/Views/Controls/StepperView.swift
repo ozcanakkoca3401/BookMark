@@ -103,6 +103,9 @@ import SnapKit
         super.initialize()
         stepperButton.stepperDelegate = self
         
+        stepperButton.leftButton.isEnabled = false
+        stepperButton.leftButton.bgColor = Styling.colorForCode(.themeLight)
+        
         self.bgColor = Styling.colorForCode(.stepperGray)
         
         addSubview(capacityView)
@@ -166,6 +169,8 @@ import SnapKit
         
         capacityWith += 50
         capacityView.frame.size.width = CGFloat(capacityWith)
+        stepperButton.leftButton.isEnabled = true
+        stepperButton.leftButton.bgColor = Styling.colorForCode(.themeBlue)
       //  gbChangeLabel.text  = String(changeLabelValue! + 1)
         
         if minusButtonisEnable {

@@ -137,7 +137,7 @@ class BilgeViewController: UIViewController {
        // view.addSubview(switchStepperView)
         
         stepperComponentview.frame = CGRect(x: 50, y: 100, width: 250, height: 180)
-        //view.addSubview(stepperComponentview)
+        view.addSubview(stepperComponentview)
         
         usageInformationView.frame = CGRect(x: 50, y: 100, width: 280, height: 300)
        // view.addSubview(usageInformationView)
@@ -149,7 +149,7 @@ class BilgeViewController: UIViewController {
         //view.addSubview(topMenuButton)
         
         loyaltyButton.frame = CGRect(x: 50, y: 150, width: 60, height: 80)
-        view.addSubview(loyaltyButton)
+//        view.addSubview(loyaltyButton)
         
     }
 
