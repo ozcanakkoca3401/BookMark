@@ -25,7 +25,7 @@ import UIKit
     // #TODO: array içeriğini gönderme ve count unu dışarıdan gönderilebilir olarak düzenlenecek
     var sumWidth: CGFloat = 15
     var parametricCount: Int = 8
-    var nameArray: [String] = ["Overview", "Notifications", "My Profile", "Plans & Billing", "", "", "", ""]
+    var nameArray: [String] = ["+ 10 min", "+ 20 min", "+ 30 min", "+ 40 min", "+ 50 min", "+ 60 min", "+ 70 min", "+ 80 min"]
     
     var sc: EBScrollView = {
         let scroll = EBScrollView()
@@ -66,12 +66,8 @@ import UIKit
         
         for i in 0..<parametricCount {
             
-            let button = RoundButton(frame: CGRect(x: sumWidth, y: 10, width: 70, height: 60))
-            button.title = nameArray[i]
-            button.titleLabel?.textColor = UIColor.white
-            button.titleColor = Styling.colorForCode(.themeMediumGray)
-            button.bgColor = Styling.colorForCode(.white)
-            button.titleLabel?.font = Styling.font(weight: .bold, size: 9)
+            let button = LoyaltyButtonView(frame: CGRect(x: sumWidth, y: 10, width: 70, height: 80))
+            button.titleLabel.EBtext = nameArray[i]
             //            button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
             
             sc.addSubview(button)

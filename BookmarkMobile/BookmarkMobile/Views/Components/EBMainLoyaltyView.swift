@@ -67,7 +67,7 @@ import UIKit
             make.top.equalTo(topView.snp.bottom).offset(0)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
-            make.height.equalTo(110)
+            make.height.equalTo(130)
         }
         
         footerView.snp.makeConstraints { (make) in
