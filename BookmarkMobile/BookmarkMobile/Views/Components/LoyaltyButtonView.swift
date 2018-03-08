@@ -11,9 +11,9 @@ import SnapKit
 
 @IBDesignable public class LoyaltyButtonView: RoundView {
     
-    @IBInspectable var image: UIImage? {
+    @IBInspectable var image: UIImage = UIImage(named: "topMenu1")! {
         didSet {
-            loyaltyButton.setImage(UIImage(named: "topMenu1"), for: .normal)
+            loyaltyButton.setImage(image, for: .normal)
         }
     }
     
@@ -65,6 +65,7 @@ import SnapKit
     override func initialize() {
         super.initialize()
         
+        loyaltyButton.setImage(image, for: .normal)
         self.borderWidth = 0
         self.borderColor = Styling.colorForCode(.themeGray)
         self.bgColor = Styling.colorForCode(.themeUltraLightGray)
