@@ -38,11 +38,16 @@ extension InformationTableViewController {
     
     // Cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: InformationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell1") as? InformationTableViewCell ??
-            InformationTableViewCell(style: .default, reuseIdentifier: "cell1")
         
-        cell.cellView.nameLabel.EBtext = titleArray[indexPath.row]
-        cell.cellView.secondNameLabel.EBtext = dataArray[indexPath.row]
+        let cellView = InformationCellView()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? BaseTableViewCell ??
+            BaseTableViewCell(style: .default, reuseIdentifier: "cell")
+        
+        cell.configure(view: cellView)
+        
+//        cell.cellView.nameLabel.EBtext = titleArray[indexPath.row]
+//        cell.cellView.secondNameLabel.EBtext = dataArray[indexPath.row]
         //        let item: Item = sections[indexPath.section].items[indexPath.row]
         
         //        cell.nameLabel.text = item.name

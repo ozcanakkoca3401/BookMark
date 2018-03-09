@@ -8,22 +8,20 @@
 
 import UIKit
 
-class InformationTableViewCell: UITableViewCell {
-
-    let cellView = InformationCellView(frame: CGRect(x: 0, y: 0, width: 380, height: 80))
+class BaseTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        
-        
-//        cellView.frame = self.frame
-        print("Frame", self.frame)
-        contentView.addSubview(cellView)
-   
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public func configure(view: UIView) {
+        view.frame = self.frame
+        contentView.addSubview(view)
+        
+    }
+    
 }
