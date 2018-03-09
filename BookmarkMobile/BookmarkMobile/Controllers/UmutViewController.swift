@@ -55,6 +55,7 @@ extension UmutViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? CollapsibleTableViewHeader ?? CollapsibleTableViewHeader(reuseIdentifier: "header")
         
+        header.headerView.dataLabel.EBtext = sections[section].name
 //        header.titleLabel.text = sections[section].name
 //        header.arrowLabel.text = ">"
         header.setCollapsed(sections[section].collapsed)

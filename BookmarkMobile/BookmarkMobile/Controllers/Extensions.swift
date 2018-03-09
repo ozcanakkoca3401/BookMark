@@ -18,7 +18,6 @@ extension UIColor {
             alpha: alpha
         )
     }
-    
 }
 
 extension UIView {
@@ -33,5 +32,4 @@ extension UIView {
         
         self.layer.add(animation, forKey: nil)
     }
-
 }
