@@ -9,6 +9,8 @@
 import Foundation
 import SnapKit
 
+// #TODO: Aşağıdaki UIButton bizim button ile değiştirilecek ve imageview inspectable taşınacak
+
 @IBDesignable public class ChangeButtonView: RoundView {
     
     @IBInspectable var image: UIImage? {

@@ -59,15 +59,15 @@ class EnesViewController: UIViewController, MainScrollViewProtocol, CustomPopupP
     func confirmButton() {
         print("confirm")
     }
+
+    var stepperComponentview: StepperComponentView = {
+        let stepperComponentView = StepperComponentView()
+        
+        return stepperComponentView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var stepperComponentview: StepperComponentView = {
-            let stepperComponentView = StepperComponentView()
-            
-            return stepperComponentView
-        }()
         
         stepperComponentview.frame = CGRect(x: 50, y: 250, width: 250, height: 180)
         stepperComponentview.stepperView.increaseAmount = 2
