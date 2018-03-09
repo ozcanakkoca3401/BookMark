@@ -23,7 +23,7 @@ class CollapsibleTableViewCell: UITableViewCell {
         print("Frame", self.frame)
         contentView.addSubview(cellView)
         
-        _ = contentView.layoutMarginsGuide
+//        _ = contentView.layoutMarginsGuide
 
         // configure nameLabel
 //        contentView.addSubview(nameLabel)
