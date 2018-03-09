@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class BasePageViewController: UIViewController, RoundButtonProtocol, EBPageViewProtocol {
+class BasePageViewController: UIViewController, RoundButtonProtocol {
     
     // ScrollView da yapılacak custom değişiklikler burada yapılabilir
     
@@ -45,12 +45,6 @@ class BasePageViewController: UIViewController, RoundButtonProtocol, EBPageViewP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.nextPageNumber()
-        self.previousPageNumber()
-//        var pageController = EBPageViewController()
-//        pageController.pageDelegate = self
-//        self.addChildViewController(pageController)
         
         closeButton.roundButtonDelegate = self
         view.backgroundColor = Styling.colorForCode(.blurGray)
@@ -97,14 +91,6 @@ class BasePageViewController: UIViewController, RoundButtonProtocol, EBPageViewP
     
     func buttonClicked() {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    func nextPageNumber() {
-        print("asdas")
-    }
-    
-    func previousPageNumber() {
-        print("asdas")
     }
     
 }

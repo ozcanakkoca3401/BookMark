@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol EBPageViewProtocol: class {
-    func nextPageNumber()
-    func previousPageNumber()
-}
-
 class EBPageViewController: UIPageViewController {
 
 //    private lazy var orderedViewControllers: [UIViewController] = {
@@ -20,8 +15,6 @@ class EBPageViewController: UIPageViewController {
 //                self.newColoredViewController(color: "Red"),
 //                self.newColoredViewController(color: "Blue")]
 //    }()
-    
-    weak var pageDelegate: EBPageViewProtocol?
     
     public lazy var orderedViewControllers: [UIViewController] = {
         return []
@@ -68,8 +61,6 @@ extension EBPageViewController: UIPageViewControllerDataSource {
             return nil
         }
         
-        pageDelegate?.previousPageNumber()
-        
         return orderedViewControllers[previousIndex]
     }
     
@@ -89,8 +80,6 @@ extension EBPageViewController: UIPageViewControllerDataSource {
         guard orderedViewControllers.count > nextIndex else {
             return nil
         }
-        
-        pageDelegate?.nextPageNumber()
         
         return orderedViewControllers[nextIndex]
     }
