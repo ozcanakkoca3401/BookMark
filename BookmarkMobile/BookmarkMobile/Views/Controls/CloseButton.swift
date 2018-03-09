@@ -39,7 +39,7 @@ import SnapKit
         self.title = "CLOSE"
         self.bgColor = Styling.colorForCode(.white)
         self.setTitleColor(Styling.colorForCode(.black), for: .normal)
-        self.titleLabel?.font = Styling.font(weight: .regular, size: 20)
+        self.titleLabel?.font = Styling.font(weight: .regular, size: 22)
     }
     
     override public func layoutSubviews() {

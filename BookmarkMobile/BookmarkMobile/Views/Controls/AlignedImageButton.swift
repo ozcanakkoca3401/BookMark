@@ -62,9 +62,10 @@ import UIKit
 //        self.layer.borderColor = UIColor.red.cgColor
         self.contentHorizontalAlignment = .center
         self.titleLabel?.adjustsFontSizeToFitWidth = true
-        self.titleEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: image.size.width)
+        self.titleEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 10, right: image.size.width)
         // Inset top and bottom by 10
         self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 5)
+        
     }
     
     // Configure button when bounds change since image inset has dependency on bounds
