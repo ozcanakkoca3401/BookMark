@@ -9,9 +9,26 @@
 import UIKit
 import SnapKit
 
-class BasePageViewController: UIViewController, RoundButtonProtocol {
+class BasePageViewController: UIViewController, RoundButtonProtocol, EBPageViewProtocol {
     
     // ScrollView da yapılacak custom değişiklikler burada yapılabilir
+    
+    var topLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "1/8"
+        label.font = Styling.font(weight: .bold, size: 24)
+        label.textAlignment = .right
+        label.EBcolor = Styling.colorForCode(.white)
+        
+        return label
+    }()
+    
+    var labelView: EBView = {
+        let view = EBView()
+        
+        return view
+    }()
+    
     var mainScrollView: EBScrollView = {
         
         let view = EBScrollView()
@@ -28,9 +45,17 @@ class BasePageViewController: UIViewController, RoundButtonProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.nextPageNumber()
+        self.previousPageNumber()
+//        var pageController = EBPageViewController()
+//        pageController.pageDelegate = self
+//        self.addChildViewController(pageController)
         
         closeButton.roundButtonDelegate = self
         view.backgroundColor = Styling.colorForCode(.blurGray)
+        view.addSubview(labelView)
+        labelView.addSubview(topLabel)
         view.addSubview(mainScrollView)
         view.addSubview(closeButton)
         setupView()
@@ -38,6 +63,20 @@ class BasePageViewController: UIViewController, RoundButtonProtocol {
     }
     
     func setupView() {
+        
+        labelView.snp.makeConstraints { (make) in
+            make.height.equalTo(40)
+            make.bottom.equalTo(mainScrollView.snp.top)
+            make.left.equalTo(self.view).offset(20)
+            make.right.equalTo(self.view).offset(-20)
+        }
+        
+        topLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(labelView)
+            make.bottom.equalTo(labelView)
+            make.left.equalTo(labelView)
+            make.right.equalTo(labelView).offset(-5)
+        }
         
         mainScrollView.snp.makeConstraints { (make) in
             make.top.equalTo(self.view).offset(100)
@@ -58,6 +97,14 @@ class BasePageViewController: UIViewController, RoundButtonProtocol {
     
     func buttonClicked() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func nextPageNumber() {
+        print("asdas")
+    }
+    
+    func previousPageNumber() {
+        print("asdas")
     }
     
 }

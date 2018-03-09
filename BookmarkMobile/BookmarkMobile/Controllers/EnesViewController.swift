@@ -38,19 +38,19 @@ class EnesViewController: UIViewController, MainScrollViewProtocol, CustomPopupP
         view.addSubview(a)
     }
 //
-//    @IBAction func PageViewButton(_ sender: Any) {
-//
-////        let modalVC = EBPageViewController()
-////        modalVC.orderedViewControllers = [GreenViewController(), BlueViewController()]
-////        modalVC.modalPresentationStyle = .overCurrentContext
-////        present(modalVC, animated: true, completion: nil)
-//
+    @IBAction func PageViewButton(_ sender: Any) {
+
+        let modalVC = EBPageViewController()
+        modalVC.orderedViewControllers = [GreenViewController(), BlueViewController(), BlueViewController(), BlueViewController()]
+        modalVC.modalPresentationStyle = .overCurrentContext
+        present(modalVC, animated: true, completion: nil)
+
 //        let modalVC = EBUsageInfoPageView()
 //        modalVC.orderedViewControllers = [UsageInfoViewController()]
 //        modalVC.modalPresentationStyle = .overCurrentContext
 //        present(modalVC, animated: true, completion: nil)
 //
-//    }
+    }
 //
     func cancelButton() {
          a.removeFromSuperview()
