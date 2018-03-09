@@ -36,13 +36,13 @@ extension UmutViewController {
     
     // Cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CollapsibleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CollapsibleTableViewCell ??
-            CollapsibleTableViewCell(style: .default, reuseIdentifier: "cell")
-        
-//        let item: Item = sections[indexPath.section].items[indexPath.row]
-        
-//        cell.nameLabel.text = item.name
-//        cell.detailLabel.text = item.detail
+
+        let cellView = ThreeButtonView()
+//        let cell: BaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell1") as? BaseTableViewCell ??
+//            BaseTableViewCell(style: .default, reuseIdentifier: "cell1")
+
+        let cell = BaseTableViewCell()
+        cell.configure(view: cellView)
         
         return cell
     }
@@ -76,9 +76,6 @@ extension UmutViewController {
     
 }
 
-//
-// MARK: - Section Header Delegate
-//
 extension UmutViewController: CollapsibleTableViewHeaderDelegate {
     
     func toggleSection(_ header: CollapsibleTableViewHeader, section: Int) {

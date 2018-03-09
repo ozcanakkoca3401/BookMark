@@ -45,9 +45,9 @@ extension InformationTableViewController {
             BaseTableViewCell(style: .default, reuseIdentifier: "cell")
         
         cell.configure(view: cellView)
-        
-//        cell.cellView.nameLabel.EBtext = titleArray[indexPath.row]
-//        cell.cellView.secondNameLabel.EBtext = dataArray[indexPath.row]
+        cellView.nameLabel.EBtext = titleArray[indexPath.row]
+        cellView.secondNameLabel.EBtext = dataArray[indexPath.row]
+
         //        let item: Item = sections[indexPath.section].items[indexPath.row]
         
         //        cell.nameLabel.text = item.name
@@ -59,42 +59,4 @@ extension InformationTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
-    
-    // Header
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? CollapsibleTableViewHeader ?? CollapsibleTableViewHeader(reuseIdentifier: "header")
-//
-//        //        header.titleLabel.text = sections[section].name
-//        //        header.arrowLabel.text = ">"
-//        header.setCollapsed(sections[section].collapsed)
-//
-//        header.section = section
-//        header.delegate = self
-//
-//        return header
-//    }
-//
-//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 80.0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 1.0
-//    }
-    
 }
-
-//
-// MARK: - Section Header Delegate
-//
-//extension UmutViewController: CollapsibleTableViewHeaderDelegate {
-//
-//    func toggleSection(_ header: CollapsibleTableViewHeader, section: Int) {
-//        let collapsed = !sections[section].collapsed
-//
-//        // Toggle collapse
-//        sections[section].collapsed = collapsed
-//        header.setCollapsed(collapsed)
-//
-//        tableView.reloadSections(NSIndexSet(index: section) as IndexSet, with: .automatic)
-//    }

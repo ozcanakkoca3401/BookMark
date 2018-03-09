@@ -21,7 +21,6 @@ class BaseTableViewCell: UITableViewCell {
     public func configure(view: UIView) {
         view.frame = self.frame
         contentView.addSubview(view)
-        
     }
     
 }
