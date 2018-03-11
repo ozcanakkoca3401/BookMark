@@ -22,15 +22,12 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-//        contentView.backgroundColor = UIColor(hex: 0x2E3944)
         contentView.addSubview(headerView)
         
         headerView.snp.makeConstraints { (make) in
             make.top.bottom.left.right.equalTo(self)
         }
-        //
-        // Call tapHeader when tapping on this header
-        //
+        
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CollapsibleTableViewHeader.tapHeader(_:))))
     }
     
@@ -46,10 +43,8 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     }
     
     func setCollapsed(_ collapsed: Bool) {
-        
 //         Animate the arrow rotation (see Extensions.swf)
         headerView.rightImageView.rotate(collapsed ? 0.0 : .pi / 2)
-        
     }
     
 }

@@ -32,7 +32,7 @@
 		45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D322040053300A564CF /* ThreeButtonView.swift */; };
 		4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */; };
 		4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */; };
-		4C36B1C4204568870055DB00 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C0204568870055DB00 /* Extensions.swift */; };
+		4C36B1C4204568870055DB00 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C0204568870055DB00 /* ViewExtensions.swift */; };
 		4C36B1C5204568870055DB00 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C1204568870055DB00 /* ExampleData.swift */; };
 		4C36B1C6204568870055DB00 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C2204568870055DB00 /* CollapsibleTableViewCell.swift */; };
 		4C3B0457203EB3B200A01E94 /* EBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0456203EB3B200A01E94 /* EBView.swift */; };
@@ -136,7 +136,7 @@
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScrollView.swift; sourceTree = "<group>"; };
 		4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
-		4C36B1C0204568870055DB00 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4C36B1C0204568870055DB00 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		4C36B1C1204568870055DB00 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
 		4C36B1C2204568870055DB00 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		4C3B0456203EB3B200A01E94 /* EBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBView.swift; sourceTree = "<group>"; };
@@ -319,6 +319,7 @@
 		69017B7920370D810046B009 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4C36B1C0204568870055DB00 /* ViewExtensions.swift */,
 				69017B7B20370FC00046B009 /* StringExtension.swift */,
 				4C741554203C678F00A32734 /* ColorExtension.swift */,
 			);
@@ -419,7 +420,6 @@
 				4C92B4D9204D2F5D00347293 /* BaseControllers */,
 				4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */,
 				4C36B1C1204568870055DB00 /* ExampleData.swift */,
-				4C36B1C0204568870055DB00 /* Extensions.swift */,
 				8408E0242036D68F004ABC0A /* ViewController.swift */,
 				8408E073203C6480004ABC0A /* AlaattinViewController.swift */,
 				8408E074203C6480004ABC0A /* AlaattinViewController.xib */,
@@ -882,7 +882,7 @@
 				8408E079203C655C004ABC0A /* BilgeViewController.swift in Sources */,
 				8408E075203C6480004ABC0A /* AlaattinViewController.swift in Sources */,
 				45B481E820515BBF0094F6D2 /* AddAddOnsHeaderView.swift in Sources */,
-				4C36B1C4204568870055DB00 /* Extensions.swift in Sources */,
+				4C36B1C4204568870055DB00 /* ViewExtensions.swift in Sources */,
 				8408E085203C6594004ABC0A /* EnesViewController.swift in Sources */,
 				4C5AFF79204E793D00572447 /* FooterView.swift in Sources */,
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
