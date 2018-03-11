@@ -39,46 +39,41 @@ import SnapKit
     
         return icon
     }()
-
-    var arrowButton: RoundButton = {
-        let button = RoundButton()
-        button.setImage(UIImage(named: "blueArrow"), for: .normal)
+    
+    var rightImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "blueArrow")
+        imageView.contentMode = .scaleAspectFit
         
-        return button
+        return imageView
     }()
     
     public override init() {
         super.init()
-        
         self.initialize()
     }
     
     // code initialize
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.initialize()
     }
     
     // storyboard initialize
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         self.initialize()
     }
     
     override func initialize() {
     
-        self.layer.borderWidth = 3
-        
         imageView.image = image
         
         self.addSubview(imageView)
         self.addSubview(titleLabel)
-        self.addSubview(arrowButton)
+        self.addSubview(rightImageView)
     
         titleLabel.snp.makeConstraints { (make) in
-            make.width.equalTo(60)
             make.height.equalTo(20)
             make.left.equalTo(self).offset(10)
             make.centerY.equalTo(self)
@@ -91,7 +86,7 @@ import SnapKit
             make.centerX.equalTo(self)
         }
         
-        arrowButton.snp.makeConstraints { (make) in
+        rightImageView.snp.makeConstraints { (make) in
             make.width.equalTo(20)
             make.height.equalTo(20)
             make.right.equalTo(self).offset(-20)

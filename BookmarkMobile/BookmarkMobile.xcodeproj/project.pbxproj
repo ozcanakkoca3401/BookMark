@@ -32,6 +32,8 @@
 		45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D322040053300A564CF /* ThreeButtonView.swift */; };
 		4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */; };
 		4C19C76D20553398001FFDD6 /* UserAccountPlansTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19C76C20553398001FFDD6 /* UserAccountPlansTableViewController.swift */; };
+		4C19C76F20553806001FFDD6 /* AddOnsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19C76E20553806001FFDD6 /* AddOnsTableViewController.swift */; };
+		4C19C771205538C3001FFDD6 /* AddOnsTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19C770205538C3001FFDD6 /* AddOnsTableViewHeader.swift */; };
 		4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */; };
 		4C36B1C4204568870055DB00 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C0204568870055DB00 /* ViewExtensions.swift */; };
 		4C36B1C5204568870055DB00 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C1204568870055DB00 /* ExampleData.swift */; };
@@ -137,6 +139,8 @@
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScrollView.swift; sourceTree = "<group>"; };
 		4C19C76C20553398001FFDD6 /* UserAccountPlansTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountPlansTableViewController.swift; sourceTree = "<group>"; };
+		4C19C76E20553806001FFDD6 /* AddOnsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsTableViewController.swift; sourceTree = "<group>"; };
+		4C19C770205538C3001FFDD6 /* AddOnsTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnsTableViewHeader.swift; sourceTree = "<group>"; };
 		4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		4C36B1C0204568870055DB00 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		4C36B1C1204568870055DB00 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
@@ -434,6 +438,8 @@
 				453A555A204EE19A00E19887 /* InformationTableViewController.swift */,
 				4C19C76C20553398001FFDD6 /* UserAccountPlansTableViewController.swift */,
 				4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */,
+				4C19C76E20553806001FFDD6 /* AddOnsTableViewController.swift */,
+				4C19C770205538C3001FFDD6 /* AddOnsTableViewHeader.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -860,6 +866,7 @@
 			files = (
 				4C4C4F6620504833003DC903 /* EBMainLoyaltyView.swift in Sources */,
 				4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */,
+				4C19C76F20553806001FFDD6 /* AddOnsTableViewController.swift in Sources */,
 				4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */,
 				45C35D1F204C67AF00B21B52 /* StepperComponentView.swift in Sources */,
 				4CBAD1FE203C0AEA00FC412B /* StepperButton.swift in Sources */,
@@ -902,6 +909,7 @@
 				4CC89616204EC97800A2A87A /* UsageInfoViewController.swift in Sources */,
 				8408E070203C12EF004ABC0A /* testCell.swift in Sources */,
 				0BB7FA81204BF4C00076BF66 /* GreenViewController.swift in Sources */,
+				4C19C771205538C3001FFDD6 /* AddOnsTableViewHeader.swift in Sources */,
 				45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */,
 				45C35D1D204C4A6800B21B52 /* SwitchStepperView.swift in Sources */,
 				45C35D192047E15E00B21B52 /* CloseButton.swift in Sources */,

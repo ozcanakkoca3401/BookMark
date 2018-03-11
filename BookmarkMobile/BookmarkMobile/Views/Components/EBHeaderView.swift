@@ -63,6 +63,7 @@ import SnapKit
         let imageView = UIImageView()
         imageView.image = UIImage(named: "openIcon")
         imageView.contentMode = .scaleAspectFit
+        
         return imageView
     }()
     
