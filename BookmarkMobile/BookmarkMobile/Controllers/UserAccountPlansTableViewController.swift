@@ -1,14 +1,14 @@
 //
-//  UmutViewController.swift
+//  UserAccountPlansTableViewController.swift
 //  BookmarkMobile
 //
-//  Created by Alaattin Bedir on 20.02.2018.
+//  Created by Umut on 11.03.2018.
 //  Copyright © 2018 Nookmark. All rights reserved.
 //
 
 import UIKit
 
-class UmutViewController: UITableViewController {
+class UserAccountPlansTableViewController: UITableViewController {
     
     var sections = sectionsData
     
@@ -24,7 +24,7 @@ class UmutViewController: UITableViewController {
     
 }
 
-extension UmutViewController {
+extension UserAccountPlansTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -36,11 +36,11 @@ extension UmutViewController {
     
     // Cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let cellView = ThreeButtonView()
-//        let cell: BaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell1") as? BaseTableViewCell ??
-//            BaseTableViewCell(style: .default, reuseIdentifier: "cell1")
-
+        //        let cell: BaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell1") as? BaseTableViewCell ??
+        //            BaseTableViewCell(style: .default, reuseIdentifier: "cell1")
+        
         let cell = BaseTableViewCell()
         cell.configure(view: cellView)
         
@@ -74,7 +74,7 @@ extension UmutViewController {
     
 }
 
-extension UmutViewController: CollapsibleTableViewHeaderDelegate {
+extension UserAccountPlansTableViewController: CollapsibleTableViewHeaderDelegate {
     
     func toggleSection(_ header: CollapsibleTableViewHeader, section: Int) {
         let collapsed = !sections[section].collapsed

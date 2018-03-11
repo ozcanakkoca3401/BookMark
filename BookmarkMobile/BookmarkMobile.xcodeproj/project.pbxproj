@@ -31,6 +31,7 @@
 		45CF9D2F203ED56800A564CF /* ChangeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D2E203ED56800A564CF /* ChangeButtonView.swift */; };
 		45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CF9D322040053300A564CF /* ThreeButtonView.swift */; };
 		4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */; };
+		4C19C76D20553398001FFDD6 /* UserAccountPlansTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19C76C20553398001FFDD6 /* UserAccountPlansTableViewController.swift */; };
 		4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */; };
 		4C36B1C4204568870055DB00 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C0204568870055DB00 /* ViewExtensions.swift */; };
 		4C36B1C5204568870055DB00 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36B1C1204568870055DB00 /* ExampleData.swift */; };
@@ -135,6 +136,7 @@
 		45CF9D322040053300A564CF /* ThreeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeButtonView.swift; sourceTree = "<group>"; };
 		4AB81D1AB5BF29F3D76A801D /* Pods-BookmarkMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmarkMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmarkMobile/Pods-BookmarkMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScrollView.swift; sourceTree = "<group>"; };
+		4C19C76C20553398001FFDD6 /* UserAccountPlansTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountPlansTableViewController.swift; sourceTree = "<group>"; };
 		4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		4C36B1C0204568870055DB00 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		4C36B1C1204568870055DB00 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				8408E083203C6594004ABC0A /* EnesViewController.swift */,
 				8408E084203C6594004ABC0A /* EnesViewController.xib */,
 				453A555A204EE19A00E19887 /* InformationTableViewController.swift */,
+				4C19C76C20553398001FFDD6 /* UserAccountPlansTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -915,6 +918,7 @@
 				0BB7FA83204C08090076BF66 /* EBScrollView.swift in Sources */,
 				453A555B204EE19A00E19887 /* InformationTableViewController.swift in Sources */,
 				8408E05E203710AE004ABC0A /* BaseViewController.swift in Sources */,
+				4C19C76D20553398001FFDD6 /* UserAccountPlansTableViewController.swift in Sources */,
 				4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */,
 				45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */,
 				0BB7FA7E204BF4C00076BF66 /* BlueViewController.swift in Sources */,

@@ -17,11 +17,11 @@ class CollapsibleTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        let cellView = ThreeButtonView()
-        
-        cellView.frame = self.frame
-        print("Frame", self.frame)
-        contentView.addSubview(cellView)
+//        let cellView = ThreeButtonView()
+//
+//        cellView.frame = self.frame
+//        print("Frame", self.frame)
+//        contentView.addSubview(cellView)
         
 //        _ = contentView.layoutMarginsGuide
 
