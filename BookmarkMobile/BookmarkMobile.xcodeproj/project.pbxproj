@@ -420,7 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				4C92B4D9204D2F5D00347293 /* BaseControllers */,
-				4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */,
 				4C36B1C1204568870055DB00 /* ExampleData.swift */,
 				8408E0242036D68F004ABC0A /* ViewController.swift */,
 				8408E073203C6480004ABC0A /* AlaattinViewController.swift */,
@@ -434,6 +433,7 @@
 				8408E084203C6594004ABC0A /* EnesViewController.xib */,
 				453A555A204EE19A00E19887 /* InformationTableViewController.swift */,
 				4C19C76C20553398001FFDD6 /* UserAccountPlansTableViewController.swift */,
+				4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
