@@ -19,8 +19,11 @@ class BaseTableViewCell: UITableViewCell {
     }
     
     public func configure(view: UIView) {
-        view.frame = self.frame
         contentView.addSubview(view)
+        
+        view.snp.makeConstraints { (make) in
+            make.top.bottom.left.right.equalTo(self)
+        }
     }
     
 }

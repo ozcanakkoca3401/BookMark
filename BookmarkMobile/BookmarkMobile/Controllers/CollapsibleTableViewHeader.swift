@@ -17,7 +17,7 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     weak var delegate: CollapsibleTableViewHeaderDelegate?
     var section: Int = 0
     
-    let headerView = EBHeaderView(frame: CGRect(x: 0, y: 0, width: 380, height: 80))
+    let headerView = EBHeaderView()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -25,6 +25,9 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
 //        contentView.backgroundColor = UIColor(hex: 0x2E3944)
         contentView.addSubview(headerView)
         
+        headerView.snp.makeConstraints { (make) in
+            make.top.bottom.left.right.equalTo(self)
+        }
         //
         // Call tapHeader when tapping on this header
         //

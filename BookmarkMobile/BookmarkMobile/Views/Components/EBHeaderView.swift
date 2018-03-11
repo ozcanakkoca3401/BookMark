@@ -114,19 +114,19 @@ import SnapKit
         }
         
         usableLabel.snp.makeConstraints { (make) in
-            make.right.equalTo(self).offset(-65)
+            make.right.equalTo(rightImageView.snp.left).offset(-5)
             make.centerY.equalTo(self)
         }
         
         rightImageView.snp.makeConstraints { (make) in
             make.width.equalTo(20)
             make.height.equalTo(20)
-            make.right.equalTo(self).offset(-40)
+            make.right.equalTo(self).offset(-20)
             make.centerY.equalTo(self)
         }
         
         hSlider.snp.makeConstraints { (make) in
-            make.right.equalTo(self).offset(-65)
+            make.right.equalTo(rightImageView.snp.left).offset(-5)
             make.left.equalTo(self).offset(15)
             make.bottom.equalTo(self).offset(5)
         }
