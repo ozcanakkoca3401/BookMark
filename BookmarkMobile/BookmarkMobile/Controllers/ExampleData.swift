@@ -26,7 +26,7 @@ public struct Section {
     var items: [Item]
     var collapsed: Bool
     
-    public init(name: String, items: [Item], collapsed: Bool = false) {
+    public init(name: String, items: [Item], collapsed: Bool = true) {
         self.name = name
         self.items = items
         self.collapsed = collapsed
@@ -42,6 +42,9 @@ public var sectionsData: [Section] = [
     ]),
     Section(name: "iPhone", items: [
         Item(name: "ThreeButtonView", detail: "ThreeButtonView")
-    ])
+    ]),
+    Section(name: "iPhone", items: [
+        Item(name: "ThreeButtonView", detail: "ThreeButtonView")
+        ])
     
 ]

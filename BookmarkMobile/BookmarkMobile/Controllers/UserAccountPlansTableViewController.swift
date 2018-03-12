@@ -16,9 +16,12 @@ class UserAccountPlansTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Auto resizing the height of the cell
-        tableView.estimatedRowHeight = 70.0
-        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = 70.0
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView = UITableView(frame: tableView.frame, style: .grouped)
         tableView.separatorStyle = .none
+//        tableView.backgroundColor = Styling.colorForCode(.white)
+        
         self.title = "Apple Products"
     }
     
@@ -43,29 +46,38 @@ extension UserAccountPlansTableViewController {
         
         let cell = BaseTableViewCell()
         cell.configure(view: cellView)
+        cell.backgroundColor = Styling.colorForCode(.themeDarkGray)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return 60
     }
     
     // Header
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? CollapsibleTableViewHeader ?? CollapsibleTableViewHeader(reuseIdentifier: "header")
         
         header.headerView.dataLabel.EBtext = sections[section].name
         header.setCollapsed(sections[section].collapsed)
         
         header.section = section
+        header.configure()
         header.delegate = self
         
         return header
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 80.0
+        
+        if section != 3 {
+            return 80.0
+        } else {
+            return 120.0
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -77,6 +89,7 @@ extension UserAccountPlansTableViewController {
 extension UserAccountPlansTableViewController: CollapsibleTableViewHeaderDelegate {
     
     func toggleSection(_ header: CollapsibleTableViewHeader, section: Int) {
+        
         let collapsed = !sections[section].collapsed
         
         // Toggle collapse

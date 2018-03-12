@@ -22,7 +22,10 @@ class BaseTableViewCell: UITableViewCell {
         contentView.addSubview(view)
         
         view.snp.makeConstraints { (make) in
-            make.top.bottom.left.right.equalTo(self)
+            make.top.equalTo(self).offset(10)
+            make.bottom.equalTo(self).offset(-10)
+            make.left.equalTo(self)
+            make.right.equalTo(self)
         }
     }
     

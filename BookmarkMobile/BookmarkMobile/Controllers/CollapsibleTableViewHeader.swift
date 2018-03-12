@@ -18,17 +18,11 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     var section: Int = 0
     
     let headerView = EBHeaderView()
+    let bottomCell = EBCellView()
+//    let seperatorView = EBView()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        
-        contentView.addSubview(headerView)
-        
-        headerView.snp.makeConstraints { (make) in
-            make.top.bottom.left.right.equalTo(self)
-        }
-        
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CollapsibleTableViewHeader.tapHeader(_:))))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -45,6 +39,34 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     func setCollapsed(_ collapsed: Bool) {
 //         Animate the arrow rotation (see Extensions.swf)
         headerView.rightImageView.rotate(collapsed ? 0.0 : .pi / 2)
+    }
+    
+    func configure() {
+        
+//        seperatorView.backgroundColor = Styling.colorForCode(.white)
+        
+        if section != 3 {
+            contentView.addSubview(headerView)
+//            contentView.addSubview(seperatorView)
+            
+            headerView.snp.makeConstraints { (make) in
+                make.top.bottom.left.right.equalTo(self)
+            }
+//            seperatorView.snp.makeConstraints { (make) in
+//                make.top.equalTo(headerView.snp.bottom)
+//                make.height.equalTo(5)
+//                make.width.equalTo(self)
+//            }
+            addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CollapsibleTableViewHeader.tapHeader(_:))))
+            
+        } else {
+            
+            contentView.addSubview(bottomCell)
+            
+            bottomCell.snp.makeConstraints { (make) in
+                make.top.bottom.left.right.equalTo(self)
+            }
+        }
     }
     
 }
