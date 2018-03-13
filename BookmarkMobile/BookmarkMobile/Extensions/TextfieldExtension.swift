@@ -21,21 +21,21 @@ extension EBTextfield {
     }
     
     func setLeftViewImage(imageName: String) {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
 //        paddingView.backgroundColor = UIColor.red
         paddingView.addSubview(createImageView(imageName: imageName))
         self.leftView = paddingView
     }
     
     func setRightViewImage(imageName: String) {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
 //        paddingView.backgroundColor = UIColor.red
         paddingView.addSubview(createImageView(imageName: imageName))
         self.rightView = paddingView
     }
     
     func createImageView(imageName: String) -> UIImageView {
-        let myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         let myImage = UIImage(named: imageName)
 //        myImageView.backgroundColor = UIColor.cyan
         myImageView.contentMode = .scaleAspectFit
