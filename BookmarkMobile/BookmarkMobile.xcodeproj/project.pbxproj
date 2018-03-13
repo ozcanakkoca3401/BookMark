@@ -59,6 +59,7 @@
 		4CC89618204EF04800A2A87A /* EBTopLoyaltyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC89617204EF04800A2A87A /* EBTopLoyaltyView.swift */; };
 		4CCB4DBE20579FED00405261 /* TextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DBD20579FED00405261 /* TextfieldExtension.swift */; };
 		4CCB4DC02057A42C00405261 /* EBTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DBF2057A42C00405261 /* EBTextfield.swift */; };
+		4CCB4DC22057A51200405261 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DC12057A51200405261 /* LoginViewController.swift */; };
 		69004CCB203D540700CC1215 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69004CCA203D540700CC1215 /* HeaderView.swift */; };
 		69017B7C20370FC00046B009 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7B20370FC00046B009 /* StringExtension.swift */; };
 		69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */; };
@@ -169,6 +170,7 @@
 		4CC89617204EF04800A2A87A /* EBTopLoyaltyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBTopLoyaltyView.swift; sourceTree = "<group>"; };
 		4CCB4DBD20579FED00405261 /* TextfieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldExtension.swift; sourceTree = "<group>"; };
 		4CCB4DBF2057A42C00405261 /* EBTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBTextfield.swift; sourceTree = "<group>"; };
+		4CCB4DC12057A51200405261 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69004CCA203D540700CC1215 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		69017B7B20370FC00046B009 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNetworkConnectivityAvailable.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				4C36B1BF204568870055DB00 /* CollapsibleTableViewHeader.swift */,
 				4C19C76E20553806001FFDD6 /* AddOnsTableViewController.swift */,
 				4C19C770205538C3001FFDD6 /* AddOnsTableViewHeader.swift */,
+				4CCB4DC12057A51200405261 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				8408E079203C655C004ABC0A /* BilgeViewController.swift in Sources */,
 				8408E075203C6480004ABC0A /* AlaattinViewController.swift in Sources */,
 				45B481E820515BBF0094F6D2 /* AddAddOnsHeaderView.swift in Sources */,
+				4CCB4DC22057A51200405261 /* LoginViewController.swift in Sources */,
 				4C36B1C4204568870055DB00 /* ViewExtensions.swift in Sources */,
 				8408E085203C6594004ABC0A /* EnesViewController.swift in Sources */,
 				4C5AFF79204E793D00572447 /* FooterView.swift in Sources */,
