@@ -146,7 +146,12 @@ class LoginViewController: UIViewController {
         
         self.username = usernameTextfield.text!
         self.password = passwordTextfield.text!
-        login(username: username, password: password)
+        if Authentication.validateCredential(username: self.username, password: self.password) {
+            login(username: username, password: password)
+        }else {
+            print("login failed")
+        }
+        
     }
     
 }
