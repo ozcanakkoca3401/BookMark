@@ -57,6 +57,8 @@
 		4CC89614204EC90400A2A87A /* EBUsageInfoPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC89613204EC90400A2A87A /* EBUsageInfoPageView.swift */; };
 		4CC89616204EC97800A2A87A /* UsageInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC89615204EC97800A2A87A /* UsageInfoViewController.swift */; };
 		4CC89618204EF04800A2A87A /* EBTopLoyaltyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC89617204EF04800A2A87A /* EBTopLoyaltyView.swift */; };
+		4CCB4DBE20579FED00405261 /* TextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DBD20579FED00405261 /* TextfieldExtension.swift */; };
+		4CCB4DC02057A42C00405261 /* EBTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DBF2057A42C00405261 /* EBTextfield.swift */; };
 		69004CCB203D540700CC1215 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69004CCA203D540700CC1215 /* HeaderView.swift */; };
 		69017B7C20370FC00046B009 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7B20370FC00046B009 /* StringExtension.swift */; };
 		69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */; };
@@ -165,6 +167,8 @@
 		4CC89613204EC90400A2A87A /* EBUsageInfoPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBUsageInfoPageView.swift; sourceTree = "<group>"; };
 		4CC89615204EC97800A2A87A /* UsageInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageInfoViewController.swift; sourceTree = "<group>"; };
 		4CC89617204EF04800A2A87A /* EBTopLoyaltyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBTopLoyaltyView.swift; sourceTree = "<group>"; };
+		4CCB4DBD20579FED00405261 /* TextfieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldExtension.swift; sourceTree = "<group>"; };
+		4CCB4DBF2057A42C00405261 /* EBTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBTextfield.swift; sourceTree = "<group>"; };
 		69004CCA203D540700CC1215 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		69017B7B20370FC00046B009 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNetworkConnectivityAvailable.swift; sourceTree = "<group>"; };
@@ -328,6 +332,7 @@
 				4C36B1C0204568870055DB00 /* ViewExtensions.swift */,
 				69017B7B20370FC00046B009 /* StringExtension.swift */,
 				4C741554203C678F00A32734 /* ColorExtension.swift */,
+				4CCB4DBD20579FED00405261 /* TextfieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				4C3B0458203ECF4D00A01E94 /* CHorizontalSlider.swift */,
 				45C35D182047E15E00B21B52 /* CloseButton.swift */,
 				0BB7FA82204C08090076BF66 /* EBScrollView.swift */,
+				4CCB4DBF2057A42C00405261 /* EBTextfield.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -898,6 +904,7 @@
 				69017B7C20370FC00046B009 /* StringExtension.swift in Sources */,
 				69004CCB203D540700CC1215 /* HeaderView.swift in Sources */,
 				4C36B1C5204568870055DB00 /* ExampleData.swift in Sources */,
+				4CCB4DC02057A42C00405261 /* EBTextfield.swift in Sources */,
 				453A5557204ECCA200E19887 /* InformationCellView.swift in Sources */,
 				4C8B90ED204D97E3001C730C /* EBLevelKnowledge.swift in Sources */,
 				4C36B1C6204568870055DB00 /* CollapsibleTableViewCell.swift in Sources */,
@@ -905,6 +912,7 @@
 				4C4C4F6020501220003DC903 /* LoyaltyScrollView.swift in Sources */,
 				4C3B0459203ECF4D00A01E94 /* CHorizontalSlider.swift in Sources */,
 				45C35D172046F8C600B21B52 /* ExpendHeaderView.swift in Sources */,
+				4CCB4DBE20579FED00405261 /* TextfieldExtension.swift in Sources */,
 				0BB7FA7D204BF4C00076BF66 /* RedViewController.swift in Sources */,
 				4CC89616204EC97800A2A87A /* UsageInfoViewController.swift in Sources */,
 				8408E070203C12EF004ABC0A /* testCell.swift in Sources */,
