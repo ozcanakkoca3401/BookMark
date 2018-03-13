@@ -48,7 +48,7 @@
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
 		4C741555203C678F00A32734 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741554203C678F00A32734 /* ColorExtension.swift */; };
 		4C7EBCBA2046989200D762EE /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EBCB92046989200D762EE /* CustomPopup.swift */; };
-		4C839B0F2057CB480031ABF2 /* LoginSubButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B0E2057CB480031ABF2 /* LoginSubButtonView.swift */; };
+		4C839B0F2057CB480031ABF2 /* LoginFooterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B0E2057CB480031ABF2 /* LoginFooterButtonView.swift */; };
 		4C8B90ED204D97E3001C730C /* EBLevelKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */; };
 		4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */; };
 		4CA3C37B2052B9CB00012E68 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3C37A2052B9CB00012E68 /* BaseTableViewCell.swift */; };
@@ -160,7 +160,7 @@
 		4C741552203C670600A32734 /* EBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLabel.swift; sourceTree = "<group>"; };
 		4C741554203C678F00A32734 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		4C7EBCB92046989200D762EE /* CustomPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopup.swift; sourceTree = "<group>"; };
-		4C839B0E2057CB480031ABF2 /* LoginSubButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSubButtonView.swift; sourceTree = "<group>"; };
+		4C839B0E2057CB480031ABF2 /* LoginFooterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFooterButtonView.swift; sourceTree = "<group>"; };
 		4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLevelKnowledge.swift; sourceTree = "<group>"; };
 		4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSlider.swift; sourceTree = "<group>"; };
 		4CA3C37A2052B9CB00012E68 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -500,7 +500,7 @@
 				4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */,
 				4C4C4F5F20501220003DC903 /* LoyaltyScrollView.swift */,
 				4CCB4DC52057BA1300405261 /* LoginWithView.swift */,
-				4C839B0E2057CB480031ABF2 /* LoginSubButtonView.swift */,
+				4C839B0E2057CB480031ABF2 /* LoginFooterButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -928,7 +928,7 @@
 				4C18BF4E204C4DBC00DDFF9C /* MainScrollView.swift in Sources */,
 				45CF9D332040053400A564CF /* ThreeButtonView.swift in Sources */,
 				0BB7FA7E204BF4C00076BF66 /* BlueViewController.swift in Sources */,
-				4C839B0F2057CB480031ABF2 /* LoginSubButtonView.swift in Sources */,
+				4C839B0F2057CB480031ABF2 /* LoginFooterButtonView.swift in Sources */,
 				45CCA134204D990500C56D66 /* UsageInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
