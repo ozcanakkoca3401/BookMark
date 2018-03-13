@@ -21,7 +21,7 @@ class AuthenticationTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_Authentication() {
+    func test_Authentication_Positive() {
        
         // given
         
@@ -45,6 +45,33 @@ class AuthenticationTests: XCTestCase {
         waitForExpectations(timeout: 2) { _ in
             XCTAssertNotNil(authentication)
             XCTAssertEqual(authentication.name, "Ceren Bal")
+        }
+        
+    }
+    
+    func test_Authentication_Negative() {
+        
+        // given
+        
+        let authenticationExpectation = expectation(description: "Authentication")
+        var authentication = Authentication()
+        let params: [String: AnyObject] = [
+            "userName": "semih@abc.com" as AnyObject,
+            "password": "Abc123" as AnyObject ]
+        
+        // when
+        
+        Authentication.auth(params: params, success: { (result) in
+            authentication = result
+            authenticationExpectation.fulfill()
+        }, failure: { (error) in
+            print(error)
+        })
+        
+        // expection
+        
+        waitForExpectations(timeout: 2) { _ in
+            XCTAssertNil(authentication)
         }
         
     }

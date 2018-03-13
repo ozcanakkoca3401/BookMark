@@ -52,6 +52,7 @@
 		4C839B112057E7190031ABF2 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B102057E7190031ABF2 /* Authentication.swift */; };
 		4C839B132057F1020031ABF2 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B122057F1020031ABF2 /* AuthenticationTests.swift */; };
 		4C839B162057F5B20031ABF2 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B152057F5B20031ABF2 /* LoginViewControllerTests.swift */; };
+		4C839B18205813FD0031ABF2 /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B17205813FD0031ABF2 /* OperationResult.swift */; };
 		4C8B90ED204D97E3001C730C /* EBLevelKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */; };
 		4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */; };
 		4CA3C37B2052B9CB00012E68 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3C37A2052B9CB00012E68 /* BaseTableViewCell.swift */; };
@@ -166,6 +167,7 @@
 		4C839B102057E7190031ABF2 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		4C839B122057F1020031ABF2 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		4C839B152057F5B20031ABF2 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		4C839B17205813FD0031ABF2 /* OperationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
 		4C8B90EC204D97E3001C730C /* EBLevelKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLevelKnowledge.swift; sourceTree = "<group>"; };
 		4C9343B4203AF36F00848B9E /* HorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSlider.swift; sourceTree = "<group>"; };
 		4CA3C37A2052B9CB00012E68 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 			children = (
 				8408E0552036F01A004ABC0A /* Message.swift */,
 				4C839B102057E7190031ABF2 /* Authentication.swift */,
+				4C839B17205813FD0031ABF2 /* OperationResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -872,6 +875,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4C4F6620504833003DC903 /* EBMainLoyaltyView.swift in Sources */,
+				4C839B18205813FD0031ABF2 /* OperationResult.swift in Sources */,
 				4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */,
 				4C19C76F20553806001FFDD6 /* AddOnsTableViewController.swift in Sources */,
 				4C9343B5203AF36F00848B9E /* HorizontalSlider.swift in Sources */,
