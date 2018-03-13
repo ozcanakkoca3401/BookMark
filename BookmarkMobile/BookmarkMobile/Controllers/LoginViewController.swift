@@ -10,6 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var username = ""
+    var password = ""
+    
     var subView: RoundView = {
         let view = RoundView()
         view.bgColor = Styling.colorForCode(.white)
@@ -22,6 +25,7 @@ class LoginViewController: UIViewController {
     var usernameTextfield: EBTextfield = {
         let textfield = EBTextfield()
         textfield.EBPlaceholder = "Username"
+        textfield.text = "semih@abc.com"
         textfield.setBottomBorder()
         textfield.leftViewMode = .always
         textfield.setLeftViewImage(imageName: "account")
@@ -32,6 +36,7 @@ class LoginViewController: UIViewController {
     var passwordTextfield: EBTextfield = {
         let textfield = EBTextfield()
         textfield.EBPlaceholder = "Password"
+        textfield.text = "Abc12345"
         textfield.setBottomBorder()
         textfield.leftViewMode = .always
         textfield.setLeftViewImage(imageName: "textboxpassword")
@@ -53,6 +58,7 @@ class LoginViewController: UIViewController {
         button.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         button.layer.shadowOpacity = 0.8
         button.layer.masksToBounds = false
+        button.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
         
         return button
     }()
@@ -69,18 +75,20 @@ class LoginViewController: UIViewController {
         return view
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    fileprivate func login(username: String, password: String) {
         let params: [String: AnyObject] = [
-            "userName": "semih@abc.com" as AnyObject,
-            "password": "Abc12345" as AnyObject ]
+            "userName": username as AnyObject,
+            "password": password as AnyObject ]
         
-        Authentication.auth(params: params,success: { (result) in
+        Authentication.auth(params: params, success: { (result) in
             print(result.name!)
         }, failure: { (error) in
             print(error)
         })
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         setGradientLayer()
         self.view.addSubview(subView)
@@ -132,6 +140,13 @@ class LoginViewController: UIViewController {
             make.bottom.equalTo(self.view)
             make.height.equalTo(48)
         }
+    }
+    
+    @objc func loginButtonClicked() {
+        
+        self.username = usernameTextfield.text!
+        self.password = passwordTextfield.text!
+        login(username: username, password: password)
     }
     
 }

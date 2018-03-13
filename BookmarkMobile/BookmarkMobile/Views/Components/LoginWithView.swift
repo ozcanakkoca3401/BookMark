@@ -29,7 +29,7 @@ import UIKit
     var googleButton: RoundButton = {
         let button = RoundButton()
         button.setImage(UIImage(named: "google"), for: .normal)
-    
+        
         return button
     }()
     

@@ -49,4 +49,10 @@ class AuthenticationTests: XCTestCase {
         
     }
     
+    func test_validateCredential() {
+    
+        let result: Bool = Authentication.validateCredential(username: "semih@abc.com", password: "Abc12345")
+        XCTAssertTrue(result)
+    }
+        
 }
