@@ -15,8 +15,8 @@ class BookmarkSessionManager: NSObject {
     
     static let sharedInstance = BookmarkSessionManager()
     private var sessionManager: SessionManager
-    let baseURL = "https://jsonblob.com/api/"
-//    let baseURL = "http://dcomm.etiya.com/Dev-CommerceBackend/"
+//    let baseURL = "https://jsonblob.com/api/"
+    let baseURL = "http://dcomm.etiya.com/Dev-CommerceBackend/"
     
     private override init() {
         // Create custom manager

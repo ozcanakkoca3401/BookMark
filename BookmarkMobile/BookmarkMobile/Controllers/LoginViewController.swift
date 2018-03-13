@@ -72,6 +72,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let params: [String: AnyObject] = [
+            "userName": "semih@abc.com" as AnyObject,
+            "password": "Abc12345" as AnyObject ]
+        
+        Authentication.auth(params: params,success: { (result) in
+            print(result.name!)
+        }, failure: { (error) in
+            print(error)
+        })
+        
         setGradientLayer()
         self.view.addSubview(subView)
         subView.addSubview(usernameTextfield)

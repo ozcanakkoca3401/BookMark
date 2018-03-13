@@ -36,12 +36,40 @@ class Authentication: Mappable {
     }
     
     func mapping(map: Map) {
-        userId <- map["message"]
-        name <- map["timestamp"]
-        saleCnlId <- map["nickname"]
-        customerId <- map["avatarUrl"]
+        userId <- map["userId"]
+        name <- map["name"]
+        saleCnlId <- map["saleCnlId"]
+        customerId <- map["customerId"]
         preferredCollation <- map["preferredCollation"]
         id <- map["id"]
     }
+
+}
+
+extension Authentication {
     
+    // Get messages from service
+    static func auth(params: [String: AnyObject], success:@escaping (Authentication) -> Void, failure:@escaping (String) -> Void) {
+        
+        BookmarkSessionManager.sharedInstance.requestPOSTURL("auth", params: params, headers: nil, success: { (responseJSON) in
+            
+            // Convert to json
+            let json = JSON(responseJSON)
+            
+            // Get json array  from data
+            let object = json["data"].object
+            
+            // Map json array to Array<Message> object
+            guard let result: Authentication = Mapper<Authentication>().map(JSONObject: object) else {
+                failure("Error mapping response")
+                return
+            }
+            
+            // Send to array to calling controllers
+            success(result)
+            
+        }, failure: { (error) in
+            print(error)
+        })
+    }
 }
