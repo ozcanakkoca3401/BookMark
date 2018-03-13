@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
     
     var bottomLoginWithView: LoginWithView = {
         let view = LoginWithView()
-        
+        view.backgroundColor = UIColor.cyan
         return view
     }()
     
@@ -81,7 +81,7 @@ class LoginViewController: UIViewController {
             make.top.equalTo(subView.snp.bottom).offset(50)
             make.left.equalTo(self.view).offset(16)
             make.right.equalTo(self.view).offset(-16)
-            make.height.equalTo(50)
+            make.height.equalTo(70)
         }
     }
     
