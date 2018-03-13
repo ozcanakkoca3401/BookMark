@@ -25,6 +25,8 @@ enum ColorCode {
     case capacityGray
     case blurGray
     case usageGreen
+    case themeViewControllerStartColor
+    case themeViewControllerEndColor
 }
 
 enum FontWeight: String {
@@ -65,8 +67,12 @@ class Styling {
             return UIColor.init(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 0.4)
         case .usageGreen:
             return UIColor.init(red: 31.0 / 255.0, green: 202.0 / 255.0, blue: 105.0 / 255.0, alpha: 1.0)
+        case .themeViewControllerStartColor:
+            return UIColor.init(red: 248.0 / 255.0, green: 166.0 / 255.0, blue: 50.0 / 255.0, alpha: 1.0)
+        case .themeViewControllerEndColor:
+            return UIColor.init(red: 248.0 / 255.0, green: 225.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0)
+            }
         }
-    }
     
     static func font(weight: FontWeight, size: Float) -> UIFont {
         if let font = UIFont.init(name: "Helvetica-\(weight.rawValue.capitalized)", size: CGFloat(size)) {
