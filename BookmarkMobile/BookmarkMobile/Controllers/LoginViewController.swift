@@ -41,6 +41,12 @@ class LoginViewController: UIViewController {
         return textfield
     }()
     
+    var bottomLoginWithView: LoginWithView = {
+        let view = LoginWithView()
+        
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +54,7 @@ class LoginViewController: UIViewController {
         self.view.addSubview(subView)
         subView.addSubview(usernameTextfield)
         subView.addSubview(passwordTextfield)
+        self.view.addSubview(bottomLoginWithView)
         
         subView.snp.makeConstraints { (make) in
             make.top.equalTo(150)
@@ -68,6 +75,13 @@ class LoginViewController: UIViewController {
             make.left.equalTo(self.subView).offset(20)
             make.right.equalTo(self.subView).offset(-20)
             make.height.equalTo(35)
+        }
+        
+        bottomLoginWithView.snp.makeConstraints { (make) in
+            make.top.equalTo(subView.snp.bottom).offset(50)
+            make.left.equalTo(self.view).offset(16)
+            make.right.equalTo(self.view).offset(-16)
+            make.height.equalTo(50)
         }
     }
     

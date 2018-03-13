@@ -61,6 +61,7 @@
 		4CCB4DC02057A42C00405261 /* EBTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DBF2057A42C00405261 /* EBTextfield.swift */; };
 		4CCB4DC22057A51200405261 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DC12057A51200405261 /* LoginViewController.swift */; };
 		4CCB4DC42057A90C00405261 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DC32057A90C00405261 /* ViewControllerExtension.swift */; };
+		4CCB4DC62057BA1300405261 /* LoginWithView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DC52057BA1300405261 /* LoginWithView.swift */; };
 		69004CCB203D540700CC1215 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69004CCA203D540700CC1215 /* HeaderView.swift */; };
 		69017B7C20370FC00046B009 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7B20370FC00046B009 /* StringExtension.swift */; };
 		69017B7E203712160046B009 /* IsNetworkConnectivityAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */; };
@@ -173,6 +174,7 @@
 		4CCB4DBF2057A42C00405261 /* EBTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBTextfield.swift; sourceTree = "<group>"; };
 		4CCB4DC12057A51200405261 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CCB4DC32057A90C00405261 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		4CCB4DC52057BA1300405261 /* LoginWithView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithView.swift; sourceTree = "<group>"; };
 		69004CCA203D540700CC1215 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		69017B7B20370FC00046B009 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69017B7D203712160046B009 /* IsNetworkConnectivityAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNetworkConnectivityAvailable.swift; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				45C35D1C204C4A6800B21B52 /* SwitchStepperView.swift */,
 				4C18BF4D204C4DBC00DDFF9C /* MainScrollView.swift */,
 				4C4C4F5F20501220003DC903 /* LoyaltyScrollView.swift */,
+				4CCB4DC52057BA1300405261 /* LoginWithView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -922,6 +925,7 @@
 				45C35D172046F8C600B21B52 /* ExpendHeaderView.swift in Sources */,
 				4CCB4DBE20579FED00405261 /* TextfieldExtension.swift in Sources */,
 				0BB7FA7D204BF4C00076BF66 /* RedViewController.swift in Sources */,
+				4CCB4DC62057BA1300405261 /* LoginWithView.swift in Sources */,
 				4CC89616204EC97800A2A87A /* UsageInfoViewController.swift in Sources */,
 				8408E070203C12EF004ABC0A /* testCell.swift in Sources */,
 				0BB7FA81204BF4C00076BF66 /* GreenViewController.swift in Sources */,
