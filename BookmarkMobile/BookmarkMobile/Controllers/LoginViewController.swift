@@ -41,9 +41,31 @@ class LoginViewController: UIViewController {
         return textfield
     }()
     
+    var loginButton: RoundButton = {
+        let button = RoundButton()
+        button.title = "Login"
+        button.titleColor = Styling.colorForCode(.black)
+        button.titleLabel?.font = Styling.font(weight: .bold, size: 14)
+        button.cornerRadius = 4
+        button.borderWidth = 0.0
+        button.bgColor = Styling.colorForCode(.loginButtonColor)
+        button.layer.shadowColor = Styling.colorForCode(.themeDarkGray).cgColor
+        button.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        button.layer.shadowOpacity = 0.8
+        button.layer.masksToBounds = false
+        
+        return button
+    }()
+    
     var bottomLoginWithView: LoginWithView = {
         let view = LoginWithView()
-        view.backgroundColor = UIColor.cyan
+
+        return view
+    }()
+    
+    var footerView: LoginFooterButtonView = {
+        let view = LoginFooterButtonView()
+        
         return view
     }()
     
@@ -54,34 +76,51 @@ class LoginViewController: UIViewController {
         self.view.addSubview(subView)
         subView.addSubview(usernameTextfield)
         subView.addSubview(passwordTextfield)
+        subView.addSubview(loginButton)
         self.view.addSubview(bottomLoginWithView)
+        self.view.addSubview(footerView)
         
         subView.snp.makeConstraints { (make) in
-            make.top.equalTo(150)
+            make.top.equalTo(200)
             make.left.equalTo(self.view).offset(16)
             make.right.equalTo(self.view).offset(-16)
             make.height.equalTo(300)
         }
         
         usernameTextfield.snp.makeConstraints { (make) in
-            make.top.equalTo(30)
+            make.top.equalTo(self.subView).offset(45)
             make.left.equalTo(self.subView).offset(20)
             make.right.equalTo(self.subView).offset(-20)
             make.height.equalTo(35)
         }
         
         passwordTextfield.snp.makeConstraints { (make) in
-            make.top.equalTo(usernameTextfield.snp.bottom).offset(30)
+            make.top.equalTo(usernameTextfield.snp.bottom).offset(45)
             make.left.equalTo(self.subView).offset(20)
             make.right.equalTo(self.subView).offset(-20)
             make.height.equalTo(35)
         }
         
+        loginButton.snp.makeConstraints { (make) in
+//            make.top.equalTo(passwordTextfield.snp.bottom).offset(50)
+            make.bottom.equalTo(self.subView).offset(-15)
+            make.left.equalTo(self.subView).offset(20)
+            make.right.equalTo(self.subView).offset(-20)
+            make.height.equalTo(50)
+        }
+        
         bottomLoginWithView.snp.makeConstraints { (make) in
-            make.top.equalTo(subView.snp.bottom).offset(50)
+            make.bottom.equalTo(footerView.snp.top).offset(-30)
             make.left.equalTo(self.view).offset(16)
             make.right.equalTo(self.view).offset(-16)
             make.height.equalTo(70)
+        }
+        
+        footerView.snp.makeConstraints { (make) in
+            make.left.equalTo(self.view)
+            make.right.equalTo(self.view)
+            make.bottom.equalTo(self.view)
+            make.height.equalTo(48)
         }
     }
     

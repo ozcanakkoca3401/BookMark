@@ -18,9 +18,10 @@ import UIKit
     
     var loginWithLabel: EBLabel = {
         let label = EBLabel()
-        label.EBtext = "Login With"
+        label.EBtext = "Login with"
         label.textAlignment = .center
         label.font = Styling.font(weight: .bold, size: 16)
+        label.EBcolor = Styling.colorForCode(.black)
         
         return label
     }()
