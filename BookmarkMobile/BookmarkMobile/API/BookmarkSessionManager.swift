@@ -77,9 +77,23 @@ class BookmarkSessionManager: NSObject {
         return response
     }
     
+    func formatedErrorMessage(errorCode: String) -> BookmarkError {
+        var error: BookmarkError? = nil
+        
+        switch errorCode {
+        case "BAD_CREDIENTIALS":
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Kullanıcı adı veya şifre hatalı")
+        default:
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Bilinmeyen bir hata oluştu")
+        }
+
+        return error!
+    }
+    
     func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (BookmarkError) -> Void) {
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            print("internet yok")
+            let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: "Internet yok")
+            failure(bookmarError)
             return
         }
         
@@ -88,20 +102,19 @@ class BookmarkSessionManager: NSObject {
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
                 
-                let (result1, errorCode1) = self.isValidResponse(resJson: resJson)
-                
-                if result1 {
+                let (result, errorCode) = self.isValidResponse(resJson: resJson)
+                if result {
                     success(resJson)
                 } else {
-                    let error = BookmarkError.init(errorCode: errorCode1, errorMessage: "")
+                    let error = self.formatedErrorMessage(errorCode: errorCode)
                     failure(error)
                 }
             }
             
             if responseObject.result.isFailure {
                 let error: Error = responseObject.result.error!
-                let bError = BookmarkError.init(errorCode: "error", errorMessage: error.localizedDescription)
-                failure(bError)
+                let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: error.localizedDescription)
+                failure(bookmarError)
             }
         }
     }
@@ -109,7 +122,8 @@ class BookmarkSessionManager: NSObject {
     func requestPOSTURL(_ strURL: String, params: [String: AnyObject]?, headers: [String: String]?, success:@escaping (JSON) -> Void, failure: @escaping (BookmarkError) -> Void) {
         
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            print("internet yok")
+            let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: "Internet yok")
+            failure(bookmarError)
             return
         }
         
@@ -117,13 +131,21 @@ class BookmarkSessionManager: NSObject {
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
-                success(resJson)
+                
+                let (result, errorCode) = self.isValidResponse(resJson: resJson)
+                if result {
+                    success(resJson)
+                } else {
+                    let error = self.formatedErrorMessage(errorCode: errorCode)
+                    failure(error)
+                }
+                
             }
             
             if responseObject.result.isFailure {
                 let error: Error = responseObject.result.error!
-                let bError = BookmarkError.init(errorCode: "error", errorMessage: error.localizedDescription)
-                failure(bError)
+                let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: error.localizedDescription)
+                failure(bookmarError)
             }
         }
     }
@@ -137,4 +159,3 @@ class CustomServerTrustPoliceManager: ServerTrustPolicyManager {
         super.init(policies: [:])
     }
 }
-
