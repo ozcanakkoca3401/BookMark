@@ -83,6 +83,8 @@ class BookmarkSessionManager: NSObject {
         switch errorCode {
         case "BAD_CREDENTIALS":
             error = BookmarkError.init(errorCode: errorCode, errorMessage: "Username or password is wrong")
+        case "MAP_ERROR":
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Error mapping response")
         default:
             error = BookmarkError.init(errorCode: errorCode, errorMessage: "An unknown error has occurred")
         }
