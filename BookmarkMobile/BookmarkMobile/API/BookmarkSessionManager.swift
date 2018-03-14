@@ -125,16 +125,14 @@ class BookmarkSessionManager: NSObject {
         self.sessionManager.request(baseURL + strURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
-                if responseObject.result.isSuccess {
-                    if let value = responseObject.result.value {
-                        let json = JSON(value)
-                        let (result, errorCode) = self.isValidResponse(json: json)
-                        if result {
-                            success(json)
-                        } else {
-                            let error = self.formatedErrorMessage(errorCode: errorCode)
-                            failure(error)
-                        }
+                if let value = responseObject.result.value {
+                    let json = JSON(value)
+                    let (result, errorCode) = self.isValidResponse(json: json)
+                    if result {
+                        success(json)
+                    } else {
+                        let error = self.formatedErrorMessage(errorCode: errorCode)
+                        failure(error)
                     }
                 }
             }
