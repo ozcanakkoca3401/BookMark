@@ -137,8 +137,29 @@ class LoginViewController: UIViewController {
         if Authentication.validateCredential(username: self.username, password: self.password) {
             login(username: username, password: password)
         } else {
-            print("login failed")
+            self.showMessage(message: "Username or password is wrong")
         }
+    }
+    
+    fileprivate func showMessage(message: String) {
+        let alert = UIAlertController(title: "Alert",
+                                      message: message,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            switch action.style {
+            case .default:
+                print("default")
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+                
+            }}))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     fileprivate func login(username: String, password: String) {
@@ -149,7 +170,7 @@ class LoginViewController: UIViewController {
         Authentication.auth(params: params, success: { (result) in
             print(result.name!)
         }, failure: { (error) in
-            print(error)
+            self.showMessage(message: error.errorMessage)
         })
     }
     
