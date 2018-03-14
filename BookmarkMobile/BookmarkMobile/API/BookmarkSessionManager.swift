@@ -88,7 +88,7 @@ class BookmarkSessionManager: NSObject {
     
     func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (BookmarkError) -> Void) {
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: "No Internet connection")
+            let bookmarError = BookmarkError.init(errorCode: "NO_CONNECTION_ERROR", errorMessage: "No Internet connection")
             failure(bookmarError)
             return
         }
@@ -118,7 +118,7 @@ class BookmarkSessionManager: NSObject {
     func requestPOSTURL(_ strURL: String, params: [String: AnyObject]?, headers: [String: String]?, success:@escaping (JSON) -> Void, failure: @escaping (BookmarkError) -> Void) {
         
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: "No Internet connection")
+            let bookmarError = BookmarkError.init(errorCode: "NO_CONNECTION_ERROR", errorMessage: "No Internet connection")
             failure(bookmarError)
             return
         }
