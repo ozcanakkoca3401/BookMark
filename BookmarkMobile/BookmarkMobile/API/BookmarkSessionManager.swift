@@ -12,8 +12,6 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 
-// #TODO: Error codeları için bir func hazırlanacak ve error codeları için mesaj oluşturulacak
-
 class BookmarkError: Error {
     
     var errorCode: String
