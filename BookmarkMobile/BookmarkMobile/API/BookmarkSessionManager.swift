@@ -34,7 +34,7 @@ class BookmarkSessionManager: NSObject {
     
     static let sharedInstance = BookmarkSessionManager()
     private var sessionManager: SessionManager
-//    let baseURL = "https://jsonblob.com/api/"
+    //    let baseURL = "https://jsonblob.com/api/"
     let baseURL = "http://dcomm.etiya.com/Dev-CommerceBackend/"
     
     private override init() {
@@ -51,7 +51,7 @@ class BookmarkSessionManager: NSObject {
         self.sessionManager = manager
     }
     
-     func isValidateResponse(resJson: JSON) -> (Bool, String) {
+    func isValidResponse(resJson: JSON) -> (Bool, String) {
         
         var response = (result: false, errorCode: "")
         
@@ -82,18 +82,18 @@ class BookmarkSessionManager: NSObject {
             print("internet yok")
             return
         }
-
+        
         self.sessionManager.request(baseURL + strURL).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
                 
-                let (result1, errorCode1) = self.isValidateResponse(resJson: resJson)
+                let (result1, errorCode1) = self.isValidResponse(resJson: resJson)
                 
                 if result1 {
                     success(resJson)
                 } else {
-                   let error = BookmarkError.init(errorCode: errorCode1, errorMessage: "")
+                    let error = BookmarkError.init(errorCode: errorCode1, errorMessage: "")
                     failure(error)
                 }
             }
@@ -117,8 +117,8 @@ class BookmarkSessionManager: NSObject {
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
-                    success(resJson)
-                }
+                success(resJson)
+            }
             
             if responseObject.result.isFailure {
                 let error: Error = responseObject.result.error!
@@ -137,3 +137,4 @@ class CustomServerTrustPoliceManager: ServerTrustPolicyManager {
         super.init(policies: [:])
     }
 }
+
