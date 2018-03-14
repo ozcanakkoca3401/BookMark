@@ -49,23 +49,24 @@ class AuthenticationTests: XCTestCase {
     func test_Authentication_Negative() {
         
         // given
-        let authenticationExpectation = expectation(description: "Authentication")
-        var authentication = Authentication()
+        let authenticationExpectation = expectation(description: "Authentication")        
         let params: [String: AnyObject] = [
             "userName": "semih@abc.com" as AnyObject,
             "password": "Abc123" as AnyObject ]
+        var failed = false
         
         // when
         Authentication.auth(params: params, success: { (result) in
-            authentication = result
-            authenticationExpectation.fulfill()
+            print(result)            
         }, failure: { (error) in
-            authentication = nil
+            authenticationExpectation.fulfill()
+            print(error)
+            failed = true
         })
         
         // then
         waitForExpectations(timeout: 2) { _ in
-            XCTAssertNil(authentication)
+            XCTAssertTrue(failed)
         }
         
     }
