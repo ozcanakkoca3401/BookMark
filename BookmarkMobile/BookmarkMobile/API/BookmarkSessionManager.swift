@@ -49,10 +49,9 @@ class BookmarkSessionManager: NSObject {
         self.sessionManager = manager
     }
     
-    func isValidResponse(resJson: JSON) -> (Bool, String) {
+    func isValidResponse(json: JSON) -> (Bool, String) {
         var response = (result: false, errorCode: "")
         
-        let json = JSON(resJson)
         let object = json["operationResult"].object
         guard let result: OperationResult = Mapper<OperationResult>().map(JSONObject: object) else {
             return response
@@ -94,21 +93,23 @@ class BookmarkSessionManager: NSObject {
         self.sessionManager.request(baseURL + strURL).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
-                let resJson = JSON(responseObject.result.value!)
-                
-                let (result, errorCode) = self.isValidResponse(resJson: resJson)
-                if result {
-                    success(resJson)
-                } else {
-                    let error = self.formatedErrorMessage(errorCode: errorCode)
-                    failure(error)
+                if let value = responseObject.result.value {
+                    let json = JSON(value)
+                    let (result, errorCode) = self.isValidResponse(json: json)
+                    if result {
+                        success(json)
+                    } else {
+                        let error = self.formatedErrorMessage(errorCode: errorCode)
+                        failure(error)
+                    }
                 }
             }
             
             if responseObject.result.isFailure {
-                let error: Error = responseObject.result.error!
-                let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: error.localizedDescription)
-                failure(bookmarError)
+                if let error = responseObject.result.error {
+                    let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: error.localizedDescription)
+                    failure(bookmarError)
+                }
             }
         }
     }
@@ -124,22 +125,25 @@ class BookmarkSessionManager: NSObject {
         self.sessionManager.request(baseURL + strURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
-                let resJson = JSON(responseObject.result.value!)
-                
-                let (result, errorCode) = self.isValidResponse(resJson: resJson)
-                if result {
-                    success(resJson)
-                } else {
-                    let error = self.formatedErrorMessage(errorCode: errorCode)
-                    failure(error)
+                if responseObject.result.isSuccess {
+                    if let value = responseObject.result.value {
+                        let json = JSON(value)
+                        let (result, errorCode) = self.isValidResponse(json: json)
+                        if result {
+                            success(json)
+                        } else {
+                            let error = self.formatedErrorMessage(errorCode: errorCode)
+                            failure(error)
+                        }
+                    }
                 }
-                
             }
             
             if responseObject.result.isFailure {
-                let error: Error = responseObject.result.error!
-                let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: error.localizedDescription)
-                failure(bookmarError)
+                if let error = responseObject.result.error {
+                    let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: error.localizedDescription)
+                    failure(bookmarError)
+                }
             }
         }
     }

@@ -52,12 +52,8 @@ extension Authentication {
     static func auth(params: [String: AnyObject], success:@escaping (Authentication) -> Void, failure:@escaping (BookmarkError) -> Void) {
         
         BookmarkSessionManager.sharedInstance.requestPOSTURL("auth", params: params, headers: nil, success: { (responseJSON) in
-            
-            // Convert to json
-            let json = JSON(responseJSON)
-            
             // Get json array  from data
-            let object = json["data"].object
+            let object = responseJSON["data"].object
             
             // Map json array to Array<Message> object
             guard let result: Authentication = Mapper<Authentication>().map(JSONObject: object) else {
