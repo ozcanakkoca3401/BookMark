@@ -51,18 +51,13 @@ class BookmarkSessionManager: NSObject {
     
     func isValidResponse(json: JSON) -> (Bool, String) {
         var response = (result: false, errorCode: "")
-        
-        let object = json["operationResult"].object
-        guard let result: OperationResult = Mapper<OperationResult>().map(JSONObject: object) else {
-            return response
-        }
-        
-        if result.resultCode == "SUCCESS" {
+        let resultCode = json["operationResult"]["resultCode"].stringValue
+        if resultCode == "SUCCESS" {
             response.result = true
             response.errorCode = ""
         } else {
             response.result = false
-            response.errorCode = result.operationResultCode!
+            response.errorCode = json["operationResult"]["operationResultCode"].stringValue
         }
         
         return response
