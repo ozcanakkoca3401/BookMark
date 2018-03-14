@@ -11,27 +11,27 @@ import UIKit
 import SnapKit
 
 @IBDesignable public class StepperComponentView: EBView {
-
-var stepperView: StepperView = {
-    let stepperView = StepperView()
     
-    return stepperView
-}()
-
-var switchStepperView: SwitchStepperView = {
-    let switchStepperView = SwitchStepperView()
+    var stepperView: StepperView = {
+        let stepperView = StepperView()
+        
+        return stepperView
+    }()
     
-    return switchStepperView
-}()
-
-var secondStepperView: StepperView = {
-    let stepperView = StepperView()
-    stepperView.dataLabel.text = "VOICE"
-    stepperView.gbLabel.text = "minutes"
+    var switchStepperView: SwitchStepperView = {
+        let switchStepperView = SwitchStepperView()
+        
+        return switchStepperView
+    }()
     
-    return stepperView
-}()
-
+    var secondStepperView: StepperView = {
+        let stepperView = StepperView()
+        stepperView.dataLabel.text = "VOICE"
+        stepperView.gbLabel.text = "minutes"
+        
+        return stepperView
+    }()
+    
     public override init() {
         super.init()
         
@@ -59,7 +59,7 @@ var secondStepperView: StepperView = {
         self.addSubview(secondStepperView)
         
         stepperView.snp.makeConstraints { (make) in
-//            make.width.equalTo(250)
+            //            make.width.equalTo(250)
             make.height.equalTo(60)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
@@ -67,7 +67,7 @@ var secondStepperView: StepperView = {
         }
         
         switchStepperView.snp.makeConstraints { (make) in
-//            make.width.equalTo(250)
+            //            make.width.equalTo(250)
             make.height.equalTo(60)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
@@ -75,7 +75,7 @@ var secondStepperView: StepperView = {
         }
         
         secondStepperView.snp.makeConstraints { (make) in
-          //  make.width.equalTo(250)
+            //  make.width.equalTo(250)
             make.height.equalTo(60)
             make.left.equalTo(self).offset(0)
             make.right.equalTo(self).offset(0)
@@ -88,3 +88,4 @@ var secondStepperView: StepperView = {
     }
     
 }
+
