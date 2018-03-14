@@ -13,6 +13,14 @@ class LoginViewController: UIViewController {
     var username = ""
     var password = ""
     
+    var logo: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "logo_videotron")
+        imageView.contentMode = .scaleAspectFit
+        
+        return imageView
+    }()
+    
     var subView: RoundView = {
         let view = RoundView()
         view.bgColor = Styling.colorForCode(.white)
@@ -79,6 +87,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setGradientLayer()
+        self.view.addSubview(logo)
         self.view.addSubview(subView)
         subView.addSubview(usernameTextfield)
         subView.addSubview(passwordTextfield)
@@ -86,8 +95,14 @@ class LoginViewController: UIViewController {
         self.view.addSubview(bottomLoginWithView)
         self.view.addSubview(footerView)
         
+        logo.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view).offset(36)
+            make.centerX.equalTo(self.view)
+            make.height.equalTo(100)
+        }
+        
         subView.snp.makeConstraints { (make) in
-            make.top.equalTo(200)
+            make.top.equalTo(logo.snp.bottom).offset(36)
             make.left.equalTo(self.view).offset(16)
             make.right.equalTo(self.view).offset(-16)
             make.height.equalTo(300)
