@@ -64,7 +64,7 @@ class BookmarkSessionManager: NSObject {
     }
     
     func formatedErrorMessage(errorCode: String) -> BookmarkError {
-        var error: BookmarkError? = nil
+        var error: BookmarkError
         
         switch errorCode {
         case "BAD_CREDENTIALS":
@@ -75,7 +75,7 @@ class BookmarkSessionManager: NSObject {
             error = BookmarkError.init(errorCode: errorCode, errorMessage: "An unknown error has occurred")
         }
 
-        return error!
+        return error
     }
     
     func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (BookmarkError) -> Void) {
