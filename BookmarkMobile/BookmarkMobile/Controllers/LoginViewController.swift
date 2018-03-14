@@ -51,6 +51,16 @@ class LoginViewController: UIViewController {
         return textfield
     }()
     
+    var checkBox: RoundButton = {
+        let button = RoundButton()
+        button.cornerRadius = 3
+        button.borderWidth = 2.5
+        button.borderColor = Styling.colorForCode(.themeMediumGray)
+        button.bgColor = Styling.colorForCode(.white)
+        
+        return button
+    }()
+    
     var loginButton: RoundButton = {
         let button = RoundButton()
         button.title = "Login"
@@ -91,6 +101,7 @@ class LoginViewController: UIViewController {
         self.view.addSubview(subView)
         subView.addSubview(usernameTextfield)
         subView.addSubview(passwordTextfield)
+        subView.addSubview(checkBox)
         subView.addSubview(loginButton)
         self.view.addSubview(bottomLoginWithView)
         self.view.addSubview(footerView)
@@ -120,6 +131,13 @@ class LoginViewController: UIViewController {
             make.left.equalTo(self.subView).offset(20)
             make.right.equalTo(self.subView).offset(-20)
             make.height.equalTo(35)
+        }
+        
+        checkBox.snp.makeConstraints { (make) in
+            make.top.equalTo(passwordTextfield.snp.bottom).offset(25)
+            make.left.equalTo(self.subView).offset(20)
+            make.width.equalTo(20)
+            make.height.equalTo(20)
         }
         
         loginButton.snp.makeConstraints { (make) in

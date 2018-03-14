@@ -74,6 +74,16 @@ class CreateNewAccountViewController: UIViewController {
         return textfield
     }()
     
+    var checkBox: RoundButton = {
+        let button = RoundButton()
+        button.cornerRadius = 3
+        button.borderWidth = 2.5
+        button.borderColor = Styling.colorForCode(.themeMediumGray)
+        button.bgColor = Styling.colorForCode(.white)
+        
+        return button
+    }()
+    
     var signUpButton: RoundButton = {
         let button = RoundButton()
         button.title = "Sign Up"
@@ -115,6 +125,7 @@ class CreateNewAccountViewController: UIViewController {
         subView.addSubview(emailTextfield)
         subView.addSubview(passwordTextfield)
         subView.addSubview(passConfirmTextfield)
+        subView.addSubview(checkBox)
         subView.addSubview(signUpButton)
         self.view.addSubview(bottomLoginWithView)
         self.view.addSubview(footerView)
@@ -165,6 +176,13 @@ class CreateNewAccountViewController: UIViewController {
             make.left.equalTo(self.subView).offset(20)
             make.right.equalTo(self.subView).offset(-20)
             make.height.equalTo(35)
+        }
+        
+        checkBox.snp.makeConstraints { (make) in
+            make.top.equalTo(passConfirmTextfield.snp.bottom).offset(25)
+            make.left.equalTo(self.subView).offset(20)
+            make.width.equalTo(20)
+            make.height.equalTo(20)
         }
         
         signUpButton.snp.makeConstraints { (make) in
