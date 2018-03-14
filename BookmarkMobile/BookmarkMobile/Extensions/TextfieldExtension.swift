@@ -24,6 +24,7 @@ extension EBTextfield {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
 //        paddingView.backgroundColor = UIColor.red
         paddingView.addSubview(createImageView(imageName: imageName))
+        self.leftViewMode = .always
         self.leftView = paddingView
     }
     
@@ -31,6 +32,7 @@ extension EBTextfield {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
 //        paddingView.backgroundColor = UIColor.red
         paddingView.addSubview(createImageView(imageName: imageName))
+        self.rightViewMode = .always
         self.rightView = paddingView
     }
     

@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        self.window?.rootViewController = UINavigationController(rootViewController: CreateNewAccountViewController())
         return true
     }
 

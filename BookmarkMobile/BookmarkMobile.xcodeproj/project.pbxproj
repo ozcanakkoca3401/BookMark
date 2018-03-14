@@ -44,6 +44,7 @@
 		4C451A1F20405E3700FF9E3D /* EBCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C451A1E20405E3700FF9E3D /* EBCellView.swift */; };
 		4C4C4F6020501220003DC903 /* LoyaltyScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C4F5F20501220003DC903 /* LoyaltyScrollView.swift */; };
 		4C4C4F6620504833003DC903 /* EBMainLoyaltyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C4F6520504833003DC903 /* EBMainLoyaltyView.swift */; };
+		4C504FEC205903A700958329 /* CreateNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C504FEB205903A700958329 /* CreateNewAccountViewController.swift */; };
 		4C5AFF79204E793D00572447 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AFF78204E793D00572447 /* FooterView.swift */; };
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
 		4C741555203C678F00A32734 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741554203C678F00A32734 /* ColorExtension.swift */; };
@@ -159,6 +160,7 @@
 		4C451A1E20405E3700FF9E3D /* EBCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBCellView.swift; sourceTree = "<group>"; };
 		4C4C4F5F20501220003DC903 /* LoyaltyScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyScrollView.swift; sourceTree = "<group>"; };
 		4C4C4F6520504833003DC903 /* EBMainLoyaltyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBMainLoyaltyView.swift; sourceTree = "<group>"; };
+		4C504FEB205903A700958329 /* CreateNewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountViewController.swift; sourceTree = "<group>"; };
 		4C5AFF78204E793D00572447 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		4C741552203C670600A32734 /* EBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLabel.swift; sourceTree = "<group>"; };
 		4C741554203C678F00A32734 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				4C19C76E20553806001FFDD6 /* AddOnsTableViewController.swift */,
 				4C19C770205538C3001FFDD6 /* AddOnsTableViewHeader.swift */,
 				4CCB4DC12057A51200405261 /* LoginViewController.swift */,
+				4C504FEB205903A700958329 /* CreateNewAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -875,6 +878,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4C4F6620504833003DC903 /* EBMainLoyaltyView.swift in Sources */,
+				4C504FEC205903A700958329 /* CreateNewAccountViewController.swift in Sources */,
 				4C839B18205813FD0031ABF2 /* OperationResult.swift in Sources */,
 				4C36B1C3204568870055DB00 /* CollapsibleTableViewHeader.swift in Sources */,
 				4C19C76F20553806001FFDD6 /* AddOnsTableViewController.swift in Sources */,

@@ -27,7 +27,6 @@ class LoginViewController: UIViewController {
         textfield.EBPlaceholder = "Username"
         textfield.text = "semih@abc.com"
         textfield.setBottomBorder()
-        textfield.leftViewMode = .always
         textfield.setLeftViewImage(imageName: "account")
         
         return textfield
@@ -38,9 +37,7 @@ class LoginViewController: UIViewController {
         textfield.EBPlaceholder = "Password"
         textfield.text = "Abc12345"
         textfield.setBottomBorder()
-        textfield.leftViewMode = .always
         textfield.setLeftViewImage(imageName: "textboxpassword")
-        textfield.rightViewMode = .always
         textfield.setRightViewImage(imageName: "eyeoff")
         
         return textfield
@@ -65,27 +62,18 @@ class LoginViewController: UIViewController {
     
     var bottomLoginWithView: LoginWithView = {
         let view = LoginWithView()
-
+        view.loginWithLabel.EBtext = "Login with"
+        
         return view
     }()
     
     var footerView: LoginFooterButtonView = {
         let view = LoginFooterButtonView()
+        view.forgetPasswordButton.title = "Forget Password"
+        view.createAccountButton.title = "Create New Account"
         
         return view
     }()
-    
-    fileprivate func login(username: String, password: String) {
-        let params: [String: AnyObject] = [
-            "userName": username as AnyObject,
-            "password": password as AnyObject ]
-        
-        Authentication.auth(params: params, success: { (result) in
-            print(result.name!)
-        }, failure: { (error) in
-            print(error)
-        })
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,14 +94,14 @@ class LoginViewController: UIViewController {
         }
         
         usernameTextfield.snp.makeConstraints { (make) in
-            make.top.equalTo(self.subView).offset(45)
+            make.top.equalTo(self.subView).offset(35)
             make.left.equalTo(self.subView).offset(20)
             make.right.equalTo(self.subView).offset(-20)
             make.height.equalTo(35)
         }
         
         passwordTextfield.snp.makeConstraints { (make) in
-            make.top.equalTo(usernameTextfield.snp.bottom).offset(45)
+            make.top.equalTo(usernameTextfield.snp.bottom).offset(35)
             make.left.equalTo(self.subView).offset(20)
             make.right.equalTo(self.subView).offset(-20)
             make.height.equalTo(35)
@@ -151,7 +139,18 @@ class LoginViewController: UIViewController {
         } else {
             print("login failed")
         }
+    }
+    
+    fileprivate func login(username: String, password: String) {
+        let params: [String: AnyObject] = [
+            "userName": username as AnyObject,
+            "password": password as AnyObject ]
         
+        Authentication.auth(params: params, success: { (result) in
+            print(result.name!)
+        }, failure: { (error) in
+            print(error)
+        })
     }
     
 }

@@ -18,7 +18,7 @@ import UIKit
     
     var forgetPasswordButton: RoundButton = {
         let button = RoundButton()
-        button.title = "Forget Password"
+        button.title = ""
         button.titleColor = Styling.colorForCode(.black)
         button.titleLabel?.font = Styling.font(weight: .regular, size: 14)
         button.cornerRadius = 0
@@ -29,13 +29,20 @@ import UIKit
     
     var createAccountButton: RoundButton = {
         let button = RoundButton()
-        button.title = "Create New Account"
+        button.title = ""
         button.titleColor = Styling.colorForCode(.black)
         button.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         button.cornerRadius = 0
         button.borderWidth = 0.0
-        
+
         return button
+    }()
+    
+    var middleView: EBView = {
+        let view = EBView()
+        view.backgroundColor = Styling.colorForCode(.black)
+        
+        return view
     }()
     
     public override init() {
@@ -58,17 +65,27 @@ import UIKit
         backgroundColor = footerViewBackgrounColor
         self.addSubview(forgetPasswordButton)
         self.addSubview(createAccountButton)
+        self.addSubview(middleView)
 
         forgetPasswordButton.snp.makeConstraints { (make) in
             make.top.equalTo(self)
+            make.left.equalTo(self)
             make.bottom.equalTo(self)
-            make.width.equalTo(self).dividedBy(2)
+            make.width.equalTo(self).dividedBy(2).offset(-1)
         }
         
         createAccountButton.snp.makeConstraints { (make) in
             make.top.equalTo(self)
+            make.right.equalTo(self)
             make.bottom.equalTo(self)
-            make.width.equalTo(self).dividedBy(2)
+            make.width.equalTo(self).dividedBy(2).offset(-1)
+        }
+        
+        middleView.snp.makeConstraints { (make) in
+            make.top.equalTo(self).offset(15)
+            make.centerX.equalTo(self)
+            make.bottom.equalTo(self).offset(-15)
+            make.width.equalTo(2)
         }
     }
 
