@@ -81,7 +81,7 @@ class BookmarkSessionManager: NSObject {
         var error: BookmarkError? = nil
         
         switch errorCode {
-        case "BAD_CREDIENTIALS":
+        case "BAD_CREDENTIALS":
             error = BookmarkError.init(errorCode: errorCode, errorMessage: "Kullanıcı adı veya şifre hatalı")
         default:
             error = BookmarkError.init(errorCode: errorCode, errorMessage: "Bilinmeyen bir hata oluştu")
