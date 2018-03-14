@@ -49,7 +49,7 @@ class Authentication: Mappable {
 extension Authentication {
     
     // Get messages from service
-    static func auth(params: [String: AnyObject], success:@escaping (Authentication) -> Void, failure:@escaping (String) -> Void) {
+    static func auth(params: [String: AnyObject], success:@escaping (Authentication) -> Void, failure:@escaping (BookmarkError) -> Void) {
         
         BookmarkSessionManager.sharedInstance.requestPOSTURL("auth", params: params, headers: nil, success: { (responseJSON) in
             
@@ -61,7 +61,8 @@ extension Authentication {
             
             // Map json array to Array<Message> object
             guard let result: Authentication = Mapper<Authentication>().map(JSONObject: object) else {
-                failure("Error mapping response")
+                let error = BookmarkSessionManager.sharedInstance.formatedErrorMessage(errorCode: "MAP_ERROR")
+                failure(error)
                 return
             }
             
@@ -69,7 +70,7 @@ extension Authentication {
             success(result)
             
         }, failure: { (error) in
-            print(error)
+            failure(error)
         })
     }
     

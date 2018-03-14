@@ -12,8 +12,6 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 
-// #TODO: Error codeları için bir func hazırlanacak ve error codeları için mesaj oluşturulacak
-
 class BookmarkError: Error {
     
     var errorCode: String
@@ -34,7 +32,7 @@ class BookmarkSessionManager: NSObject {
     
     static let sharedInstance = BookmarkSessionManager()
     private var sessionManager: SessionManager
-//    let baseURL = "https://jsonblob.com/api/"
+    //    let baseURL = "https://jsonblob.com/api/"
     let baseURL = "http://dcomm.etiya.com/Dev-CommerceBackend/"
     
     private override init() {
@@ -51,17 +49,11 @@ class BookmarkSessionManager: NSObject {
         self.sessionManager = manager
     }
     
-     func isValidateResponse(resJson: JSON) -> (Bool, String) {
-        
+    func isValidResponse(resJson: JSON) -> (Bool, String) {
         var response = (result: false, errorCode: "")
         
-        // Convert to json
         let json = JSON(resJson)
-        
-        // Get json array  from data
         let object = json["operationResult"].object
-        
-        // Map json array to Array<Message> object
         guard let result: OperationResult = Mapper<OperationResult>().map(JSONObject: object) else {
             return response
         }
@@ -77,31 +69,46 @@ class BookmarkSessionManager: NSObject {
         return response
     }
     
-    func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (BookmarkError) -> Void) {
-        guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            print("internet yok")
-            return
+    func formatedErrorMessage(errorCode: String) -> BookmarkError {
+        var error: BookmarkError? = nil
+        
+        switch errorCode {
+        case "BAD_CREDENTIALS":
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Username or password is wrong")
+        case "MAP_ERROR":
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Error mapping response")
+        default:
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: "An unknown error has occurred")
         }
 
+        return error!
+    }
+    
+    func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (BookmarkError) -> Void) {
+        guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
+            let bookmarError = BookmarkError.init(errorCode: "NO_CONNECTION_ERROR", errorMessage: "No Internet connection")
+            failure(bookmarError)
+            return
+        }
+        
         self.sessionManager.request(baseURL + strURL).responseJSON { (responseObject) -> Void in
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
                 
-                let (result1, errorCode1) = self.isValidateResponse(resJson: resJson)
-                
-                if result1 {
+                let (result, errorCode) = self.isValidResponse(resJson: resJson)
+                if result {
                     success(resJson)
                 } else {
-                   let error = BookmarkError.init(errorCode: errorCode1, errorMessage: "")
+                    let error = self.formatedErrorMessage(errorCode: errorCode)
                     failure(error)
                 }
             }
             
             if responseObject.result.isFailure {
                 let error: Error = responseObject.result.error!
-                let bError = BookmarkError.init(errorCode: "error", errorMessage: error.localizedDescription)
-                failure(bError)
+                let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: error.localizedDescription)
+                failure(bookmarError)
             }
         }
     }
@@ -109,7 +116,8 @@ class BookmarkSessionManager: NSObject {
     func requestPOSTURL(_ strURL: String, params: [String: AnyObject]?, headers: [String: String]?, success:@escaping (JSON) -> Void, failure: @escaping (BookmarkError) -> Void) {
         
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            print("internet yok")
+            let bookmarError = BookmarkError.init(errorCode: "NO_CONNECTION_ERROR", errorMessage: "No Internet connection")
+            failure(bookmarError)
             return
         }
         
@@ -117,13 +125,21 @@ class BookmarkSessionManager: NSObject {
             //print(responseObject)
             if responseObject.result.isSuccess {
                 let resJson = JSON(responseObject.result.value!)
+                
+                let (result, errorCode) = self.isValidResponse(resJson: resJson)
+                if result {
                     success(resJson)
+                } else {
+                    let error = self.formatedErrorMessage(errorCode: errorCode)
+                    failure(error)
                 }
+                
+            }
             
             if responseObject.result.isFailure {
                 let error: Error = responseObject.result.error!
-                let bError = BookmarkError.init(errorCode: "error", errorMessage: error.localizedDescription)
-                failure(bError)
+                let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: error.localizedDescription)
+                failure(bookmarError)
             }
         }
     }
