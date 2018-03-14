@@ -82,9 +82,9 @@ class BookmarkSessionManager: NSObject {
         
         switch errorCode {
         case "BAD_CREDENTIALS":
-            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Kullanıcı adı veya şifre hatalı")
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Username or password is wrong")
         default:
-            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Bilinmeyen bir hata oluştu")
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: "An unknown error has occurred")
         }
 
         return error!
@@ -92,7 +92,7 @@ class BookmarkSessionManager: NSObject {
     
     func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (BookmarkError) -> Void) {
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: "Internet yok")
+            let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: "No Internet connection")
             failure(bookmarError)
             return
         }
@@ -122,7 +122,7 @@ class BookmarkSessionManager: NSObject {
     func requestPOSTURL(_ strURL: String, params: [String: AnyObject]?, headers: [String: String]?, success:@escaping (JSON) -> Void, failure: @escaping (BookmarkError) -> Void) {
         
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: "Internet yok")
+            let bookmarError = BookmarkError.init(errorCode: "NETWORK_ERROR", errorMessage: "No Internet connection")
             failure(bookmarError)
             return
         }
