@@ -13,6 +13,16 @@ class CreateNewAccountViewController: UIViewController {
     var username = ""
     var password = ""
     
+    var headerLabel: EBLabel = {
+       let label = EBLabel()
+        label.EBtext = "CREATE NEW ACCOUNT"
+        label.textAlignment = .center
+        label.font = Styling.font(weight: .bold, size: 18)
+        label.EBcolor = Styling.colorForCode(.black)
+        
+        return label
+    }()
+    
     var subView: RoundView = {
         let view = RoundView()
         view.bgColor = Styling.colorForCode(.white)
@@ -98,6 +108,7 @@ class CreateNewAccountViewController: UIViewController {
         super.viewDidLoad()
         
         setGradientLayer()
+        self.view.addSubview(headerLabel)
         self.view.addSubview(subView)
         subView.addSubview(firstNameTextfield)
         subView.addSubview(lastNameTextfield)
@@ -108,11 +119,17 @@ class CreateNewAccountViewController: UIViewController {
         self.view.addSubview(bottomLoginWithView)
         self.view.addSubview(footerView)
         
+        headerLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view).offset(40)
+            make.left.equalTo(self.view)
+            make.right.equalTo(self.view)
+        }
+        
         subView.snp.makeConstraints { (make) in
-            make.top.equalTo(100)
+            make.top.equalTo(headerLabel.snp.bottom).offset(20)
             make.left.equalTo(self.view).offset(16)
             make.right.equalTo(self.view).offset(-16)
-            make.height.equalTo(400)
+            make.height.equalTo(420)
         }
         
         firstNameTextfield.snp.makeConstraints { (make) in

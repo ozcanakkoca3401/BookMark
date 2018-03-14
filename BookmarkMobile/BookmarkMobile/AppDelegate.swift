@@ -28,9 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        return true
         
+        let rootView: CreateNewAccountViewController = CreateNewAccountViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = UINavigationController(rootViewController: CreateNewAccountViewController())
+        self.window?.rootViewController = rootView
         return true
     }
 
