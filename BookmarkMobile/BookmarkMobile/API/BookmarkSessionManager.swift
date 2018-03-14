@@ -52,16 +52,10 @@ class BookmarkSessionManager: NSObject {
     }
     
     func isValidResponse(resJson: JSON) -> (Bool, String) {
-        
         var response = (result: false, errorCode: "")
         
-        // Convert to json
         let json = JSON(resJson)
-        
-        // Get json array  from data
         let object = json["operationResult"].object
-        
-        // Map json array to Array<Message> object
         guard let result: OperationResult = Mapper<OperationResult>().map(JSONObject: object) else {
             return response
         }
