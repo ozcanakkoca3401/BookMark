@@ -137,7 +137,7 @@ class LoginViewController: UIViewController {
         if Authentication.validateCredential(username: self.username, password: self.password) {
             login(username: username, password: password)
         } else {
-            print("login failed")
+            self.showMessage(message: "Username or password is wrong")
         }
     }
     
