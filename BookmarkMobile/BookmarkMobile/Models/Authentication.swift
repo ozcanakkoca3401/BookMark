@@ -75,6 +75,7 @@ extension Authentication {
         
         if username.trimmingCharacters(in: .whitespacesAndNewlines).count <= 1 {
             result = false
+            return result
         }
         
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$")

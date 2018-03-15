@@ -84,6 +84,24 @@ class CreateNewAccountViewController: UIViewController {
         return button
     }()
     
+    var agreeLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "I agree to the"
+        label.EBcolor = Styling.colorForCode(.black)
+        label.font = Styling.font(weight: .regular, size: 16)
+        
+        return label
+    }()
+    
+    var termServicesLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "Terms & Services"
+        label.EBcolor = Styling.colorForCode(.textFieldBorderColor)
+        label.font = Styling.font(weight: .bold, size: 16)
+        
+        return label
+    }()
+    
     var signUpButton: RoundButton = {
         let button = RoundButton()
         button.title = "Sign Up"
@@ -115,6 +133,7 @@ class CreateNewAccountViewController: UIViewController {
         super.viewDidLoad()
         
         footerView.loginFooterButtonDelegate = self
+//        firstNameTextfield.becomeFirstResponder()
         
         setGradientLayer()
         self.view.addSubview(headerLabel)
@@ -125,6 +144,8 @@ class CreateNewAccountViewController: UIViewController {
         subView.addSubview(passwordTextfield)
         subView.addSubview(passConfirmTextfield)
         subView.addSubview(checkBox)
+        subView.addSubview(agreeLabel)
+        subView.addSubview(termServicesLabel)
         subView.addSubview(signUpButton)
         self.view.addSubview(bottomLoginWithView)
         self.view.addSubview(footerView)
@@ -145,14 +166,14 @@ class CreateNewAccountViewController: UIViewController {
         firstNameTextfield.snp.makeConstraints { (make) in
             make.top.equalTo(self.subView).offset(35)
             make.left.equalTo(self.subView).offset(20)
-            make.width.equalTo(100)
+            make.width.equalTo(self.subView).dividedBy(2).offset(-25)
             make.height.equalTo(35)
         }
         
         lastNameTextfield.snp.makeConstraints { (make) in
             make.top.equalTo(self.subView).offset(35)
             make.right.equalTo(self.subView).offset(-20)
-            make.width.equalTo(100)
+            make.width.equalTo(self.subView).dividedBy(2).offset(-25)
             make.height.equalTo(35)
         }
         
@@ -182,6 +203,16 @@ class CreateNewAccountViewController: UIViewController {
             make.left.equalTo(self.subView).offset(20)
             make.width.equalTo(20)
             make.height.equalTo(20)
+        }
+        
+        agreeLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(passConfirmTextfield.snp.bottom).offset(25)
+            make.left.equalTo(self.checkBox.snp.right).offset(10)
+        }
+        
+        termServicesLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(passConfirmTextfield.snp.bottom).offset(25)
+            make.left.equalTo(self.agreeLabel.snp.right).offset(5)
         }
         
         signUpButton.snp.makeConstraints { (make) in
