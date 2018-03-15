@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        return true
         
-        let rootView: CreateNewAccountViewController = CreateNewAccountViewController()
+        let rootView: LoginViewController = LoginViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController = rootView

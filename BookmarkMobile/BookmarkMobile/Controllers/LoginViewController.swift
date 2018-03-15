@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     var username = ""
     var password = ""
     
@@ -87,14 +87,16 @@ class LoginViewController: UIViewController {
     
     var footerView: LoginFooterButtonView = {
         let view = LoginFooterButtonView()
-        view.forgetPasswordButton.title = "Forget Password"
-        view.createAccountButton.title = "Create New Account"
+        view.leftButton.title = "Forget Password"
+        view.rightButton.title = "Create New Account"
         
         return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        footerView.loginFooterButtonDelegate = self
         
         setGradientLayer()
         self.view.addSubview(logo)
@@ -207,4 +209,19 @@ class LoginViewController: UIViewController {
         })
     }
     
+}
+
+extension LoginViewController: LoginFooterButtonProtocol {
+    
+    func leftButtonClicked() {
+        print("left button")
+        return
+    }
+    
+    func rightButtonClicked() {
+        print("right button")
+        let vc = CreateNewAccountViewController()
+        vc.modalPresentationStyle = .popover
+        present(vc, animated: true, completion: nil)
+    }
 }

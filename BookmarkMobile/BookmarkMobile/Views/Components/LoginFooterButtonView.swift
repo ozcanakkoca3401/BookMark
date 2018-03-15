@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol LoginFooterButtonProtocol: class {
+    func leftButtonClicked()
+    func rightButtonClicked()
+}
+
 @IBDesignable public class LoginFooterButtonView: EBView {
+    
+    weak var loginFooterButtonDelegate: LoginFooterButtonProtocol?
     
     @IBInspectable var footerViewBackgrounColor: UIColor = Styling.colorForCode(.themeViewControllerStartColor) {
         didSet {
@@ -16,24 +23,26 @@ import UIKit
         }
     }
     
-    var forgetPasswordButton: RoundButton = {
+    var leftButton: RoundButton = {
         let button = RoundButton()
         button.title = ""
         button.titleColor = Styling.colorForCode(.black)
         button.titleLabel?.font = Styling.font(weight: .regular, size: 14)
         button.cornerRadius = 0
         button.borderWidth = 0.0
+        button.addTarget(self, action: #selector(footerLeftButton), for: .touchUpInside)
         
         return button
     }()
     
-    var createAccountButton: RoundButton = {
+    var rightButton: RoundButton = {
         let button = RoundButton()
         button.title = ""
         button.titleColor = Styling.colorForCode(.black)
         button.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         button.cornerRadius = 0
         button.borderWidth = 0.0
+        button.addTarget(self, action: #selector(footerRightButton), for: .touchUpInside)
 
         return button
     }()
@@ -63,18 +72,18 @@ import UIKit
     override func initialize() {
         
         backgroundColor = footerViewBackgrounColor
-        self.addSubview(forgetPasswordButton)
-        self.addSubview(createAccountButton)
+        self.addSubview(leftButton)
+        self.addSubview(rightButton)
         self.addSubview(middleView)
 
-        forgetPasswordButton.snp.makeConstraints { (make) in
+        leftButton.snp.makeConstraints { (make) in
             make.top.equalTo(self)
             make.left.equalTo(self)
             make.bottom.equalTo(self)
             make.width.equalTo(self).dividedBy(2).offset(-1)
         }
         
-        createAccountButton.snp.makeConstraints { (make) in
+        rightButton.snp.makeConstraints { (make) in
             make.top.equalTo(self)
             make.right.equalTo(self)
             make.bottom.equalTo(self)
@@ -87,6 +96,14 @@ import UIKit
             make.bottom.equalTo(self).offset(-15)
             make.width.equalTo(2)
         }
+    }
+    
+    @objc func footerLeftButton() {
+        loginFooterButtonDelegate?.leftButtonClicked()
+    }
+    
+    @objc func footerRightButton() {
+        loginFooterButtonDelegate?.rightButtonClicked()
     }
 
 }

@@ -110,12 +110,15 @@ class CreateNewAccountViewController: UIViewController {
     
     var footerView: LoginFooterButtonView = {
         let view = LoginFooterButtonView()
-        view.createAccountButton.title = "Login"
+        view.rightButton.title = "Login"
+        
         return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        footerView.loginFooterButtonDelegate = self
         
         setGradientLayer()
         self.view.addSubview(headerLabel)
@@ -231,4 +234,15 @@ class CreateNewAccountViewController: UIViewController {
 //        })
 //    }
     
+}
+
+extension CreateNewAccountViewController: LoginFooterButtonProtocol {
+    func leftButtonClicked() {
+        print("left button")
+    }
+    
+    func rightButtonClicked() {
+        print("right button")
+        self.dismiss(animated: true, completion: nil)
+    }
 }
