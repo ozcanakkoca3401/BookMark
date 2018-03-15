@@ -48,10 +48,6 @@ class ForgetPasswordViewController: UIViewController {
         button.cornerRadius = 4
         button.borderWidth = 0.0
         button.bgColor = Styling.colorForCode(.loginButtonColor)
-        button.layer.shadowColor = Styling.colorForCode(.themeDarkGray).cgColor
-        button.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        button.layer.shadowOpacity = 0.8
-        button.layer.masksToBounds = false
         //        button.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
         
         return button
@@ -77,22 +73,23 @@ class ForgetPasswordViewController: UIViewController {
         self.view.addSubview(footerView)
         
         headerLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view).offset(40)
+            make.bottom.equalTo(self.subView.snp.top).offset(-20)
             make.left.equalTo(self.view)
             make.right.equalTo(self.view)
         }
         
         subView.snp.makeConstraints { (make) in
-            make.top.equalTo(headerLabel.snp.bottom).offset(20)
+//            make.top.equalTo(headerLabel.snp.bottom).offset(20)
+            make.centerY.equalTo(self.view)
             make.left.equalTo(self.view).offset(16)
             make.right.equalTo(self.view).offset(-16)
-            make.height.equalTo(420)
+            make.height.equalTo(180)
         }
         
         emailAdressTextfield.snp.makeConstraints { (make) in
             make.top.equalTo(self.subView).offset(35)
             make.left.equalTo(self.subView).offset(20)
-            make.width.equalTo(100)
+            make.right.equalTo(self.subView).offset(-20)
             make.height.equalTo(35)
         }
         

@@ -92,10 +92,6 @@ class CreateNewAccountViewController: UIViewController {
         button.cornerRadius = 4
         button.borderWidth = 0.0
         button.bgColor = Styling.colorForCode(.loginButtonColor)
-        button.layer.shadowColor = Styling.colorForCode(.themeDarkGray).cgColor
-        button.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        button.layer.shadowOpacity = 0.8
-        button.layer.masksToBounds = false
 //        button.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
         
         return button
