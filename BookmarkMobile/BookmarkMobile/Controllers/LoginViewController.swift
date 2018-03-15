@@ -61,6 +61,15 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    var rememberMeLabel: EBLabel = {
+        let label = EBLabel()
+        label.EBtext = "Remember me"
+        label.EBcolor = Styling.colorForCode(.black)
+        label.font = Styling.font(weight: .regular, size: 16)
+        
+        return label
+    }()
+    
     var loginButton: RoundButton = {
         let button = RoundButton()
         button.title = "Login"
@@ -104,6 +113,7 @@ class LoginViewController: UIViewController {
         subView.addSubview(usernameTextfield)
         subView.addSubview(passwordTextfield)
         subView.addSubview(checkBox)
+        subView.addSubview(rememberMeLabel)
         subView.addSubview(loginButton)
         self.view.addSubview(bottomLoginWithView)
         self.view.addSubview(footerView)
@@ -136,10 +146,15 @@ class LoginViewController: UIViewController {
         }
         
         checkBox.snp.makeConstraints { (make) in
-            make.top.equalTo(passwordTextfield.snp.bottom).offset(25)
+            make.top.equalTo(passwordTextfield.snp.bottom).offset(30)
             make.left.equalTo(self.subView).offset(20)
             make.width.equalTo(20)
             make.height.equalTo(20)
+        }
+        
+        rememberMeLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(passwordTextfield.snp.bottom).offset(30)
+            make.left.equalTo(checkBox.snp.right).offset(10)
         }
         
         loginButton.snp.makeConstraints { (make) in
