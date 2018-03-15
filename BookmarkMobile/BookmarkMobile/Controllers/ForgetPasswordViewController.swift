@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForgetPasswordViewController: UIViewController {
+class ForgetPasswordViewController: BaseViewController {
 
     var username = ""
     var password = ""
@@ -64,7 +64,7 @@ class ForgetPasswordViewController: UIViewController {
         super.viewDidLoad()
         
         footerView.loginFooterButtonDelegate = self
-//        emailAdressTextfield.becomeFirstResponder()
+        emailAdressTextfield.becomeFirstResponder()
         
         setGradientLayer()
         self.view.addSubview(headerLabel)

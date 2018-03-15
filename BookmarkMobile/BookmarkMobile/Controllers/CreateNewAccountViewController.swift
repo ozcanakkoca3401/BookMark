@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewAccountViewController: UIViewController {
+class CreateNewAccountViewController: BaseViewController {
     
     var username = ""
     var password = ""
@@ -133,7 +133,7 @@ class CreateNewAccountViewController: UIViewController {
         super.viewDidLoad()
         
         footerView.loginFooterButtonDelegate = self
-//        firstNameTextfield.becomeFirstResponder()
+        firstNameTextfield.becomeFirstResponder()
         
         setGradientLayer()
         self.view.addSubview(headerLabel)
