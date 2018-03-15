@@ -238,10 +238,17 @@ class CreateNewAccountViewController: BaseViewController {
         }
         
         footerView.snp.makeConstraints { (make) in
-            make.left.equalTo(self.view)
-            make.right.equalTo(self.view)
-            make.bottom.equalTo(self.view)
-            make.height.equalTo(48)
+            if #available(iOS 11, *) {
+                make.left.equalTo(self.view)
+                make.right.equalTo(self.view)
+                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+                make.height.equalTo(48)
+            } else {
+                make.left.equalTo(self.view)
+                make.right.equalTo(self.view)
+                make.bottom.equalTo(self.view)
+                make.height.equalTo(48)
+            }
         }
     }
     
