@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
         textfield.text = "semih@abc.com"
         textfield.setBottomBorder()
         textfield.setLeftViewImage(imageName: "account")
+        textfield.tag = 1
         
         return textfield
     }()
@@ -47,6 +48,7 @@ class LoginViewController: UIViewController {
         textfield.setBottomBorder()
         textfield.setLeftViewImage(imageName: "textboxpassword")
         textfield.setRightViewImage(imageName: "eyeoff")
+        textfield.tag = 2
         
         return textfield
     }()
@@ -106,6 +108,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         footerView.loginFooterButtonDelegate = self
+        usernameTextfield.delegate = self
+        passwordTextfield.delegate = self
         
         setGradientLayer()
         self.view.addSubview(logo)
@@ -226,7 +230,7 @@ class LoginViewController: UIViewController {
     
 }
 
-extension LoginViewController: LoginFooterButtonProtocol {
+extension LoginViewController: LoginFooterButtonProtocol, UITextFieldDelegate {
     
     func leftButtonClicked() {
         print("left button")
@@ -243,4 +247,21 @@ extension LoginViewController: LoginFooterButtonProtocol {
         vc.modalPresentationStyle = .popover
         present(vc, animated: true, completion: nil)
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.tag == 1 {
+            usernameTextfield.layer.shadowColor = Styling.colorForCode(.textFieldBorderColor).cgColor
+        } else {
+            passwordTextfield.layer.shadowColor = Styling.colorForCode(.textFieldBorderColor).cgColor
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        if textField.tag == 1 {
+            usernameTextfield.layer.shadowColor = Styling.colorForCode(.black).cgColor
+        } else {
+            passwordTextfield.layer.shadowColor = Styling.colorForCode(.black).cgColor
+        }
+    }
+    
 }

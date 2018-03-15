@@ -28,6 +28,7 @@ enum ColorCode {
     case themeViewControllerStartColor
     case themeViewControllerEndColor
     case loginButtonColor
+    case textFieldBorderColor
 }
 
 enum FontWeight: String {
@@ -74,6 +75,8 @@ class Styling {
             return UIColor.init(red: 248.0 / 255.0, green: 225.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0)
         case .loginButtonColor:
             return UIColor.init(red: 254.0 / 255.0, green: 209.0 / 255.0, blue: 48.0 / 255.0, alpha: 1.0)
+        case .textFieldBorderColor:
+            return UIColor.init(red: 0.0 / 255.0, green: 188.0 / 255.0, blue: 212.0 / 255.0, alpha: 1.0)
             }
         }
     
