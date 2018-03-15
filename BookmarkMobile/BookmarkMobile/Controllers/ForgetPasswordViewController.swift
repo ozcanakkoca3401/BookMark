@@ -64,6 +64,7 @@ class ForgetPasswordViewController: UIViewController {
         super.viewDidLoad()
         
         footerView.loginFooterButtonDelegate = self
+//        emailAdressTextfield.becomeFirstResponder()
         
         setGradientLayer()
         self.view.addSubview(headerLabel)
