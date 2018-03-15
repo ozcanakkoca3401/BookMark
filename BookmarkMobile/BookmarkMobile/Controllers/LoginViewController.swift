@@ -104,8 +104,16 @@ class LoginViewController: UIViewController {
         return view
     }()
     
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        self.view.addGestureRecognizer(tap)
+        self.view.isUserInteractionEnabled = true
         
         footerView.loginFooterButtonDelegate = self
         usernameTextfield.delegate = self
@@ -263,6 +271,7 @@ extension LoginViewController: LoginFooterButtonProtocol, UITextFieldDelegate {
         } else {
             passwordTextfield.layer.shadowColor = Styling.colorForCode(.black).cgColor
         }
+        
     }
     
 }
