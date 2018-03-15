@@ -151,9 +151,16 @@ class CreateNewAccountViewController: BaseViewController {
         self.view.addSubview(footerView)
         
         headerLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view).offset(40)
-            make.left.equalTo(self.view)
-            make.right.equalTo(self.view)
+            
+            if #available(iOS 11, *) {
+                make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(30)
+                make.left.equalTo(self.view)
+                make.right.equalTo(self.view)
+            } else {
+                make.top.equalTo(self.view).offset(30)
+                make.left.equalTo(self.view)
+                make.right.equalTo(self.view)
+            }
         }
         
         subView.snp.makeConstraints { (make) in

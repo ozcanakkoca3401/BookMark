@@ -6,7 +6,7 @@ cyclomatic_complexity:
 - 20
 
 function_body_length:
-- 80
+- 100
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Carthage

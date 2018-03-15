@@ -124,9 +124,15 @@ class LoginViewController: BaseViewController {
         self.view.addSubview(footerView)
         
         logo.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view).offset(36)
-            make.centerX.equalTo(self.view)
-            make.height.equalTo(100)
+            if #available(iOS 11, *) {
+                make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(36)
+                make.centerX.equalTo(self.view)
+                make.height.equalTo(100)
+            } else {
+                make.top.equalTo(self.view).offset(36)
+                make.centerX.equalTo(self.view)
+                make.height.equalTo(100)
+            }
         }
         
         subView.snp.makeConstraints { (make) in
