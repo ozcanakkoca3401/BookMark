@@ -109,6 +109,7 @@ class LoginViewController: UIViewController {
         
         footerView.loginFooterButtonDelegate = self
         usernameTextfield.delegate = self
+        usernameTextfield.becomeFirstResponder()
         passwordTextfield.delegate = self
         
         setGradientLayer()
