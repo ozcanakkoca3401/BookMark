@@ -166,14 +166,14 @@ class CreateNewAccountViewController: UIViewController {
         firstNameTextfield.snp.makeConstraints { (make) in
             make.top.equalTo(self.subView).offset(35)
             make.left.equalTo(self.subView).offset(20)
-            make.width.equalTo(100)
+            make.width.equalTo(self.subView).dividedBy(2).offset(-25)
             make.height.equalTo(35)
         }
         
         lastNameTextfield.snp.makeConstraints { (make) in
             make.top.equalTo(self.subView).offset(35)
             make.right.equalTo(self.subView).offset(-20)
-            make.width.equalTo(100)
+            make.width.equalTo(self.subView).dividedBy(2).offset(-25)
             make.height.equalTo(35)
         }
         
