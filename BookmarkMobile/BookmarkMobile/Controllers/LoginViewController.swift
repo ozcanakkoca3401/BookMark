@@ -215,11 +215,15 @@ extension LoginViewController: LoginFooterButtonProtocol {
     
     func leftButtonClicked() {
         print("left button")
-        return
+        
+        let vc = ForgetPasswordViewController()
+        vc.modalPresentationStyle = .popover
+        present(vc, animated: true, completion: nil)
     }
     
     func rightButtonClicked() {
         print("right button")
+        
         let vc = CreateNewAccountViewController()
         vc.modalPresentationStyle = .popover
         present(vc, animated: true, completion: nil)

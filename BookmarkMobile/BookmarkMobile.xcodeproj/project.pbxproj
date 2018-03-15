@@ -48,6 +48,7 @@
 		4C5AFF79204E793D00572447 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AFF78204E793D00572447 /* FooterView.swift */; };
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
 		4C741555203C678F00A32734 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741554203C678F00A32734 /* ColorExtension.swift */; };
+		4C78BABF205A6BD600E23249 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78BABE205A6BD600E23249 /* ForgetPasswordViewController.swift */; };
 		4C7EBCBA2046989200D762EE /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EBCB92046989200D762EE /* CustomPopup.swift */; };
 		4C839B0F2057CB480031ABF2 /* LoginFooterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B0E2057CB480031ABF2 /* LoginFooterButtonView.swift */; };
 		4C839B112057E7190031ABF2 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B102057E7190031ABF2 /* Authentication.swift */; };
@@ -164,6 +165,7 @@
 		4C5AFF78204E793D00572447 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		4C741552203C670600A32734 /* EBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLabel.swift; sourceTree = "<group>"; };
 		4C741554203C678F00A32734 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		4C78BABE205A6BD600E23249 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		4C7EBCB92046989200D762EE /* CustomPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopup.swift; sourceTree = "<group>"; };
 		4C839B0E2057CB480031ABF2 /* LoginFooterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFooterButtonView.swift; sourceTree = "<group>"; };
 		4C839B102057E7190031ABF2 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 				4C19C770205538C3001FFDD6 /* AddOnsTableViewHeader.swift */,
 				4CCB4DC12057A51200405261 /* LoginViewController.swift */,
 				4C504FEB205903A700958329 /* CreateNewAccountViewController.swift */,
+				4C78BABE205A6BD600E23249 /* ForgetPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				8408E06A203C1013004ABC0A /* Styling.swift in Sources */,
 				4CC89618204EF04800A2A87A /* EBTopLoyaltyView.swift in Sources */,
 				4C7EBCBA2046989200D762EE /* CustomPopup.swift in Sources */,
+				4C78BABF205A6BD600E23249 /* ForgetPasswordViewController.swift in Sources */,
 				4CC89614204EC90400A2A87A /* EBUsageInfoPageView.swift in Sources */,
 				4C741555203C678F00A32734 /* ColorExtension.swift in Sources */,
 				4577DEB3203D85A70076A7D8 /* AddOnsButtonView.swift in Sources */,
