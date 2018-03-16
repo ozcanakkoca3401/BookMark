@@ -27,11 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //
 //        return true
+        rememberLogin()
         
-        let rootView: LoginViewController = LoginViewController()
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = rootView
+//        let rootView: LoginViewController = LoginViewController()
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.makeKeyAndVisible()
+//        self.window?.rootViewController = rootView
         return true
     }
 
@@ -55,6 +56,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func rememberLogin() {
+        
+        let rememberUser: String? = UserDefaults.standard.string(forKey: "remember")
+        
+        if rememberUser != nil {
+            let rootView: MainViewController = MainViewController()
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = rootView
+        } else {
+            let rootView: LoginViewController = LoginViewController()
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = rootView
+        }
     }
 
 }

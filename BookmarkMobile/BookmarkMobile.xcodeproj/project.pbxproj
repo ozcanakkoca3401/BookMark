@@ -48,6 +48,7 @@
 		4C5AFF79204E793D00572447 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AFF78204E793D00572447 /* FooterView.swift */; };
 		4C741553203C670600A32734 /* EBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741552203C670600A32734 /* EBLabel.swift */; };
 		4C741555203C678F00A32734 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C741554203C678F00A32734 /* ColorExtension.swift */; };
+		4C753679205C0BEF00728916 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C753678205C0BEF00728916 /* MainViewController.swift */; };
 		4C78BABF205A6BD600E23249 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78BABE205A6BD600E23249 /* ForgetPasswordViewController.swift */; };
 		4C7EBCBA2046989200D762EE /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EBCB92046989200D762EE /* CustomPopup.swift */; };
 		4C839B0F2057CB480031ABF2 /* LoginFooterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C839B0E2057CB480031ABF2 /* LoginFooterButtonView.swift */; };
@@ -165,6 +166,7 @@
 		4C5AFF78204E793D00572447 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		4C741552203C670600A32734 /* EBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBLabel.swift; sourceTree = "<group>"; };
 		4C741554203C678F00A32734 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		4C753678205C0BEF00728916 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4C78BABE205A6BD600E23249 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		4C7EBCB92046989200D762EE /* CustomPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopup.swift; sourceTree = "<group>"; };
 		4C839B0E2057CB480031ABF2 /* LoginFooterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFooterButtonView.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				4CCB4DC12057A51200405261 /* LoginViewController.swift */,
 				4C504FEB205903A700958329 /* CreateNewAccountViewController.swift */,
 				4C78BABE205A6BD600E23249 /* ForgetPasswordViewController.swift */,
+				4C753678205C0BEF00728916 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -907,6 +910,7 @@
 				4C741553203C670600A32734 /* EBLabel.swift in Sources */,
 				45C35D132046CBDB00B21B52 /* PopUpView.swift in Sources */,
 				8408E0252036D68F004ABC0A /* ViewController.swift in Sources */,
+				4C753679205C0BEF00728916 /* MainViewController.swift in Sources */,
 				4CCB4DC42057A90C00405261 /* ViewControllerExtension.swift in Sources */,
 				0BB7FA7F204BF4C00076BF66 /* EBPageViewController.swift in Sources */,
 				8408E079203C655C004ABC0A /* BilgeViewController.swift in Sources */,
@@ -1133,7 +1137,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KHRD8446CX;
+				DEVELOPMENT_TEAM = MHJ8EWL6NT;
 				INFOPLIST_FILE = BookmarkMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobile;
@@ -1151,7 +1155,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KHRD8446CX;
+				DEVELOPMENT_TEAM = MHJ8EWL6NT;
 				INFOPLIST_FILE = BookmarkMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bookmark.BookmarkMobile;

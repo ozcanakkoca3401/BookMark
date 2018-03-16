@@ -12,6 +12,7 @@ class LoginViewController: BaseViewController {
     
     var username = ""
     var password = ""
+    var isCheckBoxClicked: Bool = false
     
     var logo: UIImageView = {
         let imageView = UIImageView()
@@ -59,6 +60,7 @@ class LoginViewController: BaseViewController {
         button.borderWidth = 2.5
         button.borderColor = Styling.colorForCode(.themeMediumGray)
         button.bgColor = Styling.colorForCode(.white)
+        button.addTarget(self, action: #selector(checkBoxButtnoClicked), for: .touchUpInside)
         
         return button
     }()
@@ -198,10 +200,23 @@ class LoginViewController: BaseViewController {
         }
     }
     
+    @objc func checkBoxButtnoClicked() {
+        if !isCheckBoxClicked {
+            checkBox.bgColor = Styling.colorForCode(.textFieldBorderColor)
+            checkBox.setImage(UIImage(named: "account"), for: .normal)
+            isCheckBoxClicked = true
+        } else {
+            checkBox.bgColor = Styling.colorForCode(.white)
+            checkBox.setImage(UIImage(named: ""), for: .normal)
+            isCheckBoxClicked = false
+        }
+    }
+    
     @objc func loginButtonClicked() {
         
         self.username = usernameTextfield.text!
         self.password = passwordTextfield.text!
+        
         if Authentication.validateCredential(username: self.username, password: self.password) {
             login(username: username, password: password)
         } else {
@@ -236,7 +251,19 @@ class LoginViewController: BaseViewController {
             "password": password as AnyObject ]
         
         Authentication.auth(params: params, success: { (result) in
-            print(result.name!)
+            
+            if self.isCheckBoxClicked {
+                UserDefaults.standard.set(result.customerId, forKey: "remember")
+                UserDefaults.standard.synchronize()
+                
+                // swiftlint:disable force_cast
+                let delegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                delegate.rememberLogin()
+                print(result.name!)
+            } else {
+                print(result.id!)
+            }
+            
         }, failure: { (error) in
             self.showMessage(message: error.errorMessage)
         })
