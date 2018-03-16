@@ -203,11 +203,13 @@ class LoginViewController: BaseViewController {
     @objc func checkBoxButtnoClicked() {
         if !isCheckBoxClicked {
             checkBox.bgColor = Styling.colorForCode(.textFieldBorderColor)
-            checkBox.setImage(UIImage(named: "account"), for: .normal)
+            checkBox.setImage(UIImage(named: "check"), for: .normal)
+            checkBox.borderColor = Styling.colorForCode(.textFieldBorderColor)
             isCheckBoxClicked = true
         } else {
             checkBox.bgColor = Styling.colorForCode(.white)
             checkBox.setImage(UIImage(named: ""), for: .normal)
+            checkBox.borderColor = Styling.colorForCode(.themeMediumGray)
             isCheckBoxClicked = false
         }
     }
@@ -261,6 +263,9 @@ class LoginViewController: BaseViewController {
                 delegate.rememberLogin()
                 print(result.name!)
             } else {
+                let mainVC = MainViewController()
+                mainVC.modalPresentationStyle = .popover
+                self.present(mainVC, animated: true, completion: nil)
                 print(result.id!)
             }
             
