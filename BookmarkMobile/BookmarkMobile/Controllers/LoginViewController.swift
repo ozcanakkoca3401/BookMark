@@ -258,9 +258,10 @@ class LoginViewController: BaseViewController {
                 UserDefaults.standard.set(result.customerId, forKey: "remember")
                 UserDefaults.standard.synchronize()
                 
-                // swiftlint:disable force_cast
-                let delegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-                delegate.rememberLogin()
+                let mainVC = MainViewController()
+                mainVC.modalPresentationStyle = .popover
+                self.present(mainVC, animated: true, completion: nil)
+                
                 print(result.name!)
             } else {
                 let mainVC = MainViewController()
