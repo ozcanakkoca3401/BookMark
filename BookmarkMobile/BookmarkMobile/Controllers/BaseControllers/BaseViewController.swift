@@ -32,4 +32,18 @@ class BaseViewController: UIViewController {
         textField.layer.shadowColor = Styling.colorForCode(.black).cgColor
     }
     
+    func baseCheckBoxButtnoClicked(isCheckBoxClicked: Bool, checkBox: RoundButton) -> Bool {
+        if !isCheckBoxClicked {
+            checkBox.bgColor = Styling.colorForCode(.textFieldBorderColor)
+            checkBox.setImage(UIImage(named: "check"), for: .normal)
+            checkBox.borderColor = Styling.colorForCode(.textFieldBorderColor)
+            return true
+        } else {
+            checkBox.bgColor = Styling.colorForCode(.white)
+            checkBox.setImage(UIImage(named: ""), for: .normal)
+            checkBox.borderColor = Styling.colorForCode(.themeMediumGray)
+            return false
+        }
+    }
+    
 }

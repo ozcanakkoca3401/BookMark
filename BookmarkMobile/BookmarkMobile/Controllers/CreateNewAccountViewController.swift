@@ -259,17 +259,7 @@ class CreateNewAccountViewController: BaseViewController {
     }
     
     @objc func checkBoxButtnoClicked() {
-        if !isCheckBoxClicked {
-            checkBox.bgColor = Styling.colorForCode(.textFieldBorderColor)
-            checkBox.setImage(UIImage(named: "check"), for: .normal)
-            checkBox.borderColor = Styling.colorForCode(.textFieldBorderColor)
-            isCheckBoxClicked = true
-        } else {
-            checkBox.bgColor = Styling.colorForCode(.white)
-            checkBox.setImage(UIImage(named: ""), for: .normal)
-            checkBox.borderColor = Styling.colorForCode(.themeMediumGray)
-            isCheckBoxClicked = false
-        }
+        isCheckBoxClicked = super.baseCheckBoxButtnoClicked(isCheckBoxClicked: isCheckBoxClicked, checkBox: checkBox)
     }
     
 //    @objc func signUpButtonClicked() {
