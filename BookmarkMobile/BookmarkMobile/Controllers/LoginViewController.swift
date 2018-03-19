@@ -296,20 +296,11 @@ extension LoginViewController: LoginFooterButtonProtocol, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.tag == 1 {
-            usernameTextfield.layer.shadowColor = Styling.colorForCode(.textFieldBorderColor).cgColor
-        } else {
-            passwordTextfield.layer.shadowColor = Styling.colorForCode(.textFieldBorderColor).cgColor
-        }
+        super.baseTextFieldDidBeginEditing(textField)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        if textField.tag == 1 {
-            usernameTextfield.layer.shadowColor = Styling.colorForCode(.black).cgColor
-        } else {
-            passwordTextfield.layer.shadowColor = Styling.colorForCode(.black).cgColor
-        }
-        
+        super.baseTextFieldDidEndEditing(textField)
     }
     
 }

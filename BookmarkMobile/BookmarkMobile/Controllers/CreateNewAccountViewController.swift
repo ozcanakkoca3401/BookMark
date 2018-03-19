@@ -12,6 +12,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var username = ""
     var password = ""
+    var isCheckBoxClicked: Bool = false
     
     var headerLabel: EBLabel = {
        let label = EBLabel()
@@ -80,7 +81,7 @@ class CreateNewAccountViewController: BaseViewController {
         button.borderWidth = 2.5
         button.borderColor = Styling.colorForCode(.themeMediumGray)
         button.bgColor = Styling.colorForCode(.white)
-        
+        button.addTarget(self, action: #selector(checkBoxButtnoClicked), for: .touchUpInside)
         return button
     }()
     
@@ -133,7 +134,12 @@ class CreateNewAccountViewController: BaseViewController {
         super.viewDidLoad()
         
         footerView.loginFooterButtonDelegate = self
+        firstNameTextfield.delegate = self
         firstNameTextfield.becomeFirstResponder()
+        lastNameTextfield.delegate = self
+        emailTextfield.delegate = self
+        passwordTextfield.delegate = self
+        passConfirmTextfield.delegate = self
         
         setGradientLayer()
         self.view.addSubview(headerLabel)
@@ -252,6 +258,20 @@ class CreateNewAccountViewController: BaseViewController {
         }
     }
     
+    @objc func checkBoxButtnoClicked() {
+        if !isCheckBoxClicked {
+            checkBox.bgColor = Styling.colorForCode(.textFieldBorderColor)
+            checkBox.setImage(UIImage(named: "check"), for: .normal)
+            checkBox.borderColor = Styling.colorForCode(.textFieldBorderColor)
+            isCheckBoxClicked = true
+        } else {
+            checkBox.bgColor = Styling.colorForCode(.white)
+            checkBox.setImage(UIImage(named: ""), for: .normal)
+            checkBox.borderColor = Styling.colorForCode(.themeMediumGray)
+            isCheckBoxClicked = false
+        }
+    }
+    
 //    @objc func signUpButtonClicked() {
 //
 //        self.username = usernameTextfield.text!
@@ -277,7 +297,7 @@ class CreateNewAccountViewController: BaseViewController {
     
 }
 
-extension CreateNewAccountViewController: LoginFooterButtonProtocol {
+extension CreateNewAccountViewController: LoginFooterButtonProtocol, UITextFieldDelegate {
     func leftButtonClicked() {
         print("left button")
     }
@@ -286,4 +306,13 @@ extension CreateNewAccountViewController: LoginFooterButtonProtocol {
         print("right button")
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        super.baseTextFieldDidBeginEditing(textField)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        super.baseTextFieldDidEndEditing(textField)
+    }
+    
 }

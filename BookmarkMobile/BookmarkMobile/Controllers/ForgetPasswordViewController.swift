@@ -64,6 +64,7 @@ class ForgetPasswordViewController: BaseViewController {
         super.viewDidLoad()
         
         footerView.loginFooterButtonDelegate = self
+        emailAdressTextfield.delegate = self
         emailAdressTextfield.becomeFirstResponder()
         
         setGradientLayer()
@@ -142,7 +143,7 @@ class ForgetPasswordViewController: BaseViewController {
     
 }
 
-extension ForgetPasswordViewController: LoginFooterButtonProtocol {
+extension ForgetPasswordViewController: LoginFooterButtonProtocol, UITextFieldDelegate {
     func leftButtonClicked() {
         print("left button")
     }
@@ -151,4 +152,13 @@ extension ForgetPasswordViewController: LoginFooterButtonProtocol {
         print("right button")
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        super.baseTextFieldDidBeginEditing(textField)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        super.baseTextFieldDidEndEditing(textField)
+    }
+    
 }

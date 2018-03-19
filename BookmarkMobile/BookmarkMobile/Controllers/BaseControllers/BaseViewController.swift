@@ -23,5 +23,13 @@ class BaseViewController: UIViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-
+    
+    func baseTextFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.shadowColor = Styling.colorForCode(.textFieldBorderColor).cgColor
+    }
+    
+    func baseTextFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.shadowColor = Styling.colorForCode(.black).cgColor
+    }
+    
 }
