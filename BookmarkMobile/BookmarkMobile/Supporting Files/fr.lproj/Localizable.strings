@@ -5,3 +5,24 @@
   Created by Alaattin Bedir on 13.03.2018.
   Copyright © 2018 Nookmark. All rights reserved.
 */
+"Username"="Nom d'utilisateur";
+"Password"="Mot de passe";
+"Login"="S'identifier";
+"Remember me"="Souviens-toi de moi";
+"Login with"="Connectez-vous avec";
+"Forget Password"="Mot de passe oublié";
+"Create New Account"="Créer un nouveau compte";
+"Alert"="Alerte";
+"Username or password is wrong"="Le nom d'utilisateur ou le mot de passe est incorrect";
+"Email Address"="Adresse e-mail";
+"Password Reset"="Réinitialiser le mot de passe";
+"CREATE NEW ACCOUNT"="CRÉER UN NOUVEAU COMPTE";
+"First Name"="Prénom";
+"Last Name"="Nom de famille";
+"Password Confirm"="Confirmer le mot de passe";
+"I agree to the"="J'accepte les";
+"Terms & Services"="Termes & Services";
+"Sign Up"="S'inscrire";
+"Sign Up with"="Se connecter avec";
+"Logout"="Connectez - Out";
+"Ok"="D'accord";

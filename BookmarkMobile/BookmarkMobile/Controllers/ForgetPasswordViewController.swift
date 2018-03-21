@@ -15,7 +15,7 @@ class ForgetPasswordViewController: BaseViewController {
     
     var headerLabel: EBLabel = {
         let label = EBLabel()
-        label.EBtext = "Forget Password"
+        label.EBtext = NSLocalizedString("Forget Password", comment: "comment")
         label.textAlignment = .center
         label.font = Styling.font(weight: .bold, size: 18)
         label.EBcolor = Styling.colorForCode(.black)
@@ -34,7 +34,7 @@ class ForgetPasswordViewController: BaseViewController {
     
     var emailAdressTextfield: EBTextfield = {
         let textfield = EBTextfield()
-        textfield.EBPlaceholder = "Email Address"
+        textfield.EBPlaceholder = NSLocalizedString("Email Address", comment: "comment")
         textfield.setBottomBorder()
         
         return textfield
@@ -42,7 +42,7 @@ class ForgetPasswordViewController: BaseViewController {
     
     var passwordResetButton: RoundButton = {
         let button = RoundButton()
-        button.title = "Password Reset"
+        button.title = NSLocalizedString("Password Reset", comment: "comment")
         button.titleColor = Styling.colorForCode(.black)
         button.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         button.cornerRadius = 4
@@ -55,7 +55,7 @@ class ForgetPasswordViewController: BaseViewController {
     
     var footerView: LoginFooterButtonView = {
         let view = LoginFooterButtonView()
-        view.rightButton.title = "Login"
+        view.rightButton.title = NSLocalizedString("Login", comment: "comment")
         
         return view
     }()

@@ -12,7 +12,8 @@ class MainViewController: UIViewController {
 
     var myButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Logout", for: .normal)
+        let title = NSLocalizedString("Logout", comment: "comment")
+        button.setTitle(title, for: .normal)
         button.backgroundColor = UIColor.blue
         button.addTarget(self, action: #selector(logout), for: .touchUpInside)
         return button

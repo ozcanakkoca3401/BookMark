@@ -16,7 +16,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var headerLabel: EBLabel = {
        let label = EBLabel()
-        label.EBtext = "CREATE NEW ACCOUNT"
+        label.EBtext = NSLocalizedString("CREATE NEW ACCOUNT", comment: "comment")
         label.textAlignment = .center
         label.font = Styling.font(weight: .bold, size: 18)
         label.EBcolor = Styling.colorForCode(.black)
@@ -35,7 +35,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var firstNameTextfield: EBTextfield = {
         let textfield = EBTextfield()
-        textfield.EBPlaceholder = "First Name"
+        textfield.EBPlaceholder = NSLocalizedString("First Name", comment: "comment")
         textfield.setBottomBorder()
         
         return textfield
@@ -43,7 +43,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var lastNameTextfield: EBTextfield = {
         let textfield = EBTextfield()
-        textfield.EBPlaceholder = "Last Name"
+        textfield.EBPlaceholder = NSLocalizedString("Last Name", comment: "comment")
         textfield.setBottomBorder()
         
         return textfield
@@ -51,7 +51,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var emailTextfield: EBTextfield = {
         let textfield = EBTextfield()
-        textfield.EBPlaceholder = "Email"
+        textfield.EBPlaceholder = NSLocalizedString("Email Address", comment: "comment")
         textfield.setBottomBorder()
         
         return textfield
@@ -59,7 +59,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var passwordTextfield: EBTextfield = {
         let textfield = EBTextfield()
-        textfield.EBPlaceholder = "Password"
+        textfield.EBPlaceholder = NSLocalizedString("Password", comment: "comment")
         textfield.setBottomBorder()
         textfield.setRightViewImage(imageName: "eyeoff")
         
@@ -68,7 +68,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var passConfirmTextfield: EBTextfield = {
         let textfield = EBTextfield()
-        textfield.EBPlaceholder = "Password Confirm"
+        textfield.EBPlaceholder = NSLocalizedString("Password Confirm", comment: "comment")
         textfield.setBottomBorder()
         textfield.setRightViewImage(imageName: "eyeoff")
         
@@ -87,7 +87,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var agreeLabel: EBLabel = {
         let label = EBLabel()
-        label.EBtext = "I agree to the"
+        label.EBtext = NSLocalizedString("I agree to the", comment: "comment")
         label.EBcolor = Styling.colorForCode(.black)
         label.font = Styling.font(weight: .regular, size: 16)
         
@@ -96,7 +96,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var termServicesLabel: EBLabel = {
         let label = EBLabel()
-        label.EBtext = "Terms & Services"
+        label.EBtext = NSLocalizedString("Terms & Services", comment: "comment")
         label.EBcolor = Styling.colorForCode(.textFieldBorderColor)
         label.font = Styling.font(weight: .bold, size: 16)
         
@@ -105,7 +105,7 @@ class CreateNewAccountViewController: BaseViewController {
     
     var signUpButton: RoundButton = {
         let button = RoundButton()
-        button.title = "Sign Up"
+        button.title = NSLocalizedString("Sign Up", comment: "comment")
         button.titleColor = Styling.colorForCode(.black)
         button.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         button.cornerRadius = 4
@@ -118,14 +118,14 @@ class CreateNewAccountViewController: BaseViewController {
     
     var bottomLoginWithView: LoginWithView = {
         let view = LoginWithView()
-        view.loginWithLabel.EBtext = "Sign Up with"
+        view.loginWithLabel.EBtext = NSLocalizedString("Sign Up with", comment: "comment")
         
         return view
     }()
     
     var footerView: LoginFooterButtonView = {
         let view = LoginFooterButtonView()
-        view.rightButton.title = "Login"
+        view.rightButton.title = NSLocalizedString("Login", comment: "comment")
         
         return view
     }()

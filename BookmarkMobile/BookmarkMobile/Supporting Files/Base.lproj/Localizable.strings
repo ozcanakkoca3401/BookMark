@@ -5,3 +5,24 @@
   Created by Alaattin Bedir on 13.03.2018.
   Copyright © 2018 Nookmark. All rights reserved.
 */
+"Username"="Username";
+"Password"="Password";
+"Login"="Login";
+"Remember me"="Remember me";
+"Login with"="Login with";
+"Forget Password"="Forget Password";
+"Create New Account"="Create New Account";
+"Alert"="Alert";
+"Username or password is wrong"="Username or password is wrong";
+"Email Address"="Email Address";
+"Password Reset"="Password Reset";
+"CREATE NEW ACCOUNT"="CREATE NEW ACCOUNT";
+"First Name"="First Name";
+"Last Name"="Last Name";
+"Password Confirm"="Password Confirm";
+"I agree to the"="I agree to the";
+"Terms & Services"="Terms & Services";
+"Sign Up"="Sign Up";
+"Sign Up with"="Sign Up with";
+"Logout"="Logout";
+"Ok"="Ok";

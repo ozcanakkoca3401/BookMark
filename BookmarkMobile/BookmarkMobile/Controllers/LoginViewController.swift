@@ -33,7 +33,7 @@ class LoginViewController: BaseViewController {
     
     var usernameTextfield: EBTextfield = {
         let textfield = EBTextfield()
-        textfield.EBPlaceholder = "Username"
+        textfield.EBPlaceholder = NSLocalizedString("Username", comment: "comment")
         textfield.text = "semih@abc.com"
         textfield.setBottomBorder()
         textfield.setLeftViewImage(imageName: "account")
@@ -44,7 +44,7 @@ class LoginViewController: BaseViewController {
     
     var passwordTextfield: EBTextfield = {
         let textfield = EBTextfield()
-        textfield.EBPlaceholder = "Password"
+        textfield.EBPlaceholder = NSLocalizedString("Password", comment: "comment")
         textfield.text = "Abc12345"
         textfield.setBottomBorder()
         textfield.setLeftViewImage(imageName: "textboxpassword")
@@ -67,7 +67,7 @@ class LoginViewController: BaseViewController {
     
     var rememberMeLabel: EBLabel = {
         let label = EBLabel()
-        label.EBtext = "Remember me"
+        label.EBtext = NSLocalizedString("Remember me", comment: "comment")
         label.EBcolor = Styling.colorForCode(.black)
         label.font = Styling.font(weight: .regular, size: 16)
         
@@ -76,7 +76,7 @@ class LoginViewController: BaseViewController {
     
     var loginButton: RoundButton = {
         let button = RoundButton()
-        button.title = "Login"
+        button.title = NSLocalizedString("Login", comment: "comment")
         button.titleColor = Styling.colorForCode(.black)
         button.titleLabel?.font = Styling.font(weight: .bold, size: 14)
         button.cornerRadius = 4
@@ -93,15 +93,15 @@ class LoginViewController: BaseViewController {
     
     var bottomLoginWithView: LoginWithView = {
         let view = LoginWithView()
-        view.loginWithLabel.EBtext = "Login with"
+        view.loginWithLabel.EBtext = NSLocalizedString("Login with", comment: "comment")
         
         return view
     }()
     
     var footerView: LoginFooterButtonView = {
         let view = LoginFooterButtonView()
-        view.leftButton.title = "Forget Password"
-        view.rightButton.title = "Create New Account"
+        view.leftButton.title = NSLocalizedString("Forget Password", comment: "comment")
+        view.rightButton.title = NSLocalizedString("Create New Account", comment: "comment")
         
         return view
     }()
@@ -212,16 +212,16 @@ class LoginViewController: BaseViewController {
         if Authentication.validateCredential(username: self.username, password: self.password) {
             login(username: username, password: password)
         } else {
-            self.showMessage(message: "Username or password is wrong")
+            self.showMessage(message: NSLocalizedString("Username or password is wrong", comment: "comment"))
         }
     }
     
     fileprivate func showMessage(message: String) {
-        let alert = UIAlertController(title: "Alert",
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: "comment"),
                                       message: message,
                                       preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "comment"), style: .default, handler: { action in
             switch action.style {
             case .default:
                 print("default")
