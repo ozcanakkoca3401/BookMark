@@ -68,11 +68,11 @@ class BookmarkSessionManager: NSObject {
         
         switch errorCode {
         case "BAD_CREDENTIALS":
-            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Username or password is wrong")
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: NSLocalizedString("Username or password is wrong", comment: "comment"))
         case "MAP_ERROR":
-            error = BookmarkError.init(errorCode: errorCode, errorMessage: "Error mapping response")
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: NSLocalizedString("Error mapping response", comment: "comment"))
         default:
-            error = BookmarkError.init(errorCode: errorCode, errorMessage: "An unknown error has occurred")
+            error = BookmarkError.init(errorCode: errorCode, errorMessage: NSLocalizedString("An unknown error has occurred", comment: "comment"))
         }
 
         return error
@@ -80,7 +80,7 @@ class BookmarkSessionManager: NSObject {
     
     func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (BookmarkError) -> Void) {
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            let bookmarError = BookmarkError.init(errorCode: "NO_CONNECTION_ERROR", errorMessage: "No Internet connection")
+            let bookmarError = BookmarkError.init(errorCode: "NO_CONNECTION_ERROR", errorMessage: NSLocalizedString("No Internet connection", comment: "comment"))
             failure(bookmarError)
             return
         }
@@ -112,7 +112,7 @@ class BookmarkSessionManager: NSObject {
     func requestPOSTURL(_ strURL: String, params: [String: AnyObject]?, headers: [String: String]?, success:@escaping (JSON) -> Void, failure: @escaping (BookmarkError) -> Void) {
         
         guard Utilities.sharedInstance.isNetworkConnectivityAvailable() else {
-            let bookmarError = BookmarkError.init(errorCode: "NO_CONNECTION_ERROR", errorMessage: "No Internet connection")
+            let bookmarError = BookmarkError.init(errorCode: "NO_CONNECTION_ERROR", errorMessage: NSLocalizedString("No Internet connection", comment: "comment"))
             failure(bookmarError)
             return
         }

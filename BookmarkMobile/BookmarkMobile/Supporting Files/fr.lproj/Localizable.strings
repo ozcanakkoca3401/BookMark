@@ -26,3 +26,7 @@
 "Sign Up with"="Se connecter avec";
 "Logout"="Connectez - Out";
 "Ok"="D'accord";
+"Username or password is wrong"="Le nom d'utilisateur ou le mot de passe est incorrect";
+"Error mapping response"="Erreur de mappage de la réponse";
+"An unknown error has occurred"="Une erreur inconnue s'est produite";
+"No Internet connection"="Pas de connexion Internet";

@@ -26,3 +26,7 @@
 "Sign Up with"="Sign Up with";
 "Logout"="Logout";
 "Ok"="Ok";
+"Username or password is wrong"="Username or password is wrong";
+"Error mapping response"="Error mapping response";
+"An unknown error has occurred"="An unknown error has occurred";
+"No Internet connection"="No Internet connection";
